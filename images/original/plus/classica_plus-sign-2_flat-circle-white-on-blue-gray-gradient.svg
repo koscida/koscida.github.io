@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!-- Find more at icons.mysitemyway.com -->
+<svg height="100" width="100" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<linearGradient id="blue-gray-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#787D91" />
+<stop offset="100%" stop-color="#424654" />
+</linearGradient>
+</defs>
+<circle fill="url(#blue-gray-gradient)" cx="50" cy="50" r="49"/>
+<path fill="#fff" transform="translate(25,25) scale(0.5)" d="M97.679,38.7H61.505V2.456C57.662,1.506,53.641,1,49.501,1 c-4.48,0-8.826,0.591-12.956,1.698V38.7H1.323C0.46,42.334-0.001,46.11-0.001,50c0,4.649,0.653,9.149,1.878,13.408h34.668v33.891 C40.675,98.409,45.021,99,49.501,99c4.14,0,8.161-0.506,12.004-1.454V63.408h35.621c1.221-4.259,1.874-8.759,1.874-13.408 C99.001,46.11,98.544,42.334,97.679,38.7z"/>
+</svg>
