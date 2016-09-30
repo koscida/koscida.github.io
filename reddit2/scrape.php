@@ -1,5 +1,17 @@
 <?php
 
+date_default_timezone_set("America/Denver");
+ini_set('max_execution_time', 300);
+
+
+include "simple_html_dom.php";
+include "subreddits_list.php";
+
+
+$COLLECT_ALL = true;
+$COLLECT_KEYWORD_POSTS = true;
+
+
 
 function print_array($arr, $name = null) {
 	echo "<pre> $name: ".print_r($arr, true)."</pre>";
@@ -21,12 +33,12 @@ function replace_shortened_urls($contents) {
 	return $contents_edited;
 }
 
-date_default_timezone_set("America/Denver");
+
 
 // get today's date
 $date = date("Y-m-d");
 // get today's time
-$time = date("G-i-s");
+$time = array_key_exists("time", $_GET) ? $_GET["time"] : date("G-i-s");
 $datapath = "data/$date/$time";
 
 // check if date folder exists, if not, create it
@@ -35,61 +47,19 @@ if (!file_exists("data/$date")) {
 }
 
 // create time folder
-mkdir($datapath, 0777, true);
+if (!file_exists($datapath)) {
+	mkdir($datapath, 0777, true);
+}
 
 
-$subreddits = array(
-	array(
-		"general",
-		array(
-			array("https://www.reddit.com/",				"frontpage"),
-			array("https://www.reddit.com/r/all",			"all"),
-			array("https://www.reddit.com/r/AskReddit",		"AskReddit"),
-			array("https://www.reddit.com/r/funny",			"funny"),
-			array("https://www.reddit.com/r/todayilearned",	"todayilearned"),
-			array("https://www.reddit.com/r/pics", 			"pics"),
-			array("https://www.reddit.com/r/bestof",		"bestof"),
-		),
-		array("cat"),
-	),
-	array(
-		"feminineCentric",
-		array(
-			array("https://www.reddit.com/r/MakeupAddiction",		"MakeupAddiction"),
-			array("https://www.reddit.com/r/skincareaddiction",		"skincareaddiction"),
-			array("https://www.reddit.com/r/femalefashionadvice",	"femalefashionadvice"),
-		),
-		array("tech", "comput"),
-	),
-	array(
-		"technology",
-		array(
-			array("https://www.reddit.com/r/technology",			"technology"),
-			array("https://www.reddit.com/r/programming",			"programming"),
-			array("https://www.reddit.com/r/talesfromtechsupport",	"talesfromtechsupport"),
-			array("https://www.reddit.com/r/learnprogramming",		"learnprogramming"),
-		),
-		array("female", "woman", "women", "girl", "she", "her"),
-	),
-	array(
-		"feminist",
-		array(
-			array("https://www.reddit.com/r/shitredditsays",	"shitredditsays"),
-			array("https://www.reddit.com/r/feminism",			"feminism"),
-			array("https://www.reddit.com/r/TwoXChromosomes",	"TwoXChromosomes"),
-		),
-		array("tech", "comput"),
-	),
-	array(
-		"antiFeminist",
-		array(
-			array("https://www.reddit.com/r/TumblrInAction",	"TumblrInAction"),
-			array("https://www.reddit.com/r/MensRights",		"MensRights"),
-			array("https://www.reddit.com/r/TheRedPill",		"TheRedPill"),
-		),
-		array("tech", "comput"),
-	)
-);
+
+
+
+
+$site_num = array_key_exists("num", $_GET) ? $_GET['num'] : 1;
+$site_num = ($site_num > 0 && $site_num < 21) ? $site_num : 1;
+$site_counter = 0;
+
 
 foreach ($subreddits as $subredditKind) {
 	$nameKind = $subredditKind[0];
@@ -98,83 +68,113 @@ foreach ($subreddits as $subredditKind) {
 	//print_array($subredditFilters, "subredditFilters");
 
 	foreach ($subreddits as $subreddit) {
-		$subredditURL = $subreddit[0];
-		$subredditName = $subreddit[1];
-		$datapath_subreddit = "$datapath/$nameKind-$subredditName";
-		$filenamepath = "$datapath_subreddit/$subredditName.html";
+		$site_counter++;
+		if($site_counter == $site_num) {
+			$subredditURL = $subreddit[0];
+			$subredditName = $subreddit[1];
+			$datapath_subreddit = "$datapath/$nameKind-$subredditName";
+			$filenamepath = "$datapath_subreddit/$subredditName.html";
 
-		// create subreddit dir
-		mkdir($datapath_subreddit, 0777, true);
-
-
-		// get contents
-		$contents = file_get_contents($subredditURL);
-
-		// replace shortened urls
-		$contents_edited = replace_shortened_urls($contents);
-		//echo $contents_edited; die();
-
-		// put contents into file
-		file_put_contents($filenamepath, $contents_edited);
+			// create subreddit dir
+			if (!file_exists($datapath_subreddit)) {
+				mkdir($datapath_subreddit, 0777, true);
+			}
 
 
-		// search for keywords in each post
-		$pattern_keyword = '/<a class="title[^>]*>([^<]*and[^<]*)+<\/a>/i';
-		$matches_keywords_all = array();
-		preg_match_all($pattern_keyword, $contents_edited, $matches_keywords_all);
-		//print_array($matches_keywords_all, "matches_keywords_all");
-		$matches_keywords_links = $matches_keywords_all[0];
-		//print_array($matches_keywords_links, "matches_keywords_links");
-		$matches_keywords_names = $matches_keywords_all[1];
-		//print_array($matches_keywords_names, "matches_keywords_names");
-
-		// get url for matches
-		$pattern_url = '/href="([^"]*)"/i';
-		$matches_urlsnames = array();
-		foreach($matches_keywords_links as $key => $match) {
-			// get raw url
-			preg_match_all($pattern_url, $match, $match_url);
-			$matches_urlsnames[$key]["url"] = substr($match_url[0][0], 6, -1);
-
-			// get name
-			$matches_urlsnames[$key]["name"] = $matches_keywords_names[$key];
-		}
-		//print_array($matches_urlsnames, "matches_urlsnames"); //die();
-
-		// follow links, save content of page
-		foreach($matches_urlsnames as $key => $match_urlname) {
-			// create name and path for new match
-			$match_normal_name = substr(preg_replace(array("/\s/", '/[^A-Za-z0-9\-\_]/'), array("_", ''), $match_urlname["name"]), 0, 30);
-			$datapath_subreddit_match = "$datapath_subreddit/$match_normal_name";
-
-			// create folder for this keyword match
-			mkdir($datapath_subreddit_match, 0777, true);
-
-			// get contents of keyword matches
-			$contents = file_get_contents($match_urlname["url"]);
+			// get contents
+			$contents = file_get_contents($subredditURL);
 
 			// replace shortened urls
-			$contents = replace_shortened_urls($contents);
+			$contents_edited = replace_shortened_urls($contents);
 
-			// put keyword contents into file
-			$matchnamepath = "$datapath_subreddit_match/$match_normal_name"."___LINK.html";
-			file_put_contents($matchnamepath, $contents);
+			// put contents into file
+			file_put_contents($filenamepath, $contents_edited);
 
-			echo "$match_normal_name done<br/>";
-		}
+			echo "$nameKind-$subredditName success<br/>";
 
 
+			// search for keywords in each post
+			// get each post
+			if($COLLECT_KEYWORD_POSTS) {
+
+				$html = str_get_html($contents_edited);
+				foreach($html->find('div') as $div) {
+				    if( isset($div->attr['class']) && preg_match('/entry unvoted/', $div->attr['class']) ) {
+						//echo "-------------------- POST FOUND ----------------------<br/>";
+						$post = $div;
+						$post_string = $div->outertext;
+						//echo $post_string . "\n";
+
+						// get post name
+						preg_match_all('/<a class="title[^>]*>([^<])+<\/a>/i', $post_string, $post_anchors_names);
+						//print_array($post_anchors_names, "post_anchors_names");
+						$post_anchor = $post_anchors_names[0][0];
+						preg_match_all( '/>[^<]*<\/a>/', $post_anchor, $post_names );
+						//print_array($post_names, "post_names");
+						$post_name = substr($post_names[0][0], 1, -6);
+						//echo "post_name: $post_name <br/>";
+
+						// create normalized name
+						$post_name_normalized = substr(preg_replace(array("/\s/", '/[^A-Za-z0-9\-\_]/'), array("_", ''), $post_name), 0, 30);
+						//echo "post_name_normalized: $post_name_normalized <br/>";
+
+						// get dir path
+						$datapath_post = "$datapath_subreddit/$post_name_normalized";
+						//echo "datapath_post: $datapath_post <br/>";
+
+						// get post url
+						preg_match_all('/href="([^"]*)"/i', $post_anchor, $post_anchor_urls);
+						$post_url = substr($post_anchor_urls[0][0], 6, -1);
+						//echo "post_url: $post_url <br/>";
+
+						// get comments url
+						preg_match_all( '/<a[^>]*>.{0,9}comment[^<]*<\/a>/i', $post_string, $post_comments );
+						preg_match_all( '/href="[^"]*"/i', $post_comments[0][0], $post_comment_urls );
+						$post_comment_url = substr($post_comment_urls[0][0], 6, -1);
+						//echo "post_comment_url: $post_comment_url <br/>";
+
+						// CHECK FOR KEYWORD matches
+						$found_match = 0;
+						foreach($subredditFilters as $keyword) {
+							//$keyword = "and";
+							if( preg_match_all('/'.$keyword.'/i', $post_name) > 0) {
+								$found_match++;
+								echo "match: $keyword<br/>";
+							}
+						}
+
+						if($found_match > 0) {
+							//echo "-------------------- KEYWORDS FOUND ----------------------<br/>";
+
+							// create folder for this keyword match
+							mkdir($datapath_post, 0777, true);
 
 
+							// get post's contents
+							$post_link_contents = file_get_contents($post_url);
+							$post_link_contents = replace_shortened_urls($post_link_contents);
+							$post_link_filename = "$datapath_post/$post_name_normalized"."___LINK.html";
+							file_put_contents($post_link_filename, $post_link_contents);
 
+							// get post's comments
+							$post_contents_comments = file_get_contents($post_comment_url);
+							$post_contents_comments = replace_shortened_urls($post_contents_comments);
+							$post_comments_filename = "$datapath_post/$post_name_normalized"."___COMMENTS.html";
+							file_put_contents($post_comments_filename, $post_contents_comments);
 
-		/*
-		<p class="title">
-			<a class="title may-blank " href="http://reddit.com/r/funny/comments/5400s1/my_dad_is_claustrophobic_and_needs_to_have_an_mri/" tabindex="1" rel="">My dad is claustrophobic and needs to have an MRI scan. He's practicing.</a>
-*/
+							//echo "$post_name_normalized ----- link and comments done<br/>";
+							echo "$post_name ----- link and comments done<br/>";
+							echo "<br/><br/>";
+						}
 
-		echo "$subredditName success<br/>";
-		break;
-	}
-	break;
-}
+						//echo "<br/><br/>";
+
+				    }
+				} // END -- foreach($html->find('div') as $div)
+
+			} // END -- if($COLLECT_KEYWORD_POSTS)
+
+		} // END -- if($site_counter == $site_num)
+
+	} // END -- foreach ($subreddits as $subreddit)
+} // END -- foreach ($subreddits as $subredditKind)
