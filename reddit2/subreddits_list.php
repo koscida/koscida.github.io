@@ -1,5 +1,17 @@
 <?php
 
+$subreddit_filters_female = array(
+	"female", "she", "\sher\s", "\shers\s",
+	"woman", "women", "girl",
+	"femini",
+	"sister", "wife", "daughter", "\sson\s", "husband", "brother",);
+$subreddit_filters_tech = array(
+	"tech", "comput",
+	"phone", "cell",
+	"desktop", "laptop", "tower", "monitor",
+	"\scs\s", "comp sci", "program", "code");
+$subreddit_filters_both = array_merge($subreddit_filters_female, $subreddit_filters_tech);
+
 $subreddits = array(
 	array(	// 7 - 7
 		"general",
@@ -12,10 +24,7 @@ $subreddits = array(
 			array("https://www.reddit.com/r/pics", 			"pics"),
 			array("https://www.reddit.com/r/bestof",		"bestof"),
 		),
-		array(
-			"female", "woman", "women", "girl", "she", " her",
-			"tech", "comput", "phone", "cell", "desktop",
-		),
+		$subreddit_filters_both,
 	),
 	array(	// 3 - 10
 		"feminineCentric",
@@ -24,7 +33,7 @@ $subreddits = array(
 			array("https://www.reddit.com/r/skincareaddiction",		"skincareaddiction"),
 			array("https://www.reddit.com/r/femalefashionadvice",	"femalefashionadvice"),
 		),
-		array("tech", "comput", "phone", "cell", "desktop", ),
+		$subreddit_filters_tech,
 	),
 	array(	// 4 - 14
 		"technology",
@@ -34,7 +43,7 @@ $subreddits = array(
 			array("https://www.reddit.com/r/talesfromtechsupport",	"talesfromtechsupport"),
 			array("https://www.reddit.com/r/learnprogramming",		"learnprogramming"),
 		),
-		array("female", "woman", "women", "girl", "she", " her"),
+		$subreddit_filters_female,
 	),
 	array(	// 3 - 17
 		"feminist",
@@ -43,7 +52,7 @@ $subreddits = array(
 			array("https://www.reddit.com/r/feminism",			"feminism"),
 			array("https://www.reddit.com/r/TwoXChromosomes",	"TwoXChromosomes"),
 		),
-		array("tech", "comput", "phone", "cell", "desktop", ),
+		$subreddit_filters_tech,
 	),
 	array(	// 3 - 20
 		"antiFeminist",
@@ -52,6 +61,6 @@ $subreddits = array(
 			array("https://www.reddit.com/r/MensRights",		"MensRights"),
 			array("https://www.reddit.com/r/TheRedPill",		"TheRedPill"),
 		),
-		array("tech", "comput", "phone", "cell", "desktop", ),
+		$subreddit_filters_tech,
 	)
 );

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<?php
@@ -75,7 +75,6 @@ foreach ($subreddits as $subredditKind) {
 <script>
 	var ajaxQueue = [];
 
-
 	$(function () {
 	    $('form').on('submit', function (e) {
 			e.preventDefault();
@@ -83,6 +82,7 @@ foreach ($subreddits as $subredditKind) {
 			if($(this).attr("id") == "get_all") {
 				$("#all").attr("disabled", "disabled");
 				$("#stop").removeAttr("disabled");
+				$(".feedback").text("");
 
 				var totalSec = new Date().getTime() / 1000;
 				var hours = parseInt( totalSec / 3600 ) % 24;
@@ -100,6 +100,7 @@ foreach ($subreddits as $subredditKind) {
 				startAjaxQueue();
 			} else {
 				var feedback_id = "#feedback_"+$(this).attr("data-num");
+				$(feedback_id).text("");
 				sendAjax($(this).attr('action'), $(this).serialize(), feedback_id);
 			}
 		});
@@ -129,15 +130,49 @@ foreach ($subreddits as $subredditKind) {
 				completeAjax(feedback_id, "...sending...");
 			},
 			complete : function(data){
-				completeAjax(feedback_id, data["responseText"]);
+				completeAjax(feedback_id, processCompleteResponse(data["responseText"]));
 				console.log(data);
 				startAjaxQueue();
 			}
 		});
 	}
 
+	function processCompleteResponse(json) {
+		console.log(json);
+		console.log(json.datapath);
+		console.log(json.keywords);
+		console.log(json.matches);
+		var html = ''
+			+	'<div class="path">'
+			+		'<a href="' + json.datapath + '">' + json.datapath + '</a>'
+			+	'</div>'
+			+	'<div class="keywords">'
+			+		'<div>Keywords Found: ' + json.keywords + '</div>'
+			+	'</div>'
+			+	'<div class="matches">'
+			+		'<div>Matches: '+json.matches+'</div>'
+			+	'</div>'
+			+ '';
+		return html;
+	}
+	/*{
+	"subredditName":"frontpage",
+	"subredditKind":"general",
+	"datapath":"data\/2016-10-01\/22-43-51\/general-frontpage",
+	"status_subreddit":"complete",
+	"status_comments":"none",
+	"keywords":["women","\\sher\\s"],
+	"match":[{
+			"postName":"I'm wondering if gay guys and women both like the same qualities in me",
+			"postNameNormalized":"Im_wondering_if_gay_guys_and_w"
+		},{
+			"postName":"This Special Ed Teacher Had All of Her Students in Her Weddi",
+			"postNameNormalized":"This_Special_Ed_Teacher_Had_Al"
+		}]
+	}*/
+
 	function completeAjax(div_id, msg) {
-		$(div_id).text(msg);
+		$(div_id).html(msg);
 	}
 
 </script>
