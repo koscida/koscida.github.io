@@ -11,13 +11,13 @@
 			margin: 0 10px 20px;
 			overflow: hidden;
 		}
-		p {
+		.subreddit p {
 			margin: 0;
 			width: 10%;
 			display: inline-block;
 			float: left;
 		}
-		form {
+		.subreddit form {
 			width: 5%;
 			display: inline-block;
 			float: left;
@@ -31,6 +31,17 @@
 			display: inline-block;
 			float: left;
 			background: pink;
+			padding: 5px;
+			box-sizing: border-box;
+		}
+		.path {
+			margin: 0 0 10px;
+		}
+		.match {
+			padding: 1px 5px;
+			margin: 0 0 10px;
+			border: 1px solid grey;
+			box-sizing: border-box;
 		}
 	 </style>
 </head>
@@ -85,7 +96,7 @@ foreach ($subreddits as $subredditKind) {
 				$(".feedback").text("");
 
 				var totalSec = new Date().getTime() / 1000;
-				var hours = parseInt( totalSec / 3600 ) % 24;
+				var hours = parseInt( totalSec / 3600 ) % 24 - 6;
 				var minutes = parseInt( totalSec / 60 ) % 60;
 				var seconds = parseInt(totalSec % 60, 10);
 				var time = hours+"-"+minutes+"-"+seconds;
@@ -117,6 +128,9 @@ foreach ($subreddits as $subredditKind) {
 			var a = [ajaxQueue[0][0], ajaxQueue[0][1], ajaxQueue[0][2]];
 			ajaxQueue = ajaxQueue.slice(1, ajaxQueue.length);
 			sendAjax(a[0], a[1], a[2]);
+		} else {
+			$("#all").attr("disabled", "disabled");
+			$("#stop").removeAttr("disabled");
 		}
 	}
 
@@ -126,50 +140,42 @@ foreach ($subreddits as $subredditKind) {
 			cache	: false,
 			url		: url,
 			data	: form_data,
+			dataType: 'json',
 			beforeSend : function() {
 				completeAjax(feedback_id, "...sending...");
 			},
 			complete : function(data){
 				completeAjax(feedback_id, processCompleteResponse(data["responseText"]));
-				console.log(data);
+				//console.log(data);
 				startAjaxQueue();
 			}
 		});
 	}
 
-	function processCompleteResponse(json) {
+	function processCompleteResponse(jsonStr) {
+		var json = $.parseJSON(jsonStr);
 		console.log(json);
-		console.log(json.datapath);
-		console.log(json.keywords);
-		console.log(json.matches);
+
 		var html = ''
 			+	'<div class="path">'
-			+		'<a href="' + json.datapath + '">' + json.datapath + '</a>'
-			+	'</div>'
-			+	'<div class="keywords">'
-			+		'<div>Keywords Found: ' + json.keywords + '</div>'
-			+	'</div>'
-			+	'<div class="matches">'
-			+		'<div>Matches: '+json.matches+'</div>'
-			+	'</div>'
-			+ '';
+			+		'<a href="' + json.subredditFile + '" target="_blank">' + json.subredditFile + '</a>'
+			+	'</div>';
+			if(json.matchFound) {
+				html += '<div class="matches">';
+				for(var i=0; i<json.matches.length; i++) {
+					html += ''
+					+	'<div class="match">'
+					+		'<div>Keywords: ' + json.matches[i].keywords + '</div>'
+					+		'<div>Name: ' + json.matches[i].postName + '</div>'
+					+		'<div>Post link: <a href="' + json.matches[i].datapathPostLink + '" target="_blank">' + json.matches[i].datapathPostLink + '</a></div>'
+					+		'<div>Post comments: <a href="' + json.matches[i].datapathPostComments + '" target="_blank">' + json.matches[i].datapathPostComments + '</a></div>'
+					+	'</div>'
+					+ '';
+				}
+				html += '</div>';
+			}
 		return html;
 	}
-	/*{
-	"subredditName":"frontpage",
-	"subredditKind":"general",
-	"datapath":"data\/2016-10-01\/22-43-51\/general-frontpage",
-	"status_subreddit":"complete",
-	"status_comments":"none",
-	"keywords":["women","\\sher\\s"],
-	"match":[{
-			"postName":"I'm wondering if gay guys and women both like the same qualities in me",
-			"postNameNormalized":"Im_wondering_if_gay_guys_and_w"
-		},{
-			"postName":"This Special Ed Teacher Had All of Her Students in Her Weddi",
-			"postNameNormalized":"This_Special_Ed_Teacher_Had_Al"
-		}]
-	}*/
 
 	function completeAjax(div_id, msg) {
 		$(div_id).html(msg);

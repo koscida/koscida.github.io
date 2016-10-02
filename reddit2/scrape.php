@@ -9,8 +9,6 @@ include "subreddits_list.php";
 
 
 $COLLECT_ALL = true;
-$COLLECT_KEYWORD_POSTS = true;
-
 
 
 function print_array($arr, $name = null) {
@@ -62,6 +60,14 @@ $site_counter = 0;
 
 // the array that will get turned into json and returned
 $result = array();
+$result["status_subreddit"] = "incomplete";
+$result["subredditName"] = "";
+$result["subredditKind"] = "";
+$result["datapath"] = "";
+$result["subredditFile"] = "";
+$result["matchFound"] = false;
+$result["matches"] = "";
+//echo json_encode($result); die();
 
 
 foreach ($subreddits as $subredditKind) {
@@ -72,6 +78,7 @@ foreach ($subreddits as $subredditKind) {
 
 	foreach ($subreddits as $subreddit) {
 		$site_counter++;
+
 		if($site_counter == $site_num) {
 			$subredditURL = $subreddit[0];
 			$subredditName = $subreddit[1];
@@ -81,6 +88,7 @@ foreach ($subreddits as $subredditKind) {
 			$result["subredditName"] = $subredditName;
 			$result["subredditKind"] = $nameKind;
 			$result["datapath"] = $datapath_subreddit;
+			$result["subredditFile"] = $filenamepath;
 
 			// create subreddit dir
 			if (!file_exists($datapath_subreddit)) {
@@ -89,103 +97,104 @@ foreach ($subreddits as $subredditKind) {
 
 
 			// get contents
-			$contents = file_get_contents($subredditURL);
+			$contents = @file_get_contents($subredditURL);
 
 			// replace shortened urls
 			$contents_edited = replace_shortened_urls($contents);
 
 			// put contents into file
-			file_put_contents($filenamepath, $contents_edited);
+			@file_put_contents($filenamepath, $contents_edited);
 
 			//echo "$nameKind-$subredditName success<br/>";
 			$result["status_subreddit"] = "complete";
 
 
-			// search for keywords in each post
-			// get each post
-			if($COLLECT_KEYWORD_POSTS) {
+			$post_needle = '/<div class=" thing.{1,3500}<div class="clearleft"><\/div><\/div><div class="clearleft"><\/div>/i';
+			preg_match_all($post_needle, $contents_edited, $posts_all);
+			$posts = $posts_all[0];
+			foreach($posts as $key => $post_string) {
 
-				$html = str_get_html($contents_edited);
-				foreach($html->find('div') as $div) {
-				    if( isset($div->attr['class']) && preg_match('/entry unvoted/', $div->attr['class']) ) {
-						//echo "-------------------- POST FOUND ----------------------<br/>";
-						$post = $div;
-						$post_string = $div->outertext;
-						//echo $post_string . "\n";
+				// get post name
+				preg_match_all('/<a class="title[^>]*>([^<])+<\/a>/i', $post_string, $post_anchors_names);
+				//print_array($post_anchors_names, "post_anchors_names");
+				$post_anchor = $post_anchors_names[0][0];
+				preg_match_all( '/>[^<]*<\/a>/', $post_anchor, $post_names );
+				//print_array($post_names, "post_names");
+				$post_name = substr($post_names[0][0], 1, -6);
+				//echo "post_name: $post_name <br/>";
 
-						// get post name
-						preg_match_all('/<a class="title[^>]*>([^<])+<\/a>/i', $post_string, $post_anchors_names);
-						//print_array($post_anchors_names, "post_anchors_names");
-						$post_anchor = $post_anchors_names[0][0];
-						preg_match_all( '/>[^<]*<\/a>/', $post_anchor, $post_names );
-						//print_array($post_names, "post_names");
-						$post_name = substr($post_names[0][0], 1, -6);
-						//echo "post_name: $post_name <br/>";
+				// create normalized name
+				$post_name_normalized = substr(preg_replace(array("/\s/", '/[^A-Za-z0-9\-\_]/'), array("_", ''), $post_name), 0, 30);
+				//echo "post_name_normalized: $post_name_normalized <br/>";
 
-						// create normalized name
-						$post_name_normalized = substr(preg_replace(array("/\s/", '/[^A-Za-z0-9\-\_]/'), array("_", ''), $post_name), 0, 30);
-						//echo "post_name_normalized: $post_name_normalized <br/>";
+				// get dir path
+				$datapath_post = "$datapath_subreddit/$post_name_normalized";
+				//echo "datapath_post: $datapath_post <br/>";
 
-						// get dir path
-						$datapath_post = "$datapath_subreddit/$post_name_normalized";
-						//echo "datapath_post: $datapath_post <br/>";
+				// get post url
+				preg_match_all('/href="([^"]*)"/i', $post_anchor, $post_anchor_urls);
+				$post_url = substr($post_anchor_urls[0][0], 6, -1);
+				//echo "post_url: $post_url <br/>";
 
-						// get post url
-						preg_match_all('/href="([^"]*)"/i', $post_anchor, $post_anchor_urls);
-						$post_url = substr($post_anchor_urls[0][0], 6, -1);
-						//echo "post_url: $post_url <br/>";
+				// get comments url
+				preg_match_all( '/<a[^>]*>.{0,9}comment[^<]*<\/a>/i', $post_string, $post_comments );
+				preg_match_all( '/href="[^"]*"/i', $post_comments[0][0], $post_comment_urls );
+				$post_comment_url = substr($post_comment_urls[0][0], 6, -1);
+				//echo "post_comment_url: $post_comment_url <br/>";
 
-						// get comments url
-						preg_match_all( '/<a[^>]*>.{0,9}comment[^<]*<\/a>/i', $post_string, $post_comments );
-						preg_match_all( '/href="[^"]*"/i', $post_comments[0][0], $post_comment_urls );
-						$post_comment_url = substr($post_comment_urls[0][0], 6, -1);
-						//echo "post_comment_url: $post_comment_url <br/>";
-
-						// CHECK FOR KEYWORD matches
-						$found_match = 0;
-						$result["keywords"] = "";
-						foreach($subredditFilters as $keyword) {
-							//$keyword = "and";
-							if( preg_match_all('/'.$keyword.'/i', $post_name) > 0) {
-								$found_match++;
-								//echo "match: $keyword<br/>";
-								$result["keywords"][] = $keyword;
-							}
-						}
-
-						$result["matches"] = "";
-						if($found_match > 0) {
-							//echo "-------------------- KEYWORDS FOUND ----------------------<br/>";
-
-							// create folder for this keyword match
-							mkdir($datapath_post, 0777, true);
-
-							// get post's contents
-							$post_link_contents = file_get_contents($post_url);
-							$post_link_contents = replace_shortened_urls($post_link_contents);
-							$post_link_filename = "$datapath_post/$post_name_normalized"."___LINK.html";
-							file_put_contents($post_link_filename, $post_link_contents);
-
-							// get post's comments
-							$post_contents_comments = file_get_contents($post_comment_url);
-							$post_contents_comments = replace_shortened_urls($post_contents_comments);
-							$post_comments_filename = "$datapath_post/$post_name_normalized"."___COMMENTS.html";
-							file_put_contents($post_comments_filename, $post_contents_comments);
-
-							//echo "$post_name_normalized ----- link and comments done<br/>";
-							//echo "$post_name ----- link and comments done<br/>";
-							//echo "<br/><br/>";
-							$result["matches"][] = array("postName" => $post_name, "postNameNormalized" => $post_name_normalized);
-						}
+				// CHECK FOR KEYWORD matches
+				$found_match = 0;
+				$keywords_found = "";
+				foreach($subredditFilters as $keyword) {
+					//$keyword = "and";
+					if( preg_match_all('/'.$keyword.'/i', $post_name) > 0) {
+						$found_match++;
+						//echo "match: $keyword<br/>";
+						$keywords_found .= "$keyword &nbsp;";
+					}
+				}
 
 
-						//echo "<br/><br/>";
+				if($found_match > 0) {
+					//echo "-------------------- KEYWORDS FOUND ----------------------<br/>";
+					$result["matchFound"] = true;
 
-				    }
-				} // END -- foreach($html->find('div') as $div)
+					// create folder for this keyword match
+					mkdir($datapath_post, 0777, true);
 
-			} // END -- if($COLLECT_KEYWORD_POSTS)
+					// get post's contents
+					$post_link_contents = @file_get_contents($post_url);
+					if(!$post_link_contents) {
+						$result["matchFoundError"] = true;
+						return;
+					}
+					$post_link_contents = replace_shortened_urls($post_link_contents);
+					$post_link_filename = "$datapath_post/$post_name_normalized"."___LINK.html";
+					@file_put_contents($post_link_filename, $post_link_contents);
 
+					// get post's comments
+					$post_contents_comments = @file_get_contents($post_comment_url);
+					$post_contents_comments = replace_shortened_urls($post_contents_comments);
+					$post_comments_filename = "$datapath_post/$post_name_normalized"."___COMMENTS.html";
+					@file_put_contents($post_comments_filename, $post_contents_comments);
+
+					//echo "$post_name_normalized ----- link and comments done<br/>";
+					//echo "$post_name ----- link and comments done<br/>";
+					//echo "<br/><br/>";
+					$result["matches"][] = array(
+						"keywords" => $keywords_found,
+						"postName" => $post_name,
+						"datapathPostLink" => $post_link_filename,
+						"datapathPostComments" => $post_comments_filename
+					);
+
+					//echo "end if(found_match > 0)<br/>";
+				} // END -- if($found_match > 0)
+
+				//echo "foreach(posts as key => post_string)<br/>";
+			} // END -- foreach($posts as $key => $post_string)
+
+			//echo "end if(site_counter == site_num)<br/>";
 		} // END -- if($site_counter == $site_num)
 
 	} // END -- foreach ($subreddits as $subreddit)
