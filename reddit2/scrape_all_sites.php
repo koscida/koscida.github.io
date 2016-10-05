@@ -48,12 +48,10 @@
 <body>
 
 	<div class="subreddit">
-		<form id="get_all" action="" data-num="">
-			<button id="all">GET ALL</button>
-			<button id="stop" disabled="disabled">STOP</button>
-			<input type="text" id="time"/>
-			<button id="startAjaxQueue">startAjaxQueue</button>
-		</form>
+		<button id="get_all">GET ALL</button>
+		<button id="stop" disabled="disabled">STOP</button>
+		<input type="text" id="time"/>
+		<button id="startAjaxQueue">startAjaxQueue</button>
 	</div>
 
 <?php
@@ -72,7 +70,7 @@ foreach ($subreddits as $subredditKind) {
 			<div class="subreddit">
 				<p><?php echo $subredditName;?></p>
 				<form action="scrape.php?num=<?php echo $site_counter;?>" data-num="<?php echo $site_counter;?>" id="form_<?php echo $site_counter;?>">
-					<button>Get Info</button>
+					<button class="add_to_queue">Add to Queue</button>
 				</form>
 				<div id="feedback_<?php echo $site_counter;?>" class="feedback"></div>
 			</div>
@@ -89,53 +87,73 @@ foreach ($subreddits as $subredditKind) {
 	var ajaxQueue = [];
 
 	$(function () {
+	
+		// get single subreddit
 	    $('form').on('submit', function (e) {
 			e.preventDefault();
 
-			if($(this).attr("id") == "get_all") {
-				$("#all").attr("disabled", "disabled");
-				$("#stop").removeAttr("disabled");
-				$(".feedback").text("");
-
-				var time = "";
-				if(!$("#time").val()) {
-					var totalSec = new Date().getTime() / 1000;
-					var hours = parseInt( totalSec / 3600 ) % 24 - 6;
-					var minutes = parseInt( totalSec / 60 ) % 60;
-					var seconds = parseInt(totalSec % 60, 10);
-					time = hours+"-"+minutes+"-"+seconds;
-				} else {
-					time = $("#time").val();
-				}
-
-
-				for(var i=1; i<21; i++) {
-					var url = "scrape.php?num="+i+"&time="+time;
-					var form_data = $("#form_"+i).serialize();
-					var feedback_id = "#feedback_"+i;
-					ajaxQueue.push([url, form_data, feedback_id]);
-				}
-				startAjaxQueue();
+			console.log("indiv pressed");
+			
+			$(feedback_id).text("");
+			
+			var id = $(this).attr("data-num");
+			var feedback_id = "#feedback_"+id;
+			
+			var url = "";
+			if(!$("#time").val()) {
+				url = "scrape.php?num="+id;
 			} else {
-				$(feedback_id).text("");
-				var id = $(this).attr("data-num");
-				var feedback_id = "#feedback_"+id;
 				var time = $("#time").val();
-				var url = "scrape.php?num="+id+"&time="+time;
-				var form_data = $(this).serialize();
-				ajaxQueue.push([url, form_data, feedback_id]);
-				//sendAjax(url, $(this).serialize(), feedback_id);
+				url = "scrape.php?num="+id+"&time="+time;
 			}
+			
+			var form_data = $(this).serialize();
+			
+			ajaxQueue.push([url, form_data, feedback_id]);
 		});
+		
+		// get all
+		$("#get_all").bind( "click", function(event) {
+			console.log("get all pressed");
+			
+			$("#all").attr("disabled", "disabled");
+			$("#stop").removeAttr("disabled");
+			$(".feedback").text("");
+
+			var time = "";
+			if(!$("#time").val()) {
+				var totalSec = new Date().getTime() / 1000;
+				var hours = parseInt( totalSec / 3600 ) % 24 - 6;
+				var minutes = parseInt( totalSec / 60 ) % 60;
+				var seconds = parseInt(totalSec % 60, 10);
+				time = hours+"-"+minutes+"-"+seconds;
+			} else {
+				time = $("#time").val();
+			}
+
+			for(var i=1; i<21; i++) {
+				var url = "scrape.php?num="+i+"&time="+time;
+				var form_data = $("#form_"+i).serialize();
+				var feedback_id = "#feedback_"+i;
+				ajaxQueue.push([url, form_data, feedback_id]);
+			}
+			
+			startAjaxQueue();
+		});
+		
+		// stop ajax queue
 		$("#stop").bind( "click", function(event) {
 			event.preventDefault();
 			ajaxQueue = [];
 			$("#stop").attr("disabled", "disabled");
 			$("#all").removeAttr("disabled");
 		});
+		
+		// start ajax queue
 		$("#startAjaxQueue").bind( "click", function(event) {
 			startAjaxQueue();
 		});
+		
 	});
 
 	function startAjaxQueue() {
@@ -161,39 +179,50 @@ foreach ($subreddits as $subredditKind) {
 			},
 			complete : function(data){
 				startAjaxQueue();
+				console.log(data);
 				completeAjax(feedback_id, processCompleteResponse(data["responseText"]));
-				//console.log(data);
 			}
 		});
 	}
-</script>
-<script>
+	
 	function processCompleteResponse(jsonStr) {
-		var json = $.parseJSON(jsonStr);
-		console.log(json);
+		if(isJSON(jsonStr)) {
+			var json = $.parseJSON(jsonStr);
+			console.log(json);
 
-		var html = ''
-			+	'<div class="path">'
-			+		'<a href="' + json.subredditFile + '" target="_blank">' + json.subredditFile + '</a>'
-			+	'</div>';
-			if(json.matchFound) {
-				html += '<div class="matches">';
-				for(var i=0; i<json.matches.length; i++) {
-					html += ''
-					+	'<div class="match">'
-					+		'<div>Keywords: ' + json.matches[i].keywords + '</div>'
-					+		'<div>Name: ' + json.matches[i].postName + '</div>'
-					+		'<div>Post link: <a href="' + json.matches[i].datapathPostLink + '" target="_blank">' + json.matches[i].datapathPostLink + '</a></div>'
-					+		'<div>Post comments: <a href="' + json.matches[i].datapathPostComments + '" target="_blank">' + json.matches[i].datapathPostComments + '</a></div>'
-					+	'</div>'
-					+ '';
+			var html = ''
+				+	'<div class="path">'
+				+		'<a href="' + json.subredditFile + '" target="_blank">' + json.subredditFile + '</a>'
+				+	'</div>';
+				if(json.matchFound) {
+					html += '<div class="matches">';
+					for(var i=0; i<json.matches.length; i++) {
+						html += ''
+						+	'<div class="match">'
+						+		'<div>Keywords: ' + json.matches[i].keywords + '</div>'
+						+		'<div>Name: ' + json.matches[i].postName + '</div>'
+						+		'<div>Post link: <a href="' + json.matches[i].datapathPostLink + '" target="_blank">' + json.matches[i].datapathPostLink + '</a></div>'
+						+		'<div>Post comments: <a href="' + json.matches[i].datapathPostComments + '" target="_blank">' + json.matches[i].datapathPostComments + '</a></div>'
+						+	'</div>'
+						+ '';
+					}
+					html += '</div>';
 				}
-				html += '</div>';
-			}
-		return html;
+			return html;
+		} else {
+			return "malformed json";
+		}
 	}
-</script>
-<script>
+	
+	function isJSON(str) {
+		try {
+			JSON.parse(str);
+		} catch (e) {
+    		return false;
+    	}
+    	return true;
+	}
+	
 	function completeAjax(div_id, msg) {
 		$(div_id).html(msg);
 	}

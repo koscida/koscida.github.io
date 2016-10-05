@@ -213,3 +213,4 @@ foreach ($subreddits as $subredditKind) {
 } // END -- foreach ($subreddits as $subredditKind)
 
 echo json_encode($result);
+
