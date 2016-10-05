@@ -51,6 +51,8 @@
 		<form id="get_all" action="" data-num="">
 			<button id="all">GET ALL</button>
 			<button id="stop" disabled="disabled">STOP</button>
+			<input type="text" id="time"/>
+			<button id="startAjaxQueue">startAjaxQueue</button>
 		</form>
 	</div>
 
@@ -95,11 +97,16 @@ foreach ($subreddits as $subredditKind) {
 				$("#stop").removeAttr("disabled");
 				$(".feedback").text("");
 
-				var totalSec = new Date().getTime() / 1000;
-				var hours = parseInt( totalSec / 3600 ) % 24 - 6;
-				var minutes = parseInt( totalSec / 60 ) % 60;
-				var seconds = parseInt(totalSec % 60, 10);
-				var time = hours+"-"+minutes+"-"+seconds;
+				var time = "";
+				if(!$("#time").val()) {
+					var totalSec = new Date().getTime() / 1000;
+					var hours = parseInt( totalSec / 3600 ) % 24 - 6;
+					var minutes = parseInt( totalSec / 60 ) % 60;
+					var seconds = parseInt(totalSec % 60, 10);
+					time = hours+"-"+minutes+"-"+seconds;
+				} else {
+					time = $("#time").val();
+				}
 
 
 				for(var i=1; i<21; i++) {
@@ -110,9 +117,14 @@ foreach ($subreddits as $subredditKind) {
 				}
 				startAjaxQueue();
 			} else {
-				var feedback_id = "#feedback_"+$(this).attr("data-num");
 				$(feedback_id).text("");
-				sendAjax($(this).attr('action'), $(this).serialize(), feedback_id);
+				var id = $(this).attr("data-num");
+				var feedback_id = "#feedback_"+id;
+				var time = $("#time").val();
+				var url = "scrape.php?num="+id+"&time="+time;
+				var form_data = $(this).serialize();
+				ajaxQueue.push([url, form_data, feedback_id]);
+				//sendAjax(url, $(this).serialize(), feedback_id);
 			}
 		});
 		$("#stop").bind( "click", function(event) {
@@ -120,6 +132,9 @@ foreach ($subreddits as $subredditKind) {
 			ajaxQueue = [];
 			$("#stop").attr("disabled", "disabled");
 			$("#all").removeAttr("disabled");
+		});
+		$("#startAjaxQueue").bind( "click", function(event) {
+			startAjaxQueue();
 		});
 	});
 
@@ -145,13 +160,14 @@ foreach ($subreddits as $subredditKind) {
 				completeAjax(feedback_id, "...sending...");
 			},
 			complete : function(data){
+				startAjaxQueue();
 				completeAjax(feedback_id, processCompleteResponse(data["responseText"]));
 				//console.log(data);
-				startAjaxQueue();
 			}
 		});
 	}
-
+</script>
+<script>
 	function processCompleteResponse(jsonStr) {
 		var json = $.parseJSON(jsonStr);
 		console.log(json);
@@ -176,11 +192,11 @@ foreach ($subreddits as $subredditKind) {
 			}
 		return html;
 	}
-
+</script>
+<script>
 	function completeAjax(div_id, msg) {
 		$(div_id).html(msg);
 	}
-
 </script>
 
 

@@ -8,8 +8,6 @@ include "simple_html_dom.php";
 include "subreddits_list.php";
 
 
-$COLLECT_ALL = true;
-
 
 function print_array($arr, $name = null) {
 	echo "<pre> $name: ".print_r($arr, true)."</pre>";
@@ -30,6 +28,18 @@ function replace_shortened_urls($contents) {
 	$contents_edited = str_replace($needle, $replace, $contents);
 	return $contents_edited;
 }
+
+function echo_and_die($error) {
+	$GLOBALS['result']["error"] = $error;
+	echo json_encode($GLOBALS['result']);
+	die();
+}
+
+function echo_and_dont_die($error) {
+	$GLOBALS['result']["error"] = $error;
+	echo json_encode($GLOBALS['result']);
+}
+
 
 
 
@@ -67,8 +77,7 @@ $result["datapath"] = "";
 $result["subredditFile"] = "";
 $result["matchFound"] = false;
 $result["matches"] = "";
-//echo json_encode($result); die();
-
+//echo_and_die("none");
 
 foreach ($subreddits as $subredditKind) {
 	$nameKind = $subredditKind[0];
@@ -98,12 +107,14 @@ foreach ($subreddits as $subredditKind) {
 
 			// get contents
 			$contents = @file_get_contents($subredditURL);
+			if(!$contents) echo_and_die("postGetContents_Error");
 
 			// replace shortened urls
 			$contents_edited = replace_shortened_urls($contents);
 
 			// put contents into file
-			@file_put_contents($filenamepath, $contents_edited);
+			$post_put = @file_put_contents($filenamepath, $contents_edited);
+			if(!$post_put) echo_and_die("postPutContents_Error");
 
 			//echo "$nameKind-$subredditName success<br/>";
 			$result["status_subreddit"] = "complete";
@@ -164,19 +175,19 @@ foreach ($subreddits as $subredditKind) {
 
 					// get post's contents
 					$post_link_contents = @file_get_contents($post_url);
-					if(!$post_link_contents) {
-						$result["matchFoundError"] = true;
-						return;
-					}
+					if(!$post_link_contents) echo_and_die("matchPostGetContents_Error");
 					$post_link_contents = replace_shortened_urls($post_link_contents);
 					$post_link_filename = "$datapath_post/$post_name_normalized"."___LINK.html";
-					@file_put_contents($post_link_filename, $post_link_contents);
+					$post_put_contents = @file_put_contents($post_link_filename, $post_link_contents);
+					if(!$post_put_contents) echo_and_die("matchPostPutContents_Error");
 
 					// get post's comments
 					$post_contents_comments = @file_get_contents($post_comment_url);
+					if(!$post_contents_comments) echo_and_die("matchCommentGetContents_Error");
 					$post_contents_comments = replace_shortened_urls($post_contents_comments);
 					$post_comments_filename = "$datapath_post/$post_name_normalized"."___COMMENTS.html";
-					@file_put_contents($post_comments_filename, $post_contents_comments);
+					$post_put_comments = @file_put_contents($post_comments_filename, $post_contents_comments);
+					if(!$post_put_comments) echo_and_die("matchPostPutComments_Error");
 
 					//echo "$post_name_normalized ----- link and comments done<br/>";
 					//echo "$post_name ----- link and comments done<br/>";
@@ -188,13 +199,14 @@ foreach ($subreddits as $subredditKind) {
 						"datapathPostComments" => $post_comments_filename
 					);
 
-					//echo "end if(found_match > 0)<br/>";
+					//echo_and_die("end if(found_match > 0)<br/>");
 				} // END -- if($found_match > 0)
 
-				//echo "foreach(posts as key => post_string)<br/>";
+				//echo_and_die("foreach(posts as key => post_string)<br/>");
+				//echo_and_dont_die("foreach(posts as key => post_string)<br/>");
 			} // END -- foreach($posts as $key => $post_string)
 
-			//echo "end if(site_counter == site_num)<br/>";
+			//echo_and_die("end if(site_counter == site_num)<br/>");
 		} // END -- if($site_counter == $site_num)
 
 	} // END -- foreach ($subreddits as $subreddit)
