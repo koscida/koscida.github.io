@@ -7,7 +7,7 @@ var toggled = false;
 var doit;
 
 window.onload = function() {
-	
+
 	//resize screen
 	window.addEventListener("resize", function (){
 		clearTimeout(doit);
@@ -20,10 +20,10 @@ window.onload = function() {
 		}, 1);
 	});
 	//windowResize();
-	
-	
-	
-	
+
+
+
+
 	addContactInfo();
 };
 
@@ -33,12 +33,14 @@ function windowResize() {
 	if(pageH <= (windowH-150) && window.innerWidth >= 767) {
 			document.getElementById("page").style.height = ( (windowH - 110) + "px");
 	}
-	
+
 }
 
 function addContactInfo() {
-	document.getElementById("brit_email").innerHTML = "brittany.kos [at] colorado [dot] edu";
-	document.getElementById("brit_phone").innerHTML = "720-270-5003";
+	if(document.getElementById("brit_email"))
+		document.getElementById("brit_email").innerHTML = "brittany.kos [at] colorado [dot] edu";
+	if(document.getElementById("brit_phone"))
+		document.getElementById("brit_phone").innerHTML = "720-270-5003";
 }
 
 

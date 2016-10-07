@@ -129,13 +129,15 @@ header {}
 #nav_expand {
 	display: inline-block;
 	float: right;
-	height: 54px;
+	padding: 4px 0;
 }
-#nav_expand img {
-	height: 30px;
-	width: 30px;
-	margin: 12px 0;
-}
+	#nav_expand span {
+		background: #E8E8E8;
+		height: 6px;
+		display: block;
+		margin: 7px 10px;
+		width: 40px;
+	}
 .nav_inner {
 	float: right;
 }
