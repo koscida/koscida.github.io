@@ -67,6 +67,7 @@ if (!file_exists($datapath)) {
 $site_num = array_key_exists("num", $_GET) ? $_GET['num'] : 1;
 $site_num = ($site_num > 0 && $site_num < 21) ? $site_num : 1;
 $site_counter = 0;
+$subreddit_list = array_key_exists("massive", $_GET) ? $subreddits_massive : $subreddits_v1;
 
 // the array that will get turned into json and returned
 $result = array();
@@ -79,7 +80,7 @@ $result["matchFound"] = false;
 $result["matches"] = "";
 //echo_and_die("none");
 
-foreach ($subreddits as $subredditKind) {
+foreach ($subreddit_list as $subredditKind) {
 	$nameKind = $subredditKind[0];
 	$subreddits = $subredditKind[1];
 	$subredditFilters = $subredditKind[2];
@@ -213,4 +214,3 @@ foreach ($subreddits as $subredditKind) {
 } // END -- foreach ($subreddits as $subredditKind)
 
 echo json_encode($result);
-
