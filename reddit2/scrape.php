@@ -9,10 +9,6 @@ include "subreddits_list.php";
 
 
 
-function print_array($arr, $name = null) {
-	echo "<pre> $name: ".print_r($arr, true)."</pre>";
-}
-
 function replace_shortened_urls($contents) {
 	// replace shortened urls
 	$needle = array(
@@ -28,6 +24,8 @@ function replace_shortened_urls($contents) {
 	$contents_edited = str_replace($needle, $replace, $contents);
 	return $contents_edited;
 }
+
+
 
 function echo_and_die($error) {
 	$GLOBALS['result']["error"] = $error;
@@ -65,7 +63,6 @@ if (!file_exists($datapath)) {
 
 
 $site_num = array_key_exists("num", $_GET) ? $_GET['num'] : 1;
-$site_num = ($site_num > 0 && $site_num < 21) ? $site_num : 1;
 $site_counter = 0;
 $subreddit_list = array_key_exists("massive", $_GET) ? $subreddits_massive : $subreddits_v1;
 

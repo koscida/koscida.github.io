@@ -1,5 +1,14 @@
 <?php
 
+function print_array($arr, $name = null) {
+	echo "<pre> $name: ".print_r($arr, true)."</pre>";
+}
+
+
+
+
+
+
 $subreddit_filters_female = array(
 	"female", "she", "\sher\s", "\shers\s",
 	"woman", "women", "girl",
@@ -9,7 +18,8 @@ $subreddit_filters_tech = array(
 	"tech", "comput",
 	"phone", "cell",
 	"desktop", "laptop", "tower", "monitor",
-	"\scs\s", "comp sci", "program", "code");
+	"\scs\s", "comp sci", "program", "code",
+	"stem");
 $subreddit_filters_both = array_merge($subreddit_filters_female, $subreddit_filters_tech);
 
 $subreddits_v1 = array(
