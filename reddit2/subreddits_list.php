@@ -395,9 +395,10 @@ $subreddits_massive = array(
 		$popular_subreddits,
 		$subreddit_filters_both,
 	),
-	array(	// 3 - 303
+	array(	// 4 - 304
 		"other",
 		array(
+			array("https://www.reddit.com", 						"frontpage"),
 			array("https://www.reddit.com/r/shitredditsays",		"shitredditsays"),
 			array("https://www.reddit.com/r/feminism",				"feminism"),
 			array("https://www.reddit.com/r/MensRights",			"MensRights"),

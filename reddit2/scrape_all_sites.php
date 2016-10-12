@@ -146,11 +146,10 @@ foreach ($sub_lists as $sub_list) {
 
 		$("#get_all_massive").bind( "click", function(event) {
 			console.log("get all massive");
-			doGetAll(304, "#form_massive_", "#feedback_massive_", "&massive=true");
+			doGetAll(305, "#form_massive_", "#feedback_massive_", "&massive=true");
 		});
 
 		function doGetAll(numSubreddits, formIdPrefix, fedbackIdPrefix, urlData) {
-
 			responseDataForCSV = [["subredditKind", "subredditName", "subredditFile", "keywords", "postName", "postLink", "postComments"]];
 			getAllPressed = true;
 			downloadCSV = true;
@@ -170,7 +169,7 @@ foreach ($sub_lists as $sub_list) {
 			}
 
 			for(var i=1; i<numSubreddits; i++) {
-				var url = "scrape.php?num="+i+"&time="+time+urlData; //console.log(url);
+				var url = "scrape.php?num="+i+"&time="+time+urlData; console.log(url);
 				var form_data = $(formIdPrefix+i).serialize();
 				var feedback_id = fedbackIdPrefix+i;
 				ajaxQueue.push([url, form_data, feedback_id]);
@@ -287,7 +286,7 @@ foreach ($sub_lists as $sub_list) {
 	}
 
 	function createCSV() {
-		console.log(responseDataForCSV);
+		//console.log(responseDataForCSV);
 		// create csv
 		var csvContent = "data:text/csv;charset=utf-8,";
 		responseDataForCSV.forEach(function(infoArray, index){
@@ -295,7 +294,7 @@ foreach ($sub_lists as $sub_list) {
 			for(var i=0; i<infoArrayEsc.length;i++)
 				infoArrayEsc[i] = infoArrayEsc[i].replace(/,/g, "-");
 			//var infoArrayEsc = infoArray.replace(",", "-");
-			console.log(infoArrayEsc);
+			//console.log(infoArrayEsc);
 
 			dataString = infoArrayEsc.join(",");
 			csvContent += index < responseDataForCSV.length ? dataString+ "\n" : dataString;

@@ -13,6 +13,11 @@ function print_array($arr, $name = null) {
 	echo "<pre> $name: ".print_r($arr, true)."</pre>";
 }
 
+function print_and_die($arr, $name = null) {
+	print_array($arr, $name);
+	die();
+}
+
 function replace_shortened_urls($contents) {
 	// replace shortened urls
 	$needle = array(
@@ -65,9 +70,10 @@ if (!file_exists($datapath)) {
 
 
 $site_num = array_key_exists("num", $_GET) ? $_GET['num'] : 1;
-$site_num = ($site_num > 0 && $site_num < 21) ? $site_num : 1;
 $site_counter = 0;
-$subreddit_list = array_key_exists("massive", $_GET) ? $subreddits_massive : $subreddits_v1;
+$massive = array_key_exists("massive", $_GET) ? true : false;
+$subreddit_list = $massive ? $subreddits_massive : $subreddits_v1;
+//print_and_die($subreddit_list, "subreddit_list");
 
 // the array that will get turned into json and returned
 $result = array();
@@ -82,13 +88,14 @@ $result["matches"] = "";
 
 foreach ($subreddit_list as $subredditKind) {
 	$nameKind = $subredditKind[0];
-	$subreddits = $subredditKind[1];
+	$subredditKind_list = $subredditKind[1];
 	$subredditFilters = $subredditKind[2];
 	//print_array($subredditFilters, "subredditFilters");
 
-	foreach ($subreddits as $subreddit) {
+	foreach ($subredditKind_list as $subreddit) {
 		$site_counter++;
 
+		//echo "site_counter: $site_counter -- site_num: $site_num<br/>";
 		if($site_counter == $site_num) {
 			$subredditURL = $subreddit[0];
 			$subredditName = $subreddit[1];
