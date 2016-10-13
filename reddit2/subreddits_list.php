@@ -1,5 +1,16 @@
 <?php
 
+function print_array($arr, $name = null) {
+	echo "<pre> $name: ".print_r($arr, true)."</pre>";
+}
+
+function print_and_die($arr, $name = null) {
+	print_array($arr, $name);
+	die();
+}
+
+
+
 $subreddit_filters_female = array(
 	"female", "she", "\sher\s", "\shers\s",
 	"woman", "women", "girl",

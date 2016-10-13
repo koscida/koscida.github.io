@@ -8,16 +8,6 @@ include "simple_html_dom.php";
 include "subreddits_list.php";
 
 
-
-function print_array($arr, $name = null) {
-	echo "<pre> $name: ".print_r($arr, true)."</pre>";
-}
-
-function print_and_die($arr, $name = null) {
-	print_array($arr, $name);
-	die();
-}
-
 function replace_shortened_urls($contents) {
 	// replace shortened urls
 	$needle = array(
