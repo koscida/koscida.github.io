@@ -2,18 +2,37 @@
 
 include "subreddits_list.php";
 
+$keys = array(-1, -1, -1, -1);
 
-if(array_key_exists("id", $_GET)) {
+if(array_key_exists("action", $_GET)) {
+	switch($_GET["action"]) {
+		case "createJSON":
+			createJsonFromCollectedData(); die();
+			break;
+		case "page":
+			if(array_key_exists("id", $_GET)) {
+				$keys = explode("_", $_GET["id"]);
+			}
+			break;
+		case "update":
+			updateJSON();
+	}
+}
+
+
+
+function updateJSON() {
 
 	// get things to save
 	$id = $_GET["id"];
-	$relevant = array_key_exists("relevant", $_GET) ? 1 : 0;
+	$relevant = array_key_exists("relevant", $_GET) ? $_GET["relevant"] : -1;
 	$name = !empty($_GET["name"]) ? $_GET["name"] : "";
 	$link_comment = !empty($_GET["link_comment"]) ? $_GET["link_comment"] : "";
 	$comment_comment = !empty($_GET["comment_comment"]) ? $_GET["comment_comment"] : "";
 
 	// get keys
 	$keys = explode("_", $id);
+	$GLOBALS["keys"] = $keys;
 	//print_and_die($keys, "keys");
 
 
@@ -93,7 +112,7 @@ function getDirContents($dir, &$results = array(), $depth = 0){
 	// 4 = match files
 	$count = 0;
     foreach($files as $key => $value){
-        $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
+        $path = "$dir/$value";
 		if($depth == 0) {
 			$results[$count] = array("date_path" => $path);
 			getDirContents($path, $results[$count]["date_dirs"], ($depth+1));
@@ -125,6 +144,7 @@ function getDirContents($dir, &$results = array(), $depth = 0){
     return $results;
 }
 
+
 function createJsonFromCollectedData() {
 	$results = getDirContents('data/data_collection');
 
@@ -146,14 +166,11 @@ function createJsonFromCollectedData() {
 		}
 	}
 
-	die();
+	//die();
 }
 
-if(array_key_exists("action", $_GET)) {
-	if($_GET["action"] == createJSON) {
-		createJsonFromCollectedData(); die();
-	}
-}
+
+//print_array($keys);
 
 ?>
 
@@ -233,6 +250,7 @@ if(array_key_exists("action", $_GET)) {
 
 <?php
 
+$min = true;
 
 $directory_start = 'data_json';
 $json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
@@ -248,20 +266,20 @@ foreach($json_files as $key1 => $json_file_name) {
 	$date_dirs = $date_contents["date_dirs"];
 	?>
 	<div class="date">
-		<h1><?php echo $date_title; ?></h1>
+		<h1 class="<?php echo ($min) ? "hide": ""; ?>"><?php echo $date_title; ?></h1>
 
 		<?php
 		if(!empty($date_dirs)) {
 			?>
-			<div class="times hide">
+			<div class="times <?php echo ($key1 == $keys[1]) ? "" : "hide"; ?>">
 			<?php
 			foreach ($date_dirs as $key2 => $time_contents) {
 				$time_title = end(explode("/", $time_contents["time_path"]));
 				$time_dirs = $time_contents["time_dirs"];
 				?>
 
-				<h2 class="time_time"><?php echo $time_title; ?></h2>
-				<div class="time_content hide">
+				<h2 class="time_time <?php echo ($min) ? "hide": ""; ?>"><?php echo $time_title; ?></h2>
+				<div class="time_content <?php echo ($key2 == $keys[2]) ? "" : "hide"; ?>">
 
 					<?php
 					if(!empty($time_dirs)) {
@@ -275,9 +293,9 @@ foreach($json_files as $key1 => $json_file_name) {
 							$subreddit_matches = array_key_exists("matches", $subreddit_dirs) ? $subreddit_dirs["matches"] : null;
 							?>
 							<tr class="subreddit">
-								<td><h3><?php echo $subreddit_title;?></h3></td>
+								<td class="<?php echo ($min) ? "hide": ""; ?>"><h3><?php echo $subreddit_title;?></h3></td>
 
-								<td><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>
+								<td class="<?php echo ($min) ? "hide": ""; ?>"><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>
 
 								<?php
 								if(!empty($subreddit_matches)) {
@@ -289,39 +307,50 @@ foreach($json_files as $key1 => $json_file_name) {
 										$match_title = end(explode("/", $subreddit_match["subreddit_matches_path"]));
 										$match_dirs = $subreddit_match["subreddit_matches_dirs"];
 										$match_comment = $match_dirs[0];
+										//echo $match_comment;
 										$match_link = $match_dirs[1];
 
 										$match_relevant = array_key_exists("subreddit_matches_relevant", $subreddit_match) ? $subreddit_match["subreddit_matches_relevant"] : -1;
+										//echo $match_relevant;
 										$match_name = array_key_exists("subreddit_matches_name", $subreddit_match) ? $subreddit_match["subreddit_matches_name"] : "";
+										//echo $match_name;
 										$match_link_comment = array_key_exists("subreddit_matches_link_comment", $subreddit_match) ? $subreddit_match["subreddit_matches_link_comment"] : "";
 										$match_comments_comment = array_key_exists("subreddit_matches_comments_comment", $subreddit_match) ? $subreddit_match["subreddit_matches_comments_comment"] : "";
 
-										if($match_relevant != 0 || TRUE) {
-											?>
-											<form action="data_collected.php">
-												<input type="hidden" name="id" value="<?php echo "match_".$key1."_".$key2."_".$key3."_".$key4; ?>" />
-												<table class="match">
-													<tr>
-														<td rowspan="3"><input type="text" name="name" value="<?php echo $match_name; ?>" placeholder="Match Name" /></td>
+										?>
+										<form action="data_collected.php" class="<?php echo ($match_relevant == 0) ? "hide" : "" ;?>" >
+											<input type="hidden" name="id" value="<?php echo "match_".$key1."_".$key2."_".$key3."_".$key4; ?>" />
+											<input type="hidden" name="action" value="update" />
+											<table class="match">
+												<tr>
+													<td rowspan="3">
+														<?php
+															echo empty($match_name) ? "<input type='text' name='name' value='$match_name' placeholder='Match Name' />" :  $match_name ;
+														 ?>
+													</td>
 
-														<td><p><?php echo $match_title;?></p></td>
-														<td>Relevant: <input type="checkbox" name="relevant" <?php echo ($match_relevant == 1) ? 'checked="checked"' : ""; ?> value="1" /></td>
-													</tr>
+													<td><p><?php echo $match_title;?></p></td>
+													<td>Relevant:
+														<input id="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4; ?>__-1" type="radio" name="relevant" <?php echo ($match_relevant == -1) ? 'checked="checked"' : ""; ?> value="-1" /><label for="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4;?>__-1">Unk</label>
+														<input id="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4; ?>__0" type="radio" name="relevant" <?php echo ($match_relevant == 0) ? 'checked="checked"' : ""; ?> value="0" /><label for="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4;?>__0">NO</label>
+														<input id="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4; ?>__1" type="radio" name="relevant" <?php echo ($match_relevant == 1) ? 'checked="checked"' : ""; ?> value="1" /><label for="<?php echo "radio_".$key1."_".$key2."_".$key3."_".$key4;?>__1">YES</label>
+													</td>
+												</tr>
 
-													<tr>
-														<td><a href="<?php echo $match_link;?>" target="blank">Link</a><br/></td>
-														<td><textarea name="link_comment" rows="4"><?php echo $match_link_comment; ?></textarea></td>
-													</tr>
+												<tr>
+													<td><a href="<?php echo $match_link;?>" target="blank">Link</a><br/></td>
+													<td><textarea name="link_comment" rows="4"><?php echo $match_link_comment; ?></textarea></td>
+												</tr>
 
-													<tr>
-														<td><a href="<?php echo $match_comment;?>" target="blank">Comments</a></td>
-														<td><textarea name="comment_comment" rows="4"><?php echo $match_comments_comment; ?></textarea></td>
-													</tr>
-												</table>
-												<button>Save</button>
-											</form>
-											<?php
-										}
+												<tr>
+													<td><a href="<?php echo $match_comment;?>" target="blank">Comments</a></td>
+													<td><textarea name="comment_comment" rows="4"><?php echo $match_comments_comment; ?></textarea></td>
+												</tr>
+											</table>
+											<button>Save</button>
+										</form>
+										<?php
+
 									}
 									?>
 									</td>
