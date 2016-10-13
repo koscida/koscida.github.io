@@ -266,7 +266,7 @@ foreach($json_files as $key1 => $json_file_name) {
 	$date_dirs = $date_contents["date_dirs"];
 	?>
 	<div class="date">
-		<h1 class="<?php echo ($min) ? "hide": ""; ?>"><?php echo $date_title; ?></h1>
+		<h1 class="<?php echo ($min) ? "hide1": ""; ?>"><?php echo $date_title; ?></h1>
 
 		<?php
 		if(!empty($date_dirs)) {
@@ -278,7 +278,7 @@ foreach($json_files as $key1 => $json_file_name) {
 				$time_dirs = $time_contents["time_dirs"];
 				?>
 
-				<h2 class="time_time <?php echo ($min) ? "hide": ""; ?>"><?php echo $time_title; ?></h2>
+				<h2 class="time_time <?php echo ($min) ? "hide1": ""; ?>"><?php echo $time_title; ?></h2>
 				<div class="time_content <?php echo ($key2 == $keys[2]) ? "" : "hide"; ?>">
 
 					<?php

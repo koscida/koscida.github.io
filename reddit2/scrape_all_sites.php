@@ -58,6 +58,9 @@
 		<button id="createCSV">createCSV</button>
 		<br/>
 		<br/>
+		<button id="get_all_v2">GET V2</button>
+		<br/>
+		<br/>
 		<button id="get_all_massive">GET ALL MASSIVE</button>
 	</div>
 
@@ -65,6 +68,7 @@
 $site_counter = 0;
 $sub_lists = array(
 	array($subreddits_v1, "Version 1", "form_", "feedback_"),
+	array($subreddits_v2, "Version 2", "form_v2_", "feedback_v2_"),
 	array($subreddits_massive, "Massive List", "form_massive_", "feedback_massive_"),
 );
 foreach ($sub_lists as $sub_list) {
@@ -140,13 +144,18 @@ foreach ($sub_lists as $sub_list) {
 
 		// get all
 		$("#get_all").bind( "click", function(event) {
-			//console.log("get all");
-			doGetAll(21, "#form_", "#feedback_", "");
+			console.log("get all");
+			doGetAll(20, "#form_", "#feedback_", "");
+		});
+
+		$("#get_all_v2").bind( "click", function(event) {
+			console.log("get all v2");
+			doGetAll(83, "#form_v2_", "#feedback_v2_", "&v2=true");
 		});
 
 		$("#get_all_massive").bind( "click", function(event) {
 			console.log("get all massive");
-			doGetAll(305, "#form_massive_", "#feedback_massive_", "&massive=true");
+			doGetAll(304, "#form_massive_", "#feedback_massive_", "&massive=true");
 		});
 
 		function doGetAll(numSubreddits, formIdPrefix, fedbackIdPrefix, urlData) {
@@ -168,7 +177,7 @@ foreach ($sub_lists as $sub_list) {
 				time = $("#time").val();
 			}
 
-			for(var i=1; i<numSubreddits; i++) {
+			for(var i=1; i<(numSubreddits+1); i++) {
 				var url = "scrape.php?num="+i+"&time="+time+urlData; console.log(url);
 				var form_data = $(formIdPrefix+i).serialize();
 				var feedback_id = fedbackIdPrefix+i;

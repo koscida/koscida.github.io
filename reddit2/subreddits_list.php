@@ -76,6 +76,8 @@ $subreddits_v1 = array(
 	)
 );
 
+
+
 $default = array(
 	'AskReddit',
 	'funny',
@@ -132,6 +134,88 @@ foreach($default as $sub) {
 	$default_subreddits[] = array("https://www.reddit.com/r/".$sub, $sub);
 }
 //print_array($default_subreddits, "default_subreddits");
+
+
+
+$subreddits_v2 = array(
+	array( // 50 - 50
+		"default",
+		$default_subreddits,
+		$subreddit_filters_both,
+	),
+	array(	// 6 - 56
+		"general",
+		array(
+			array("https://www.reddit.com/",				"frontpage"),
+			array("https://www.reddit.com/r/all",			"all"),
+			array("https://www.reddit.com/r/bestof",		"bestof"),
+			array("https://www.reddit/com/r/reddit.com",	"reddit.com"),
+			array("https://www.reddit/com/r/OutOfTheLoop",	"OutOfTheLoop"),
+			array("https://www.reddit/com/r/TrueReddit",	"TrueReddit"),
+		),
+		$subreddit_filters_both,
+	),
+	array(	// 7 - 63
+		"feminineCentric",
+		array(
+			array("https://www.reddit.com/r/MakeupAddiction",		"MakeupAddiction"),
+			array("https://www.reddit.com/r/skincareaddiction",		"skincareaddiction"),
+			array("https://www.reddit.com/r/femalefashionadvice",	"femalefashionadvice"),
+			array("https://www.reddit.com/r/tumblr",				"tumblr"),
+			array("https://www.reddit.com/r/LadyBoners",			"LadyBoners"),
+			array("https://www.reddit.com/r/TrollXChromosomes",		"TrollXChromosomes"),
+			array("https://www.reddit.com/r/AskWomen",				"AskWomen"),
+		),
+		$subreddit_filters_tech,
+	),
+	array(	// 3 - 66
+		"masculineCentric",
+		array(
+			array("https://www.reddit.com/r/malefashionadvice",	"malefashionadvice"),
+			array("https://www.reddit.com/r/RealGirls",			"RealGirls"),
+			array("https://www.reddit.com/r/AskMen",			"AskMen"),
+		),
+		$subreddit_filters_both,
+	),
+	array(	// 11 - 77
+		"technology",
+		array(
+			array("https://www.reddit.com/r/technology",			"technology"),
+			array("https://www.reddit.com/r/programming",			"programming"),
+			array("https://www.reddit.com/r/talesfromtechsupport",	"talesfromtechsupport"),
+			array("https://www.reddit.com/r/learnprogramming",		"learnprogramming"),
+			array("https://www.reddit.com/r/Android",				"Android"),
+			array("https://www.reddit.com/r/geek",					"geek"),
+			array("https://www.reddit.com/r/scifi",					"scifi"),
+			array("https://www.reddit.com/r/AlienBlue",				"AlienBlue"),
+			array("https://www.reddit.com/r/battlestations",		"battlestations"),
+			array("https://www.reddit.com/r/gamedev",				"gamedev"),
+			array("https://www.reddit.com/r/iphone",				"iphone"),
+
+		),
+		$subreddit_filters_female,
+	),
+	array(	// 3 - 80
+		"feminist",
+		array(
+			array("https://www.reddit.com/r/shitredditsays",	"shitredditsays"),
+			array("https://www.reddit.com/r/feminism",			"feminism"),
+			array("https://www.reddit.com/r/creepyPMs",			"creepyPMs"),
+		),
+		$subreddit_filters_tech,
+	),
+	array(	// 3 - 83
+		"antiFeminist",
+		array(
+			array("https://www.reddit.com/r/TumblrInAction",	"TumblrInAction"),
+			array("https://www.reddit.com/r/MensRights",		"MensRights"),
+			array("https://www.reddit.com/r/TheRedPill",		"TheRedPill"),
+		),
+		$subreddit_filters_tech,
+	)
+);
+
+
 
 
 $popular = array(

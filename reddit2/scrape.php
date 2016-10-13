@@ -61,8 +61,13 @@ if (!file_exists($datapath)) {
 
 $site_num = array_key_exists("num", $_GET) ? $_GET['num'] : 1;
 $site_counter = 0;
+
 $massive = array_key_exists("massive", $_GET) ? true : false;
 $subreddit_list = $massive ? $subreddits_massive : $subreddits_v1;
+
+$v2 = array_key_exists("v2", $_GET) ? true : false;
+$subreddit_list = $v2 ? $subreddits_v2 : $subreddit_list;
+
 //print_and_die($subreddit_list, "subreddit_list");
 
 // the array that will get turned into json and returned
