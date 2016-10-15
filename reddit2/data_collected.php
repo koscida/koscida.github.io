@@ -191,6 +191,13 @@ function createJsonFromCollectedData() {
 				font-size: 18px;
 				margin: 0;
 			}
+			.date_table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			.date_table td {
+				padding: 0;
+			}
 		.time {
 			display: none;
 			border: 1px solid #aaa;
@@ -221,6 +228,7 @@ function createJsonFromCollectedData() {
 			margin-bottom: 10px;
 			background: lightblue;
 			border-collapse: collapse;
+			width: 100%;
 		}
 			.match:last-child {
 				margin: 0;
@@ -250,7 +258,11 @@ function createJsonFromCollectedData() {
 
 <?php
 
-$min = true;
+$min = false;
+$show_subreddit_meta = false;
+
+$show_all_matches = false;
+$show_unk_matches = true;
 
 $directory_start = 'data_json';
 $json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
@@ -266,25 +278,25 @@ foreach($json_files as $key1 => $json_file_name) {
 	$date_dirs = $date_contents["date_dirs"];
 	?>
 	<div class="date">
-		<h1 class="<?php echo ($min) ? "hide1": ""; ?>"><?php echo $date_title; ?></h1>
+		<!--<h1 class="<?php echo ($min) ? "hide1": ""; ?>"><?php echo $date_title; ?></h1>-->
 
 		<?php
 		if(!empty($date_dirs)) {
 			?>
-			<div class="times <?php echo ($key1 == $keys[1]) ? "" : "hide"; ?>">
+			<div class="times <?php echo ($key1 == $keys[1]) ? "" : "hide1"; ?>">
 			<?php
 			foreach ($date_dirs as $key2 => $time_contents) {
 				$time_title = end(explode("/", $time_contents["time_path"]));
 				$time_dirs = $time_contents["time_dirs"];
 				?>
 
-				<h2 class="time_time <?php echo ($min) ? "hide1": ""; ?>"><?php echo $time_title; ?></h2>
-				<div class="time_content <?php echo ($key2 == $keys[2]) ? "" : "hide"; ?>">
+				<!--<h2 class="time_time <?php echo ($min) ? "hide1": ""; ?>"><?php echo $time_title; ?></h2>
+				<div class="time_content <?php echo ($key2 == $keys[2]) ? "" : "hide1"; ?>">-->
 
 					<?php
 					if(!empty($time_dirs)) {
 						?>
-						<table>
+						<table class="date_table">
 						<?php
 						foreach ($time_dirs as $key3 => $subreddit_contents) {
 							$subreddit_title = end(explode("/", $subreddit_contents["subreddit_path"]));
@@ -293,9 +305,9 @@ foreach($json_files as $key1 => $json_file_name) {
 							$subreddit_matches = array_key_exists("matches", $subreddit_dirs) ? $subreddit_dirs["matches"] : null;
 							?>
 							<tr class="subreddit">
-								<td class="<?php echo ($min) ? "hide": ""; ?>"><h3><?php echo $subreddit_title;?></h3></td>
+								<!--<td class="<?php echo ($show_subreddit_meta) ? "": "hide"; ?>"><h3><?php echo $subreddit_title;?></h3></td>
 
-								<td class="<?php echo ($min) ? "hide": ""; ?>"><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>
+								<td class="<?php echo ($show_subreddit_meta) ? "": "hide"; ?>"><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>-->
 
 								<?php
 								if(!empty($subreddit_matches)) {
@@ -317,11 +329,27 @@ foreach($json_files as $key1 => $json_file_name) {
 										$match_link_comment = array_key_exists("subreddit_matches_link_comment", $subreddit_match) ? $subreddit_match["subreddit_matches_link_comment"] : "";
 										$match_comments_comment = array_key_exists("subreddit_matches_comments_comment", $subreddit_match) ? $subreddit_match["subreddit_matches_comments_comment"] : "";
 
+										$show_this_match = true;
+										if($show_all_matches) {
+											$show_this_match = true;
+										} else {
+											if($show_unk_matches)
+												$show_this_match = ($match_relevant == -1);
+										}
 										?>
-										<form action="data_collected.php" class="<?php echo ($match_relevant == 0) ? "hide" : "" ;?>" >
+										<form action="data_collected.php" class="<?php echo ($show_this_match) ? "" : "hide" ;?>" >
 											<input type="hidden" name="id" value="<?php echo "match_".$key1."_".$key2."_".$key3."_".$key4; ?>" />
 											<input type="hidden" name="action" value="update" />
 											<table class="match">
+												<tr>
+													<td>
+														<h1 class="<?php echo ($min) ? "hide1": ""; ?>"><?php echo $date_title; ?></h1>
+														<h2 class="time_time <?php echo ($min) ? "hide1": ""; ?>"><?php echo $time_title; ?></h2>
+													</td>
+													<td><h3><?php echo $subreddit_title;?></h3></td>
+													<td><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>
+												</tr>
+
 												<tr>
 													<td rowspan="3">
 														<?php
