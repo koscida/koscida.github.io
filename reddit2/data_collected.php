@@ -3,6 +3,7 @@
 include "subreddits_list.php";
 
 $keys = array(-1, -1, -1, -1);
+$directory_start = 'data_json';
 
 if(array_key_exists("action", $_GET)) {
 	switch($_GET["action"]) {
@@ -16,10 +17,129 @@ if(array_key_exists("action", $_GET)) {
 			break;
 		case "update":
 			updateJSON();
+			break;
+		case "updateMatchNames":
+			updateMatchNames();
+			break;
 	}
 }
 
 
+/* ******************************************** */
+/*				HELPER FUNCTIONS 				*/
+/* ******************************************** */
+function getJSONFiles($num = null) {
+
+	$directory_start = 'data_json';
+
+	// get json files
+	$json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
+	//print_array($json_files, "json_files");
+
+	if(!empty($num)) {
+		return $json_files[$keys[1]];
+	} else {
+		return $json_files;
+	}
+	//print_array($json_file, "json_file");
+
+	return $json_files;
+}
+
+function updateJSONFile($contents, $path) {
+
+	//print_and_die($date_contents);
+	$j = json_encode($contents);
+	//print_and_die($j);
+
+	// put contents into file
+	$fp = fopen($path, 'w');
+	fwrite($fp, $j);
+	fclose($fp);
+	echo "update file: $path <br/>";
+}
+
+
+
+
+
+/* ************************************************ */
+/*				UPDATE NAMES IN JSON  				*/
+/* ************************************************ */
+
+function updateMatchNames() {
+	$json_files = getJSONFiles();
+
+
+	// loop through all date files
+	foreach ($json_files as $key1 => $json_file_name) {
+		$string = file_get_contents("data_json/$json_file_name");
+		$date_contents = json_decode($string, true);
+		//print_array($date_contents); die();
+		$should_update = 0;
+
+		// loop through and get to specific match that we want to change
+		foreach ($date_contents["date_dirs"] as $key2 => &$time_contents) {
+
+			// loop through times dir -- ind subreddits
+			foreach ($time_contents["time_dirs"] as $key3 => &$subreddit_contents) {
+
+				// check if subreddit has matches
+				if(array_key_exists("matches", $subreddit_contents["subreddit_dirs"])) {
+
+					// loop through subreddit's matches
+					foreach ($subreddit_contents["subreddit_dirs"]["matches"] as $key4 => &$subreddit_match) {
+
+						// check if that match doesn't have a name
+						if(!array_key_exists("subreddit_matches_name", $subreddit_match)) {
+							//$should_update++;
+							// goal = get the post name
+
+							// 1a. get the comments file path
+							$comments_file_and_path = $subreddit_match["subreddit_matches_dirs"][0];
+
+							// 1b. get the comments file - this will have complete post name
+							$match_comment_string = file_get_contents($comments_file_and_path);
+
+							// 2a. search with regex for title
+							$regex = '/<a class="title[^>]*>([^<])+<\/a>/i';
+							preg_match_all($regex, $match_comment_string, $match_titles);
+
+							// 2b. format the match
+							$title_anchor = $match_titles[0][0];
+							preg_match_all( '/>[^<]*<\/a>/', $title_anchor, $names);
+							//print_array($names, "names");
+							$name = substr($names[0][0], 1, -6);
+							//print_and_die($name, "name");
+
+							// set name
+							$subreddit_match["subreddit_matches_name"] = $name;
+
+
+						}
+
+
+
+					}
+				}
+
+			}
+
+		}
+
+		// update that json file
+		if($should_update > 0)
+			updateJSONFile($date_contents, "data_json/$json_file_name");
+	}
+
+
+}
+
+
+
+/* **************************************************** */
+/*				UPDATE MATCH DATA IN JSON  				*/
+/* **************************************************** */
 
 function updateJSON() {
 
@@ -35,13 +155,9 @@ function updateJSON() {
 	$GLOBALS["keys"] = $keys;
 	//print_and_die($keys, "keys");
 
+	// get json files
+	$json_file = getJSONFiles($keys[1]);
 
-	// get json file
-	$directory_start = 'data_json';
-	$json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
-	//print_array($json_files, "json_files");
-	$json_file = $json_files[$keys[1]];
-	//print_array($json_file, "json_file");
 
 	// get json into php array
 	$string = file_get_contents("$directory_start/$json_file");
@@ -84,22 +200,16 @@ function updateJSON() {
 	// unset last pointer
 	//unset($date_contents);
 
-	//print_and_die($date_contents);
-	$j = json_encode($date_contents);
-	//print_and_die($j);
-
-	// put contents into file
-	$fp = fopen("$directory_start/$json_file", 'w');
-	fwrite($fp, $j);
-	fclose($fp);
-	echo "update file";
-
+	// update file
+	updateJSONFile($date_contents, "$directory_start/$json_file");
 }
 
 
 
 
-
+/* ******************************************** */
+/*				CREATE JSON FILES  				*/
+/* ******************************************** */
 
 function getDirContents($dir, &$results = array(), $depth = 0){
 	$files = array_diff(scandir($dir), array('..', '.', '.DS_Store'));
@@ -146,23 +256,18 @@ function getDirContents($dir, &$results = array(), $depth = 0){
 
 
 function createJsonFromCollectedData() {
+	// get json for all data stored
 	$results = getDirContents('data/data_collection');
 
+	// loop through file structure
 	foreach ($results as $key1 => $date_contents) {
 		$date_title = end(explode("/", $date_contents["date_path"]));
 
 		$date_file = "data_json/$date_title.json";
 
-		// check if file exists, if it does, create it
+		// check if file exists, if it doesn't, create it
 		if (!file_exists($date_file)) {
-
-			$date_dirs_json = json_encode($date_contents);
-
-			// put contents into file
-			$fp = fopen($date_file, 'w');
-			fwrite($fp, $date_dirs_json);
-			fclose($fp);
-			echo "write file";
+			updateJSONFile($date_contents, $date_file);
 		}
 	}
 
@@ -171,6 +276,14 @@ function createJsonFromCollectedData() {
 
 
 //print_array($keys);
+
+
+
+
+
+
+
+
 
 ?>
 
@@ -250,8 +363,10 @@ function createJsonFromCollectedData() {
 
 </head>
 <body>
-
-
+<a href="data_collected.php?action=createJSON">create JSON</a>
+<br/>
+<a href="data_collected.php?action=updateMatchNames">updateMatchNames</a>
+<br/>
 
 
 
@@ -262,11 +377,10 @@ $min = false;
 $show_subreddit_meta = false;
 
 $show_all_matches = false;
-$show_unk_matches = false;
-$show_yes_matches = true;
+$show_unk_matches = true;
+$show_yes_matches = false;
 
-$directory_start = 'data_json';
-$json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
+$json_files = getJSONFiles();
 //print_array($json_files, "json_files");
 
 // get the timed directories
@@ -277,46 +391,32 @@ foreach($json_files as $key1 => $json_file_name) {
 
 	$date_title = end(explode("/", $date_contents["date_path"]));
 	$date_dirs = $date_contents["date_dirs"];
-	?>
-	<div class="date">
-		<!--<h1 class="<?php echo ($min) ? "hide1": ""; ?>"><?php echo $date_title; ?></h1>-->
 
-		<?php
+		// check if there is a date folder
 		if(!empty($date_dirs)) {
-			?>
-			<div class="times <?php echo ($key1 == $keys[1]) ? "" : "hide1"; ?>">
-			<?php
+
+			// loop through the date_dirs, which are each time
 			foreach ($date_dirs as $key2 => $time_contents) {
 				$time_title = end(explode("/", $time_contents["time_path"]));
 				$time_dirs = $time_contents["time_dirs"];
-				?>
 
-				<!--<h2 class="time_time <?php echo ($min) ? "hide1": ""; ?>"><?php echo $time_title; ?></h2>
-				<div class="time_content <?php echo ($key2 == $keys[2]) ? "" : "hide1"; ?>">-->
-
-					<?php
+					// check if there is a time folder
 					if(!empty($time_dirs)) {
-						?>
-						<table class="date_table">
-						<?php
+
+						// loop throug the time_dirs, which are each subreddit's folder
 						foreach ($time_dirs as $key3 => $subreddit_contents) {
 							$subreddit_title = end(explode("/", $subreddit_contents["subreddit_path"]));
 							$subreddit_dirs = $subreddit_contents["subreddit_dirs"];
 							$subreddit_page = $subreddit_dirs["subreddit_page"];
 							$subreddit_matches = array_key_exists("matches", $subreddit_dirs) ? $subreddit_dirs["matches"] : null;
-							?>
-							<tr class="subreddit">
-								<!--<td class="<?php echo ($show_subreddit_meta) ? "": "hide"; ?>"><h3><?php echo $subreddit_title;?></h3></td>
 
-								<td class="<?php echo ($show_subreddit_meta) ? "": "hide"; ?>"><a href="<?php echo $subreddit_page;?>" target="blank">Page</a></td>-->
-
-								<?php
+								// check if there are matches in the subreddit's folder
 								if(!empty($subreddit_matches)) {
-									?>
-									<td class="matches">
-									<?php
+
+									// loop through all the matches
 									foreach ($subreddit_matches as $key4 => $subreddit_match) {
 
+										// get data about matches
 										$match_title = end(explode("/", $subreddit_match["subreddit_matches_path"]));
 										$match_dirs = $subreddit_match["subreddit_matches_dirs"];
 										$match_comment = $match_dirs[0];
@@ -382,35 +482,22 @@ foreach($json_files as $key1 => $json_file_name) {
 										</form>
 										<?php
 
-									}
-									?>
-									</td>
-									<?php
+									} // end -- foreach ($subreddit_matches as $key4 => $subreddit_match) {
+
+								// end -- if(!empty($subreddit_matches)) {
 								} else {
 									echo "<td></td>";
 								}
-							?>
-							</tr>
-							<?php
-						}
-						?>
-						</table>
-					<?php
-					}
-					?>
 
-				</div>
-				<?php
-			}
-			?>
-			</div> <!-- end times div -->
-			<?php
-		}
-		?>
+						} // end -- foreach ($time_dirs as $key3 => $subreddit_contents) {
 
-	</div>
-	<?php
-}
+					} // end -- if(!empty($time_dirs)) {
+
+			} // end -- foreach ($date_dirs as $key2 => $time_contents) {
+
+		} // end -- if(!empty($date_dirs)) {
+
+} // end -- foreach($json_files as $key1 => $json_file_name) {
 
 
 
