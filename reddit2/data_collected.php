@@ -262,7 +262,8 @@ $min = false;
 $show_subreddit_meta = false;
 
 $show_all_matches = false;
-$show_unk_matches = true;
+$show_unk_matches = false;
+$show_yes_matches = true;
 
 $directory_start = 'data_json';
 $json_files = array_diff(scandir($directory_start), array('..', '.', '.DS_Store'));
@@ -335,6 +336,8 @@ foreach($json_files as $key1 => $json_file_name) {
 										} else {
 											if($show_unk_matches)
 												$show_this_match = ($match_relevant == -1);
+											if($show_yes_matches)
+												$show_this_match = ($match_relevant == 1);
 										}
 										?>
 										<form action="data_collected.php" class="<?php echo ($show_this_match) ? "" : "hide" ;?>" >
