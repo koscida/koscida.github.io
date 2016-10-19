@@ -79,60 +79,62 @@ function updateMatchNames() {
 		$should_update = 0;
 
 		// loop through and get to specific match that we want to change
-		foreach ($date_contents["date_dirs"] as $key2 => &$time_contents) {
+		//echo "line 82<br/>";
+		// check if date has times dirs
+		if(!empty($date_contents) && array_key_exists("date_dirs", $date_contents)) {
+			foreach ($date_contents["date_dirs"] as $key2 => &$time_contents) {
 
-			// loop through times dir -- ind subreddits
-			foreach ($time_contents["time_dirs"] as $key3 => &$subreddit_contents) {
+				// loop through times dir -- ind subreddits
+				foreach ($time_contents["time_dirs"] as $key3 => &$subreddit_contents) {
 
-				// check if subreddit has matches
-				if(array_key_exists("matches", $subreddit_contents["subreddit_dirs"])) {
+					// check if subreddit has matches
+					if(!empty($subreddit_contents["subreddit_dirs"]) && array_key_exists("matches", $subreddit_contents["subreddit_dirs"])) {
 
-					// loop through subreddit's matches
-					foreach ($subreddit_contents["subreddit_dirs"]["matches"] as $key4 => &$subreddit_match) {
+						// loop through subreddit's matches
+						foreach ($subreddit_contents["subreddit_dirs"]["matches"] as $key4 => &$subreddit_match) {
 
-						// check if that match doesn't have a name
-						if(!array_key_exists("subreddit_matches_name", $subreddit_match)) {
-							//$should_update++;
-							// goal = get the post name
+							// check if that match doesn't have a name
+							if(!array_key_exists("subreddit_matches_name", $subreddit_match)) {
+								$should_update++;
+								// goal = get the post name
 
-							// 1a. get the comments file path
-							$comments_file_and_path = $subreddit_match["subreddit_matches_dirs"][0];
+								// 1a. get the comments file path
+								$comments_file_and_path = $subreddit_match["subreddit_matches_dirs"][0];
 
-							// 1b. get the comments file - this will have complete post name
-							$match_comment_string = file_get_contents($comments_file_and_path);
+								// 1b. get the comments file - this will have complete post name
+								$match_comment_string = file_get_contents($comments_file_and_path);
 
-							// 2a. search with regex for title
-							$regex = '/<a class="title[^>]*>([^<])+<\/a>/i';
-							preg_match_all($regex, $match_comment_string, $match_titles);
+								// 2a. search with regex for title
+								$regex = '/<a class="title[^>]*>([^<])+<\/a>/i';
+								preg_match_all($regex, $match_comment_string, $match_titles);
 
-							// 2b. format the match
-							$title_anchor = $match_titles[0][0];
-							preg_match_all( '/>[^<]*<\/a>/', $title_anchor, $names);
-							//print_array($names, "names");
-							$name = substr($names[0][0], 1, -6);
-							//print_and_die($name, "name");
+								// 2b. format the match
+								$title_anchor = $match_titles[0][0];
+								preg_match_all( '/>[^<]*<\/a>/', $title_anchor, $names);
+								//print_array($names, "names");
+								$name = substr($names[0][0], 1, -6);
+								//print_and_die($name, "name");
 
-							// set name
-							$subreddit_match["subreddit_matches_name"] = $name;
+								// set name
+								$subreddit_match["subreddit_matches_name"] = $name;
+
+
+							}
+
 
 
 						}
-
-
-
 					}
+
 				}
 
-			}
-
-		}
+			} // end -- foreach ($date_contents["date_dirs"] as $key2 => &$time_contents) {
+		} // end -- if(array_key_exists("date_dirs", $date_contents)) {
 
 		// update that json file
 		if($should_update > 0)
 			updateJSONFile($date_contents, "data_json/$json_file_name");
 	}
-
-
 }
 
 
