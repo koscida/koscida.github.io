@@ -415,6 +415,8 @@ $show_all_matches = false;
 $show_unk_matches = true;
 $show_yes_matches = false;
 
+$show_folder_num = 11;
+
 $json_files = getJSONFiles();
 //print_array($json_files, "json_files");
 
@@ -428,7 +430,8 @@ foreach($json_files as $key1 => $json_file_name) {
 	$date_dirs = $date_contents["date_dirs"];
 
 		// check if there is a date folder
-		if(!empty($date_dirs)) {
+		// and check if correct date
+		if( !empty($date_dirs) && $key1 == $show_folder_num ) {
 
 			// loop through the date_dirs, which are each time
 			foreach ($date_dirs as $key2 => $time_contents) {
