@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+  <title>The Criterion Collection</title>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5f9f1cd0f4","applicationID":"509801","transactionName":"dF8LQUEMCV1UQ0xSAkRYB1pSEQEeWF8HUxs=","queueTime":1,"applicationTime":18,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIOV1dXGwYAXVlSBg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(14)(a),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=s(n,"nr@wrapped",function(){return c(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&c.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(14)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(14)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(w=-w,x.data=w)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(14)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,g),g.prototype=p.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var w=1,x=document.createTextNode(w);new h(a).observe(x,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],c])}f(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],c),l}finally{f(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<n.length;s++)c=n[s],a=t[c],r(a)||(t[c]=e(a,f?c+o:o,i,c))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var u=f[v[n]];return u&&u.push([y,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){s(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},y={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return y}function i(){return new r}var a="nr@context",c=t("gos"),s=t(12),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!w++){var t=g.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(v,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;g.proto=n?"https://":"http://",c("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=g.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(12),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(9);var m=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},y=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:m,features:{},xhrWrappable:y};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),c("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader",2,7]);</script>
+    <meta name="robots" content="index, follow"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="verify-v1" content="EBSm1BxBx51dV3m3IFQboA6AYGbl5t/q/eqRdYvmBDc="/>
+  <meta name="y_key" content="8523162f29232e98"/>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="wlITePDo1rFWVakyel6vkHlOm0R67EOJTRKJNWnLUnE=" name="csrf-token" />
+  <meta property="fb:app_id" content="121335962047"/>
+  <meta property="fb:admins" content="801630"/>
+  <meta property="fb:admins" content="502024"/>
+    <meta content="The Criterion Collection" property="og:site_name" />
+<meta content="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/cc-logo-279e4daa0ba486647b702f34637470ff.jpg" property="og:image" />
+<meta content="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/cc-logo-279e4daa0ba486647b702f34637470ff.jpg" property="thumbnail" />
+<meta content="The Criterion Collection" property="og:title" />
+<meta content="http://www.criterion.com" property="og:url" />
+<meta content="website" property="og:type" />
+<meta content="Since 1984, we’ve dedicated ourselves to gathering the greatest films from around the world and publishing them in editions of the highest technical quality." property="og:description" />
+  <meta content="pk_live_kUoIDZhPTlCA3twpBgMCIw30" name="stripe-key" />
+  <link rel="alternate" href="http://feeds.feedburner.com/TheCriterionCollection-TheCurrent" title="RSS Feed" type="application/rss+xml"/>
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/favicon-ab37f5b950b81a4e3cb4058a593bc513.png" rel="shortcut icon" type="image/png" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/favicon-ab37f5b950b81a4e3cb4058a593bc513.png" rel="icon" type="image/png" />
+
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-180x180-cdf0043cb4e42e20bb75518fa466a509.png" rel="apple-touch-icon" sizes="180x180" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-152x152-5d57ffbd81da542ec688914825a442c2.png" rel="apple-touch-icon" sizes="152x152" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-144x144-737ec5f1642bb57aaf5f9a3ac0572ba0.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-120x120-050ebf8ddce81441a21febca7a3ea9aa.png" rel="apple-touch-icon" sizes="120x120" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-114x114-b267ee4f6144672a75c485ee238f17b3.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-76x76-2ce116d4af843543eab631db43cda90f.png" rel="apple-touch-icon" sizes="76x76" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-72x72-81c4aa06860ec037656e59fee0d41a32.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-60x60-9fccb22a31a3bb3c691de5b3dd9e3549.png" rel="apple-touch-icon" sizes="60x60" type="image/png" />
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/apple-touch-icon-57x57-4f58a743ec7740ed4b0008a42121ee9f.png" rel="apple-touch-icon" sizes="57x57" type="image/png" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/favicon-32x32-32d1b88348d0d69896a2ef5bff8d7d7d.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/android-chrome-192x192-c23a8ee02fac62105ebd5ad7282c3872.png" rel="icon" sizes="192x192" type="image/png" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/favicon-96x96-fdea04e352dada2fb247f8fdf3c72969.png" rel="icon" sizes="96x96" type="image/png" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/favicon-16x16-ab37f5b950b81a4e3cb4058a593bc513.png" rel="icon" sizes="16x16" type="image/png" />
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="text/javascript" charset="utf-8">
+    CC = {}; // Define the Criterion namespace
+    var _sf_startpt = (new Date()).getTime();
+  </script>
+
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/main-9e68e45f7041ad49792f5af79a8a764f.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/application-cd073cb19149a0d862a2c3a6dc900bbf.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/main-print-967ca2cc65d6ff8766d88050f72a4e1d.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE 6]><link href="https://d2ffltj98nrzzh.cloudfront.net/assets/main-ie6-18d8408550e6e658b4e1d0ba43a3c37b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 7]><link href="https://d2ffltj98nrzzh.cloudfront.net/assets/main-ie7-2b6e83df9abea2f0d4e0ef6ef9314929.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <link href="https://d2ffltj98nrzzh.cloudfront.net/assets/homepage-735c90e8b1d8f55714870077a12a0403.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script crossorigin="true" src="https://d2ffltj98nrzzh.cloudfront.net/assets/main-e863830133e5999e5e06b64cd1e27bcf.js" type="text/javascript"></script>
+  <script crossorigin="true" src="https://d2ffltj98nrzzh.cloudfront.net/assets/application-00c43faee292d3d626db417b39392b81.js" type="text/javascript"></script>
+
+    <script crossorigin="true" src="https://d2ffltj98nrzzh.cloudfront.net/assets/homepage-c3807f710e13c7aa1c0863ff170140e5.js" type="text/javascript"></script>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1852531-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+  <body>
+    <div id="wrap">
+      <ul id="statusnav">
+  <!--<li><img alt="Ajax-loader" class="ajax-loader" src="https://d2ffltj98nrzzh.cloudfront.net/assets/ajax-loader-5e6ce8395b7f1cec9f0b5af0c3defb60.gif" /></li>-->
+  <li>&nbsp;</li>
+</ul> <!-- END STATUSNAV -->
+
+
+
+      <div id="header">
+        <h1><a href="/" title="The Criterion Collection"><span>The Criterion Collection</span></a></h1>
+        <div id="navbar">
+
+  <ul id="nav" class="clear">
+    <li class="films"><a href="/library" title="Films">Films</a>/</li>
+    <li class="explore"><a href="/explore" title="Explore">Explore</a>/</li>
+    <li class="current"><a href="/current/posts" title="Current">Current</a>/</li>
+    <li class="shop"><a href="/shop" title="Shop">Shop</a></li>
+  </ul>
+
+  <div id="ff_autocomplete_container" class="autocomplete_list">
+    <div id="search">
+    <form action="/search/results" id="cse-search-box">
+      <div>
+        <input type="hidden" name="cx" value="010409313683156935813:t7nyanc_22g" />
+        <input type="hidden" name="cof" value="FORID:9" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <div id="ff_autocomplete_errors" class="autocomplete_errors" style="display: none;"></div>
+        <input autocomplete="off" class="field" id="ff_autocomplete_input" name="q" onfocus='this.value=""; this.setAttribute("class", "field black");' size="31" type="text" value="SEARCH" />
+        <input alt="Search" class="searchbutton" src="https://d2ffltj98nrzzh.cloudfront.net/assets/shared/blank-25822eec20a3d4e884b74ca8c64792bb.gif" type="image" />
+        <div id="ff_autocomplete_results" class="search_results"></div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+</div> <!-- END #NAVBAR -->
+
+      </div> <!-- END HEADER -->
+
+      <div class="headerpadding">
+        <div id="flash">
+          <p id="error_div" class="flash flash_error" style="display:none;"></p>
+          <p id="notice_div" class="flash flash_notice" style="display:none;"></p>
+        </div>
+      </div>
+
+        <div id="banner"></div>
+
+      
+
+
+<div id="newhome" class="clear">
+<div class="newhome_spotlight">
+	<ul class="spotlight_left">
+  		<li class="slide1">
+  			<h6>Spotlight</h6>
+  			<h2><a href="http://www.filmstruck.com">Our New Streaming Home</a></h2>
+  			<p>FilmStruck, our new subscription streaming service, is launching soon. Sign up for the newsletter now to receive a free two-week trial offer!</p>
+  			<a href="http://www.filmstruck.com" class="readmore" title="Read more">Learn more</a>
+  			<a href="http://www.filmstruck.com" class="spotlight_link">&nbsp;</a>
+  		</li>
+  		<li class="slide2">
+  			<h6>Spotlight</h6>
+  			<h2><a href="https://www.criterion.com/library/expanded_view?f=1&amp;s=release_date">January Titles!</a></h2>
+  			<p>We’ll be ringing in the new year with acclaimed works by masters Sembène, Fassbinder, and Hawks. Plus, an underappreciated landmark of American independent cinema.</p>
+  			<a href="https://www.criterion.com/library/expanded_view?f=1&amp;s=release_date" class="readmore" title="Read more">Learn more</a>
+  			<a href="https://www.criterion.com/library/expanded_view?f=1&amp;s=release_date" class="spotlight_link">&nbsp;</a>
+  		</li>
+  		<li class="slide3">
+  			<h6>Spotlight</h6>
+  			<h2><a href="https://www.criterion.com/current/posts/4246-boyhood-the-moment-seizes-you">Jonathan Lethem on <em>Boyhood</em></a></h2>
+  			<p>The novelist delivers an idiosyncratic take on the slippery nature of time and the synthesis of fiction and documentary in Richard Linklater’s coming-of-age drama.</p>
+  			<a href="https://www.criterion.com/current/posts/4246-boyhood-the-moment-seizes-you" class="readmore" title="Read more">Learn more</a>
+  			<a href="https://www.criterion.com/current/posts/4246-boyhood-the-moment-seizes-you" class="spotlight_link">&nbsp;</a>
+  		</li>
+  		<li class="slide4">
+  			<h6>Spotlight</h6>
+  			<h2><a href="https://www.criterion.com/current/posts/4249-stranger-songs-the-music-of-leonard-cohen-in-mccabe-mrs-miller">The Songs of <em>McCabe &amp; Mrs. Miller</em></a></h2>
+  			<p>Rock critic Robert Christgau examines the evocative use of three early Leonard Cohen songs in Robert Altman’s brilliant revisionist western.</p>
+  			<a href="https://www.criterion.com/current/posts/4249-stranger-songs-the-music-of-leonard-cohen-in-mccabe-mrs-miller" class="readmore" title="Read more">Learn more</a>
+  			<a href="https://www.criterion.com/current/posts/4249-stranger-songs-the-music-of-leonard-cohen-in-mccabe-mrs-miller" class="spotlight_link">&nbsp;</a>
+  		</li>
+	</ul>
+	<ul class="spotlight_right">
+	    <li><a href="http://www.filmstruck.com"><img alt="Filmstrucktout2_large" height="385" src="https://s3.amazonaws.com/criterion-production/spotlights/1467-0f29b89d4581abfc2e4aa87f8f576c7e/Filmstrucktout2_large.jpg" width="602" /></a></li>
+	    <li><a href="https://www.criterion.com/library/expanded_view?f=1&amp;s=release_date"><img alt="Spotlight_28849id_035_large" height="385" src="https://s3.amazonaws.com/criterion-production/spotlights/1463-47baf22643d93e89f7e4317c8d324b76/Spotlight_28849id_035_large.jpg" width="602" /></a></li>
+	    <li><a href="https://www.criterion.com/current/posts/4246-boyhood-the-moment-seizes-you"><img alt="Spotlight_28820id_234_large" height="385" src="https://s3.amazonaws.com/criterion-production/spotlights/1462-7796a1e391fb2a031c3c7406ec092d9c/Spotlight_28820id_234_large.jpg" width="602" /></a></li>
+	    <li><a href="https://www.criterion.com/current/posts/4249-stranger-songs-the-music-of-leonard-cohen-in-mccabe-mrs-miller"><img alt="28712id_440spotlight_large" height="385" src="https://s3.amazonaws.com/criterion-production/spotlights/1460-47859127b8e0b24eece925dcbab9fdc9/28712id_440spotlight_large.jpg" width="602" /></a></li>
+	</ul>
+	<div class="spotlight_prev">&nbsp;</div>
+	<div class="spotlight_next">&nbsp;</div>
+	<div class="spotlight_nav">
+		<div class="spotlight_bg">&nbsp;</div>
+		<ul class="spotlight_timer">
+			<li class="slide1"><div class="progress">&nbsp;</div></li>
+			<li class="slide2"><div class="progress">&nbsp;</div></li>
+			<li class="slide3"><div class="progress">&nbsp;</div></li>
+			<li class="slide4"><div class="progress">&nbsp;</div></li>
+		</ul>
+		<ul class="spotlight_slides">
+			  <li class="slide1"><img alt="Filmstrucktout2_large" height="91" src="https://s3.amazonaws.com/criterion-production/spotlights/1467-0f29b89d4581abfc2e4aa87f8f576c7e/Filmstrucktout2_large.jpg" width="142" /><div class="highlight">&nbsp;</div><div class="darken">&nbsp;</div></li>
+			  <li class="slide2"><img alt="Spotlight_28849id_035_large" height="91" src="https://s3.amazonaws.com/criterion-production/spotlights/1463-47baf22643d93e89f7e4317c8d324b76/Spotlight_28849id_035_large.jpg" width="142" /><div class="highlight">&nbsp;</div><div class="darken">&nbsp;</div></li>
+			  <li class="slide3"><img alt="Spotlight_28820id_234_large" height="91" src="https://s3.amazonaws.com/criterion-production/spotlights/1462-7796a1e391fb2a031c3c7406ec092d9c/Spotlight_28820id_234_large.jpg" width="142" /><div class="highlight">&nbsp;</div><div class="darken">&nbsp;</div></li>
+			  <li class="slide4"><img alt="28712id_440spotlight_large" height="91" src="https://s3.amazonaws.com/criterion-production/spotlights/1460-47859127b8e0b24eece925dcbab9fdc9/28712id_440spotlight_large.jpg" width="142" /><div class="highlight">&nbsp;</div><div class="darken">&nbsp;</div></li>
+		</ul>
+	</div>
+</div><!--end .newhome_spotlight-->
+
+  <div id="newcurrent_spotlight" style="margin:0 0 10px;">
+    <div class="newcurrent_top">
+      <h3><a href="/current/posts">Current Posts</a></h3>
+    </div>
+    
+<ul>
+    
+<li>
+  <a href="/current/posts/4261-tim-robbins-s-closet-picks">
+    
+<img alt="Screen_shot_2016-10-17_at_10.41.00_am_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7673-edc02c3de1471a64aa6a4420a6c4f343/Screen_Shot_2016-10-17_at_10.41.00_AM_thumbnail.png" />
+</a>  <p>
+    <a href="/current/posts/4261-tim-robbins-s-closet-picks">Tim Robbins’s Closet Picks</a>
+  </p>
+</li>
+
+    
+<li>
+  <a href="/current/posts/4260-did-you-see-this">
+    
+<img alt="555id_139_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7672-41d9901d2315b52a645355f54ecd947c/555id_139_thumbnail.jpg" />
+</a>  <p>
+    <a href="/current/posts/4260-did-you-see-this">Did You See This?</a>
+  </p>
+</li>
+
+    
+<li>
+  <a href="/current/posts/4259-out-of-time-patricia-arquette-and-ellar-coltrane-on-boyhood">
+    
+<img alt="28820id_019_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7671-1caae48439de1c7271971e99164c201d/28820id_019_thumbnail.JPG" />
+</a>  <p>
+    <a href="/current/posts/4259-out-of-time-patricia-arquette-and-ellar-coltrane-on-boyhood">Out of Time: Patricia Arquette and Ellar Coltrane on <i>Boyhood</i> </a>
+  </p>
+</li>
+
+    
+<li>
+  <a href="/current/posts/4258-bob-dylan-nobel-laureate">
+    
+<img alt="Dylan2_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/6331-ad8ffc0cfd0a19bdab7dd9720658706e/dylan2_thumbnail.png" />
+</a>  <p>
+    <a href="/current/posts/4258-bob-dylan-nobel-laureate">Bob Dylan, Nobel Laureate</a>
+  </p>
+</li>
+
+    
+<li>
+  <a href="/current/posts/4256-mccabe-mrs-miller-showdowns">
+    
+<img alt="Current_28032id_165_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7667-542bce00a8008f8933450694510ce095/Current_28032id_165_thumbnail.jpg" />
+</a>  <p>
+    <a href="/current/posts/4256-mccabe-mrs-miller-showdowns"><em>McCabe & Mrs. Miller:</em> Showdowns</a>
+      <strong>By Nathaniel Rich</strong>
+  </p>
+</li>
+
+</ul>
+
+  </div>
+
+  <div class="newhome_comingsoon">
+	<div class="comingsoon_top">
+		<h3><a href="/library/expanded_view?f=1&s=release_date" title="Coming Soon">Coming Soon</a></h3>
+		<div class="comingsoon_nav">
+			<a href="/library/expanded_view?f=1&s=release_date" class="seeall" title="See All">See all</a>
+			<div class="prev" title="Prev">Prev</div>
+			<div class="next" title="Next">Next</div>
+		</div>
+	</div>
+	<div class="comingsoon_body">
+		<ul>
+			<li><img alt="Punch-Drunk Love (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4632-8cec227159a08f4d8d76bab5f21291c4/844_BD_box_348x490_w100.jpg" width="100" /><h4>Punch-Drunk Love</h4><p>Paul Thomas Anderson</p><a href='https://www.criterion.com/films/27916-punch-drunk-love'>&nbsp;</a></li><li><img alt="Heart of a Dog (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4642-8c3034d2a7f1f70b38bcad2d9f176c57/846_BD_box_348x490_w100.jpg" width="100" /><h4>Heart of a Dog</h4><p>Laurie Anderson</p><a href='https://www.criterion.com/films/28909-heart-of-a-dog'>&nbsp;</a></li><li><img alt="The Tree of Wooden Clogs (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4623-cb9b8edcb47df92a32e19c6e8a743936/840_BD_box_348x490_w100.jpg" width="100" /><h4>The Tree of Wooden Clogs</h4><p>Ermanno Olmi</p><a href='https://www.criterion.com/films/28599-the-tree-of-wooden-clogs'>&nbsp;</a></li><li><img alt="One-Eyed Jacks (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4630-03b560aa4237c66eb8b56e775efa3fa7/844_BD_box_348x490_w100.jpg" width="100" /><h4>One-Eyed Jacks</h4><p>Marlon Brando</p><a href='https://www.criterion.com/films/28979-one-eyed-jacks'>&nbsp;</a></li><li><img alt="Lone Wolf and Cub (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4628-eefcd71dda63c907dc4d522b33a1dcd1/842_BD_box_348x490_w100.jpg" width="100" /><h4>Lone Wolf and Cub</h4><p></p><a href='https://www.criterion.com/boxsets/1217-lone-wolf-and-cub'>&nbsp;</a></li><li><img alt="The Exterminating Angel (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4637-4fceb4021d403c397d5230d1c6389c4b/459_BD_box_348x490_w100.jpg" width="100" /><h4>The Exterminating Angel</h4><p>Luis Buñuel</p><a href='https://www.criterion.com/films/1076-the-exterminating-angel'>&nbsp;</a></li><li><img alt="The Executioner (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4621-7f8f3178bfbd1b1118629eb4ca4490e9/841_BD_box_348x490_w100.jpg" width="100" /><h4>The Executioner</h4><p>Luis García Berlanga</p><a href='https://www.criterion.com/films/28980-the-executioner'>&nbsp;</a></li><li><img alt="Akira Kurosawa&#x27;s Dreams (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4626-97b963ef540ae475adfa0219342a5181/841_BD_box_348x490_w100.jpg" width="100" /><h4>Akira Kurosawa’s Dreams</h4><p>Akira Kurosawa</p><a href='https://www.criterion.com/films/28700-akira-kurosawa-s-dreams'>&nbsp;</a></li><li><img alt="Black Girl (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4649-9c648c931a03eabc20db504b286d7d21/852_BD_box_348x490_w100.jpg" width="100" /><h4>Black Girl</h4><p>Ousmane Sembène</p><a href='https://www.criterion.com/films/28849-black-girl'>&nbsp;</a></li><li><img alt="The Asphalt Jungle (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4638-d82ccdbf4b5c74ddb4e54b6c2a67b956/847_BD_box_348x490_w100.jpg" width="100" /><h4>The Asphalt Jungle</h4><p>John Huston</p><a href='https://www.criterion.com/films/28690-the-asphalt-jungle'>&nbsp;</a></li><li><img alt="The Squid and the Whale (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4634-cca75240bcc338b6b37141ddf8b1ccfa/845_BD_box_348x490_w100.jpg" width="100" /><h4>The Squid and the Whale</h4><p>Noah Baumbach</p><a href='https://www.criterion.com/films/28830-the-squid-and-the-whale'>&nbsp;</a></li><li><img alt="Roma (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4640-f63b554326466dbcddddc2bb1f551d12/848_BD_box_348x490_w100.jpg" width="100" /><h4>Roma</h4><p>Federico Fellini</p><a href='https://www.criterion.com/films/28039-roma'>&nbsp;</a></li><li><img alt="His Girl Friday (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4650-f3d630da88ba34ab39580cfe27b3e952/849_BD_box_348x490_w100.jpg" width="100" /><h4>His Girl Friday</h4><p>Howard Hawks</p><a href='https://www.criterion.com/films/27903-his-girl-friday'>&nbsp;</a></li><li><img alt="Something Wild (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4654-f59112a32cd8537da5dbe0e5ef5222b8/850_BD_box_348x490_w100.jpg" width="100" /><h4>Something Wild</h4><p>Jack Garfein</p><a href='https://www.criterion.com/films/28777-something-wild'>&nbsp;</a></li><li><img alt="Fox and His Friends (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4652-d643beb0588b43fd9770442d628a4913/851_BD_box_348x490_w100.jpg" width="100" /><h4>Fox and His Friends</h4><p>Rainer Werner Fassbinder</p><a href='https://www.criterion.com/films/27957-fox-and-his-friends'>&nbsp;</a></li><li class='empty'>&nbsp;</li><li class='empty'>&nbsp;</li><li class='empty'>&nbsp;</li>
+		</ul>
+	</div>
+</div><!--end .newhome_comingsoon-->
+
+<div class="newhome_releases">
+	<div class="releases_top">
+		<h3><a href="/library/expanded_view?f=2&s=release_date" title="New Releases">New Releases</a></h3>
+		<div class="releases_nav">
+			<a href="/library/expanded_view?f=2&s=release_date" class="seeall" title="See All">See all</a>
+			<div class="prev" title="Prev">Prev</div>
+			<div class="next" title="Next">Next</div>
+		</div>
+	</div>
+	<div class="releases_body">
+		<ul>
+      <li><img alt="Woman in the Dunes (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4591-b9d67c255d7db2850297ef2f29b0259b/394_BD_box_348x490_w100.jpg" width="100" /><h4>Woman in the Dunes</h4><p>Hiroshi Teshigahara</p><a href='https://www.criterion.com/films/826-woman-in-the-dunes'>&nbsp;</a></li><li><img alt="Boyhood (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4485-55debecc1c2e689d92d2b6367297853b/839_BD_box_348x490_w100.jpg" width="100" /><h4>Boyhood</h4><p>Richard Linklater</p><a href='https://www.criterion.com/films/28820-boyhood'>&nbsp;</a></li><li><img alt="Night Train to Munich (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4611-3ad5947d72a75e39117a2f1dc23abe91/523_BD_box_348x490_w100.jpg" width="100" /><h4>Night Train to Munich</h4><p>Carol Reed</p><a href='https://www.criterion.com/films/25039-night-train-to-munich'>&nbsp;</a></li><li><img alt="The New World (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4576-1ae162c99931a4286d6b84f9919c09c4/826_BD_box_348x490_w100.jpg" width="100" /><h4>The New World</h4><p>Terrence Malick</p><a href='https://www.criterion.com/films/28713-the-new-world'>&nbsp;</a></li><li><img alt="Valley of the Dolls (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4605-fabf9ae4f2f1fc310be7550762496443/835_BD_box_348x490_w100.jpg" width="100" /><h4>Valley of the Dolls</h4><p>Mark Robson</p><a href='https://www.criterion.com/films/28577-valley-of-the-dolls'>&nbsp;</a></li><li><img alt="Pan’s Labyrinth (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4615-20dbd209c32d34fa1aecf6f8bac4168e/838_BD_box_348x490_w100.jpg" width="100" /><h4>Pan’s Labyrinth</h4><p>Guillermo del Toro</p><a href='https://www.criterion.com/films/28948-pan-s-labyrinth'>&nbsp;</a></li><li><img alt="Zatoichi: The Blind Swordsman (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4612-cb7f7969ac16453420c5ec94cb8093d8/679_BD_box_348x490_w100.jpg" width="100" /><h4>Zatoichi: The Blind Swordsman</h4><p></p><a href='https://www.criterion.com/boxsets/1012-zatoichi-the-blind-swordsman'>&nbsp;</a></li><li><img alt="The Story of the Last Chrysanthemum (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4599-5446829cbbcd526817e2a1586e819b9e/832_BD_box_348x490_w100.jpg" width="100" /><h4>The Story of the Last Chrysanthemum</h4><p>Kenji Mizoguchi</p><a href='https://www.criterion.com/films/27729-the-story-of-the-last-chrysanthemum'>&nbsp;</a></li><li><img alt="Nashville (Criterion Blu-Ray/DVD Combo)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4187-22383d9d2fdb6615ae03fc7a8524d16f/683_box_348x490_DF_w100.jpg" width="100" /><h4>Nashville</h4><p>Robert Altman</p><a href='https://www.criterion.com/films/28427-nashville'>&nbsp;</a></li><li><img alt="Short Cuts (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4619-fecb50cdb7b24765176493458291c958/265_BD_box_348x490_w100.jpg" width="100" /><h4>Short Cuts</h4><p>Robert Altman</p><a href='https://www.criterion.com/films/376-short-cuts'>&nbsp;</a></li><li><img alt="Trilogía de Guillermo del Toro (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4617-636c41edf222a47d634978f95ffd639b/GuillermoDelToro_BD_box_348x490_w100.jpg" width="100" /><h4>Trilogía de Guillermo del Toro</h4><p>Guillermo del Toro</p><a href='https://www.criterion.com/boxsets/1209-trilogia-de-guillermo-del-toro'>&nbsp;</a></li><li><img alt="Cat People (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4603-859ccf04cfc3b0626fe4fc3fe2c7d6d3/833_BD_box_348x490_w100.jpg" width="100" /><h4>Cat People</h4><p>Jacques Tourneur</p><a href='https://www.criterion.com/films/28696-cat-people'>&nbsp;</a></li><li><img alt="Blood Simple (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4601-1bacf0e6fc63d5ca8f2b6d363d3f4942/834_BD_box_348x490_w100.jpg" width="100" /><h4>Blood Simple</h4><p>Joel Coen</p><a href='https://www.criterion.com/films/28852-blood-simple'>&nbsp;</a></li><li><img alt="Beyond the Valley of the Dolls (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4607-50784e70cd4ef17974b830dc02818a79/836_BD_box_348x490_w100.jpg" width="100" /><h4>Beyond the Valley of the Dolls</h4><p>Russ Meyer</p><a href='https://www.criterion.com/films/28120-beyond-the-valley-of-the-dolls'>&nbsp;</a></li><li><img alt="Dekalog (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4609-2bd306f87ee9b31ec9af2f2be0c84475/837_BD_box_348x490_w100.jpg" width="100" /><h4>Dekalog</h4><p>Krzysztof Kieślowski</p><a href='https://www.criterion.com/films/28661-dekalog'>&nbsp;</a></li><li><img alt="Ingrid Bergman: In Her Own Words (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4584-75bbea578f08630928145c68081af3e5/828_BD_box_348x490_w100.jpg" width="100" /><h4>Ingrid Bergman: In Her Own Words</h4><p>Stig Björkman</p><a href='https://www.criterion.com/films/28910-ingrid-bergman-in-her-own-words'>&nbsp;</a></li><li><img alt="The Immortal Story (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4588-09bcce294bd2878f63e1dfe6f9f9e8dc/831_BD_box_348x490_w100.jpg" width="100" /><h4>The Immortal Story</h4><p>Orson Welles</p><a href='https://www.criterion.com/films/27672-the-immortal-story'>&nbsp;</a></li><li><img alt="Chimes at Midnight (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4586-e920f038d40e0b5d5387c972fc8ea454/830_BD_box_348x490_w100.jpg" width="100" /><h4>Chimes at Midnight</h4><p>Orson Welles</p><a href='https://www.criterion.com/films/28756-chimes-at-midnight'>&nbsp;</a></li><li><img alt="McCabe &amp; Mrs. Miller (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4582-47933577d7f427eb2e96dca5fdb796a9/827_BD_box_348x490_w100.jpg" width="100" /><h4>McCabe & Mrs. Miller</h4><p>Robert Altman</p><a href='https://www.criterion.com/films/28712-mccabe-mrs-miller'>&nbsp;</a></li><li><img alt="A Taste of Honey (Criterion Blu-Ray)" height="141" src="https://s3.amazonaws.com/criterion-production/release_boxshots/4590-bb52f133fb8169ec4387707f67c28d17/829_BD_box_348x490_w100.jpg" width="100" /><h4>A Taste of Honey</h4><p>Tony Richardson</p><a href='https://www.criterion.com/films/28734-a-taste-of-honey'>&nbsp;</a></li><li class='empty'>&nbsp;</li><li class='empty'>&nbsp;</li><li class='empty'>&nbsp;</li><li class='empty'>&nbsp;</li>
+		</ul>
+	</div>
+</div><!--end .newhome_releases-->
+
+<div class="newhome_social">
+	<div class="social_twitter">
+		<h3><a href="http://twitter.com/criterion" class="grey">Twitter</a></h3>
+		<p>We tweet about film culture, upcoming releases, and other interesting tidbits.</p>
+		<a href="http://twitter.com/criterion" class="twitter-follow-button" data-show-count="true">Follow @criterion</a>
+	</div>
+
+	<div class="social_facebook">
+		<a href="http://www.facebook.com/CriterionCollection" class="link_facebook">Facebook</a>
+		<h3><a href="http://www.facebook.com/CriterionCollection" class="grey">Facebook</a></h3>
+		<p>Join us on Facebook for announcements, sneak peeks, and contests.</p>
+    <fb:like href="http://www.facebook.com/CriterionCollection" notify="true" ref="homepage" send="false" width="250" height="40" show_faces="false" font="arial"></fb:like>
+	</div>
+
+	<div class="social_newsletter">
+		<h3>Newsletter</h3>
+		<div class="newsletter_form">
+		  <form accept-charset="UTF-8" action="https://www.criterion.com/users/newsletter_signup" class="new_user" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="wlITePDo1rFWVakyel6vkHlOm0R67EOJTRKJNWnLUnE=" /></div>
+			  <input class="input" name="email" value="Enter E-mail Address" type="text" onfocus="this.value=''" />
+			  <input class="submit" name="subscribe" type="submit" value="Subscribe" />
+</form>		</div>
+		<p><strong>Sign Up</strong> to receive new release info, top 10 lists, contests, giveaways, and other special offers.</p>
+	</div>
+</div><!--end .newhome_social-->
+
+<div class="newhome_feeds">
+  
+<div class="feeds_current feeds_col">
+  <div class="feeds_current_top">
+    <h3>
+      <a href="/current/posts?category=Film+Essays" class="grey">Film Essays</a>
+    </h3>
+    <ul>
+      <li>
+        <a href="/current/posts?category=Film+Essays" title="Read More Film Essays">Read more</a>
+      </li>
+    </ul>
+    <div class="break"></div>
+  </div>
+  
+  <ul class="feeds_current_list">
+      <li>
+          <a href="/current/posts/4256-mccabe-mrs-miller-showdowns">
+            
+<img alt="Current_28032id_165_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7667-542bce00a8008f8933450694510ce095/Current_28032id_165_thumbnail.jpg" />
+</a>
+        <h4>
+          <a href="/current/posts/4256-mccabe-mrs-miller-showdowns"><em>McCabe & Mrs. Miller:</em> Showdowns</a>
+        </h4>
+
+        <p>
+            By <strong>Nathaniel Rich</strong>
+            &bull;
+          13 October 2016
+          &bull;
+          <a href="/current/posts/4256-mccabe-mrs-miller-showdowns#comments">0 comments</a>
+          <br />
+          From its diffusely structured narrative to its innovative cinematography, this radical western is a showcase for Robert Altman’s iconoclastic style.
+          <a href="/current/posts/4256-mccabe-mrs-miller-showdowns" title="Read more">Read more »</a>
+        </p>
+      </li>
+      <li>
+          <a href="/current/posts/4246-boyhood-the-moment-seizes-you">
+            
+<img alt="Current_28820id_003_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7660-ef7e0b90448421b628f7f94328600bbd/Current_28820id_003_thumbnail.jpg" />
+</a>
+        <h4>
+          <a href="/current/posts/4246-boyhood-the-moment-seizes-you"><em>Boyhood:</em> The Moment Seizes You</a>
+        </h4>
+
+        <p>
+            By <strong>Jonathan Lethem</strong>
+            &bull;
+          10 October 2016
+          &bull;
+          <a href="/current/posts/4246-boyhood-the-moment-seizes-you#comments">5 comments</a>
+          <br />
+          Filmed over the course of twelve years, Richard Linklater’s coming-of-age portrait is an astonishing experiment in cinematic time.
+          <a href="/current/posts/4246-boyhood-the-moment-seizes-you" title="Read more">Read more »</a>
+        </p>
+      </li>
+      <li>
+          <a href="/current/posts/4241-beyond-the-valley-of-the-dolls-my-happening">
+            
+<img alt="Beyond_current_thumbnail" src="https://s3.amazonaws.com/criterion-production/images/7593-662fca73f8b9f0e9daaee6b2b5d82c8b/beyond_current_thumbnail.jpg" />
+</a>
+        <h4>
+          <a href="/current/posts/4241-beyond-the-valley-of-the-dolls-my-happening"><em>Beyond the Valley of the Dolls:</em> “My Happening”</a>
+        </h4>
+
+        <p>
+            By <strong>Glenn Kenny</strong>
+            &bull;
+          28 September 2016
+          &bull;
+          <a href="/current/posts/4241-beyond-the-valley-of-the-dolls-my-happening#comments">1 comment</a>
+          <br />
+          “King of the Nudies” Russ Meyer injects his transgressive exuberance into this big-studio send-up of Hollywood debauchery.
+          <a href="/current/posts/4241-beyond-the-valley-of-the-dolls-my-happening" title="Read more">Read more »</a>
+        </p>
+      </li>
+  </ul>
+</div>
+
+  
+<div class="feeds_quicklinks feeds_col">
+  <div class="feeds_quicklinks_top">
+    <h3>
+      <a href="/current/posts">Current Posts</a>
+    </h3>
+    
+    <ul>
+      <li>
+        <a href="http://feeds.feedburner.com/TheCriterionCollection-TheCurrent" class="rss">
+          <img alt="Icon_rss" src="https://d2ffltj98nrzzh.cloudfront.net/assets/editorial_content/icon_rss-8c8ec6e8cbd4b83c805bfd2409a8625c.gif" />
+</a>      </li>
+    </ul>
+    
+    <div class="break"></div>
+  </div>
+  
+  <ul class="feeds_quicklinks_list">
+      <li>
+        <p>
+          <a href="/current/posts/4261-tim-robbins-s-closet-picks" class="title">Tim Robbins’s Closet Picks</a>
+          <br />
+          Posted
+            in
+            <a href="/current/posts?category=Video">Video</a>
+            &bull;
+          17 October 2016
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="/current/posts/4260-did-you-see-this" class="title">Did You See This?</a>
+          <br />
+          Posted
+            in
+            <a href="/current/posts?category=Clippings">Clippings</a>
+            &bull;
+          14 October 2016
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="/current/posts/4259-out-of-time-patricia-arquette-and-ellar-coltrane-on-boyhood" class="title">Out of Time: Patricia Arquette and Ellar Coltrane on <i>Boyhood</i> </a>
+          <br />
+          Posted
+            in
+            <a href="/current/posts?category=Video">Video</a>
+            &bull;
+          14 October 2016
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="/current/posts/4258-bob-dylan-nobel-laureate" class="title">Bob Dylan, Nobel Laureate</a>
+          <br />
+          Posted
+            in
+            <a href="/current/posts?category=Video">Video</a>
+            &bull;
+          13 October 2016
+        </p>
+      </li>
+  </ul>
+  <div class="feeds_quicklinks_btm">
+    <ul>
+      <li>Browse :</li>
+      <li><a href="/current/posts?category=On+Five" title="On Five">On Five</a></li>
+      <li>/</li>
+      <li><a href="/current/posts?category=Three+Reasons" title="Three Reasons">Three Reasons</a></li>
+      <li>/</li>
+      <li><a href="/current/posts?category=News" title="News">News</a></li>
+    </ul>
+  </div>
+</div>
+
+</div><!--end .newhome_feeds-->
+
+
+  <div id="my-criterion">
+    <div class="my-criterion_top">
+      <h3><a href="/my_criterion" class="grey">My Criterion</a></h3>
+    </div>
+
+    <div id="featured-lists">
+        <div class="spotlight-list">
+          <a href="https://www.criterion.com/lists/386837-james-agee-s-criterion" class="spotlight-list-photo hover"><img alt="Film_662w_safetylast_original" height="252" src="https://s3.amazonaws.com/criterion-production/stills/132112-be9748d79b404e16d6b281c7621cd782/Film_662w_SafetyLast_original.jpg" width="448" /></a>
+          <div class="spotlight-list-right my-criterion_lists">
+            <p class="featured-lists-label">Featured Lists:</p>
+            <a href="https://www.criterion.com/lists/386837-james-agee-s-criterion" class="spotlight-list-title">James Agee's Criterion</a>
+            <a href="https://www.criterion.com/my_criterion/95989-neil_mcglone" class="featured-list-titles author">By Neil_McGlone</a>
+            <ul class="meta">
+              <li>20 favorites</li>
+                <li>|</li>
+                <li>6 comments</li>
+            </ul>
+          </div>
+        </div>
+
+      <div class="item list">
+  	 	    <div class="featured-list hover">
+  		      <a href="https://www.criterion.com/lists/51139-national-film-registry-criterion-titles" class="featured-list-photo hover"><img alt="Film_821_drstrangelove_w160" height="90" src="https://s3.amazonaws.com/criterion-production/stills/132360-2f871a84854f3ca4737349e351f625a7/Film_821_DrStrangelove_w160.jpg" width="160" /></a>
+  		      <a href="https://www.criterion.com/lists/51139-national-film-registry-criterion-titles" class="featured-list-titles hover">National Film Registry Criterion Titles</a>
+  	 	    </div>
+  	 	    <div class="featured-list hover">
+  		      <a href="https://www.criterion.com/lists/48418-30-and-under" class="featured-list-photo hover"><img alt="Film_397w_ivanschildhood_w160" height="90" src="https://s3.amazonaws.com/criterion-production/stills/7517-321092def482c86e44286741350d378d/Film_397w_IvansChildhood_w160.jpg" width="160" /></a>
+  		      <a href="https://www.criterion.com/lists/48418-30-and-under" class="featured-list-titles hover">30 and Under</a>
+  	 	    </div>
+  	 	    <div class="featured-list hover">
+  		      <a href="https://www.criterion.com/lists/173792-commercial-misunderstandings" class="featured-list-photo hover"><img alt="Film_636w_heavensgate_w160" height="90" src="https://s3.amazonaws.com/criterion-production/stills/132028-10fe9dc4639a2a5a049781915f266d70/Film_636w_HeavensGate_w160.jpg" width="160" /></a>
+  		      <a href="https://www.criterion.com/lists/173792-commercial-misunderstandings" class="featured-list-titles hover">Commercial Misunderstandings </a>
+  	 	    </div>
+  	 	    <div class="featured-list hover">
+  		      <a href="https://www.criterion.com/lists/76422-sam-smith-my-criterion" class="featured-list-photo hover"><img alt="520_filmw_everlastingmoments_w160" height="90" src="https://s3.amazonaws.com/criterion-production/stills/89007-c7fdc8da20784aa0203bde10a6790b6e/520_Filmw_EverlastingMoments_w160.jpg" width="160" /></a>
+  		      <a href="https://www.criterion.com/lists/76422-sam-smith-my-criterion" class="featured-list-titles hover">Sam Smith: My Criterion</a>
+  	 	    </div>
+      </div>
+    </div><!-- END featured-lists -->
+
+    <div id="mycri-tout">
+      <div id="mycri-tout-inner">
+        <p class="mycri-tout-headline">Create a profile, <br/>build your collection, <br/>make a wish (list).</p>
+        <p class="mycri-tout-body"><strong>My Criterion</strong> is a free way to build your virtual collection, make lists, and share them. It’s your new home on Criterion.com.</p>
+        <a href="/my_criterion/signup" class="mycri-tout-button green_button">Get Started</a>
+      </div>
+    </div>
+
+
+      <div class="newhome_my_criterion_notes">
+    	  <p class="featured-lists-label">What you’re saying:</p>
+          <div class="my-criterion-note-bg" style="background-image:url('https://s3.amazonaws.com/criterion-production/stills/131193-5f1edd478489dc8e9be4f82675670e15/Film_230w_3Women_original.jpg');">
+            <div class="my-criterion-note">
+              <div class="note-arrow"></div>
+              <a href="https://www.criterion.com/films/712-3-women" class="note-link">&nbsp;</a>
+              <p class="note-body"><a href="https://www.criterion.com/my_criterion/49939-cnuts/wish_list#list-item-311022">“This surreal film flows back and forth from watery dreamscape to dusty desert dive bar & has me close to worshiping in the cult of all things Altman  ”</a></p>
+              <a href="https://www.criterion.com/my_criterion/49939-cnuts" class="note-author">Cnuts</a>
+            </div>
+          </div>
+          <div class="my-criterion-note-bg" style="background-image:url('https://s3.amazonaws.com/criterion-production/stills/129673-0ea2aac9a611213dd57031baf3eecd6d/Film_57w_Charade_original.jpg');">
+            <div class="my-criterion-note">
+              <div class="note-arrow"></div>
+              <a href="https://www.criterion.com/films/603-charade" class="note-link">&nbsp;</a>
+              <p class="note-body"><a href="https://www.criterion.com/my_criterion/65350-chase-hiland/collection?open_item=571907">“What can I say about this that isn't great? Hepburn and Grant. Murder mystery. Espionage. Secret lives. Double-crossing. Awesome 60s score. Excellent!”</a></p>
+              <a href="https://www.criterion.com/my_criterion/65350-chase-hiland" class="note-author">Chase Hiland</a>
+            </div>
+          </div>
+          <div class="my-criterion-note-bg" style="background-image:url('https://s3.amazonaws.com/criterion-production/stills/132207-b28903dbff606a4db462405222c212be/Film_683w_Nashville_original.jpg');">
+            <div class="my-criterion-note">
+              <div class="note-arrow"></div>
+              <a href="https://www.criterion.com/films/28427-nashville" class="note-link">&nbsp;</a>
+              <p class="note-body"><a href="https://www.criterion.com/my_criterion/118862-connor/collection?open_item=1702726">“As the title implies, the movie is just as much a story of a place as the people who live in it, which is perfectly tuned to Altman's  sensibilities. ”</a></p>
+              <a href="https://www.criterion.com/my_criterion/118862-connor" class="note-author">Connor</a>
+            </div>
+          </div>
+        <div class="clear"></div>
+      </div>
+  </div>
+
+</div><!-- END NEWHOME -->
+
+      <div id="footer" class="clear">
+  <ul class="sections">
+    <li><a href="/library" title="Films" class="header">Films</a></li>
+    <li><a href="/library/expanded_view?f=2&s=release_date" title="New Releases" class="inner">New Releases</a></li>
+    <li><a href="/library/expanded_view?f=1&s=release_date" title="Coming Soon" class="inner">Coming Soon</a></li>
+    <li><a href="/library/expanded_view?f=3" title="Collector's Sets" class="inner">Collector’s Sets</a></li>
+    <li><a href="/library/expanded_view?b=Eclipse&s=spine&f=3" title="Eclipse" class="inner">Eclipse</a></li>
+  </ul>
+
+  <ul class="sections">
+    <li><a href="/explore" title="Explore" class="header">Explore</a></li>
+    <li><a href="/explore/top10" title="Top 10s" class="inner">Top 10 Lists</a></li>
+    <li><a href="/explore/people" title="People" class="inner">People</a></li>
+    <li><a href="/explore/themes" title="Themes" class="inner">Themes</a></li>
+    <!-- until user lists are ready>	<li><a href="/explore" title="TBD Lists" class="inner">TBD Lists</a></li> <-->
+  </ul>
+
+  <ul class="sections">
+    <li><a href="/current/posts" title="Current" class="header">Current</a></li>
+    <li><a href="/current/posts?category=Film+Essays" title="Film Essays" class="inner">Film Essays</a></li>
+    <li><a href="/current/posts?category=Video" title="Video" class="inner">Video</a></li>
+    <li><a href="/current/posts?category=Photo+Galleries" title="Photo Galleries" class="inner">Photo Galleries</a></li>
+    <li><a href="/current/posts?category=On+Five" title="On Five" class="inner">On Five</a></li>
+  </ul>
+
+  <ul class="sections">
+    <li><a href="/shop" title="Films" class="header">Shop</a></li>
+    <li><a href="/library" title="Blu-rays and DVDs" class="inner">Blu-rays and DVDs</a></li>
+    <li><a href="/shop/t_shirts" title="T-Shirts" class="inner">T-Shirts</a></li>
+    <li><a href="/shop/artwork" title="Artwork and Posters" class="inner">Artwork and Posters</a></li>
+    <li><a href="/shop/gift_certificates" title="Gift Certificates" class="inner">Gift Certificates</a></li>
+  </ul>
+
+  <ul class="sections-user">
+    <li><a href="/account" title="My Account" class="header">My Account</a></li>
+    <li class="cart-present-only"><a href="/cart/show" title="View Cart" class="inner cart-present-only" rel="nofollow">View Cart</a></li>
+    <li class="admin-only"><a href="/admin" class="inner admin-only" title="Admin" rel="nofollow">Admin</a></li>
+    <li class="signed-in-only"><a href="/account" class="inner signed-in-only" title="Account Info" rel="nofollow">Account Info</a></li>
+    <li class="signed-in-only"><a href="/orders" class="inner signed-in-only" title="Orders" rel="nofollow">Orders</a></li>
+    <li class="signed-in-only"><a href="/logout" class="inner signed-in-only" title="Log Out" rel="nofollow">Log Out</a></li>
+    <li class="signed-out-only"><a href="/signup" class="inner signed-out-only" title="Sign Up">Sign Up</a></li>
+    <li class="signed-out-only"><a href="/login" class="inner signed-out-only" title="Log In">Log In</a></li>
+    <li><a href="/help" title="Help" class="inner">Help</a></li>
+  </ul>
+
+
+  <ul class="sections-user">
+    <li><a href="/my_criterion" title="My Criterion" class="header">My Criterion</a></li>
+    <li class="signed-in-only"><a href="/my_criterion" class="inner signed-in-only" title="My Profile"  rel="nofollow">My Profile</a></li>
+    <li class="signed-in-only"><a href="/my_wish_list" class="inner signed-in-only" title="My Wish List" rel="nofollow">My Wish List</a></li>
+    <li class="signed-in-only"><a href="/my_collection" class="inner signed-in-only" title="My Collection" rel="nofollow">My Collection</a></li>
+    <li class="signed-out-only"><a href="/my_criterion" class="inner signed-out-only" title="Get Started">Get Started</a></li>
+  </ul>
+
+  <div id="aboutjoin">
+    <p id="aboutus">The Criterion Collection &copy; 2016
+      <a href="/about_us" title="About Us" class="contactjoin">About Us</a>
+      <a href="/contact_us" title="Contact Us" class="contactjoin">Contact Us</a>
+      <a href="http://www.janusfilms.com" title="Janus Films" class="contactjoin">Janus Films</a>
+    </p>
+    <p id="joinus">Join us on:
+      <a href="http://www.facebook.com/criterioncollection" title="Facebook" class="contactjoin">Facebook</a>
+      <a href="http://www.twitter.com/criterion" title="Twitter" class="contactjoin">Twitter</a>
+      <a href="http://criterioncollection.tumblr.com/" title="Tumblr" class="contactjoin">Tumblr</a>
+      <a href="http://www.youtube.com/criterioncollection?sub_confirmation=1" title="YouTube" class="contactjoin">YouTube</a></p>
+  </div>
+
+ <!--
+    <li><a href="/terms" title="Terms">Terms</a></li>
+    <li><a href="/privacy" title="Privacy">Privacy</a></li>
+    -->
+</div> <!-- END FOOTER -->
+    </div> <!-- END WRAP -->
+
+    	<script type="text/javascript">
+  var _sf_async_config={uid:5334,domain:"criterion.com"};
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+         "js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+
+  </script>
+
+  </body>
+</html>
+
+<!-- Environment: production -->

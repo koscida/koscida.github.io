@@ -1,0 +1,410 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>In Praise of Closed Source</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="20" cellspacing="0" width="80%"
+bgcolor="#FFD5AA">
+    <tr>
+        <td valign="top" rowspan="2" bgcolor="#FFC78E"><img
+        src="mark.jpg" width="285" height="288"></td>
+        <td valign="top" rowspan="2" bgcolor="#FFFFFF"><p
+        align="center"
+        style="color: rgb(255, 255, 255); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+		<font
+        color="#000000" size="6" face="Nyala">Open Source is Ceasing to be Cool<br>
+        <br>
+        </font><font color="#000000" size="4" face="Nyala"><strong>©
+        Dr Mark Tarver, 2016</strong></font></p>
+		<p><i><font face="Nyala" size="4">This essay is a lightly edited 
+		transcript of a series of posts I made to the Shen news group in the 
+		middle of 2015.&nbsp; They highlighted the failure of the open source 
+		initiative in the project, analysed the reasons and suggested a 
+		successful formula for moving the project forward.&nbsp; The posts led 
+		to the formation of the much more dynamic closed source Shen Professional.&nbsp; 
+		The lessons here are widely applicable to many open source projects and 
+		developers may find the material interesting.</font></i></p>
+		<p><font face="Nyala" size="5">Evaluating the Open Source Initiative</font></p>
+		<p><font face="Nyala" size="4">I said that I would give the open source 
+		initiative 6 months from BSD day (February 2015)before passing judgment; 
+		but the 6 months is now well up. So it's time to look at what has been 
+		achieved and what lessons are to be learned.&nbsp; Stay focused; what 
+		follows is important.<br>
+		<br>
+		Six months have passed since BSD day and it is time to take stock of 
+		achievements. <u>In that time the OS initiative has accomplished bugger 
+		all</u>. Am I surprised? No. But even my admittedly low expectations 
+		were surpassed by the non-performance of this approach. I hope that 
+		we're not going to follow the Maoists of the period of the Great Leap 
+		Forward - who could not accept that their unworkable ideas did not work 
+		and resorted to show trials of people to explain their failure. <br>
+		<br>
+		Also I hope that people are not going to try to save this discredited 
+		ideology from being led to the scaffold. Take heart, I am in fact only 
+		executing a corpse in what I am going to say in the next messages. <br>
+		<br>
+		If there is a value in this period, and it can be a very substantial 
+		one, it is seeing why ideas fail, which can point to the right 
+		direction. We are going to take the red pill. But before moving forward, 
+		the whole open source strategy must be deconstructed. <br>
+		<br>
+		Now I will warn you that in the next paragraphs open source is going to 
+		be shredded. Why am I doing this? Just to 
+		exercise an itch? No.&nbsp; In Taoism when you embark on energy 
+		cultivation (qigong) you don't just put the new energy on top of what is 
+		already there; the old stale, bad <i>qi</i> needs to be cleaned out. 
+		Think of having to paint over a surface with lumpy old paint; you sand 
+		down the surface first and then apply the new paint otherwise your new 
+		paint job is screwed by the old one. So systematically I'm going to 
+		remove some myths and clean out the bad stuff. <br>
+		<br>
+		</font><font face="Nyala" size="5">Myth #1 Mindshare = Success</font><font face="Nyala" size="4"><br>
+		<br>
+		Defining mindshare as popular support on chat sites and having lots of 
+		users is an OS idea of success. If you define 'success' as such and that 
+		is your goal, then 'mindshare is success' is a tautology. But if you've 
+		graduated beyond this desire and you have other ideas of success - for 
+		example livelihood - then this is one myth that needs to be busted.<br>
+		<br>
+		We know now that though giving people stuff for free and achieving 
+		traction is not at all synonymous with being economically successful. We 
+		know this because we now have examples of projects that got lots of 
+		freeloaders and still struggle for money - most notoriously 
+		<a href="http://mashable.com/2014/04/14/heartbleed-open-source/#wdU_WSRQVZqB">OpenSSL</a>, but 
+		also 
+		<a href="http://www.zdnet.com/article/electricity-bill-threatens-survival-of-openbsd/">OpenBSD</a> and many others less well known. We also know that in any 
+		project of significant size and complexity, money is needed on a regular 
+		basis to pay for the kind of professional development and support needed 
+		to deliver a really good product. This is the case with Shen.<br>
+		<br>
+		The other problem in defining success as mindshare is that this creates 
+		an almost futureproof model for failure. I can think of nothing more 
+		likely to fuck your mind than going for mindshare. Why? Because simply 
+		the world is a very big place full of people with very small brains who 
+		can barely hold one idea at a time. The nature of things is that the 
+		chances of your idea conquering the world is slight. So if you're 
+		building mindshare into your success model you're building 
+		disappointment, heartbreak and abandonment into your success strategy. <br>
+		<br>
+		There is a certain character you see in the West; the sort of girl who 
+		paints her nails, works at KFC and dreams of being selected for X-Factor 
+		because she sang karaoke at her friend's hen night. We laugh at this 
+		because we know that for her the chances of getting mindshare and being 
+		the next Beyonce are slight. Everyone can dream; but when the girl goes 
+		on to neglect her education and development because she's stuck on this 
+		dream, then something has gone very wrong in her head. The aspirations 
+		of the OS fanatic hooked on mindshare are often no more realistic than 
+		the neurotic checkout girl at KFC.<br>
+		<br>
+		Out of all the dubious achievements of open source none has been so 
+		damaging as the general promotion of this neurotic definition of 
+		success. <br>
+		<br>
+		</font><font face="Nyala" size="5">Myth #2: Open Source is Creative</font><font face="Nyala" size="4"><br>
+		<br>
+		This is an odd one. Saying OS is creative is what Gilbert Ryle called a 
+		category mistake and in programming we call a type error; open source is 
+		no more creative than people are divisible by 2 or knowledge wants to be 
+		free. Creativity is really a feature of intelligent life of which humans 
+		are supposed to be exemplars. We can only talk about institutions being 
+		creative to the extent that they foster and encourage creativity. 
+		Universities to an extent, used to do that, but they are corporate 
+		machines today; they are not creative places to work.<br>
+		<br>
+		OS has never really been creative in this sense for the simple reason 
+		that mindshare philosophy dominates and the quickest way to achieve 
+		mindshare is to copy some closed source work that has already achieved 
+		it. Hence Linux, Gimp, Open Office etc. This is not to say that nothing 
+		under an OS license has ever been creative; it just means that the <i>
+		zeitgeist </i>of the movement does not especially reward originality.</font></p>
+		<blockquote>
+			<p><i><font face="Nyala" size="4">I predict that no tool of any kind 
+			which too greatly amplifies the productivity of an individual will 
+			ever be permitted to most developers.&nbsp; In this they shall follow in 
+			the maximally deskilled assembly-line footsteps of their 
+			grandparents.&nbsp;</font></i><span style="color: rgb(0, 0, 0); font-family: Nyala; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(248, 248, 248)"><span class="Apple-converted-space">&nbsp;</span></span><a style="text-decoration: none; color: rgb(51, 102, 153); font-family: Nyala; font-style: italic; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 248, 248)" href="http://nfldsongs.tripod.com/04/chemical.htm"><font size="4">&#8220;They'll 
+			time your every breath.&#8221;</font></a><span style="color: rgb(0, 0, 0); font-family: Georgia, Arial, helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(248, 248, 248);"><span class="Apple-converted-space">&nbsp;</span></span><i><font face="Nyala" size="4">As for the &#8220;free software&#8221; world, 
+			it eagerly opposes industrial dogmas in rhetoric but not at all in 
+			practice. No concept shunned by cube farm hells has ever gained real 
+			traction among the amateur masses.</font></i></p>
+		</blockquote>
+		<blockquote>
+			<p><font face="Nyala" size="4"><i>
+			<a href="http://www.loper-os.org/?p=69">Where Lisp Fails: at Turning 
+			People into Fungible Cogs</a> </i>by Stanislav</font></p>
+		</blockquote>
+		<p align="left"><font face="Nyala" size="4">Shen simply sticks out as 
+		contrary to that trend - it is original and hard to understand. So 
+		immediately we should at least <b>begin</b> to question the goals of 
+		mindshare in connection with Shen. In fact the coupling of Shen with 
+		mindshare thinking has been nothing short of tragic in its consequences 
+		for this project. I want to get stuck into specifics next. <br>
+		<br>
+		</font><font face="Nyala" size="5">The Consequences of Adopting 
+		Mindshare on the Development of Shen</font><font face="Nyala" size="4"><br>
+		<br>
+		I think a lot of people in the Shen group bought into mindshare and it 
+		informed a lot of their work. Greg 
+		wrote to me and said that there was no future unless Shen was more widely adopted. He then 
+		nobly set himself to write an open source dissertation on Shen-YACC. 
+		Bruno created a wiki which I attached to the Shen front page to allow 
+		people to create their own documentation. People created the Shen reddit 
+		- a very mixed blessing in some ways - and Twitter was used. All these 
+		are products of a generation for whom social networking via the web and 
+		the philosophy of mindshare are very much intertwined. Shen needed 
+		mindshare to live and thrive.<br>
+		<br>
+		But actually if you look at the most productive phase from 2011-2012, 
+		the 'mindshare' consisted of a handful of people. You could have seated 
+		us all round a table in Starbucks. Perhaps one day we need to do that.<br>
+		<br>
+		The philosophy of mindshare is one of heartbreak because significant 
+		mindshare is hard to achieve. Hence the people here were laying up 
+		trouble and disappointment for themselves. But the task was made even 
+		more monumental by very strengths of Shen; the advanced type system, 
+		sequent calculus and the incredible multilingual potential which 
+		collectively the software community did not and still do not understand. 
+		So in effect a very small group of idealistic people with hardly any 
+		resources undertook to re-educate the planet. <br>
+		<br>
+		</font><font face="Nyala" size="5">Giving Away Your Power<br>
+		</font><font face="Nyala" size="4"><br>
+		When this decision to educate the planet about Shen was taken, and I 
+		don't say it was a conscious decision, the centre of gravity of the 
+		project moved outwards and the energy was dissipated on a fruitless 
+		goal. Effectively the philosophy of mindshare had redefined success. 
+		Shen was in fact an outstanding success, almost a miracle; with the 
+		minimum of funding, under harsh conditions, it had achieved exactly what 
+		it set out to do and a small group of people had made it run under 
+		nearly every major platform. But now success was redefined as mindshare.<br>
+		<br>
+		This is the time when reddit made an appearance. I blessed the Shen 
+		subreddit because I thought that reddit was some polite ladies bookclub 
+		- obviously showing my ignorance of it. It is nothing of the sort of 
+		course and some of its most vicious sites like Coontown - t<a href="http://www.wired.co.uk/article/reddit-new-content-policy-update">he reddit for 
+		racists only recently closed</a> - shows what is so often like. Reddit is a 
+		shit hole; and to a lesser degree so are SlashDot, and Hacker News. <br>
+		<br>
+		Unfortunately some members of the Shen group, imbibing the mindshare 
+		poison, gave much power away to the opinions on reddit. The OS fanatics 
+		relished their power to bully and shame and people used to mail me and 
+		say 'You need to say something because XYZ has said such and such on 
+		reddit'. I did on occasion call such people 'complete prats', but really 
+		this was whack-a-mole because the supply of arseholes was unending. <br>
+		<br>
+		Effectively the mindshare philosophy delivered the energy and soul of 
+		the project to those who had reasons to dislike it. These people were 
+		stupid and could have been dismissed as such but the mindshare poison 
+		had so undermined resistance that people here could not fight them. 
+		These online voices represented or claimed to represent the community - 
+		they were the mindshare.<br>
+		<br>
+		Having bowed to open source as they demanded, the group discovered 
+		that these people have melted away and are not to be found. There is no 
+		open source army on the march that Tycho hoped for. There never was. What 
+		you had was a bunch of useless people getting their kicks out of 
+		manipulating a small group of much cleverer people. It was simply a 
+		power trip. The nadir was reached when two members of the open source 
+		community crawled out from under their stone to conspire to expel Shen 
+		from Wikipedia by announcing Shen was dead. <br>
+		<br>
+		</font><font face="Nyala" size="5">Taking Back the Power<br>
+		</font><font face="Nyala" size="4"><br>
+		When you've given away your power you generally end up energetically or 
+		literally 'broke' and in a dead-end. The way this project felt mid-2015. 
+		You look around and ask &quot;How did I get here?&quot; and as Willi did &quot;What 
+		now?&quot;. I've answered the first question and now I move to the second. 
+		The short answer is:</font></p>
+		<p align="center"><b><font face="Nyala" size="4">you take back the power</font></b></p>
+		<p align="left"><font face="Nyala" size="4">This is the first step of 
+		getting things going. You let go of the strategies and mind-stuff that 
+		led you to the position of helplessness and being stuck. In this case we 
+		let go of the philosophy of mindshare. Success for Shen <b>is not</b> 
+		mindshare.<br>
+		<br>
+		When we do that immediately the power returns to the centre where it 
+		belongs; inside the project and to the people who made it happen. Since 
+		mindshare is no longer operating, the opinions of the open source 
+		community are no longer important. You don't have to give a shit about 
+		them unless they have something significant to say - which, reading 
+		reddit, is not often.<br>
+		<br>
+		Doing this puts them in the proper perspective; rather like when you 
+		were a kid and there was a huge creepy figure in your bedroom. You turn 
+		on the light and the huge creepy figure is your dressing gown hanging 
+		up. Your mind gave it power and made it into something huge. The 
+		freetards want you to believe that they are huge, powerful and you 
+		cannot succeed without their approval, but actually they have no power 
+		unless we developers choose to give it to them. When you realise it is a 
+		mind-trick induced by the mindshare pill they dwindle to their true 
+		size.<br>
+		<br>
+		</font><font face="Nyala" size="5">Shen is a Powertool not Designed for 
+		the Average Programmer</font><font face="Nyala" size="4"><br>
+		<br>
+		As long as people were hooked on the blue pill there was very little 
+		chance of anything useful happening. The OS fanatics on Wikipedia talked 
+		about Shen being dead. The smell of death around the Shen project is not 
+		coming from Shen, it is coming from the decomposing body of the OS 
+		philosophy based on mindshare and the faltering economics used to power 
+		the project. <br>
+		<br>
+		Underneath Shen is amazingly dynamic, untouched and better documented 
+		than in TBoS 3rd edition than it has ever been. And the OS 6 month 
+		period of total failure has had its purpose; at least people are waking 
+		up to something that does not work and asking 'What can we do?'. People 
+		are actually questioning the central assumptions of the OS initiative. 
+		The failure of the OS initiative is a time of huge opportunity for Shen.
+		<br>
+		<br>
+		Open source philosophy is dead, last century and discredited and we 
+		developers need to take back our power from it. But where do we go and 
+		what do we do with that power? Well, first we must acknowledge that Shen 
+		is itself hugely powerful, that potentially as a productivity tool it 
+		can reap enormous benefits if rightly handled and developed, that it is 
+		in many ways unique, but that being able to extract and lever that power 
+		requires programming skills that most programmers do not have and never 
+		will. Think of the skills needed to dogfight and pilot the F-16 to the 
+		edge of the atmosphere and the skills needed to fly a family twin seater 
+		under autopilot. That's the difference we're looking at between a Shen 
+		programmer and the stock programmer assembling glue code and cranking 
+		code generated from packages.<br>
+		<br>
+		</font><font face="Nyala" size="5">Using Shen Effectively in a 
+		Commercial Setting </font><font face="Nyala" size="4"><br>
+		<br>
+		If we are looking at the commercial development of this language beyond 
+		a hobbyist implementation then we are looking at an elite group. <br>
+		<br>
+		I quote Paul Graham's famous essay, <i>
+		<a href="http://www.paulgraham.com/avg.html">Beating the Averages,</a></i> by Paul 
+		Graham. This is a must-read if you haven't read it and it is a must-must 
+		read for Shenturians. Several of the passages apply directly to Shen. 
+		Read it because I'm only excerpting with comments here. All I've done is 
+		substitute 'Shen' for 'Lisp'.</font></p>
+		<blockquote>
+			<p align="left"><font face="Nyala" size="4"><i>The purpose of this 
+			article is not to change anyone's mind, but to reassure people 
+			already interested in using Shen -- people who know that Shen is a 
+			powerful language, but worry because it isn't widely used. In a 
+			competitive situation, that's an advantage. Shen's power is 
+			multiplied by the fact that your competitors don't get it.</i></font></p>
+			<p align="left"><font face="Nyala" size="4"><i>If you think of using 
+			Shen in a startup, you shouldn't worry that it isn't widely 
+			understood. You should hope that <br>
+			it stays that way. </i></font></p>
+		</blockquote>
+		<p align="left"><font face="Nyala" size="4"><b>Bam</b>! A precise 
+		reversal of OS philosophy. Competitive edge requires access to 
+		technology your competitors <b>don't</b> understand.</font></p>
+		<blockquote>
+			<p align="left"><font face="Nyala" size="4"><i>.... programming 
+			languages are different: programming languages are not just 
+			technology, but what programmers think in. They're half technology 
+			and half religion. And so the median language, meaning whatever 
+			language the median programmer uses, moves as slow as an iceberg. 
+			Garbage collection, introduced by Lisp in about 1960, is now widely 
+			considered to be a good thing. Runtime typing, ditto, is growing in 
+			popularity. Lexical closures, introduced by Lisp in the early 1970s, 
+			are now, just barely, on the radar screen. Macros, introduced by 
+			Lisp in the mid 1960s, are still terra incognita.</i></font></p>
+		</blockquote>
+		<p align="left"><font face="Nyala" size="4"><b>Bam!</b> Cognitive social 
+		change is very very slow. Tying your project to it is as good as 
+		ossification.</font></p>
+		<blockquote>
+			<p align="left"><font face="Nyala" size="4"><i>You will have a hard 
+			time convincing the pointy-haired boss to let you build things in 
+			Shen, when he has just read in the paper that some other language is 
+			poised, like Ada was twenty years ago, to take over the world. But 
+			if you work for a startup that doesn't have pointy-haired bosses 
+			yet, you can, like we did, turn the Blub paradox to your advantage: 
+			you can use technology that your competitors, glued immovably to the 
+			median language, will never be able to match.</i></font></p>
+		</blockquote>
+		<p align="left"><font face="Nyala" size="4">The OS idea that technology 
+		can only be levered to advantage by mindshare is historically naive. The 
+		French were annihilated at Agincourt by a technology that had very 
+		little mindshare outside England.<br>
+		<br>
+		</font><font face="Nyala" size="5">Closed Source Shen Professional 
+		Leaves Open Source Behind</font><font face="Nyala" size="4"><br>
+		<br>
+		In September 2015, after analysing the reasons why OS Shen was massively 
+		underperforming, I moved my development to closed source. Since that 
+		time the closed source Shen, 
+		<a href="http://shenlanguage.org/professional.html">Shen Professional</a>, has developed rapidly 
+		with funding from a small group of professional programmers and 
+		investors. Concurrency, compiler optimisation, large file handling, HTML 
+		generation, and graphics have emerged or are emerging within a 6-8 month 
+		interval. We're beginning our first commercial application - a health 
+		app for yoga enthusiasts. Private money and market economics worked 
+		their usual magic.<br>
+		<br>
+		</font><font face="Nyala" size="5">Lessons for Developers<br>
+		</font><font face="Nyala" size="4"><br>
+		I think there is a useful lesson for developers to learn from the Shen 
+		project; especially when they are working at novel computing paradigms. 
+		OS may not empower your project and indeed with a 
+		<a href="http://www.techrepublic.com/article/open-source-failure-is-its-greatest-success/">98% failure rate</a> is 
+		unlikely to do so. As David MacIver very rightly remarked after learning 
+		the weakness of OS.</font></p>
+		<blockquote>
+			<p align="left"><font face="Nyala" size="4"><i>Plans which are 
+			predicated on changing the world before anyone will pay you any 
+			money are decidedly bad plans.</i></font></p>
+			<blockquote>
+				<blockquote>
+					<p align="left"><i><font face="Nyala" size="4">
+					<a href="http://www.drmaciver.com/2015/08/throwing-in-the-towel/">
+					Throwing in the Towel</a> David MacIver</font></i></p>
+				</blockquote>
+			</blockquote>
+		</blockquote>
+		<p align="left"><font face="Nyala" size="4">If you've worked in an OS 
+		environment, you'll quickly discover that only about 2% of your users 
+		will financially support your work. So it makes sense to concentrate on 
+		that percentage. Open Source may be useful in establishing your 
+		reputation, but once you are established you need to capitalise on that 
+		reputation and be leery of fairy economics. At some point, you'll have 
+		to think about close sourcing either code or documentation or training 
+		because open source is not a business model. </font>
+		<p align="left"><font face="Nyala" size="5">Stuff to Read</font><p align="left">
+		<font face="Nyala" size="4">
+		<a href="http://marktarver.com/problems.html">The Problems of Open 
+		Source</a> was a pioneering essay I wrote back in 2009 laying out the 
+		flaws in the OS approach.&nbsp; I revamped it in 2014.&nbsp; </font>
+		<p align="left"><font face="Nyala" size="4">
+		<a href="http://www.cio.com/article/2944334/open-source-development/why-the-open-source-business-model-is-a-failure.html">
+		Open Source is Not a Business Model</a></font><p align="left">
+		<font face="Nyala" size="4">
+		<a href="https://blogs.the451group.com/opensource/2008/10/13/open-source-is-not-a-business-model/">
+		Open Source is Not A Business Model</a> (and again)</font><p align="left">
+		<font face="Nyala" size="4">
+		<a href="http://www.shenlanguage.org/Download/osnbm.pdf">Open Source is 
+		Not a Business Model</a> (and yet again)</font><p align="left">
+		<font face="Nyala" size="4">That's three articles with the same title!&nbsp; 
+		Are people starting to learn?&nbsp; Seems so; more of the same.</font><p align="left">
+		<font face="Nyala" size="4">
+		<a href="http://techcrunch.com/2016/02/09/the-money-in-open-source-software/">
+		The Money in Open Source Software</a></font><p align="left">
+		<font face="Nyala" size="4">Corruption and hypocrisy in the open source 
+		movement.&nbsp; Read here</font><p align="left"><a href="fsf.html"><font size="4"
+                face="Nyala"><em>7 Reasons Why I do not Support
+                the FSF</em></font></a><p align="left">&nbsp;<p align="left">&nbsp;</td>
+    </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

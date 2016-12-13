@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
+<head itemscope itemtype="http://schema.org/WebSite">
+	<meta charset="UTF-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<!--[if IE ]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	
+        
+        
+        
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+        
+        <meta itemprop="name" content="Best Interview Questions" />
+        <meta itemprop="url" content="http://bestinterviewquestions.net" />
+
+                                                <meta itemprop="creator accountablePerson" content="Shubham Arora" />
+                    	<link rel="pingback" href="http://bestinterviewquestions.net/xmlrpc.php" />
+	<title>SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions</title>
+<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace( /\bno-js\b/,'js' );</script>
+<!-- This site is optimized with the Yoast SEO plugin v3.7.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Mostly Asked DBMS, Database and SQL Interview Questions &amp; Answers for Freshers/Experienced. MS SQL Server, Oracle and MySQL Database Interview Questions."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions" />
+<meta property="og:description" content="Mostly Asked DBMS, Database and SQL Interview Questions &amp; Answers for Freshers/Experienced. MS SQL Server, Oracle and MySQL Database Interview Questions." />
+<meta property="og:url" content="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/" />
+<meta property="og:site_name" content="Best Interview Questions" />
+<meta property="article:tag" content="Database Interview Questions" />
+<meta property="article:tag" content="SQL Interview" />
+<meta property="article:tag" content="SQL Interview Questions" />
+<meta property="article:section" content="Technical Round (TR) Interview Questions" />
+<meta property="article:published_time" content="2016-10-13T00:08:36+00:00" />
+<meta property="article:modified_time" content="2016-10-13T10:26:18+00:00" />
+<meta property="og:updated_time" content="2016-10-13T10:26:18+00:00" />
+<meta property="og:image" content="http://bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg" />
+<meta property="og:image:width" content="650" />
+<meta property="og:image:height" content="360" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Mostly Asked DBMS, Database and SQL Interview Questions &amp; Answers for Freshers/Experienced. MS SQL Server, Oracle and MySQL Database Interview Questions." />
+<meta name="twitter:title" content="SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions" />
+<meta name="twitter:image" content="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg?fit=650%2C360" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Best Interview Questions &raquo; Feed" href="http://bestinterviewquestions.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Best Interview Questions &raquo; Comments Feed" href="http://bestinterviewquestions.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Best Interview Questions &raquo; SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions Comments Feed" href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/bestinterviewquestions.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tablepress-default-css'  href='http://bestinterviewquestions.net/wp-content/plugins/tablepress/css/default.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='schema-stylesheet-css'  href='http://bestinterviewquestions.net/wp-content/themes/mts_schema/style.css' type='text/css' media='all' />
+<style id='schema-stylesheet-inline-css' type='text/css'>
+
+         body {background-color:#eeeeee;background-image:url(http://bestinterviewquestions.net/wp-content/themes/mts_schema/images/nobg.png);}
+        .pace .pace-progress, #mobile-menu-wrapper ul li a:hover, .page-numbers.current, .pagination a:hover, .single .pagination a:hover .current { background: #0274BE; }
+        .postauthor h5, .single_post a, .textwidget a, .pnavigation2 a, .sidebar.c-4-12 a:hover, footer .widget li a:hover, .sidebar.c-4-12 a:hover, .reply a, .title a:hover, .post-info a:hover, .widget .thecomment, #tabber .inside li a:hover, .readMore a:hover, .fn a, a, a:hover, #secondary-navigation .navigation ul li a:hover, .readMore a, #primary-navigation a:hover, #secondary-navigation .navigation ul .current-menu-item a, .widget .wp_review_tab_widget_content a, .sidebar .wpt_widget_content a { color:#0274BE; }
+         a#pull, #commentform input#submit, #mtscontact_submit, .mts-subscribe input[type='submit'], .widget_product_search input[type='submit'], #move-to-top:hover, .currenttext, .pagination a:hover, .pagination .nav-previous a:hover, .pagination .nav-next a:hover, #load-posts a:hover, .single .pagination a:hover .currenttext, .single .pagination > .current .currenttext, #tabber ul.tabs li a.selected, .tagcloud a, .navigation ul .sfHover a, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce .bypostauthor:after, #searchsubmit, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce-page nav.woocommerce-pagination ul li span.current, .woocommerce #content nav.woocommerce-pagination ul li span.current, .woocommerce-page #content nav.woocommerce-pagination ul li span.current, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce-page nav.woocommerce-pagination ul li a:hover, .woocommerce #content nav.woocommerce-pagination ul li a:hover, .woocommerce-page #content nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce-page nav.woocommerce-pagination ul li a:focus, .woocommerce #content nav.woocommerce-pagination ul li a:focus, .woocommerce-page #content nav.woocommerce-pagination ul li a:focus, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .latestPost-review-wrapper, .latestPost .review-type-circle.latestPost-review-wrapper, #wpmm-megamenu .review-total-only, .sbutton, #searchsubmit, .widget .wpt_widget_content #tags-tab-content ul li a, .widget .review-total-only.large-thumb { background-color:#0274BE; color: #fff!important; }
+        .related-posts .title a:hover, .latestPost .title a { color: #0274BE; }
+        .navigation #wpmm-megamenu .wpmm-pagination a { background-color: #0274BE!important; }
+        footer {background-color:#222222; }
+        footer {background-image: url( http://bestinterviewquestions.net/wp-content/themes/mts_schema/images/nobg.png );}
+        .copyrights { background-color: #ffffff; }
+        .flex-control-thumbs .flex-active{ border-top:3px solid #0274BE;}
+        .wpmm-megamenu-showing.wpmm-light-scheme { background-color:#0274BE!important; }
+        
+        .shareit { top: 282px; left: auto; margin: 0 0 0 -135px; width: 90px; position: fixed; padding: 5px; border:none; border-right: 0;}
+		.share-item {margin: 2px;}
+        
+        .bypostauthor { padding: 3%!important; background: #222; width: 94%!important; color: #AAA; }
+		.bypostauthor:after { content: "\f044"; position: absolute; font-family: fontawesome; right: 0; top: 0; padding: 1px 10px; color: #535353; font-size: 32px; }
+        
+        #subscribe-email input
+{
+height: 30px;
+padding: 5px;
+}
+			
+</style>
+<link rel='stylesheet' id='owl-carousel-css'  href='http://bestinterviewquestions.net/wp-content/themes/mts_schema/css/owl.carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://bestinterviewquestions.net/wp-content/themes/mts_schema/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='http://bestinterviewquestions.net/wp-content/themes/mts_schema/css/responsive.css' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='http://bestinterviewquestions.net/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://bestinterviewquestions.net/wp-content/plugins/jetpack/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/modules/related-posts/related-posts.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mts_customscript = {"responsive":"1","nav_menu":"both"};
+/* ]]> */
+</script>
+<script type='text/javascript' async="async" src='http://bestinterviewquestions.net/wp-content/themes/mts_schema/js/customscript.js'></script>
+<link rel='https://api.w.org/' href='http://bestinterviewquestions.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bestinterviewquestions.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bestinterviewquestions.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel='shortlink' href='http://wp.me/p7ZLXR-M' />
+<link rel="alternate" type="application/json+oembed" href="http://bestinterviewquestions.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbestinterviewquestions.net%2F2016%2F10%2F13%2Fsql-interview-questions-answers-freshers-experienced%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://bestinterviewquestions.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbestinterviewquestions.net%2F2016%2F10%2F13%2Fsql-interview-questions-answers-freshers-experienced%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//s1.wp.com'>
+<link rel='dns-prefetch' href='//s2.wp.com'>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+<link rel='dns-prefetch' href='//widgets.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><link href="http://fonts.googleapis.com/css?family=Roboto+Slab:normal|Raleway:500|Raleway:700|Roboto+Slab:300|Roboto+Slab:700&amp;subset=latin" rel="stylesheet" type="text/css">
+<style type="text/css">
+#logo a { font-family: 'Roboto Slab'; font-weight: normal; font-size: 32px; color: #222222;text-transform: uppercase; }
+#primary-navigation a { font-family: 'Raleway'; font-weight: 500; font-size: 13px; color: #777777; }
+#secondary-navigation a { font-family: 'Raleway'; font-weight: 700; font-size: 16px; color: #ffffff;text-transform: uppercase; }
+.latestPost .title a { font-family: 'Roboto Slab'; font-weight: 300; font-size: 38px; color: #0274be; }
+.single-title { font-family: 'Roboto Slab'; font-weight: 300; font-size: 38px; color: #222222; }
+body { font-family: 'Raleway'; font-weight: 500; font-size: 18px; color: #444444;line-height: 1.8; }
+#sidebar .widget h3 { font-family: 'Roboto Slab'; font-weight: normal; font-size: 20px; color: #222222;text-transform: uppercase; }
+#sidebar .widget { font-family: 'Raleway'; font-weight: 500; font-size: 16px; color: #444444; }
+.footer-widgets h3 { font-family: 'Roboto Slab'; font-weight: normal; font-size: 18px; color: #ffffff;text-transform: uppercase; }
+.f-widget a, footer .wpt_widget_content a, footer .wp_review_tab_widget_content a, footer .wpt_tab_widget_content a, footer .widget .wp_review_tab_widget_content a { font-family: 'Raleway'; font-weight: 500; font-size: 16px; color: #999999; }
+.footer-widgets, .f-widget .top-posts .comment_num, footer .meta, footer .twitter_time, footer .widget .wpt_widget_content .wpt-postmeta, footer .widget .wpt_comment_content, footer .widget .wpt_excerpt, footer .wp_review_tab_widget_content .wp-review-tab-postmeta, footer .advanced-recent-posts p, footer .popular-posts p, footer .category-posts p { font-family: 'Raleway'; font-weight: 500; font-size: 16px; color: #777777; }
+#copyright-note { font-family: 'Raleway'; font-weight: 500; font-size: 14px; color: #7e7d7d; }
+h1 { font-family: 'Roboto Slab'; font-weight: normal; font-size: 28px; color: #222222; }
+h2 { font-family: 'Roboto Slab'; font-weight: normal; font-size: 24px; color: #222222; }
+h3 { font-family: 'Roboto Slab'; font-weight: 700; font-size: 22px; color: #222222; }
+h4 { font-family: 'Roboto Slab'; font-weight: 700; font-size: 20px; color: #222222; }
+h5 { font-family: 'Roboto Slab'; font-weight: 700; font-size: 18px; color: #222222; }
+h6 { font-family: 'Roboto Slab'; font-weight: 700; font-size: 16px; color: #222222; }
+</style>
+<meta name="msvalidate.01" content="8594FE5B3493BB945684EA9F7F751944" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+<body id="blog" class="single single-post postid-48 single-format-standard main" itemscope itemtype="http://schema.org/WebPage">       
+	<div class="main-container">
+		<header id="site-header" class="main-header regular_header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+							<div id="primary-nav">
+					<div class="container">
+				        <div id="primary-navigation" class="primary-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					        <nav class="navigation clearfix">
+						     							<ul class="menu clearfix">
+								<li class="page_item page-item-22"><a href="http://bestinterviewquestions.net/about-us/">About Us</a></li>
+<li class="page_item page-item-35"><a href="http://bestinterviewquestions.net/advertise/">Advertise</a></li>
+<li class="page_item page-item-24"><a href="http://bestinterviewquestions.net/contact-us/">Contact Us</a></li>
+<li class="page_item page-item-29"><a href="http://bestinterviewquestions.net/disclaimer/">Disclaimer</a></li>
+<li class="page_item page-item-31"><a href="http://bestinterviewquestions.net/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-33"><a href="http://bestinterviewquestions.net/terms-conditions/">Terms &#038; Conditions</a></li>
+							</ul>
+						    				            												        </nav>
+				    	</div>
+				    </div>
+			    </div>
+									    <div id="regular-header">
+			    	<div class="container">
+						<div class="logo-wrap">
+																								  <h2 id="logo" class="text-logo" itemprop="headline">
+											<a href="http://bestinterviewquestions.net">Best Interview Questions</a>
+										</h2><!-- END #logo -->
+																					</div>
+											</div>
+				</div>
+									<div class="clear" id="catcher"></div>
+			<div id="header" class="sticky-navigation">
+						    <div class="container">
+				    					<div id="secondary-navigation" class="secondary-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<a href="#" id="pull" class="toggle-mobile-menu">Menu</a>
+													<nav class="navigation clearfix">
+																	<ul id="menu-main-menu" class="menu clearfix"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-21"><a href="http://bestinterviewquestions.net/">Home</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://bestinterviewquestions.net/category/hr-questions/">HR Questions</a></li>
+<li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-56"><a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/">TR Interview Questions</a></li>
+<li id="menu-item-102" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-102"><a href="http://bestinterviewquestions.net/category/effective-job-interview-tips/">Effective Job Interview Tips</a></li>
+</ul>															</nav>
+							<nav class="navigation mobile-only clearfix mobile-menu-wrapper">
+								<ul id="menu-main-menu-1" class="menu clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-21"><a href="http://bestinterviewquestions.net/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://bestinterviewquestions.net/category/hr-questions/">HR Questions</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-56"><a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/">TR Interview Questions</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-102"><a href="http://bestinterviewquestions.net/category/effective-job-interview-tips/">Effective Job Interview Tips</a></li>
+</ul>							</nav>
+											</div>         
+				</div><!--.container-->
+			</div>
+		</header>
+		<div id="page" class="single">
+
+		
+	<article class="article">
+		<div id="content_box" >
+							<div id="post-48" class="g post post-48 type-post status-publish format-standard has-post-thumbnail hentry category-technical-round-tr-interview-questions tag-database-interview-questions tag-sql-interview tag-sql-interview-questions has_thumb">
+											<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"><div><i class="fa fa-home"></i></div> <div typeof="v:Breadcrumb" class="root"><a rel="v:url" property="v:title" href="http://bestinterviewquestions.net">Home</a></div><div><i class="fa fa-caret-right"></i></div><div typeof="v:Breadcrumb"><a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/" rel="v:url" property="v:title">Technical Round (TR) Interview Questions</a></div><div><i class="fa fa-caret-right"></i></div><div><span>SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions</span></div></div>
+																		<div class="single_post">
+									<header>
+										<h1 class="title single-title entry-title">SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions</h1>
+													<div class="post-info">
+                                <span class="theauthor"><i class="fa fa-user"></i> <span><a href="http://bestinterviewquestions.net/author/shubham/" title="Posts by Shubham Arora" rel="author">Shubham Arora</a></span></span>
+                            <span class="thetime date updated"><i class="fa fa-calendar"></i> <span>October 13, 2016</span></span>
+                            <span class="thecategory"><i class="fa fa-tags"></i> <a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/" title="View all posts in Technical Round (TR) Interview Questions">Technical Round (TR) Interview Questions</a></span>
+                            <span class="thecomment"><i class="fa fa-comments"></i> <a href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/#respond" itemprop="interactionCount">No Comments</a></span>
+            			</div>
+											</header><!--.headline_area-->
+									<div class="post-single-content box mark-links entry-content">
+																														<div class="thecontent">
+											<p>Mostly Asked DBMS, Database and <strong>SQL Interview Questions &amp; Answers for Freshers/Experienced</strong>. MS SQL Server, Oracle and MySQL Database Interview Questions.</p>
+<p><strong>Topics Covered &#8211;</strong></p>
+<ol>
+<li>Database Basics</li>
+<li>Tables</li>
+<li>Normalization</li>
+<li>Primary Key &amp; Foreign Key</li>
+<li>Constraints on database</li>
+<li>Views</li>
+<li>Trigger</li>
+<li>Cluster &amp; Non cluster Index</li>
+<li>Transaction</li>
+<li>Pattern Matching (Wildcards)</li>
+</ol>
+<p><img class="alignnone wp-image-54" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-layzr="http://bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions--300x166.jpg" alt="SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions" width="531" height="294" data-layzr-srcset="http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg?resize=300%2C166 300w, http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg?w=650 650w" sizes="(max-width: 531px) 100vw, 531px" /></p>
+<h2>SQL Interview Questions &amp; Answers For Freshers/Experienced</h2>
+<h4>SQL Interview Questions and Answers on Database Basics</h4>
+<p><strong>1. What is DBMS  ?</strong></p>
+<div>The database management system is a collection of programs that enables user to store, retrieve, update and delete information from a database.</div>
+<div></div>
+<p></p>
+<div><strong>2. What is RDBMS  ?</strong><br />
+Relational Database Management system (RDBMS) is a database management system (DBMS) that is based on the relational model. Data from relational database can be accessed or reassembled in many different ways without having to reorganize the database tables. Data from relational database can be accessed using an API , Structured Query Language (SQL).</div>
+<p></p>
+<div></div>
+<div><strong>3. What is SQL  ?</strong><br />
+Structured Query Language(SQL) is a language designed specifically for communicating with databases. SQL is an ANSI (American National Standards Institute) standard.</div>
+<div></div>
+<p></p>
+<div><strong>4. What are the different type of SQL&#8217;s statements ?</strong><br />
+SQL statements are broadly classified into three. They are:<br />
+<span style="text-decoration: underline;">1. DDL – Data Definition Language</span><br />
+DDL is used to define the structure that holds the data. For example, Create, Alter, Drop and Truncate table.</div>
+<p><span style="text-decoration: underline;">2. DML – Data Manipulation Language</span><br />
+DML is used for manipulation of the data itself. Typical operations are Insert, Delete, Update and retrieving the data from the table. The Select statement is considered as a limited version of the DML, since it can&#8217;t change the data in the database. But it can perform operations on data retrieved from the DBMS, before the results are returned to the calling function.</p>
+<p><span style="text-decoration: underline;">3. DCL – Data Control Language</span><br />
+DCL is used to control the visibility of data like granting database access and set privileges to create tables, etc. Example &#8211; Grant, Revoke access permission to the user to access data in the database.</p>
+<p><strong>5. What are the Advantages of SQL  ?</strong><br />
+Following are the main advantages of SQL &#8211;</p>
+<ol>
+<li>SQL is not a proprietary language used by specific database vendors. Almost every major DBMS supports SQL, so learning this one language will enable programmers to interact with any database like ORACLE, SQL ,MYSQL etc.</li>
+<li><strong>SQL is easy to learn.</strong> The statements are all made up of descriptive English words, and there aren&#8217;t that many of them.</li>
+<li>SQL is actually a very powerful language and by using its language elements you can perform very complex and sophisticated database operations.</li>
+</ol>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<p><strong>6. what is a field in a database  ?</strong><br />
+A field is an area within a record <span style="text-decoration: underline;">reserved for a specific piece of data.</span><br />
+Examples: Employee Name, Employee ID, etc.</p>
+<p><strong>7. What is a Record in a database  ?</strong><br />
+A record is the collection of values of a specific entity &#8211;  i.e. an Employee, Salary etc.</p>
+<p><strong>8. What is a Table in a database  ?</strong><br />
+A table is a collection of records of a specific type. For example, employee table, salary table etc.</p>
+<h4>SQL Interview Questions on Database Transactions</h4>
+<p><strong>9. What is a database transaction  ?</strong><br />
+<em>Database transaction takes database from one consistent state to another</em>. At the end of the transaction the system must be in the prior state if the transaction fails or the status of the system should reflect the successful completion if the transaction goes through.</p>
+<p><strong>10. What are properties of a transaction  ?</strong><br />
+Properties of the transaction can be summarized as ACID Properties.<br />
+<span style="text-decoration: underline;">1. Atomicity</span><br />
+A transaction consists of many steps. When all the steps in a transaction get completed, it will get reflected in DB or if any step fails, all the transactions are rolled back.</p>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<p><span style="text-decoration: underline;">2. Consistency</span><br />
+The database will move from one consistent state to another, if the transaction succeeds and remain in the original state, if the transaction fails.</p>
+<p><span style="text-decoration: underline;">3. Isolation</span><br />
+Every transaction should operate as if it is the only transaction in the system.</p>
+<p><span style="text-decoration: underline;">4. Durability</span><br />
+Once a transaction has completed successfully, the updated records must be available for all other transactions on a permanent basis.</p>
+<p><strong>11. What is a Database Lock  ?</strong><br />
+Database lock tells a transaction, if the data item in questions is currently being used by other transactions.</p>
+<p><strong>12. What are the type of locks ?</strong><br />
+<span style="text-decoration: underline;">1. Shared Lock</span><br />
+When a shared lock is applied on data item, other transactions can only read the item, but can&#8217;t write into it.</p>
+<p><span style="text-decoration: underline;">2. Exclusive Lock</span><br />
+When an exclusive lock is applied on data item, other transactions can&#8217;t read or write into the data item.</p>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<h4>SQL Database Normalization Interview Questions</h4>
+<p><strong>Question 13. What are the different type of normalization?</strong><br />
+In database design, we start with one single table, with all possible columns. A lot of redundant data would be present since it is a single table. <span style="text-decoration: underline;">The process of removing the redundant data</span>, by splitting up the table in a well defined fashion is called normalization.</p>
+<p><span style="text-decoration: underline;">1. First Normal Form (1NF)</span><br />
+A relation is said to be in first normal form if and only if all underlying domains contain atomic values only. After 1NF, we can still have redundant data.</p>
+<p><span style="text-decoration: underline;">2. Second Normal Form (2NF)</span><br />
+A relation is said to be in 2NF if and only if it is in 1NF and every non key attribute is fully dependent on the primary key. After 2NF, we can still have redundant data.</p>
+<p><span style="text-decoration: underline;">3. Third Normal Form (3NF)</span><br />
+A relation is said to be in 3NF, if and only if it is in 2NF and every non key attribute is non-transitively dependent on the primary key.</p>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<h4>SQL Database Keys and Constraints Type SQL Interview Questions</h4>
+<p><strong>14. What is a primary key?</strong><br />
+<span style="text-decoration: underline;">A primary key is a column whose values uniquely identify every row in a table</span>. Primary key values can never be reused. If a row is deleted from the table, its primary key may not be assigned to any new rows in the future. To define a field as primary key, following conditions had to be met :</p>
+<ul>
+<li> No two rows can have the same primary key value.</li>
+<li>Every row must have a primary key value.</li>
+<li>The primary key field cannot be null.</li>
+<li>Value in a primary key column can never be modified or updated, if any foreign key refers to that primary key.</li>
+</ul>
+<p><strong>15. What is a Composite Key ?</strong><br />
+A Composite primary key is a type of candidate key, which represents a <span style="text-decoration: underline;">set of columns whose values uniquely identify every row in a table</span>.</p>
+<p>For example &#8211; if &#8220;Employee_ID&#8221; and &#8220;Employee Name&#8221; in a table is combined to uniquely identify a row its called a Composite Key.</p>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<p><strong>16. What is a Foreign Key ?</strong><br />
+When a &#8220;one&#8221; table&#8217;s primary key field is added to a related &#8220;many&#8221; table in order to create the common field which relates the two tables, it is called a foreign key in the &#8220;many&#8221; table.</p>
+<p>For example, the salary of an employee is stored in salary table. The relation is established via foreign key column “Employee_ID_Ref” which refers “Employee_ID” field in the Employee table.</p>
+<p><strong>17. What is a Unique Key ?</strong><br />
+Unique key is same as primary with the difference being the existence of null. <em>Unique key field allows one value as NULL value.</em></p>
+<h4>SQL Insert, Update and Delete Commands Interview Questions</h4>
+<p><strong>18. Define SQL Insert Statement ?</strong><br />
+SQL INSERT statement is used to <span style="text-decoration: underline;">add rows</span> to a table. For a full row insert, SQL Query should start with “Insert into “ statement followed by table name and values command, followed by the values that need to be inserted into the table. The insert can be used in several ways:</p>
+<p>1. To insert a single complete row.<br />
+2. To insert a single partial row.</p>
+<p><strong>19. Define SQL Update Statement  ?</strong><br />
+SQL Update is used <span style="text-decoration: underline;">to update data in a row</span> or set of rows specified in the filter condition.</p>
+<p>The basic format of an SQL UPDATE statement is, Update command followed by table to be updated and SET command followed by column names and their new values followed by filter condition that determines which rows should be updated.</p>
+<p><strong>20. Define SQL Delete Statement  ?</strong><br />
+SQL Delete is used to delete a row or set of rows specified in the filter condition.</p>
+<p>The basic format of an SQL DELETE statement is, DELETE FROM command followed by table name followed by filter condition that determines which rows should be updated.</p>
+<p><strong>21. What are wild cards used in database for Pattern Matching ?</strong><br />
+SQL<strong> Like</strong> operator is used for pattern matching.<br />
+1) Don&#8217;t overuse wild cards. If another search operator will do, use it instead.<br />
+2) When you do use wild cards, try not to use them at the beginning of the search pattern, unless absolutely necessary. Search patterns that begin with wild cards are the slowest to process.<br />
+3) Pay careful attention to the placement of the wild card symbols. If they are misplaced, you might not return the data you intended.</p>
+<h4>SQL Joins Interview Questions and answers</h4>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<p><strong>22. Define Join and explain different type of joins?</strong><br />
+The most asked SQL Interview Questions.</p>
+<p>In order to avoid data duplication, data is stored in related tables. Join keyword is used to fetch data from related tables. <em>&#8220;Join&#8221; return rows when there is at least one match in both table</em>. Type of joins are:</p>
+<p><span style="text-decoration: underline;">Right Join</span><br />
+Return all rows from the right table, even if there are no matches in the left table.</p>
+<p><span style="text-decoration: underline;">Outer Join</span></p>
+<p><span style="text-decoration: underline;">Left Join</span><br />
+Return all rows from the left table, even if there are no matches in the right table.</p>
+<p><span style="text-decoration: underline;">Full Join</span><br />
+Return rows when there is a match in one of the tables.</p>
+<p><strong>23. What is Self-Join?</strong><br />
+Self-join is query used to join a table to itself. Aliases should be used for the same table comparison.</p>
+<p><strong>24. What is Cross Join?</strong><br />
+Cross Join will return all records where each row from the first table is combined with each row from the second table.</p>
+<h4>SQL Database Views Interview Questions</h4>
+<p><em>You are reading SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions.</em></p>
+<p><strong>25. What is a view  ?</strong><br />
+The views are virtual tables. Unlike tables that contain data, views simply contain queries that dynamically retrieve data when used.</p>
+<p><strong>26. What is a materialized view  ?</strong><br />
+Materialized views are also a view but are disk based. Materialized views get updates on specific duration, base upon the interval specified in the query definition. We can index materialized view.</p>
+<p><strong>27. What are the advantages and disadvantages of views in a database  ?</strong><br />
+<span style="text-decoration: underline;">Advantages:</span><br />
+1. Views don&#8217;t store data in a physical location.<br />
+2. The view can be used to hide some of the columns from the table.<br />
+3. Views can provide Access Restriction, since data insertion, update and deletion is not possible with the view.</p>
+<p><span style="text-decoration: underline;">Disadvantages:</span><br />
+1. When a table is dropped, associated view become irrelevant.<br />
+2. Since the view is created when a query requesting data from view is triggered, its a bit slow.<br />
+3. When views are created for large tables, it occupies more memory.</p>
+<h4>SQL Stored Procedures and Triggers Interview Questions</h4>
+<p><strong>Also check Best Way To Answer Strengths And Weaknesses Interview Question at Job Interview</strong></p>
+<p><strong>28. What is a stored procedure  ?</strong><br />
+Stored Procedure is a function which contains a collection of SQL Queries. The procedure can take inputs , process them and send back output.</p>
+<p><strong>29. What are the advantages of a stored procedure  ?</strong><br />
+Stored Procedures are pre-complied and stored in the database. This <span style="text-decoration: underline;">enables the database to execute the queries much faster</span>. Since many queries can be included in a stored procedure, round trip time to execute multiple queries from source code to database and back is avoided.</p>
+<p><strong>30. What is a trigger  ?</strong><br />
+Database triggers are sets of commands that get executed when an event(Before Insert, After Insert, On Update, On delete of a row) occurs on a table, views.</p>
+<p><strong>31. Explain the difference between DELETE , TRUNCATE and DROP commands?</strong><br />
+Once delete operation is performed, Commit and Rollback can be performed to retrieve data.</p>
+<p>Once the truncate statement is executed, Commit and Rollback statement cannot be performed. Where condition can be used along with delete statement but it can&#8217;t be used with truncate statement.</p>
+<p>Drop command is used to drop the table or keys like primary, foreign from a table.</p>
+<p><strong>32. What is the difference between Cluster and Non cluster Index?</strong><br />
+A clustered index reorders the way records in the table are physically stored. There can be only one clustered index per table. It makes data retrieval faster.</p>
+<p>A non clustered index does not alter the way it was stored but creates a completely separate object within the table. As a result insert and update command will be faster.</p>
+<p><strong>33. What is Union, minus and Interact commands?</strong><br />
+MINUS operator is used to return rows from the first query but not from the second query. INTERSECT operator is used to return rows returned by both the queries.</p>
+<p>That ends our collection #1 of SQL Interview Questions &amp; Answers For Freshers/Experienced 35+ Questions. We will be back with more SQL Interview Questions and Answers.</p>
+<p>If you have any query you can mail us at <a href="mailto:bestinterviewquestions10@gmail.com">bestinterviewquestions10@gmail.com</a>. Till then keep visiting more interview questions at <a href="http://bestinterviewquestions.net">http://bestinterviewquestions.net</a>.</p>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $.post('http://bestinterviewquestions.net/wp-admin/admin-ajax.php', {action: 'mts_view_count', id: '48'});
+});
+</script><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-48" class="share-twitter sd-button share-icon no-text" href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-48" class="share-facebook sd-button share-icon no-text" href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-48" class="share-google-plus-1 sd-button share-icon no-text" href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span></span><span class="sharing-screen-reader-text">Click to share on Google+ (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-118156739-48-5803c1832af81' data-src='//widgets.wp.com/likes/#blog_id=118156739&amp;post_id=48&amp;origin=bestinterviewquestions.net&amp;obj_id=118156739-48-5803c1832af81' data-name='like-post-frame-118156739-48-5803c1832af81'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>										</div>
+																														    		<!-- Start Share Buttons -->
+    		<div class="shareit floating">
+                                <!-- Facebook Share-->
+                <span class="share-item facebooksharebtn">
+                    <div class="fb-share-button" data-layout="button_count"></div>
+                </span>
+                            <!-- Facebook -->
+                <span class="share-item facebookbtn">
+                    <div id="fb-root"></div>
+                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+                </span>
+                            <!-- Twitter -->
+                <span class="share-item twitterbtn">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="">Tweet</a>
+                </span>
+                            <!-- GPlus -->
+                <span class="share-item gplusbtn">
+                    <g:plusone size="medium"></g:plusone>
+                </span>
+                            <!-- Pinterest -->
+                <span class="share-item pinbtn">
+                    <a href="http://pinterest.com/pin/create/button/?url=http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/&media=http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg?fit=650%2C360&description=SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions" class="pin-it-button" count-layout="horizontal">Pin It</a>
+                </span>
+                            <!--Linkedin -->
+                <span class="share-item linkedinbtn">
+                    <script type="IN/Share" data-url="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/"></script>
+                </span>
+                            <!-- Stumble -->
+                <span class="share-item stumblebtn">
+                    <su:badge layout="1"></su:badge>
+                </span>
+                		</div>
+    		<!-- end Share Buttons -->
+    										</div><!--.post-single-content-->
+								</div><!--.single_post-->
+								    		<!-- Start Related Posts -->
+    		<div class="related-posts"><h4>Related Posts</h4><div class="clear">    			<article class="latestPost excerpt  ">
+                        					<a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/" title="60+ SQL Query Interview Questions And Answers With Examples" id="featured-thumbnail">
+                            <div class="featured-thumbnail"><img width="211" height="150" src="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/60-Most-Important-SQL.jpg?resize=211%2C150" class="attachment-schema-related size-schema-related wp-post-image" alt="SQL Query Interview Questions And Answers" title="" srcset="http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/60-Most-Important-SQL.jpg?zoom=2&amp;resize=211%2C150 422w, http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/60-Most-Important-SQL.jpg?zoom=3&amp;resize=211%2C150 633w" sizes="(max-width: 211px) 100vw, 211px" /></div>                                                    </a>
+                                        <header>
+						<h2 class="title front-view-title"><a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/" title="60+ SQL Query Interview Questions And Answers With Examples">60+ SQL Query Interview Questions And Answers With Examples</a></h2>
+					</header>
+                </article><!--.post.excerpt-->
+    			</div></div>    		<!-- .related-posts -->
+    									<div class="postauthor">
+									<h4>About The Author</h4>
+									<img alt='' src='http://2.gravatar.com/avatar/ea236bdf93821af50ff314dac8720fb3?s=100&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ea236bdf93821af50ff314dac8720fb3?s=200&amp;d=mm&amp;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' />									<h5 class="vcard author"><a href="http://bestinterviewquestions.net/author/shubham/" class="fn">Shubham</a></h5>
+									<p></p>
+								</div>
+																<div class="tags"><span class="tagtext">Tags:</span><a href="http://bestinterviewquestions.net/tag/database-interview-questions/" rel="tag">Database Interview Questions</a>, <a href="http://bestinterviewquestions.net/tag/sql-interview/" rel="tag">SQL Interview</a>, <a href="http://bestinterviewquestions.net/tag/sql-interview-questions/" rel="tag">SQL Interview Questions</a></div>												</div><!--.g post-->
+				<!-- You can start editing here. -->
+
+
+	<div id="commentsAdd">
+		<div id="respond" class="box m-t-6">
+					
+		<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/10/13/sql-interview-questions-answers-freshers-experienced/#respond" style="display:none;">Cancel reply</a></small></h3>
+			<form id="commentform" class="comment-form">
+				<iframe src="https://jetpack.wordpress.com/jetpack-comment/?blogid=118156739&#038;postid=48&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=1&#038;stb_enabled=1&#038;show_avatars=1&#038;avatar_default=mystery&#038;greeting=Leave+a+Reply&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=light&#038;lang=en_US&#038;jetpack_version=4.3.2&#038;sig=9fda394524a546df818271b6db6eff6346871065#parent=http%3A%2F%2Fbestinterviewquestions.net%2F2016%2F10%2F13%2Fsql-interview-questions-answers-freshers-experienced%2F" allowtransparency="false" style="width:100%; height: 430px;border:0;" frameBorder="0" scrolling="no" name="jetpack_remote_comment" id="jetpack_remote_comment"></iframe>
+			</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+				</div>
+	</div>
+					</div>
+	</article>
+	<aside id="sidebar" class="sidebar c-4-12" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+			<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/16/how-to-face-interview-tip-freshers/">How To Face An Interview? Top 5 Tips On How To Face Interviews</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/15/mistakes-not-to-make-during-interview/">Top 10 Commonly Made Mistakes During An interview &#038; How To Avoid Them</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/15/tell-me-about-yourself-examples-answers/">Tell Me About Yourself &#8211; Tips, Best Way, Examples &#038; Sample Answers</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/14/resume-writing-tips-write-effectively/">Resume Writing Tips, How To Write An Effective Resume?</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/14/mech-engg-interview-questions-design-safety/">Mechanical Engineering Interview Questions On Design, Safety &#038; Maintenance</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/13/make-great-first-impression-interview/">Top 10 Tips To Make Great First Impression At Any Interview</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/13/job-interview-tips-tricks-for-freshers/">Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/">60+ SQL Query Interview Questions And Answers With Examples</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/">SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions</a>
+						</li>
+					<li>
+				<a href="http://bestinterviewquestions.net/2016/10/12/best-way-to-answer-strengths-weaknesses-interview-question/">Best Way To Answer Strengths And Weaknesses Interview Question at Job Interview</a>
+						</li>
+				</ul>
+		</div>		<div id="blog_subscription-2" class="widget jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address" />
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe" />
+						<input type="hidden" name="source" value="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/" />
+						<input type="hidden" name="sub-type" value="widget" />
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2" />
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" />
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</div><div id="top-posts-2" class="widget widget_top-posts"><h3 class="widget-title">Top Posts</h3><ul class='widgets-list-layout no-grav'>
+					<li>
+												<a href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/" title="SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/SQL-Interview-Questions-.jpg?fit=650%2C360&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/13/sql-interview-questions-answers-freshers-experienced/" class="bump-view" data-bump-view="tp">
+								SQL Interview Questions and Answers For Freshers/Experienced 35+ Questions							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/12/best-way-to-answer-strengths-weaknesses-interview-question/" title="Best Way To Answer Strengths And Weaknesses Interview Question at Job Interview" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i1.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Best-Way-To-Answer.jpg?fit=650%2C360&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Best Way To Answer Strengths And Weaknesses Interview Question at Job Interview" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/12/best-way-to-answer-strengths-weaknesses-interview-question/" class="bump-view" data-bump-view="tp">
+								Best Way To Answer Strengths And Weaknesses Interview Question at Job Interview							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/15/tell-me-about-yourself-examples-answers/" title="Tell Me About Yourself - Tips, Best Way, Examples &amp; Sample Answers" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Tell-Me-About-Yourself-1.jpg?fit=650%2C325&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Tell Me About Yourself - Tips, Best Way, Examples &amp; Sample Answers" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/15/tell-me-about-yourself-examples-answers/" class="bump-view" data-bump-view="tp">
+								Tell Me About Yourself - Tips, Best Way, Examples &amp; Sample Answers							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/13/job-interview-tips-tricks-for-freshers/" title="Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Best-Job-Interview-Tips.jpg?fit=650%2C360&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/13/job-interview-tips-tricks-for-freshers/" class="bump-view" data-bump-view="tp">
+								Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/" title="60+ SQL Query Interview Questions And Answers With Examples" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i2.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/60-Most-Important-SQL.jpg?fit=650%2C317&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="60+ SQL Query Interview Questions And Answers With Examples" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/" class="bump-view" data-bump-view="tp">
+								60+ SQL Query Interview Questions And Answers With Examples							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/15/mistakes-not-to-make-during-interview/" title="Top 10 Commonly Made Mistakes During An interview &amp; How To Avoid Them" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Top-10-Commonly-Made.jpg?fit=650%2C433&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Top 10 Commonly Made Mistakes During An interview &amp; How To Avoid Them" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/15/mistakes-not-to-make-during-interview/" class="bump-view" data-bump-view="tp">
+								Top 10 Commonly Made Mistakes During An interview &amp; How To Avoid Them							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/13/make-great-first-impression-interview/" title="Top 10 Tips To Make Great First Impression At Any Interview" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Top-10-Tips-To-Make.jpg?fit=650%2C317&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Top 10 Tips To Make Great First Impression At Any Interview" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/13/make-great-first-impression-interview/" class="bump-view" data-bump-view="tp">
+								Top 10 Tips To Make Great First Impression At Any Interview							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/14/mech-engg-interview-questions-design-safety/" title="Mechanical Engineering Interview Questions On Design, Safety &amp; Maintenance" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i0.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Mechanical-Engineering-1.jpg?fit=650%2C433&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Mechanical Engineering Interview Questions On Design, Safety &amp; Maintenance" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/14/mech-engg-interview-questions-design-safety/" class="bump-view" data-bump-view="tp">
+								Mechanical Engineering Interview Questions On Design, Safety &amp; Maintenance							</a>
+						</div>
+											</li>
+									<li>
+												<a href="http://bestinterviewquestions.net/2016/10/14/resume-writing-tips-write-effectively/" title="Resume Writing Tips, How To Write An Effective Resume?" class="bump-view" data-bump-view="tp">
+														<img width="40" height="40" src="http://i1.wp.com/bestinterviewquestions.net/wp-content/uploads/2016/10/Resume-Writing-Tips-How.jpg?fit=650%2C433&#038;resize=40%2C40" class='widgets-list-layout-blavatar' alt="Resume Writing Tips, How To Write An Effective Resume?" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="http://bestinterviewquestions.net/2016/10/14/resume-writing-tips-write-effectively/" class="bump-view" data-bump-view="tp">
+								Resume Writing Tips, How To Write An Effective Resume?							</a>
+						</div>
+											</li>
+				</ul>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://bestinterviewquestions.net/2016/10/15/mistakes-not-to-make-during-interview/' rel='external nofollow' class='url'>Top 10 Commonly Made Mistakes During An interview &amp; How To Avoid</a></span> on <a href="http://bestinterviewquestions.net/2016/10/13/job-interview-tips-tricks-for-freshers/#comment-7">Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://bestinterviewquestions.net/2016/10/14/resume-writing-tips-write-effectively/' rel='external nofollow' class='url'>Resume Writing Tips | How To Write An Effective Resume?</a></span> on <a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/#comment-6">60+ SQL Query Interview Questions And Answers With Examples</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://bestinterviewquestions.net/2016/10/14/mech-engg-interview-questions-design-safety/' rel='external nofollow' class='url'>Mechanical Engg. Interview Questions On Design, Safety &amp; Maintenance</a></span> on <a href="http://bestinterviewquestions.net/2016/10/13/make-great-first-impression-interview/#comment-5">Top 10 Tips To Make Great First Impression At Any Interview</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://bestinterviewquestions.net/2016/10/14/mech-engg-interview-questions-design-safety/' rel='external nofollow' class='url'>Mechanical Engg. Interview Questions On Design, Safety &amp; Maintenance</a></span> on <a href="http://bestinterviewquestions.net/2016/10/13/job-interview-tips-tricks-for-freshers/#comment-4">Job Interview Tips, Tricks and Strategies For Freshers/Experienced For Promised Success</a></li><li class="recentcomments"><span class="comment-author-link">Shubham Arora</span> on <a href="http://bestinterviewquestions.net/2016/10/13/60-sql-query-interview-questions-answers-examples/#comment-3">60+ SQL Query Interview Questions And Answers With Examples</a></li></ul></div><div id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-20"><a href="http://bestinterviewquestions.net/category/effective-job-interview-tips/" >Effective Job Interview Tips</a> (5)
+</li>
+	<li class="cat-item cat-item-2"><a href="http://bestinterviewquestions.net/category/hr-questions/" >HR Questions</a> (2)
+</li>
+	<li class="cat-item cat-item-22"><a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/mechanical-engineering-interview-questions/" >Mechanical Engineering Interview Questions</a> (1)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://bestinterviewquestions.net/category/technical-round-tr-interview-questions/" >Technical Round (TR) Interview Questions</a> (2)
+</li>
+		</ul>
+</div><div id="pages-2" class="widget widget_pages"><h3 class="widget-title">Pages</h3>		<ul>
+			<li class="page_item page-item-22"><a href="http://bestinterviewquestions.net/about-us/">About Us</a></li>
+<li class="page_item page-item-35"><a href="http://bestinterviewquestions.net/advertise/">Advertise</a></li>
+<li class="page_item page-item-24"><a href="http://bestinterviewquestions.net/contact-us/">Contact Us</a></li>
+<li class="page_item page-item-29"><a href="http://bestinterviewquestions.net/disclaimer/">Disclaimer</a></li>
+<li class="page_item page-item-31"><a href="http://bestinterviewquestions.net/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-33"><a href="http://bestinterviewquestions.net/terms-conditions/">Terms &#038; Conditions</a></li>
+		</ul>
+		</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href='http://bestinterviewquestions.net/tag/avoiding-interview-mistakes/' class='tag-link-32 tag-link-position-1' title='1 topic' style='font-size: 8pt;'>avoiding interview mistakes</a>
+<a href='http://bestinterviewquestions.net/tag/best-answers/' class='tag-link-28 tag-link-position-2' title='1 topic' style='font-size: 8pt;'>Best Answers</a>
+<a href='http://bestinterviewquestions.net/tag/commonly-made-mistakes-in-interview/' class='tag-link-30 tag-link-position-3' title='1 topic' style='font-size: 8pt;'>Commonly made mistakes in interview</a>
+<a href='http://bestinterviewquestions.net/tag/database-interview-questions/' class='tag-link-13 tag-link-position-4' title='1 topic' style='font-size: 8pt;'>Database Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/dbms-interview-questions/' class='tag-link-17 tag-link-position-5' title='1 topic' style='font-size: 8pt;'>DBMS Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/examples/' class='tag-link-29 tag-link-position-6' title='1 topic' style='font-size: 8pt;'>Examples</a>
+<a href='http://bestinterviewquestions.net/tag/exmaples/' class='tag-link-8 tag-link-position-7' title='1 topic' style='font-size: 8pt;'>Exmaples</a>
+<a href='http://bestinterviewquestions.net/tag/experienced/' class='tag-link-6 tag-link-position-8' title='2 topics' style='font-size: 22pt;'>Experienced</a>
+<a href='http://bestinterviewquestions.net/tag/first-impression-at-an-interview/' class='tag-link-21 tag-link-position-9' title='1 topic' style='font-size: 8pt;'>First Impression at an Interview</a>
+<a href='http://bestinterviewquestions.net/tag/fresher-interview-tips/' class='tag-link-19 tag-link-position-10' title='2 topics' style='font-size: 22pt;'>Fresher interview tips</a>
+<a href='http://bestinterviewquestions.net/tag/freshers/' class='tag-link-5 tag-link-position-11' title='2 topics' style='font-size: 22pt;'>Freshers</a>
+<a href='http://bestinterviewquestions.net/tag/how-to-face-interviews/' class='tag-link-33 tag-link-position-12' title='1 topic' style='font-size: 8pt;'>how to face interviews</a>
+<a href='http://bestinterviewquestions.net/tag/hr-interview-question/' class='tag-link-4 tag-link-position-13' title='1 topic' style='font-size: 8pt;'>HR Interview Question</a>
+<a href='http://bestinterviewquestions.net/tag/hr-interview-questions/' class='tag-link-27 tag-link-position-14' title='1 topic' style='font-size: 8pt;'>HR Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/interview-mistakes/' class='tag-link-31 tag-link-position-15' title='1 topic' style='font-size: 8pt;'>interview mistakes</a>
+<a href='http://bestinterviewquestions.net/tag/interview-tips-for-freshers/' class='tag-link-18 tag-link-position-16' title='2 topics' style='font-size: 22pt;'>Interview Tips for Freshers</a>
+<a href='http://bestinterviewquestions.net/tag/mechanical-engineering-interview-questions/' class='tag-link-24 tag-link-position-17' title='1 topic' style='font-size: 8pt;'>Mechanical Engineering Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/mechanical-interview/' class='tag-link-23 tag-link-position-18' title='1 topic' style='font-size: 8pt;'>Mechanical Interview</a>
+<a href='http://bestinterviewquestions.net/tag/resume-writing-tips/' class='tag-link-25 tag-link-position-19' title='1 topic' style='font-size: 8pt;'>Resume Writing Tips</a>
+<a href='http://bestinterviewquestions.net/tag/sql-interview/' class='tag-link-11 tag-link-position-20' title='2 topics' style='font-size: 22pt;'>SQL Interview</a>
+<a href='http://bestinterviewquestions.net/tag/sql-interview-questions/' class='tag-link-12 tag-link-position-21' title='1 topic' style='font-size: 8pt;'>SQL Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/sql-queries-interview-questions/' class='tag-link-15 tag-link-position-22' title='1 topic' style='font-size: 8pt;'>SQL Queries Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/sql-query-interview-questions/' class='tag-link-16 tag-link-position-23' title='1 topic' style='font-size: 8pt;'>SQL Query Interview Questions</a>
+<a href='http://bestinterviewquestions.net/tag/strengths-and-weaknesses/' class='tag-link-3 tag-link-position-24' title='1 topic' style='font-size: 8pt;'>strengths and weaknesses</a>
+<a href='http://bestinterviewquestions.net/tag/tell-me-about-yourself/' class='tag-link-26 tag-link-position-25' title='1 topic' style='font-size: 8pt;'>Tell Me About Yourself</a>
+<a href='http://bestinterviewquestions.net/tag/tips/' class='tag-link-7 tag-link-position-26' title='1 topic' style='font-size: 8pt;'>Tips</a></div>
+</div></aside><!--#sidebar-->
+	</div><!--#page-->
+	<footer id="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+                <div class="copyrights">
+			<div class="container">
+                <!--start copyrights-->
+<div class="row" id="copyright-note">
+<span><a href=" http://bestinterviewquestions.net/" title=" HR Interview Questions, Job Interview Questions and Answers, Job Interview Tips, How To Answer Interview Questions, Possible Interview Questions">Best Interview Questions</a> Copyright &copy; 2016.</span>
+<div class="to-top">Made With Love in <a>India</a>&nbsp;</div>
+</div>
+<!--end copyrights-->
+            </div>
+		</div> 
+	</footer><!--#site-footer-->
+</div><!--.main-container-->
+        <!--start footer code-->
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85689026-1', 'auto');
+  ga('send', 'pageview');
+
+</script>    <!--end footer code-->
+    	<div style="display:none">
+	<div class="grofile-hash-map-ea236bdf93821af50ff314dac8720fb3">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/bestinterviewquestions.net\/2016\/10\/13\/sql-interview-questions-answers-freshers-experienced\/":48};
+	</script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/akismet/_inc/form.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/modules/photon/photon.js'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/modules/wpgroho.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-includes/js/comment-reply.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var slideropts = {"rtl_support":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' async="async" src='http://bestinterviewquestions.net/wp-content/themes/mts_schema/js/owl.carousel.min.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/_inc/postmessage.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/_inc/jquery.inview.js'></script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/modules/likes/queuehandler.js'></script>
+<script type='text/javascript' async="async" src='http://bestinterviewquestions.net/wp-content/themes/mts_schema/js/sticky.js'></script>
+<script type='text/javascript' async="async" src='http://bestinterviewquestions.net/wp-content/themes/mts_schema/js/layzr.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bestinterviewquestions.net/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+</script>
+		<iframe src='http://widgets.wp.com/likes/master.html?ver=20160429#ver=20160429' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		
+		<!--[if IE]>
+		<script type="text/javascript">
+		if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+			// window.location.reload() doesn't respect the Hash in IE
+			window.location.hash = window.location.hash;
+		}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=118156739&postid=48&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=4.3.2&sig=9fda394524a546df818271b6db6eff6346871065#parent=http%3A%2F%2Fbestinterviewquestions.net%2F2016%2F10%2F13%2Fsql-interview-questions-answers-freshers-experienced%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=118156739&postid=48&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=4.3.2&sig=9fda394524a546df818271b6db6eff6346871065#parent=http%3A%2F%2Fbestinterviewquestions.net%2F2016%2F10%2F13%2Fsql-interview-questions-answers-freshers-experienced%2F";
+				}
+			};
+
+	
+			if ( 'undefined' !== typeof addComment ) {
+				addComment._Jetpack_moveForm = addComment.moveForm;
+
+				addComment.moveForm = function( commId, parentId, respondId, postId ) {
+					var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ), cancelClick, cancel;
+
+					if ( false === returnValue ) {
+						cancel = document.getElementById( 'cancel-comment-reply-link' );
+						cancelClick = cancel.onclick;
+						cancel.onclick = function() {
+							var cancelReturn = cancelClick.call( this );
+							if ( false !== cancelReturn ) {
+								return cancelReturn;
+							}
+
+							if ( !comm_par ) {
+								return cancelReturn;
+							}
+
+							comm_par = 0;
+
+							tellFrameNewParent();
+
+							return cancelReturn;
+						};
+					}
+
+					if ( comm_par == parentId ) {
+						return returnValue;
+					}
+
+					comm_par = parentId;
+
+					tellFrameNewParent();
+
+					return returnValue;
+				};
+			}
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		</script>
+
+	<script type='text/javascript' src='http://stats.wp.com/e-201641.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.3.2',blog:'118156739',post:'48',tz:'5.5',srv:'bestinterviewquestions.net'} ]);
+	_stq.push([ 'clickTrackerInit', '118156739', '48' ]);
+</script>
+</body>
+</html>

@@ -8,7 +8,12 @@ $directory_start = 'data_json';
 if(array_key_exists("action", $_GET)) {
 	switch($_GET["action"]) {
 		case "createJSON":
-			createJsonFromCollectedData(); //die();
+			if(array_key_exists("folder_name", $_GET)) {
+				$folder_name = $_GET["folder_name"];
+				//createJsonFromCollectedData($folder_name); //die();
+			} else {
+				createJsonFromCollectedData();
+			}
 			break;
 		case "page":
 			if(array_key_exists("id", $_GET)) {
@@ -245,7 +250,6 @@ function updateMatchNames() {
 /* **************************************************** */
 /*				UPDATE MATCH DATA IN JSON  				*/
 /* **************************************************** */
-
 function updateJSON() {
 
 	// get things to save
