@@ -21,9 +21,6 @@ window.onload = function() {
 	});
 	//windowResize();
 
-
-
-
 	addContactInfo();
 };
 
@@ -55,3 +52,26 @@ document.getElementById('nav_expand').onclick = function(){
 		document.getElementById('navigation').style.display = 'block';
 	toggled = !toggled;
 };
+
+
+
+
+
+/* More button ont he publications page.  To read mroe of abstracts */
+$('.readmore').click(function(e) {
+    e.stopPropagation();
+	$this = $(this)
+	if($this.attr("meta-truncated") == 1) {
+		$this.prev().css({
+			'height' : 'auto'
+		})
+		$this.html("Read less...")
+		$this.attr("meta-truncated", 0)
+	} else {
+		$this.prev().css({
+			'height' : '50px'
+		})
+		$this.html("Read more...")
+		$this.attr("meta-truncated", 1)
+	}
+});

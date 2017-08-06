@@ -35,8 +35,8 @@ figure img
 
 
 /* text */
-.text-left 			{ text-align: left; }
-.text-right 		{ text-align: right; }
+.text-left, .textLeft 			{ text-align: left; }
+.text-right, .textRight 		{ text-align: right; }
 .text-center 		{ text-align: center; }
 .text-justify		{ text-align: justify; }
 .text-bold 			{ font-weight: bold; }
@@ -66,9 +66,9 @@ figure img
 	-webkit-box-sizing: border-box;
 }
 .prefix1, .prefix2, .prefix3, .prefix4, .prefix5, .prefix6, .prefix7, .prefix8, .prefix9, .prefix10, .prefix11 {
-	display: inline-block;
+	/*display: inline-block;
 	float: left;
-	height: 1px;
+	height: 1px;*/
 }
 
 .alpha, .container12 .alpha, .container16 .alpha { margin-right: 0; margin-left: 0; }
@@ -111,17 +111,17 @@ figure img
 .column10.alpha, .container12 .column10.alpha { width:  83.33333%; }
 .column11.alpha, .container12 .column11.alpha { width:  91.66667%; }
 .column12.alpha, .container12 .column12.alpha { width:  100.0000%; }
-.prefix1,  .container12 .prefix1  { padding-left:   8.33333%; }
-.prefix2,  .container12 .prefix2  { padding-left:  16.66667%; }
-.prefix3,  .container12 .prefix3  { padding-left:  25.00000%; }
-.prefix4,  .container12 .prefix4  { padding-left:  33.33333%; }
-.prefix5,  .container12 .prefix5  { padding-left:  41.66667%; }
-.prefix6,  .container12 .prefix6  { padding-left:  50.00000%; }
-.prefix7,  .container12 .prefix7  { padding-left:  58.33333%; }
-.prefix8,  .container12 .prefix8  { padding-left:  66.66667%; }
-.prefix9,  .container12 .prefix9  { padding-left:  75.00000%; }
-.prefix10, .container12 .prefix10 { padding-left:  83.33333%; }
-.prefix11, .container12 .prefix11 { padding-left:  91.66667%; }
+.prefix1,  .container12 .prefix1  { margin-left:   9.33333%; }
+.prefix2,  .container12 .prefix2  { margin-left:  17.66667%; }
+.prefix3,  .container12 .prefix3  { margin-left:  26.00000%; }
+.prefix4,  .container12 .prefix4  { margin-left:  34.33333%; }
+.prefix5,  .container12 .prefix5  { margin-left:  42.66667%; }
+.prefix6,  .container12 .prefix6  { margin-left:  51.00000%; }
+.prefix7,  .container12 .prefix7  { margin-left:  59.33333%; }
+.prefix8,  .container12 .prefix8  { margin-left:  67.66667%; }
+.prefix9,  .container12 .prefix9  { margin-left:  76.00000%; }
+.prefix10, .container12 .prefix10 { margin-left:  82.33333%; }
+.prefix11, .container12 .prefix11 { margin-left:  92.66667%; }
 
 .container16 .column1  { width:  4.25%; }
 .container16 .column2  { width: 10.49%; }
@@ -171,21 +171,21 @@ figure img
 .container16 .column14.alpha { width:  87.49%; }
 .container16 .column15.alpha { width:  93.75%; }
 .container16 .column16.alpha { width:  100.0%; }
-.container16 .prefix1  { padding-left:   6.25%; }
-.container16 .prefix2  { padding-left:  12.49%; }
-.container16 .prefix3  { padding-left:  18.75%; }
-.container16 .prefix4  { padding-left:  25.00%; }
-.container16 .prefix5  { padding-left:  31.25%; }
-.container16 .prefix6  { padding-left:  37.49%; }
-.container16 .prefix7  { padding-left:  43.75%; }
-.container16 .prefix8  { padding-left:  50.00%; }
-.container16 .prefix9  { padding-left:  56.25%; }
-.container16 .prefix10 { padding-left:  62.49%; }
-.container16 .prefix11 { padding-left:  68.75%; }
-.container16 .prefix12 { padding-left:  75.00%; }
-.container16 .prefix13 { padding-left:  81.25%; }
-.container16 .prefix14 { padding-left:  87.49%; }
-.container16 .prefix15 { padding-left:  93.75%; }
+.container16 .prefix1  { margin-left:   7.25%; }
+.container16 .prefix2  { margin-left:  13.49%; }
+.container16 .prefix3  { margin-left:  19.75%; }
+.container16 .prefix4  { margin-left:  26.00%; }
+.container16 .prefix5  { margin-left:  32.25%; }
+.container16 .prefix6  { margin-left:  38.49%; }
+.container16 .prefix7  { margin-left:  44.75%; }
+.container16 .prefix8  { margin-left:  51.00%; }
+.container16 .prefix9  { margin-left:  57.25%; }
+.container16 .prefix10 { margin-left:  63.49%; }
+.container16 .prefix11 { margin-left:  69.75%; }
+.container16 .prefix12 { margin-left:  76.00%; }
+.container16 .prefix13 { margin-left:  82.25%; }
+.container16 .prefix14 { margin-left:  88.49%; }
+.container16 .prefix15 { margin-left:  94.75%; }
 
 @media only screen and (max-width: 1160px) and (min-width: 960px) {
     .container12, .container16 { width: 960px; }

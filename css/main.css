@@ -371,21 +371,15 @@ footer {
 /* **************************** */
 /*		publications			*/
 /* **************************** */
-.pub {
+.publication {
 	padding-bottom: 10px;
 }
-.pub .date, .pub .venue {
-	margin-top: 6px;
-}
-.pub .status {
-	font-size: 0.8em;
-	display: block;
-}
-.pub h3 {
+.publication h3 {
 	font-weight: bold;
 }
-.pub .abstract {
-	font-size: 0.8em;
+.publication .abstract {
+	height:50px;
+    overflow:hidden;
 }
 
 @media only screen and (max-width: 767px) {
