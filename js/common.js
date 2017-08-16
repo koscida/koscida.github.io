@@ -69,7 +69,7 @@ $('.readmore').click(function(e) {
 		$this.attr("meta-truncated", 0)
 	} else {
 		$this.prev().css({
-			'height' : '50px'
+			'height' : '81px'
 		})
 		$this.html("Read more...")
 		$this.attr("meta-truncated", 1)

@@ -275,11 +275,14 @@ function createCSVFromFinishedJSON() {
 
 
 $json_files = getJSONFiles();
+print_array($json_files);
 
 foreach ($json_files as $key1 => $json_file_name) {
 	$string = file_get_contents("data_json/$json_file_name");
 	$date_contents = json_decode($string, true);
 	//print_array($date_contents); die();
+
+	if($key1 == 3) {
 
 
 
@@ -311,8 +314,10 @@ foreach ($json_files as $key1 => $json_file_name) {
 		}
 	}
 
-
 	die();
+	}
+
+
 
 
 }
