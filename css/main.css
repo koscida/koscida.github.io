@@ -1,3 +1,5 @@
+/* pulled from 1140 css */
+/* end pulled from 1140css */
 body, html {
   margin: 0;
   padding: 0;
@@ -96,27 +98,25 @@ footer {
   display: inline-block;
   float: right;
   padding: 4px 0; }
-
-#nav_expand span {
-  background: #E8E8E8;
-  height: 6px;
-  display: block;
-  margin: 7px 10px;
-  width: 40px; }
+  #nav_expand span {
+    background: #E8E8E8;
+    height: 6px;
+    display: block;
+    margin: 7px 10px;
+    width: 40px; }
 
 .nav_inner {
-  float: right; }
+  width: 100%;
+  overflow: hidden; }
 
 .nav_link {
   font-size: 1.2em;
   text-align: center;
   padding: 17px 17px 0;
+  margin: 0;
   color: #D8D8D8;
   line-height: 60px;
-  float: left; }
-
-.nav_link:last-child {
-  padding-right: 0; }
+  float: right; }
 
 .nav_link.active, .nav_link:hover {
   text-decoration: none;
@@ -134,30 +134,27 @@ footer {
   margin-left: -20px;
   position: absolute; }
 
-@media only screen and (max-width: 1160px) and (min-width: 960px) {
-  .nav_link {
-    font-size: 1em; } }
-@media only screen and (max-width: 959px) and (min-width: 768px) {
+/* medium screens */
+@media only screen and (max-width: 1160px) and (min-width: 975px) {
   #title h1 {
     line-height: 60px;
     font-size: 2em; }
 
   .nav_link {
-    width: 18%;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 19px;
-    padding-top: 0;
     font-size: 1em;
-    line-height: 40px; }
+    padding-top: 0; }
 
   .nav_link.active:after {
-    top: -21px; } }
-@media only screen and (max-width: 767px) {
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-top-width: 15px; } }
+/* small screens */
+@media only screen and (max-width: 974px) {
   #title {
     display: inline-block;
     float: left;
-    width: auto; }
+    width: auto;
+    margin-bottom: 0; }
 
   #title h1 {
     font-size: 2em;
@@ -166,26 +163,31 @@ footer {
   #navigation {
     display: none;
     float: right;
-    width: auto;
+    width: 100%;
+    margin: 0;
     position: absolute;
     top: 54px;
     right: 0;
     z-index: 5;
-    background: #CC3366; }
+    background: #BB3355; }
+
+  .nav_inner {
+    width: 100%; }
 
   #navigation a {
     font-size: 1em;
     line-height: 1.5em;
     margin: 0;
-    text-align: left;
+    text-align: center;
     padding: 10px 30px;
     width: auto;
     display: block;
-    float: none; }
+    float: none;
+    border-bottom: 1px solid #AA2244; }
 
   #navigation a.active, #navigation a:hover {
-    border-bottom: 0;
-    margin-bottom: 0; }
+    /*border-bottom: 0;
+    margin-bottom: 0;*/ }
 
   #navigation a.active:after {
     display: none; } }
