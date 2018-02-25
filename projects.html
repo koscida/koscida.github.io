@@ -11,36 +11,72 @@
 	<link href="css/1140/1140.css" rel="stylesheet" type="text/css" media="all">
 	<link href="css/main.css" rel="stylesheet" type="text/css" media="all">
 
+	<!-- Custom Fonts -->
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Dosis:300,500' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
 	<header>
-		<div id="navPointer"></div>
-		<nav>
+		<nav id="navigation">
+			
+			<div id="navigationPointer"></div>
+			
 			<div class="container12">
-				<div id="title">
-					<h1>Brittany Ann Kos</h1>
+				<div class="column12 noMargin">
+					
+					<div id="navigationTitle">
+						<h1><a href="index">Brittany Ann Kos</a></h1>
+					</div>
+					
+					<div id="navigationMobile">
+						<button type="button" id="navigationButton">
+							<span id="navigationIcon" class="fa fa-bars"></span>
+						</button>
+					</div>
+					
+					<div id="navigationLarge">
+						<ul>
+							<li class="right">
+								<a href="cv.html">CV</a>
+							</li>
+							<li class="right">
+								<a href="publications.html">Publications</a>
+							</li>
+							<li class="right">
+								<a href="teaching.html">Teaching</a>
+							</li>
+							<li class="right">
+								<a href="projects.html" class="active">Projects</a>
+							</li>
+							<li class="right">
+								<a href="index.html">Home</a>
+							</li>
+						</ul>
+					</div>
+					
 				</div>
-				<div id="nav_expand" class="small-screen-only"><span></span><span></span><span></span></div>
-				<div id="navigation" class="column8"><div class="nav_inner">
-					<a href="cv.html" 				class="nav_link">CV</a>
-					<a href="publications.html" 	class="nav_link">Publications</a>
-					<a href="teaching.html" 		class="nav_link">Teaching</a>
-					<a href="projects.html" 		class="nav_link active">Projects</a>
-					<a href="index.html" 			class="nav_link">Home</a>
-				</div></div>
 			</div>
+			
 		</nav>
 	</header>
 	
 	
-	<div id="page">
+	<article id="page">
+		<div class="container12">
 
+		<aside>
+			<div id="asidePointer"></div>
+			<ul>
+				<li><a href="#">Dissertation</a></li>
+				<li><a href="#">Pre-Dissertation Research</a></li>
+				<li><a href="#">Grant Work</a></li>
+			</ul>
+		</aside>
+		
 		<section id="content">
-			<div class="container12">
-				
+			
 				<div class="row">
 					<div class="column12">
 						<h2 class="cv_title">Research, Personal, and Side Projects</h2>
@@ -164,7 +200,8 @@
 			</div>
 		</section>
 
-	</div>
+		</div>
+	</article>
 
 	<footer>
 		<div id="topFootBar"></div>

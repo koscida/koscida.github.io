@@ -2,36 +2,13 @@ var minheight = 20;
 var maxheight = 100;
 var time = 1000;
 var timer = null;
-var toggled = false;
 
 var doit;
 
 window.onload = function() {
 
-	//resize screen
-	window.addEventListener("resize", function (){
-		clearTimeout(doit);
-		doit = setInterval(function(){
-			var windowH = window.innerHeight;
-			var pageH = document.getElementById("page").style.height;
-			if(pageH <= (windowH-150)) {
-				document.getElementById("page").style.height = ( (windowH - 110) + "px");
-			}
-		}, 1);
-	});
-	//windowResize();
-
 	addContactInfo();
 };
-
-function windowResize() {
-	var windowH = window.innerHeight;
-	var pageH = document.getElementById("page").style.height;
-	if(pageH <= (windowH-150) && window.innerWidth >= 767) {
-			document.getElementById("page").style.height = ( (windowH - 110) + "px");
-	}
-
-}
 
 function addContactInfo() {
 	if(document.getElementById("brit_email"))
@@ -44,12 +21,23 @@ function addContactInfo() {
 
 
 
+/*
+ * Navigation
+ * Navigation for mobile. Opens and closes the navigation when the hamburger button gets pressed.
+ */
+var toggled = false;
 
-document.getElementById('nav_expand').onclick = function(){
-	if(toggled)
-		document.getElementById('navigation').style.display = 'none';
-	else
-		document.getElementById('navigation').style.display = 'block';
+document.getElementById('navigationIcon').onclick = function(){
+	var $this = document.getElementById('navigationIcon');
+	if(toggled) {
+		$this.classList.add("fa-bars");
+		$this.classList.remove("fa-close");
+		document.getElementById('navigationLarge').style.display = 'none';
+	} else {
+		$this.classList.add("fa-close");
+		$this.classList.remove("fa-bars");
+		document.getElementById('navigationLarge').style.display = 'block';
+	}
 	toggled = !toggled;
 };
 
@@ -57,7 +45,7 @@ document.getElementById('nav_expand').onclick = function(){
 
 
 
-/* More button ont he publications page.  To read mroe of abstracts */
+/* More button on the publications page.  To read more of abstracts */
 $('.readmore').click(function(e) {
     e.stopPropagation();
 	$this = $(this)
