@@ -366,9 +366,17 @@ footer {
 	-webkit-box-shadow: 0 0 5px #444;
 }*/
 .social_link {
+    margin-top: 10px;
 	margin-bottom: 10px;
 	overflow: hidden;
-	font-style:italic;
+	font-style: italic;
+    display: inline-block;
+    float: left;
+    
+    &.general {
+        padding-left: 20px;
+        border-left: 1px solid $body-text-color;
+    }
 }
 .social_link .icon {
 	height: 60px;
