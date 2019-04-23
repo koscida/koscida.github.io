@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vw8FU19XGwEFV1BRAgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(14)(a),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=s(n,"nr@wrapped",function(){return c(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&c.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(14)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(14)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(w=-w,x.data=w)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(14)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,g),g.prototype=p.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var w=1,x=document.createTextNode(w);new h(a).observe(x,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],c])}f(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],c),l}finally{f(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<n.length;s++)c=n[s],a=t[c],r(a)||(t[c]=e(a,f?c+o:o,i,c))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var u=f[v[n]];return u&&u.push([y,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){s(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},y={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return y}function i(){return new r}var a="nr@context",c=t("gos"),s=t(12),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!w++){var t=g.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(v,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;g.proto=n?"https://":"http://",c("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=g.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(12),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(9);var m=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},y=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:m,features:{},xhrWrappable:y};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),c("mark",["firstbyte",a()],null,"api");var w=0},{}]},{},["loader",2,7]);</script>
+    
+
+    <title>A WW2-era serial killer flick SILENT NIGHT is the most exciting movie you don&#39;t know about!</title>
+
+    
+    
+    <meta name="title" content="A WW2-era serial killer flick SILENT NIGHT is the most exciting movie you don&#39;t know about!">
+    <meta property="og:title" content="A WW2-era serial killer flick SILENT NIGHT is the most exciting movie you don&#39;t know about!">
+    <meta itemprop="description" name="description" content="From a first-time screenwriter comes this amazing-sounding story of a Nazi-appointed detective teaming up with a Jewish criminal psychologist to hunt down a serial killer in 1941 Berlin.">
+    <meta property="og:description" content="From a first-time screenwriter comes this amazing-sounding story of a Nazi-appointed detective teaming up with a Jewish criminal psychologist to hunt down a serial killer in 1941 Berlin.">
+    <meta itemprop="datePublished" content="2016-10-13">
+    <meta itemprop="dateModified" content="2016-10-13">
+    <meta name="author" content="quint" />
+    
+    <meta name="twitter:creator" content="@ericvespe">
+    
+
+    
+    <meta property="og:url" content="http://www.aintitcool.com/node/76487">
+    <link rel="canonical" href="http://www.aintitcool.com/node/76487"/>
+
+    
+    
+    <meta property="og:image" content="http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_huge.jpg"/>
+    <meta name="twitter:image" content="http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_huge.jpg">
+    <meta name="thumbnail" content="http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_large.jpg" />
+    <link rel="image_src" href="http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_large.jpg">
+    
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article">
+
+
+    <!-- Site-Wide Tags -->
+    <meta name="msapplication-starturl" content="http://www.aintitcool.com/">
+    <meta itemprop="inLanguage" content="en-US">
+    <meta name="site" content="Ain't It Cool News">
+    <meta property="og:site_name" content="Aint It Cool News" />
+    <meta name="twitter:site" content="@aintitcoolnews">
+    <meta property="fb:app_id" content="190151051022622"/>
+    <meta property="article:publisher" content="https://www.facebook.com/CoolNews" />
+
+    <link href='//fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://media.aintitcool.com/static/2014/css/core.css">
+
+
+<script src="https://cdn.optimizely.com/js/6292570029.js"></script>
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-106022-2', 'aintitcool.com');
+ga('require', 'displayfeatures');
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+
+
+
+
+
+
+<!-- Small header script that includes jQuery, navigation code, and ad code -->
+<script type="text/javascript" src="http://media.aintitcool.com/static/2014/js/min/header-script-min.js"></script>
+
+  <script type="text/javascript">
+    // Extra Google Analytics Tags
+    // Dimension 1: Category
+    ga('set', 'dimension1', 'Movie News');
+    // Dimension 2: Author/Editor
+    ga('set', 'dimension2', 'quint');
+
+    // Meta Vars
+    window.meta_author = 'quint';
+    
+    window.meta_author_twitter = 'ericvespe';
+    
+    window.meta_category = 'Movie News';
+    window.meta_title = 'A WW2\u002Dera serial killer flick SILENT NIGHT is the most exciting movie you don\u0027t know about!';
+    window.meta_description = 'From a first\u002Dtime screenwriter comes this amazing\u002Dsounding story of a Nazi\u002Dappointed detective teaming up with a Jewish criminal psychologist to hunt down a serial killer in 1941 Berlin.';
+    window.meta_published_date = new Date(2016, 10, 13, 15, 15, 00);
+    window.meta_modified_date = new Date(2016, 10, 13, 15, 14, 44);
+    window.meta_spoiler = false;
+    window.meta_topstory = false;
+    window.meta_comments = true;
+    window.meta_url = 'http://www.aintitcool.com/node/76487';
+    window.meta_article_id = 76487;
+    window.meta_image_huge = 'http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_huge.jpg'
+    window.meta_image_large = 'http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_large.jpg'
+    </script>
+
+
+<script type="text/javascript">
+ga('send', 'pageview');
+</script>
+
+</head>
+<body class="page-article has_talkback">
+<div id="fb-root"></div>
+
+<div class="container">
+
+<header class="area-header">
+<!-- Header -->
+
+<div class="header-top">
+<div class="grid-container">
+<div class="headerleft">
+    <div class="headerleft-wrap">
+        <div class="header-masthead-wrap">
+  
+      <a href="/"><img src="http://media.aintitcool.com/media/mastheads/elmharry.gif" alt="" class="animated-masthead"/></a>
+  
+</div>
+        <a href="/" class="aicn-logo">Ain't It Cool News</a>
+
+    </div>
+
+</div>
+<div class="headerright">
+    <div class="ad-leaderboard-desktop"><div class="adwrapper" id="div-gpt-leaderboard-728x90">
+    </div>
+    </div>
+</div>
+
+
+
+</div><!-- /.grid-container -->
+<span class="print-only">Ain't It Cool News (www.aintitcool.com)</span>
+
+</div>
+
+<div class="header-bottom">
+
+    <div class="grid-container">
+<div class="mobile-expand-contract headlinefont">
+    <a href="/" class="mobilenav-home"><i class="fa fa-home"></i></a>
+    <a href="#talkback" class="mobilenav-comments"><i class="fa fa-comments"></i></a>
+    <a href="#" class="mobilenav-bars"><i class="fa fa-bars fa-double-up "></i></a>
+    </a></div>
+<ul class="nav-options headlinefont mobile-hidden">
+    <li class="nav-home"><a href="/">Home</a></li>
+    <li class="nav-coolnews"><a href="/section/coolnews">Cool News</a></li>
+    <li class="nav-coaxial"><a href="/section/coaxial">Coaxial</a></li>
+    <li class="nav-reviews"><a href="/section/reviews">Reviews</a></li>
+    <li class="nav-dvd"><a href="/section/comics">Comics</a></li>
+    <li class="nav-contact"><a href="/contact/">Contact</a></li>
+    <li class="nav-search"><a href="/site-search/">Search <i class="fa fa-search"></i></a></li>
+</ul>
+
+</div>
+</div>
+
+</header><!-- /.area-header -->
+
+<div class="ad-leaderboard-mobile"><div id="div-gpt-mobile-leaderboard" class="adwrapper">
+</div></div>
+
+
+
+<div class="area-content"><div class="grid-container">
+<div class="pageleft">
+
+
+
+
+<div class="box  bg-yellow-gradient">
+    <div class="box-header">
+        <div class="box-title headlinefont">Movie News</div></div>
+<div class="box-content">
+
+
+<div class="article-heading">
+
+<div class="article-heading-left">
+<h1 class="article-title">A WW2-era serial killer flick SILENT NIGHT is the most exciting movie in production you don't know about!</h1>
+<p class="article-metainfo">
+Published at: Oct. 13, 2016, 3:15 p.m. CST by <a href="https://twitter.com/ericvespe">quint</a>
+</p>
+</div>
+
+<div class="article-heading-right">
+<div class="fb-like" data-href="http://www.aintitcool.com/node/76487" data-width="50" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+</div>
+</div>
+
+
+
+<div class="article-content">
+
+
+<center><img src="http://media.aintitcool.com/media/uploads/2016/quint/ww2berlinpic_big.jpg" alt="" /></center>
+<p>&nbsp;</p>
+<p>Ahoy, squirts! <a href="mailto:quint@aintitcool.com">Quint</a> here. Every once in a while you read about a film project and the very idea behind the film gets you amped for it. The only names attached to this project, called Silent Night, right now are ones you won't recognize. Producers and a first-time screenwriter, but the idea is so damn good that you'll want to see this movie survive the development stage.</p>
+<p><a href="http://deadline.com/2016/10/fox-international-productions-silent-night-script-james-luckard-white-horse-pictures-serial-killer-war-thriller-1201835745/" target="_">Deadline</a> has the story about Fox International picking up this script from a new screenwriter named James Luckard. It's a serial killer movie set in 1941 Berlin about the unlikely team-up of an SS-appointed investigator and a Jewish profiler/criminal psychologist who have to work together to track down a killer of young women.</p>
+<p>See, told you it was an awesome set-up. Reminds me a little about the amazing backdrop to something like The Third Man.</p>
+<p>It might just be all the My Favorite Murder podcasts I've been listening to lately, but this one has shot way up on my must-see list. Can't wait to see who they land to star and direct.</p>
+<p>What do you folks think?</p>
+<p>-Eric Vespe<br /><em>&rdquo;Quint&rdquo;</em> <br /><a href="mailto:quint@aintitcool.com">quint@aintitcool.com</a><br /> Follow Me On <a href="http://www.twitter.com/EricVespe" target="&rdquo;_&rdquo;">Twitter</a></p>
+<center><img src="http://s3.amazonaws.com/coolproduction/ckeditor_assets/pictures/16/original/quint.jpg?1291970865" alt="" /></center>
+
+
+</div>
+</div> <!-- /.box-content -->
+    <div class="box-footer box-share">
+        <ul class="headlinefont">
+            <li class="facebook"><a data-socialnetwork="Facebook" data-pagelocation="Below Article" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faintitcool.com/node/76487" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faintitcool.com/node/76487', '', 'width=600px,height=270px')" class="social-link"><i class="fa fa-facebook-square"></i> Share on Facebook</a></li>
+            <li class="twitter"><a data-socialnetwork="Twitter" data-pagelocation="Below Article" href="https://twitter.com/intent/tweet?text=A%20WW2-era%20serial%20killer%20flick%20SILENT%20NIGHT%20is%20the%20most%20exciting%20movie%20you%20don%27t%20know%20about%21&url=http%3A%2F%2Fwww.aintitcool.com/node/76487&via=ericvespe&related=aintitcoolnews,ericvespe,headgeek666" class="social-link"><i class="fa fa-twitter"></i> Share on Twitter</a></li>
+            <li class="twitter"><a data-socialnetwork="Twitter Follow" data-pagelocation="Below Article" href="https://twitter.com/intent/follow?screen_name=ericvespe" class="social-link">Follow ericvespe</a></li>
+        </ul>
+    </div>
+</div> <!-- /.box -->
+
+<div class="ad-mobile-wrap">
+    <div class="ad-mobile-box1">
+        <div id="div-gpt-mobile-300x250-a" class="adwrapper"></div>
+    </div>
+</div>
+
+
+
+<div class="box box-purple" id="talkback">
+    <div class="box-header">
+        <div class="box-title headlinefont">Readers Talkback</div></div>
+<div class="box-content">
+
+<!-- DISQUS -->
+
+    <div id="disqus_thread"></div>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!-- /DISQUS -->
+
+
+
+</div> <!-- /.box-content -->
+</div> <!-- /.box -->
+
+
+
+
+
+
+
+
+
+</div> <!-- /.pageleft -->
+<div class="pageright">
+
+<div class="ad-split-box1">
+    <div class="adwrapper" id="div-gpt-topright-300x250">
+    </div>
+</div>
+
+
+
+<div class="box article-list-box top-talkbacks-box">
+    <div class="box-header">
+        <div class="box-title headlinefont">Top Talkbacks</div></div>
+<div class="box-content">
+
+<ul class="article-list top-talkbacks">
+
+<li><a href="/node/76507"><span class="post-title">More ASH & WESTWORLD!! BERLIN, CORFU & GRAVES!! Sunday TV Talkback!! -- 109 total posts</span>
+<span class="posts-today">48</span></a></li>
+
+<li><a href="/node/76510"><span class="post-title">Commissioner Nygma On GOTHAM?? Stolen Kryptonite On SUPERGIRL?? B. Obama & B. O’Reilly On COLBERT?  Monday!! -- 34 total posts</span>
+<span class="posts-today">34</span></a></li>
+
+<li><a href="/node/76492"><span class="post-title">ROGUE ONE Supercut! -- 273 total posts</span>
+<span class="posts-today">16</span></a></li>
+
+<li><a href="/node/76495"><span class="post-title">HERC RADIO!! AICN’s TV Critic Loves THE ACCOUNTANT!!  Plus all the Exciting Star Trek, Star Wars, Marvel and DC Comics News!! -- 826 total posts</span>
+<span class="posts-today">15</span></a></li>
+
+<li><a href="/node/76486"><span class="post-title">"Save the Rebellion! Save the dream!" New Vaderiffic ROGUE ONE trailer is here! -- 982 total posts</span>
+<span class="posts-today">13</span></a></li>
+
+<li><a href="/node/76506"><span class="post-title">Horrorella Reviews JACK GOES HOME! -- 50 total posts</span>
+<span class="posts-today">12</span></a></li>
+
+<li><a href="/node/76503"><span class="post-title">Capone feels THE ACCOUNTANT adds up to something quite entertaining and largely unpredictable!!! -- 84 total posts</span>
+<span class="posts-today">11</span></a></li>
+
+<li><a href="/node/76512"><span class="post-title">Capone talks DESIERTO and life as Negan with actor Jeffrey Dean Morgan!!! -- 10 total posts</span>
+<span class="posts-today">10</span></a></li>
+
+<li><a href="/node/76504"><span class="post-title">Emily Blunt On SNL42!! Robert Plant On ACL42!! GODS OF EGYPT Hits HBO!! Saturday TV Talkback!! -- 57 total posts</span>
+<span class="posts-today">9</span></a></li>
+
+<li><a href="/node/76513"><span class="post-title">Ambush Bug counts down the best horror films on AICN HORROR since last Halloween – Number 15!!! -- 8 total posts</span>
+<span class="posts-today">8</span></a></li>
+
+</ul>
+</div> <!-- /.box-content -->
+</div> <!-- /.box -->
+
+
+
+<div class="ad-split-box2">
+    <div class="adwrapper" id="div-gpt-bottomright-300x250">
+    </div>
+</div>
+
+
+<div class="adwrapper" id="div-amzn-bottomright"></div>
+
+
+</div>
+
+</div> <!-- /.pageright -->
+
+</div> <!-- /.area-content -->
+
+
+
+
+
+<footer class="area-footer">
+    <div class="grid-container">
+<span class="section-map"><a href="/">Home</a> | <a href="/section/coolnews">Cool News</a> | <a href="/section/coaxial">Coaxial / TV</a> | <a href="/section/dvds">Picks &amp; Peeks</a> | <a href="/section/reviews">Movie Reviews</a> | <a href="/section/animation">Animation</a> | <a href="/section/comics">Comics</a> | <a href="/site-search/">Search</a> | <a href="/section/comics">Comics</a> | <a href="http://zone.aintitcool.com/">The Zone Forums</a>
+    </span>
+<span class="rss-privacy-report"><a href="/node/feed/">RSS</a>  | <a href="/privacy/">Privacy Policy</a> | <a href="/contact/">Contact AICN</a></soan>
+<span class="copyright">This site is © 1996-2016 Ain't It Cool News.</span>
+<span class="credit">Managed Hosting by <a href="http://steadfast.net/?utm_source=aintitcool.com&utm_medium=referral&utm_content=footer_link&utm_campaign=referral_20140118_x_x_aintitcool_partner&source=referral_20140118_x_x_aintitcool_partner">Steadfast</a>. Dev &amp; Responsive Design by <a href="http://www.nickcatalano.com/">Nick Catalano</a>.</span>
+</div>
+</footer><!-- /.area-footer -->
+
+</div> <!-- /.container -->
+
+<div class="adwrapper" id="div-gpt-outofpage">
+</div>
+
+
+<script type="text/javascript">
+window.disqus_identifier = 76487;
+window.disqus_shortname = 'aintitcoolnews';
+window.disqus_url = 'http://www.aintitcool.com/node/76487';
+window.disqus_developer = 1;
+</script>
+
+<!-- Footer script containing all other javascript (disqus, social, analytics, fitvid, etc) -->
+<script type="text/javascript" src="http://media.aintitcool.com/static/2014/js/min/delay-script-min.js"></script>
+
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({
+  qacct:"p-sV5gZpXM_sdwB"
+});
+</script>
+<noscript>
+<div style="display:none;">
+<img src="http://pixel.quantserve.com/pixel/p-sV5gZpXM_sdwB.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1158427fed","agent":"","transactionName":"ZwNQZUNVW0cHVRdRXF5JdERfV0FdCVhMWUNAFRxSXlpBUQhCTU5aVRFBC3BGQV0FWgZ8VkQHW11nXVBDSFEGTA==","applicationID":"2531358","errorBeacon":"bam.nr-data.net","applicationTime":36}</script>
+
+</body>
+</html>

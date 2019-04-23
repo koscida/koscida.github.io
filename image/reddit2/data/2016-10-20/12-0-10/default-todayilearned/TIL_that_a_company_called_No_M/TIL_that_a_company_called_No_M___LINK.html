@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html class=" js canvas canvastext"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script type="text/javascript" async="" src="/lib/widgets.js"></script><script type="text/javascript" async="" src="/lib/platform.js"></script><script type="text/javascript" async="" src="/lib/plusone.js"></script><script type="text/javascript" src="/lib/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app14.us.archive.org";archive_analytics.values.server_ms=150;</script>
+<link type="text/css" rel="stylesheet" href="/css/static/banner-styles.css">
+
+
+		<title>No More Woof</title>
+		<meta charset="utf-8">
+		<meta name="description" content="No-More-Woof is no joke. By using advanced brainwave measurement equipment together with new software we have been able to identify 14 separate thought patterns in dogs">
+		<meta name="keywords" content="no-more-woof, talking, dogs, eeg, epoc, brain, measure, brainwave, human language">
+		<link rel="shortcut icon" href="/img/favicon.png">
+		<link rel="stylesheet" href="/css/main.css" type="text/css" media="screen">
+
+		<script src="/files/modernizr.custom.37797.js"></script> 
+		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
+		<script src="/files/jquery.min.js"></script> 
+		<link href="/css/css" rel="stylesheet" type="text/css">
+		<script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
+		<script src="/files/parallax.js"></script>
+	
+
+	<link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen">
+	
+	
+		
+	<script type="text/javascript" src="/lib/jquery.min(1).js"></script>
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="/lib/jquery-1.7.2.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="/source/jquery.fancybox.css" media="screen">
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="/source/helpers/jquery.fancybox-buttons.css">
+	<script type="text/javascript" src="/source/helpers/jquery.fancybox-buttons.js"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="/source/helpers/jquery.fancybox-thumbs.css">
+	<script type="text/javascript" src="/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="/source/helpers/jquery.fancybox-media.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay opening speed and opacity
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedIn : 500,
+						opacity : 0.95
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				helpers : {
+					title : {
+						type : 'iStudio Totale'
+					},
+					overlay : {
+						css : {
+							'background-color' : '#eee'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'iStudio Totale'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+
+
+			$(".fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'preorder.php',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+
+
+	
+<script type="text/javascript" src="/files/disclaim-element.js"></script><script type="text/javascript" src="/files/graph-calc.js"></script><script type="text/javascript" src="/files/jquery.min(2).js"></script><script type="text/javascript">//<![CDATA[
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.nomorewoof.com/";
+
+var firstYear = 1996;
+var imgWidth = 500,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "18";
+var displayMonth = "Jul";
+var displayYear = "2014";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();//]]>
+</script><style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style></head>	
+
+
+
+<a href="/img/animalsafety.jpg" id="ele_id" rel="lightbox"><div class="animalsafety"></div></a>
+<style>
+.animalsafety {list-style-type: none;
+position: fixed;
+width:120px;
+height:120px;
+left: 10px;
+bottom: 10px;
+z-index: 9999;
+background-image: url('/img/animalsafety.jpg');
+
+</style>
+
+
+
+<div class="st"></div>
+<style>
+.st {list-style-type: none;
+position: fixed;
+right: 4px;
+width:147px;
+height:100px;
+bottom:4px;
+background-image: url('/img/byst.png');
+
+</style>
+
+<div class="border-rotate">
+<a class="facebook" href="https://www.facebook.com/TheNordicSocietyForInventionAndDiscovery" target="_blank"></a>
+<a class="twitter" href="http://www.twitter.com/NoMoreWoofReal" target="_blank"></a>
+<a class="preorder" href="http://www.indiegogo.com/project/preview/6c68ca70" target="_blank"></a>
+</div>
+<style>
+.border-rotate {list-style-type:none;position:fixed; z-index: 997; right:-1px;top:15%;border:1px solid #c4c4c4;background:#f2f2f2; -webkit-border-bottom-left-radius:30px; -webkit-border-top-left-radius:30px; -moz-border-border-bottom-left-radius:30px; -moz-border-top-left-radius:30px; border-bottom-left-radius:30px; top-left-radius:30px;}
+.facebook {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px 0px;display:block;zoom:1.2;margin:5px;}
+.facebook:hover {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px -150px;}
+.twitter {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px -50px;zoom:1.2;display:block;margin:5px;}
+.twitter:hover {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px -200px;}
+.preorder {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px -100px;zoom:1.2;display:block;margin:5px;}
+.preorder:hover {background:url(http://www.nomorewoof.com/img/borderbuttons.png);width:40px;height:40px;background-position: 0px -250px;}
+</style>
+
+
+
+<div class="share_box">
+    	<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="/files/tweet_button.1404859412.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 57px; height: 62px;"></iframe><script type="text/javascript" src="/files/widgets(1).js"></script>
+    	
+    	<!-- Place this tag where you want the +1 button to render -->
+	<g:plusone size="tall" data-gapiscan="true" data-onload="true"></g:plusone>		
+	<!-- Place this tag after the last plusone tag -->
+	     <script type="text/javascript">
+	(function() {
+	     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	     po.src = 'https://apis.google.com/js/plusone.js';
+	     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+	</script>
+	<iframe name="f1c87efbc" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="/files/share_button.html" style="border: none; visibility: visible; width: 55px; height: 61px;" class=""></iframe>
+	<!-- Place this tag where you want the share button to render. -->
+<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="http://www.nomorewoof.com" data-gapiscan="true" data-onload="true"></div>
+
+<!-- Place this tag after the last share tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+								
+        <script src="/files/hostedbadge.php"></script><iframe scrolling="no" frameborder="0" allowtransparency="true" src="/files/saved_resource.html" width="50" height="60" id="iframe-stmblpn-widget-1" style="overflow: hidden; margin: 0px; padding: 0px; border: 0px;"></iframe> <script type="text/javascript">   (function() {     var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;     li.src = window.location.protocol + '//platform.stumbleupon.com/1/widgets.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);   })(); </script>
+</div>
+
+<style>
+..share_box{
+	position:fixed;
+	width:50px;
+	top:10%;
+	left:10%;
+}
+
+.share_box{
+	position:fixed;
+	width:50px;
+	top:15%;
+	left:0;
+	padding:15px;
+}
+
+
+</style>
+
+	
+	<header class="header">
+	<div class="content-header">
+				<nav>
+                        <ul class="nav">    
+                        		<li><a href="http://www.nomorewoof.com/#contact" class="contact">Contact us</a></li>
+                                <li><a href="http://www.nomorewoof.com/#media" class="media">Media &amp; Press</a></li>
+                                <li><a href="http://www.nomorewoof.com/#tweakit" class="tweakit">Tweak it</a></li>
+                                <li><a href="http://www.nomorewoof.com/#story" class="story">Our story</a></li>
+                                <li><a href="http://www.nomorewoof.com/#tech" class="tech">Technology</a></li>
+                                <li><a href="http://www.nomorewoof.com/#products" class="products">Products</a></li>
+                        </ul>
+      </nav>	    
+	</div></header>
+	
+				<header id="branding">
+				
+				<a href="http://www.nomorewoof.com/#intro" class="intro"></a><h1><a href="http://www.nomorewoof.com/#intro" class="intro"><div class="logo"></div></a>
+				<div class="like"><iframe src="/files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true"></iframe></div>
+				</h1>
+			
+			</header>
+			
+							
+			<div id="intro-illustration">
+			
+							
+				<div id="intro-right">		
+			
+				</div>
+			</div>
+			
+			<div id="no-more-woof">		
+				<div id="player" class="full-frame" style="width: 100%; height: 100%; overflow: hidden; padding-left: 0px; padding-top: 0px;"><iframe width="640" height="360" src="https://www.youtube.com/embed/CweAeshjObA" frameborder="0" allowfullscreen></iframe></div>
+			</div>
+			
+			
+		
+
+		<div id="wrapper">	
+			
+
+			
+			<div id="content">
+			
+			<article id="left">
+				<p>NSID is working on a concept for different voices, to fit your dog. In the future they claim it will be possible to choose between a number of different voices, such as:</p>
+			<figure class="right-border"><img src="/img/dog1.png" class="domroll /img/dog1hover.png" xsrc="http://www.nomorewoof.com/img/dog1.png"><figcaption>Holly</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog2.png" class="domroll /img/dog2hover.png" xsrc="http://www.nomorewoof.com/img/dog2.png"><figcaption>Harley</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog3.png" class="domroll /img/dog3hover.png" xsrc="http://www.nomorewoof.com/img/dog3.png"><figcaption>Pudge</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog4.png" class="domroll /img/dog4hover.png" xsrc="http://www.nomorewoof.com/img/dog4.png"><figcaption>Mandy</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog5.png" class="domroll /img/dog5hover.png" xsrc="http://www.nomorewoof.com/img/dog5.png"><figcaption>Vincent</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog6.png" class="domroll /img/dog6hover.png" xsrc="http://www.nomorewoof.com/img/dog6.png"><figcaption>Roxy</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog7.png" class="domroll /img/dog7hover.png" xsrc="http://www.nomorewoof.com/img/dog7.png"><figcaption>Da Vinci</figcaption></figure>
+			<figure class="right-border"><img src="/img/dog8.png" class="domroll /img/dog8hover.png" xsrc="http://www.nomorewoof.com/img/dog8.png"><figcaption>Abby</figcaption>
+			</figure></article>
+			
+
+						
+	<article id="right">
+        <p>And different phrases like:</p>
+        <p>Holly: <i>This is splendid!</i></p>
+        <p>Harley: <i>Leave me alone</i></p>
+        <p>Pudge: <i>I am so very weary</i></p>
+        <p>Mandy: <i>Who are you?</i></p>
+        <p>Vincent: <i>Em, why are you guys leaving?..</i></p>
+        <p>Da Vinci: <i>Is that really you?</i></p>
+        <p>Roxy: <i>Night-time!</i></p>
+        <p>Abby: <i>He must be a very nice animal</i></p>
+        <p>At the moment NSID says their No More Woof device speaks only in English, but they have plans for Mandarin, French and Spanish versions later.</p>
+    </article>
+
+				<article id="products">
+					<header>
+						<h1>The Products</h1>
+					</header>
+					
+<p><i>Ever wondered what your dog is REALLY thinking?</i> Soon it may be possible to find out! NSID is working on a new way to uncover the inner wishes of our beloved pets. No More Woof – the new tool to let your dog speak its mind! NSID plans for the introduction of three distinct options, each with their own varied degree of functionality. Previously it was possible to pre-order them at their Indiegogo page, though we suggest you contact Nordic Inventions directly to see about ordering your own: <a href="http://www.indiegogo.com/project/preview/6c68ca70" target="_blank">INDIEGOGO</a>!<br><a href="http://www.indiegogo.com/project/preview/6c68ca70" target="_blank"><img src="/img/preorder.png"></a></p>			
+
+<p><b>The NSID NMW Micro</b>
+<br>A one sensor No More Woof able to distinguish 2 or 3 different thought patterns.  According to NSID, these would most likely include Tiredness, Hunger and Curiosity. This is the best option for those that are looking for something reasonably priced to test out the technology for themselves. 
+The English voice option would be available at this price level.&nbsp;
+<br>Price <b>65 $</b>
+
+</p><p><b>The NMW Standard</b>
+<br>This is a more robust design than the Micro. This one uses two sensors that help it to be able to distinguish 4 or more different thought patterns, and it should also be able to be calibrated to function better with different dog breeds. You can also flash new software via micro-USB. Far better functionality and more exactness than the Micro Edition. 
+<br>Price <b>$300</b></p>
+
+<p><b>The NMW Superior</b>
+<br>Premium mini-speaker implemented in a golden dog-tag with engraving of your choice. Fully customizable color appearance - let it blend in with your dog’s fur.&nbsp;Algorithmic learning: NMW superior programs itself while in use, always learning more of how your dog thinks and reacts –over time this option let’s your dog speak short sentences (“I’m hungry – but I don’t like this!”).
+<br>Price <b>$1200</b></p>
+
+Interested? Preorder <a href="http://www.indiegogo.com/project/preview/6c68ca70" target="_blank">here</a>
+
+<p>Finally, we must AGAIN stress that ALL the products are at the first stage and shall be regarded as research support. That said, they will definitely work on a basic level with dogs (and hopefully to some extent with all animals) and we can actually think of no cooler products, and yeah, we're basically building them because we want them ourselves.</p> 
+<p><b>Future applications and accessories</b><br>
+- Getting to personalise the device to distinguish even more thoughts, and combination of thoughts, like "Who is that woman, she looks nice!"&nbsp;<br>
+- Using the device to let hurt or disabled pets control artificial limbs or other appliances.&nbsp;<br>
+- Two-way communication. This is The Holy Grail for us. Not only should you be able to understand your pet, let them understand you. A similar device can be hooked up on humans translating our thoughts into dog, or other animal tongue like, oh sweet thought, a dolphin!
+<br>- Recognition of advanced thought patterns.<br>
+-Uncensored edition: hear your dog spelling out its horny thought. Perfect opener in the part! "Hey Bitch, wanna play?"<br>
+- The Pavlovian training kit (With the use of play and classical conditioning you and your pet will understand each other even more. By letting the… (Original instructions by Ivan Pavlov are provided :)<br>&nbsp;
+
+					
+					</p><div class="next-prev">
+						<a class="prev intro" href="http://www.nomorewoof.com/#intro">Prev</a>
+						<hr>
+						<a class="next story" href="http://www.nomorewoof.com/#story">Next</a>
+					</div>
+				</article>
+
+			
+			
+				<article id="tech">
+					<header>
+						<h1>Technology</h1>
+					</header>
+					
+<p>The technology used in No More Woof is the result of combining the latest technologies in three different tech-areas, EEG-sensoring, Micro Computing and  special BCI software. During the last decade huge discoveries have been made to map out the human brain’s functions. But never before has anyone made a serious attempt to apply this groundbreaking technology on man’s best friend.</p>
+<p>For instance there is a spectrum of specific electrical signals in the brain defining the feeling of&nbsp;tiredness&nbsp;("I'm tired!").
+Some of the most easily detected neural patterns are: "I'm hungry, "I'm tired", "I'm curious who that is?" and "I want to pee". 
+(It is worth pointing out that dogs "think" in a different way than humans. Whereas the dog's brain signals might indicate hunger, that does of course not really mean  the dog is "thinking" that, it's rather more a mental state than a "thought" although the difference between these two things is actually an interesting philosophical question, for those who are into these things.) </p>
+<p><b>An EEG reader</b><br>
+Every mammal creates and transports "thoughts" the same way, as a swarm of electrical signals through a complex neurosystem). It has long been possible to record this activity through Electroencephalogram (EEG) readings. When it comes to humans, the last decade has seen tremendous progress.</p>
+<p>However every&nbsp;species uses its unique structure. You could say that all creatures speak the same language only with varying dialects. And as animal brains are less complex than humans their signal patterns are more distinct for feelings of anger, curiosity or tiredness </p><p>– actually making them easier to distinguish.</p>
+The challenges we are facing using EEG on pets are a matter of placement for best comfort and how to identify the clearest signal when attaching the device on fur (we would never let you shave a tonsure on your beautiful German Shepard).<p></p>
+<p><b>A processing unit.</b><br>
+We are experimenting with a new&nbsp;brain-computer interface (BCI)&nbsp;to detect, analyze and&nbsp;translate&nbsp;the brainwaves of dogs&nbsp;into comprehensive thoughts.</p>
+<p>Earlier the devices had to stream thought sequences, but now we are using Raspberry PI, which handles this process directly inside the device.&nbsp;</p>
+<p>This might not seem as a big deal, but actually it clearly distinguishes this project from all previous research. Another company we have worked with in the past is <a href="http://www.hcgplusdrops.com" id="HCG Drops Plus">HCG plus diet drops</a>, an advanced HCG purification lab, who had been essential in getting our products out to market previously.</p>
+<p>The task of producing these signals and analyzing them is not simple due to the high degree of muscle tissue surrounding most dog's skulls, which disrupt the signal. When the EEG readings are gathered, you could say that the trick of reading an animal’s mind is stripped down to a more or less complex deciphering problem.&nbsp;</p>
+<p><b>Conclusion</b></p>
+<p>Right now we are&nbsp;only scraping the surface of possibilities; the project is only in its cradle.&nbsp;And&nbsp;to be completely honest, the first version will be quite rudimentary.&nbsp;But hey, the first computer was pretty crappy too.</p>
+
+					
+					<div class="next-prev">
+						<a class="prev intro" href="http://www.nomorewoof.com/#intro">Prev</a>
+						<hr>
+						<a class="next story" href="http://www.nomorewoof.com/#story">Next</a>
+					</div>
+				</article>
+				
+				<article id="story">
+					<header>
+						<h1>Our story</h1>
+					</header>
+					<p>No More Woof has been developed by the Nordic Society for Invention and Discovery, a small Scandinavian research lab. We have previously developed the much talked about concepts the iRock (a rocking chair that charges your iPad), the Fly Lamp (a hovering lamp that follows you around) and Nebula 12 (an indoor cloud).</p>
+					
+<p>The idea behind NSID is simple: The world is changing. Yesterday's giants are today’s dwarfs. Only 24 companies listed on Fortune 500 in 1970 is still around. Ten years ago Nokia was the highest valued brand in technology; nobody had heard of Facebook or the iPhone.&nbsp;
+Together with engineers, product developers and visionaries NSID has set a goal: To find, invent and develop RADICALLY new and awesome products with the potential to change the world.</p>
+
+<p>As of today, we have around 10 products in development including a flying carpet, a cellphone, a system for storing energy. We are always looking for new ideas, often together with our trendspotters from Haparanda to Hong Kong.</p>
+
+<p>No More Woof is definitely our most revolutionary invention so far.</p>
+
+<p>Our aim is to encourage sustainability, creativity and make the world a better place. For more information, read about us in&nbsp;<a href="http://www.wired.co.uk/magazine/archive/2013/03/start/ball-of-seclusion">Wired</a>&nbsp;or&nbsp;Gizmodo.</p>
+
+<p><img src="/img/micasa.png"></p>
+
+<p>
+The iRock / <a href="http://cocoonlife.ch/" target="_blank">The Cocoon</a> / The Nebula 12 / The Flylamp / The Teteatete
+</p>
+					<div class="next-prev">
+						<a class="prev tech" href="http://www.nomorewoof.com/#tech">Prev</a>
+						<hr>
+						<a class="next tweakit" href="http://www.nomorewoof.com/#tweakit">Next</a>
+					</div>
+				</article>
+				
+				<article id="tweakit">
+					<header>
+						<h1>Tweak it</h1>
+					</header>
+					<p>The technology used is still work in progress. We hope we will soon be able to share a DK, development kit, with all you interested. If you want one, just mail us here.</p>
+					<p>Keep in mind that this first round is partly novelty science. The brainwaves differ quiet a lot from different breeds as well as individual dogs. However it IS possible to detect some common patterns and we have no doubt that in 						the future this technology will open up a vast new era of communication between dogs and humans, or animals in general and humans.</p> 
+					<p>(Of course before real interaction could take place we must also build a machine that translates human thoughts into dog language, a task that seems quite a challenge, to put it mildly)</p>
+					<div class="next-prev">
+						<a class="prev story" href="http://www.nomorewoof.com/#story">Prev</a>
+						<hr>
+						<a class="next media" href="http://www.nomorewoof.com/#media">Next</a>
+					</div>
+				</article>
+				
+				<article id="media">
+					<header>
+						<h1>Media &amp; Press</h1>
+					</header>
+					<p>For press inquires about No-More-Woof, please contact info@nordicinvention.com. For information about the developers, NSID, please visit <a href="http://www.nordicinvention.com/">www.nordicinvention.com</a></p><p>The NoMoreWoof is just a working prototype, currently in version 3.2</p>
+<p><b>Press material</b></p>
+<a href="/img/v2-2.jpg" target="_blank"><img src="/img/v2-2.jpg" width="150px"></a>
+<a href="/img/v3-2.jpg" target="_blank"><img src="/img/v3-2.jpg" width="150px"></a>
+<a href="/img/v3-2-2.png" target="_blank"><img src="/img/v3-2-2.png" width="150px"></a>
+<p>Version 1.0</p>
+<a href="/img/IMG_8573.jpg" target="_blank"><img src="/img/IMG_8573.jpg" width="150px" height="100px"></a>
+<a href="/img/IMG_8564.jpg" target="_blank"><img src="/img/IMG_8564.jpg" width="150px" height="100px"></a>
+<a href="/img/IMG_8578.jpg" target="_blank"><img src="/img/IMG_8578.jpg" width="150px" height="100px"></a>
+<a href="/img/IMG_8559.jpg" target="_blank"><img src="/img/IMG_8559.jpg" width="150px" height="100px"></a>
+<a href="/img/IMG_8594.jpg" target="_blank"><img src="/img/IMG_8594.jpg" width="150px" height="100px"></a>
+<p>Version 0.9</p>
+<a href="/img/v0-9.jpg" target="_blank"><img src="/img/v0-9.jpg" width="150px"></a>
+<p></p>
+<p>Logo</p>
+<a href="/img/logo600px.png" target="_blank"><img src="/img/logo600px.png" width="206px" height="100px"></a><a href="/img/illustration-dog.png" target="_blank"><img src="/img/illustration-dog.png" width="125px" height="100px">
+
+
+
+
+
+<p></p>
+					</a><div class="next-prev"><a href="/img/illustration-dog.png" target="_blank">
+						</a><a class="prev tweakit" href="http://www.nomorewoof.com/#tweakit">Prev</a>
+						<hr>
+						<a class="next contact" href="http://www.nomorewoof.com/#contact">Next</a>
+					</div>
+				</article>
+				
+				<article id="contact">
+					<header>
+						<h1>Contact us</h1>
+					</header>
+					<p>If you have any questions about No More Woof, or any of our products, feel free to drop us a line at:<br><a href="mailto:info@nordicinvention.com">info@nordicinvention.com</a></p>
+					<div class="next-prev">
+						<a class="prev media" href="http://www.nomorewoof.com/#media">Prev</a>
+						<hr>
+					</div>
+				</article>
+			
+		
+			</div>
+			
+			<div id="pageFooter">
+				<div id="footerWrap"><p>Material is Used Under US Fair Use Copyright Laws Where Applicable. This Website is Provided for Non-Profit Information Purposes.</p></div>
+			</div>
+			
+			<!-- Parallax  left paw -->
+			<div id="parallax-bg4" style="top: -2250px;">
+				<img id="bg4-2" src="/img/bubbles/bubble-backoff.png" alt="cloud">
+				<img id="bg4-3" src="/img/bubbles/bubble-hunger.png" alt="cloud">
+				<img id="bg4-4" src="/img/bubbles/bubble-skratch.png" alt="cloud">
+				<img id="bg4-5" src="/img/bubbles/bubble-tired.png" alt="cloud">
+				<img id="bg4-6" src="/img/bubbles/bubble-who.png" alt="cloud">
+				<img id="bg4-7" src="/img/bubbles/bubble2-backoff.png" alt="cloud">
+				<img id="bg4-8" src="/img/bubbles/bubble2-hunger.png" alt="cloud">
+				<img id="bg4-9" src="/img/bubbles/bubble2-who.png" alt="cloud">
+				<img id="bg4-10" src="/img/prototype.png" alt="cloud">
+			</div>
+			
+			<!-- Parallax foreground -->
+			<div id="parallax-bg3" style="top: -2250px;">
+			
+				<img id="bg3-2-2" src="/img/media/prototype1.jpg" height="280">
+				<img id="bg3-2-3" src="/img/media/prototype2-0.jpg" height="280">
+				<img id="bg3-2-4" src="/img/media/v3-2-2.png" width="450">
+				<img id="bg3-2" src="/img/tech.png" width="723" height="500">
+				<img id="bg3-3" src="/img/nmw-ourstory.png" width="548" height="480">
+				<img id="bg3-4" src="/img/nmw-tweakit.png" width="600" height="516">
+				<img id="bg3-5" src="/img/nmw-contact-us.png" width="600" height="545">
+				<img id="bg3-6" src="/img/media.png" width="500" height="535">
+			</div>
+			
+			<!-- Parallax  left paw -->
+			<div id="parallax-bg2" style="top: -1500px;">
+				<img id="bg2-222" src="/img/note.png" alt="cloud">
+				<img id="bg2-3" src="/img/left-paw.png" alt="cloud">
+				<img id="bg2-4" src="/img/left-paw.png" alt="cloud">
+				<img id="bg2-5" src="/img/left-paw.png" alt="cloud">
+			</div>
+			
+			<script>
+			function notify() {
+    $("#bg2-2").fadeIn("slow").delay(19000).fadeOut('slow', function() {
+        setTimeout(notify, 30000);
+    });
+}
+
+notify();
+</script>
+
+			<script>
+			function notify() {
+    $("#bg2-22").fadeIn("slow").delay(80000).fadeOut('slow', function() {
+        setTimeout(notify, 10000);
+    });
+}
+
+notify();
+</script>
+
+
+
+			
+			<!-- Parallax  right paw -->
+			<div id="parallax-bg1" style="top: -750px;">
+				<img id="bg1-1" src="/img/right-paw.png" alt="cloud">
+				<img id="bg1-2" src="/img/right-paw.png" alt="cloud">
+				<img id="bg1-3" src="/img/right-paw.png" alt="cloud">
+				<img id="bg1-4" src="/img/right-paw.png" alt="cloud">
+			</div>
+		</div>
+
+
+
+<script src="/js/chrisdomroll.js">
+</script>
+		
+
+<script src="/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="/js/lightbox.js" gapi_processed="true"></script>
+
+</body></html>

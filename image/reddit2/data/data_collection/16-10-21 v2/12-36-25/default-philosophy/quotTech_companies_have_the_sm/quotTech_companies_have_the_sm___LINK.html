@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en'>
+<head>
+<meta charset='utf-8'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e79083cdd8","applicationID":"11080154","transactionName":"e15bR0tdXVtUSh9QR0tQTEAWQVlYRg==","queueTime":1,"applicationTime":109,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black' name='apple-mobile-web-app-status-bar-style'>
+<meta content='430086400490662' property='fb:app_id'>
+<meta content='Aeon' property='og:site_name'>
+<meta content='@aeonmag' property='twitter:site'>
+<meta content='index, follow' name='robots'>
+<link href='https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it' rel='canonical'>
+<meta content='Websites and apps are designed for compulsion, even addiction. Should the net be regulated like drugs or casinos?' name='description'>
+<meta content='https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it' name='standout'>
+<meta content='If the internet is addictive, why don’t we regulate it? – Michael Schulson | Aeon Essays' property='og:title'>
+<meta content='article' property='og:type'>
+<meta content='https://alpha.aeon.co/images/ca0a12a2-f88e-40c5-aa17-67dd21b8c964/header_SCHULSON-essay-BE069967.jpg' property='og:image'>
+<meta content='Websites and apps are designed for compulsion, even addiction. Should the net be regulated like drugs or casinos?' property='og:description'>
+<meta content='https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it' property='og:url'>
+<meta content='https://www.facebook.com/AeonMagazine' property='article:author'>
+<meta content='https://www.facebook.com/AeonMagazine' property='article:publisher'>
+<meta content='Technology' property='article:section'>
+<meta content='summary_large_image' property='twitter:card'>
+<meta content='If the internet is addictive, why don’t we regulate it? – Michael Schulson | Aeon Essays' property='twitter:title'>
+<meta content='Websites and apps are designed for compulsion, even addiction. Should the net be regulated like drugs or casinos?' property='twitter:description'>
+<meta content='https://alpha.aeon.co/images/ca0a12a2-f88e-40c5-aa17-67dd21b8c964/header_SCHULSON-essay-BE069967.jpg' property='twitter:image:src'>
+
+
+<title>If the internet is addictive, why don’t we regulate it? | Aeon Essays</title>
+<link rel="stylesheet" media="all" href="https://omicron.aeon.co/assets/application-b4fa74d146c8ae81f314f66b40b332be17b33fc58b6651ca619f00127735a8a9.css" />
+<link rel="alternate" type="application/atom+xml" title="Aeon" href="https://aeon.co/feed" />
+<link rel="alternate" type="application/rss+xml" title="Aeon" href="https://aeon.co/feed.rss" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="xtmtPKnRI/J49TCQb/PI19VhDJ2o0n3C17Yfe+WgeCcqVdW/6vJblOXadA/wTLEdiKlHodRCyj6ut2ZIbgYWFw==" />
+
+</head>
+
+<body class='essays show page-type--technology'>
+<div class='menu'>
+<div class='container menu__close__container'>
+<a class='menu__close' href='#' onclick="document.body.classList.remove('menu--open'); return false;">
+Close
+<span class='material-icons'>clear</span>
+</a>
+</div>
+<div class='container menu__navigation'>
+<div class='col'>
+<div class='gutter'>
+<nav class='menu__navigation__group'>
+<a class='section--philosophy' href='/philosophy'>Philosophy</a>
+<a class='section--science' href='/science'>Science</a>
+<a class='section--psychology' href='/psychology'>Psychology</a>
+<a class='section--health' href='/health'>Health</a>
+<a class='section--society' href='/society'>Society</a>
+<a class='section--technology' href='/technology'>Technology</a>
+<a class='section--culture' href='/culture'>Culture</a>
+</nav>
+</div>
+</div>
+<div class='col'>
+<div class='gutter'>
+<nav class='menu__navigation__group'>
+<a href='/essays'>Essays</a>
+<a href='/ideas'>Ideas</a>
+<a href='/videos'>Videos</a>
+<a class='mobile-break' href='/partners'>Partners</a>
+<a class='mobile-toggle' href='/about'>About</a>
+<a class='mobile-toggle' href='/donate'>Donate</a>
+</nav>
+</div>
+</div>
+<div class='col'>
+<div class='gutter'>
+<nav class='menu__navigation__group'>
+<a class='mobile-toggle' href='/about'>About</a>
+<a class='mobile-toggle' href='/donate'>Donate</a>
+<div class='menu__social-wrapper'>
+<a href='#' onclick="document.body.classList.toggle('modal-newsletter--open'); return false;">
+<span class='menu__navigation__group__icon material-icons'>email</span>
+<span class='menu__navigation__group__text'>Newsletter</span>
+</a>
+</div>
+<div class='menu__social-wrapper'>
+<a href='https://www.facebook.com/AeonMagazine' target='_blank'>
+<span class='menu__navigation__group__icon fa fa-facebook-official'></span>
+<span class='menu__navigation__group__text'>Facebook</span>
+</a>
+<span class='fb-like' data-action='like' data-href='https://facebook.com/AeonMagazine' data-layout='button_count' data-share='false' data-show-faces='false'></span>
+</div>
+<div class='menu__social-wrapper'>
+<a href='https://twitter.com/aeonmag' target='_blank'>
+<span class='menu__navigation__group__icon fa fa-twitter'></span>
+<span class='menu__navigation__group__text'>Twitter</span>
+</a>
+<a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/aeonmag'>Follow</a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='gutter'>
+<div class='menu__search'>
+<form class="menu__search__form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='material-icons'>search</div>
+<input class='menu__search__input' id='menu__search__input' name='q' placeholder='Search' type='search'>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+<a class='menu__close-cover' href='#' onclick="document.body.classList.remove('menu--open'); return false;"></a>
+
+<header class='header header--top'>
+<div class='container header__container'>
+<a class="header__logo__link" href="/"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px" width="174.65px" height="61.413px" viewBox="-14.554 -5.118 174.65 61.413" enable-background="new -14.554 -5.118 174.65 61.413" xml:space="preserve" class="header__logo">
+<g>
+	<path fill="#9D1D20" d="M70.929,25.275c0,11.705,8.432,21.268,18.756,21.268c10.57,0,19.002-9.438,19.002-21.268   c0-11.451-8.432-20.642-18.877-20.642C79.361,4.634,70.929,13.823,70.929,25.275 M118.979,25.527   c0,16.504-13.051,29.81-29.168,29.81c-16.121,0-29.172-13.306-29.172-29.81c0-16.377,13.051-29.683,29.172-29.683   C106.057-4.156,118.979,9.021,118.979,25.527"></path>
+	<path fill="#9D1D20" d="M45.389,19.563c0-6.435-0.265-10.854-0.794-13.252c-0.525-2.399-1.351-4.218-2.471-5.457   c-0.634-0.719-1.479-1.08-2.534-1.08c-1.575,0-2.856,1.02-3.853,3.06c-1.782,3.56-2.674,8.435-2.674,14.629v2.101H45.389    M56.536,23.581H33.289c0.273,7.434,1.771,13.308,4.488,17.629c2.083,3.32,4.59,4.976,7.519,4.976c1.811,0,3.459-0.673,4.937-2.009   c1.485-1.341,3.07-3.75,4.761-7.226l1.543,1.321c-2.296,6.199-4.837,10.582-7.613,13.163c-2.778,2.575-5.994,3.869-9.653,3.869   c-6.285,0-11.042-3.196-14.274-9.593c-2.596-5.158-3.896-11.555-3.896-19.186c0-9.354,1.911-16.801,5.733-22.338   c3.821-5.538,8.3-8.305,13.436-8.305c4.288,0,8.01,2.327,11.168,6.986C54.594,7.521,56.292,14.428,56.536,23.581"></path>
+	<path fill="#9D1D20" d="M4.668,26.974c-6.007,2.037-9.014,5.404-9.014,9.971v4.565c0,2.88,1.323,5.046,3.967,5.046   c2.882,0,5.047-2.524,5.047-5.648V26.974 M14.876,55.321c-3.724,0-6.605-1.924-7.807-6.244c-2.165,4.083-5.888,6.244-10.333,6.244   c-6.725,0-11.291-5.166-11.291-14.052v-2.767c0-10.572,8.169-15.615,19.224-19.699V9.912c0-2.882-1.202-4.564-3.966-4.564   c-2.884,0-3.846,1.682-3.846,4.806V15.2h-9.729v-4.564c0-8.531,4.685-14.776,14.054-14.776c9.371,0,13.816,6.486,13.816,15.618   V44.39c0,1.805,0.724,2.766,2.4,2.886v8.046H14.876L14.876,55.321z"></path>
+	<path fill="#9D1D20" d="M156.496,52.825v-39.79c0-7.597-0.514-10.944-2.311-13.522c-1.162-2.058-2.832-2.959-5.021-2.959   c-1.928,0-3.863,1.03-6.176,3.604c-2.24,2.243-5.352,6.04-7.246,8.842c0.742-4.152,0.684-14.118,0.684-14.118   c-6.561,3.859-9.902,4.893-16.207,5.151V1.19c1.926,0.515,2.572,0.643,4.244,1.415c0.127,4.25,0.127,7.34,0.127,8.111v10.945   l-0.127,10.943V45.23c0,2.958,0,4.119-0.127,7.596c-1.416,1.283-1.93,1.413-3.73,2.184v1.285h18.779V55.01   c-1.668-0.774-2.186-1.028-3.473-2.184V10.973l0.641-0.641c2.062-1.932,3.988-3.091,5.279-3.091c2.697,0,3.471,2.06,3.471,8.499   v37.085c-1.541,1.155-2.059,1.413-3.857,2.182v1.287h18.65v-1.542C158.297,54.109,157.781,53.852,156.496,52.825"></path>
+</g>
+</svg>
+
+</a><nav class='header__left'>
+<a class='header__left__menu-trigger' href='#' onclick="document.body.classList.toggle('menu--open'); return false;">Menu</a>
+<span class='header__separator separator'>&nbsp;/&nbsp;</span>
+<span class='header__search'>
+<a class='header__search-trigger' href='#' onclick="document.body.classList.toggle('menu--open'); document.querySelector('.menu__search__input').focus(); return false;">
+<span class='material-icons'>search</span>
+</a>
+</span>
+</nav>
+<nav class='header__right'>
+<div class='header__donate'>
+<a href="/donate">Donate</a>
+<span class='header__separator separator'>/&nbsp;</span>
+</div>
+<div class='header__social-icons social-hovers'>
+<div class='social-hovers__item'>
+<span class='fb-like-mobile'></span>
+<a target="_blank" class="header__social-icon" href="https://www.facebook.com/AeonMagazine"><span class='fa fa-facebook'></span>
+</a></div>
+<div class='social-hovers__item'>
+<span class='fb-like' data-action='like' data-href='https://facebook.com/AeonMagazine' data-layout='button_count' data-share='false' data-show-faces='false'></span>
+<a target="_blank" class="header__social-icon" href="https://www.facebook.com/AeonMagazine"><span class='fa fa-facebook'></span>
+</a></div>
+<div class='social-hovers__item'>
+<a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/aeonmag'></a>
+<a target="_blank" class="header__social-icon" href="https://twitter.com/aeonmag"><span class='fa fa-twitter'></span>
+</a></div>
+<a class='header__social-icon header__newsletter-icon' href='#' onclick="document.body.classList.toggle('modal-newsletter--open'); return false;">
+<span class='material-icons'>email</span>
+</a>
+</div>
+<span class='header__separator separator'>&nbsp;/</span>
+<div class='header__user header__user--anonymous'>
+<span class='user-nav'>
+<span class='one-line'>
+<a class="fixed-header__nav__item" href="/sign-in">Sign in</a>
+</span>
+</span>
+
+</div>
+</nav>
+</div>
+</header>
+
+<header class='header header--fixed'>
+<div class='container header__container'>
+<a class="header__logo__link" href="/"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px" width="174.65px" height="61.413px" viewBox="-14.554 -5.118 174.65 61.413" enable-background="new -14.554 -5.118 174.65 61.413" xml:space="preserve" class="header__logo">
+<g>
+	<path fill="#9D1D20" d="M70.929,25.275c0,11.705,8.432,21.268,18.756,21.268c10.57,0,19.002-9.438,19.002-21.268   c0-11.451-8.432-20.642-18.877-20.642C79.361,4.634,70.929,13.823,70.929,25.275 M118.979,25.527   c0,16.504-13.051,29.81-29.168,29.81c-16.121,0-29.172-13.306-29.172-29.81c0-16.377,13.051-29.683,29.172-29.683   C106.057-4.156,118.979,9.021,118.979,25.527"></path>
+	<path fill="#9D1D20" d="M45.389,19.563c0-6.435-0.265-10.854-0.794-13.252c-0.525-2.399-1.351-4.218-2.471-5.457   c-0.634-0.719-1.479-1.08-2.534-1.08c-1.575,0-2.856,1.02-3.853,3.06c-1.782,3.56-2.674,8.435-2.674,14.629v2.101H45.389    M56.536,23.581H33.289c0.273,7.434,1.771,13.308,4.488,17.629c2.083,3.32,4.59,4.976,7.519,4.976c1.811,0,3.459-0.673,4.937-2.009   c1.485-1.341,3.07-3.75,4.761-7.226l1.543,1.321c-2.296,6.199-4.837,10.582-7.613,13.163c-2.778,2.575-5.994,3.869-9.653,3.869   c-6.285,0-11.042-3.196-14.274-9.593c-2.596-5.158-3.896-11.555-3.896-19.186c0-9.354,1.911-16.801,5.733-22.338   c3.821-5.538,8.3-8.305,13.436-8.305c4.288,0,8.01,2.327,11.168,6.986C54.594,7.521,56.292,14.428,56.536,23.581"></path>
+	<path fill="#9D1D20" d="M4.668,26.974c-6.007,2.037-9.014,5.404-9.014,9.971v4.565c0,2.88,1.323,5.046,3.967,5.046   c2.882,0,5.047-2.524,5.047-5.648V26.974 M14.876,55.321c-3.724,0-6.605-1.924-7.807-6.244c-2.165,4.083-5.888,6.244-10.333,6.244   c-6.725,0-11.291-5.166-11.291-14.052v-2.767c0-10.572,8.169-15.615,19.224-19.699V9.912c0-2.882-1.202-4.564-3.966-4.564   c-2.884,0-3.846,1.682-3.846,4.806V15.2h-9.729v-4.564c0-8.531,4.685-14.776,14.054-14.776c9.371,0,13.816,6.486,13.816,15.618   V44.39c0,1.805,0.724,2.766,2.4,2.886v8.046H14.876L14.876,55.321z"></path>
+	<path fill="#9D1D20" d="M156.496,52.825v-39.79c0-7.597-0.514-10.944-2.311-13.522c-1.162-2.058-2.832-2.959-5.021-2.959   c-1.928,0-3.863,1.03-6.176,3.604c-2.24,2.243-5.352,6.04-7.246,8.842c0.742-4.152,0.684-14.118,0.684-14.118   c-6.561,3.859-9.902,4.893-16.207,5.151V1.19c1.926,0.515,2.572,0.643,4.244,1.415c0.127,4.25,0.127,7.34,0.127,8.111v10.945   l-0.127,10.943V45.23c0,2.958,0,4.119-0.127,7.596c-1.416,1.283-1.93,1.413-3.73,2.184v1.285h18.779V55.01   c-1.668-0.774-2.186-1.028-3.473-2.184V10.973l0.641-0.641c2.062-1.932,3.988-3.091,5.279-3.091c2.697,0,3.471,2.06,3.471,8.499   v37.085c-1.541,1.155-2.059,1.413-3.857,2.182v1.287h18.65v-1.542C158.297,54.109,157.781,53.852,156.496,52.825"></path>
+</g>
+</svg>
+
+</a><nav class='header__left'>
+<a class='header__left__menu-trigger' href='#' onclick="document.body.classList.toggle('menu--open'); return false;">Menu</a>
+<span class='header__separator separator'>&nbsp;/&nbsp;</span>
+<span class='header__search'>
+<a class='header__search-trigger' href='#' onclick="document.body.classList.toggle('menu--open'); document.querySelector('.menu__search__input').focus(); return false;">
+<span class='material-icons'>search</span>
+</a>
+</span>
+</nav>
+<nav class='header__right'>
+<div class='header__donate'>
+<a href="/donate">Donate</a>
+<span class='header__separator separator'>/&nbsp;</span>
+</div>
+<div class='header__social-icons social-hovers'>
+<div class='social-hovers__item'>
+<span class='fb-like-mobile'></span>
+<a target="_blank" class="header__social-icon" href="https://www.facebook.com/AeonMagazine"><span class='fa fa-facebook'></span>
+</a></div>
+<div class='social-hovers__item'>
+<span class='fb-like' data-action='like' data-href='https://facebook.com/AeonMagazine' data-layout='button_count' data-share='false' data-show-faces='false'></span>
+<a target="_blank" class="header__social-icon" href="https://www.facebook.com/AeonMagazine"><span class='fa fa-facebook'></span>
+</a></div>
+<div class='social-hovers__item'>
+<a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/aeonmag'></a>
+<a target="_blank" class="header__social-icon" href="https://twitter.com/aeonmag"><span class='fa fa-twitter'></span>
+</a></div>
+<a class='header__social-icon header__newsletter-icon' href='#' onclick="document.body.classList.toggle('modal-newsletter--open'); return false;">
+<span class='material-icons'>email</span>
+</a>
+</div>
+<span class='header__separator separator'>&nbsp;/</span>
+<div class='header__user header__user--anonymous'>
+<span class='user-nav'>
+<span class='one-line'>
+<a class="fixed-header__nav__item" href="/sign-in">Sign in</a>
+</span>
+</span>
+
+</div>
+</nav>
+</div>
+</header>
+
+<div class='modal-newsletter'>
+<div class='shortcode-inline-newsletter'>
+<div class='shortcode-inline-newsletter__title'>Get Aeon straight to your inbox</div>
+<form action='https://aeonmagazine.us5.list-manage.com/subscribe/post?u=89c6e02ebaf75bbc918731474&amp;id=411a82e59d' method='post' name='mc-embedded-subscribe-form' target='_blank'>
+<div class='fieldset email'>
+<input name='EMAIL' placeholder='Email address' type='email'>
+</div>
+<div class='fieldset frequency'>
+<label>
+<input checked='checked' name='group[10469][1]' type='checkbox' value='1'>
+Daily
+</label>
+<label>
+<input name='group[10469][2]' type='checkbox' value='2'>
+Weekly
+</label>
+</div>
+<div class='fieldset submit'>
+<input class='button' type='submit' value='Subscribe'>
+</div>
+</form>
+</div>
+
+<a class='close-cover' href='#' onclick="document.body.classList.remove('modal-newsletter--open'); return false;"></a>
+</div>
+<div data-react-class="Aeon.Components.Flash" data-react-props="{&quot;type&quot;:null,&quot;message&quot;:null}"></div>
+
+
+<article itemscope itemtype='http://schema.org/Article'>
+<meta itemType='https://schema.org/WebPage' itemid='https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it' itemprop='mainEntityOfPage' itemscope>
+<meta content='2015-11-24T11:00:08Z' itemprop='datePublished'>
+<meta content='https://omicron.aeon.co/images/ca0a12a2-f88e-40c5-aa17-67dd21b8c964/thumb_SCHULSON-essay-BE069967.jpg' itemprop='thumbnail'>
+<div itemprop='publisher' itemscope itemtype='https://schema.org/Organization'>
+<meta content='Aeon' itemprop='name'>
+<div itemprop='logo' itemscope itemtype='https://schema.org/ImageObject'>
+<img src='https://omicron.aeon.co/assets/aeon-logo-small-412e02aa7b12f7db67de24300bbb9fb4b9df5bd55d279bf1f3f3bcc167f2567e.png' style='display:none;'>
+<meta content='https://nu.aeon.co/assets/aeon-logo-small-412e02aa7b12f7db67de24300bbb9fb4b9df5bd55d279bf1f3f3bcc167f2567e.png' itemprop='url'>
+<meta content='60' itemprop='width'>
+<meta content='60' itemprop='height'>
+</div>
+</div>
+<div class='article-settings__article-wrap'>
+<article class='article-card article-card--col-3 article-card--featured article-card--section-technology' data-align-x='right' data-align-y='bottom' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<figure class='responsive-image' style="background-image: url('https://epsilon.aeon.co/images/ca0a12a2-f88e-40c5-aa17-67dd21b8c964/header_SCHULSON-essay-BE069967.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:579,&quot;path&quot;:&quot;/essays/579/save&quot;}"></div></div>
+<span class='article-card__class'>
+Essay<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>Internet &amp; Communication</span></div>
+<h1 class='article-card__title'>
+User behaviour
+</h1>
+<h2 class='article-card__standfirst'>
+Websites and apps are designed for compulsion, even addiction. Should the net be regulated like drugs or casinos? 
+</h2>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+<span class='article-card__authors__author'>Michael Schulson</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+</div>
+<div itemprop='image' itemscope itemtype='https://schema.org/ImageObject'></div>
+<meta content='https://nu.aeon.co/images/ca0a12a2-f88e-40c5-aa17-67dd21b8c964/header_SCHULSON-essay-BE069967.jpg' itemprop='url'>
+<meta content='1700' itemprop='width'>
+<meta content='680' itemprop='height'>
+<div class='article__image__caption container'>
+<div class='column'>
+<div class='gutter'>A pigeon involved in one of B F Skinner's experiments. <em>Photo by Bettmann/Corbis</em></div>
+</div>
+</div>
+<div class='article__wrapper'>
+<div class='article article--technology container essay' id='essay_579'>
+<div class='article__body'>
+<div class='article__inline-sidebar article__body__meta'>
+<div class='gutter'>
+<div class='article__body__author-details'>
+<p class='article__body__author-name vcard' itemprop='author' itemscope itemtype='https://schema.org/Person'>
+<a href='/users/michael-schulson' itemprop='name'>Michael Schulson</a>
+</p>
+<p data-uuid="48028034-6227-fa07-7402-a9a522d0040c"><span>is an American freelance writer and an associate editor at&nbsp;</span><em>Religion Dispatches&nbsp;</em><span>magazine,</span><em>&nbsp;</em><span>where he helps produce&nbsp;</span><a href="http://religiondispatches.org/section/science/the-cubit-blog/" target="_blank">The Cubit</a><span>, a section covering science, religion, technology, and ethics.</span></p>
+<div class='article__body__author-details__follow'>
+<span data-react-class="Aeon.Components.FollowButton" data-react-props="{&quot;className&quot;:&quot;follow-button--inline&quot;,&quot;name&quot;:&quot;Michael&quot;,&quot;following&quot;:null,&quot;follows&quot;:null,&quot;icon&quot;:&quot;\u003csvg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; width=\&quot;22.14\&quot; height=\&quot;15.49\&quot; viewBox=\&quot;0 0 22.14 15.49\&quot;\u003e\u003cpath d=\&quot;M5.24,9.21A2.82,2.82,0,1,1,8.06,12,2.82,2.82,0,0,1,5.24,9.21\&quot; transform=\&quot;translate(-2.5 -2.51)\&quot;\u003e\u003c/path\u003e\u003cpath d=\&quot;M9.81,18c1.89-4,4.51-6.49,7.42-6.49S22.76,14,24.64,18H9.81Z\&quot; transform=\&quot;translate(-2.5 -2.51)\&quot;\u003e\u003c/path\u003e\u003cpath d=\&quot;M13.46,6.28A3.76,3.76,0,1,1,17.23,10a3.76,3.76,0,0,1-3.76-3.76\&quot; transform=\&quot;translate(-2.5 -2.51)\&quot;\u003e\u003c/path\u003e\u003cpath d=\&quot;M10.13,13.73a4.14,4.14,0,0,0-2.07-.6C5.88,13.13,3.91,15,2.5,18H7.19a21.92,21.92,0,0,1,2.94-4.27\&quot; transform=\&quot;translate(-2.5 -2.51)\&quot;\u003e\u003c/path\u003e\u003c/svg\u003e\n&quot;,&quot;followPath&quot;:&quot;/users/michael-schulson/follow&quot;}"></span>
+</div>
+</div>
+<div class='article__body__partner-bio audio-player__wrapper'>
+<a class='audio-player__avatar'>
+<figure class='responsive-image' style="background-image: url('https://alpha.aeon.co/partneravatars/dcb351cd-fe53-4981-a284-a53d11a08300/curio-logo-aeon-partner.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+</a>
+<div class='audio-player__main'>
+<div data-react-class="Aeon.Components.AudioPlayer" data-react-props="{&quot;soundcloud_id&quot;:&quot;285624647&quot;,&quot;soundcloud_secret_token&quot;:&quot;s-7WiXI&quot;,&quot;soundcloud_client_id&quot;:&quot;fba382dd16fff276623c38d3e3b0a709&quot;,&quot;title&quot;:&quot;User behaviour&quot;,&quot;background_image&quot;:false}"></div>
+<p class='audio-player__partner'>
+Brought to you by <a href="/partners/curio-io">curio.io</a>, an Aeon partner
+</p>
+</div>
+</div>
+
+<p class='article__word-count'>3,900 words</p>
+<p class='article__body__editor'>
+Edited by
+<a href="/users/ejklake">Ed Lake</a>
+</p>
+<a class='republish-button' href='#' onclick="document.body.classList.add('show-republish-modal'); return false;">
+<div class='republish-button__text'>
+<span>Republish - Licence Only</span>
+</div>
+</a>
+
+<div class='republish-modal'>
+<div data-react-class="Aeon.Components.RepublishModal" data-react-props="{&quot;metrics_url&quot;:&quot;https://metrics.aeon.co&quot;,&quot;title&quot;:&quot;User behaviour&quot;,&quot;authors&quot;:&quot;Michael Schulson&quot;,&quot;republish_token&quot;:&quot;26f4b22f-a4a2-4306-adf1-0a98c260899e&quot;,&quot;content&quot;:&quot;\u003cp\u003eWhen I go online, I feel like one of B F Skinner’s white Carneaux pigeons. Those pigeons spent the pivotal hours of their lives in boxes, obsessively pecking small pieces of Plexiglas. In doing so, they helped Skinner, a psychology researcher at Harvard, map certain behavioural principles that apply, with eerie precision, to the design of 21st‑century digital experiences.\u003c/p\u003e\u003cp\u003eSkinner trained his birds to earn food by tapping the Plexiglas. In some scenarios, the pigeons got food every time they pecked. In other arrangements, Skinner set timed intervals between each reward. After the pigeon got food, the system stopped dispensing treats for, say, 60 seconds. Once that period had elapsed, if the bird pecked, it got another payday. The pigeons never \u003cem\u003equite\u003c/em\u003e mastered the timing, but they got close. Skinner would randomly vary the intervals between food availability. One time there’d be food available again in 60 seconds. The next, it might be after five seconds, or 50 seconds, or 200 seconds.\u003c/p\u003e\u003cp\u003eUnder these unstable conditions, the pigeons went nuts. They’d peck and peck. One pigeon hit the Plexiglas 2.5 times \u003cem\u003eper second \u003c/em\u003efor 16 hours. Another tapped 87,000 times over the course of 14 hours, getting a reward less than 1 per cent of the time.\u003c/p\u003e\u003cp\u003eSo? Well, here’s a simple illustration of how Skinner’s pigeon research applies to contemporary digital life. I’ve picked a hypothetical example: let’s call him Michael S, a journalist. Sending and receiving emails are important parts of his job. On average, he gets an email every 45 minutes. Sometimes, the interval between emails is only two minutes. Other times, it’s three hours. Although many of these emails are unimportant or stress-inducing, some of them are fun. Before long, whenever Michael S has an internet connection, he starts refreshing his email inbox every 30 minutes, and then every five minutes and then, occasionally, every two minutes. Before long, it’s a compulsive tic – the pecking pigeon of web usage.\u003c/p\u003e\u003cp\u003eShould we blame Michael S for wasting hours of his life hitting a small button? We could. He does have poor self-control, and he chose a profession in which email is an important form of communication.\u003c/p\u003e\u003cp\u003eThen again, would we blame Skinner’s pigeons, stuck in a box, pecking away until they get their grains and hemp seeds, while a pioneering researcher plumbs the glitches in their brains? Who’s in charge, really, of this whole scenario? The pigeons? Or Skinner, who designed the box in the first place?\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eB\u003c/span\u003ey 2015, it’s a platitude to describe the internet as distracting. We casually talk about digital life in terms of addiction and compulsion. In the 2000s, users nicknamed the first mainstream smartphone the \u003cem\u003ecrackberry\u003c/em\u003e. In conversation, we describe basic tools and apps – Facebook, email, Netflix, Twitter – using terms otherwise reserved for methamphetamine and slot machines.\u003c/p\u003e\u003cp\u003ePsychologists have been discussing the possibility of internet addiction since 1996, just three years after the release of the first mainstream web browser. But there’s no consensus about how to diagnose internet addiction, or whether it’s even a real thing. Estimates of its prevalence vary wildly. Unlike heroin, the internet doesn’t kill people, and has obvious utility. Plus, it can be difficult to disentangle the medium (the internet) from the addictive experience (pornography, for example, or online gambling).\u003c/p\u003e\u003cp\u003eIn any case, these diagnostic categories tend toward extremes. They don’t seem to encompass the full range of experiences on display when people joke about crackberries, or talk about getting sucked into Tumblr and Facebook.\u003c/p\u003e\u003cp\u003eYet, for millions of people, the internet is often understood in terms of compulsion. Critics blame the internet itself for this state of affairs, or they blame individual users. Neither makes much sense. The internet is not a predetermined experience. It’s a system of connections and protocols. There’s nothing about a global computer network that necessitates addiction-like behaviours.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;pullquote\&quot;\u003eT\u003cspan\u003eech companies have the smartest statisticians and computer scientists, whose job it is to break your willpower\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003eSo should individuals be blamed for having poor self-control? To a point, yes. Personal responsibility matters. But it’s important to realise that many websites and other digital tools have been engineered specifically to elicit compulsive behaviour.\u003c/p\u003e\u003cp\u003eA handful of corporations determine the basic shape of the web that most of us use every day. Many of those companies make money by capturing users’ attention, and turning it into pageviews and clicks. They’ve staked their futures on methods to cultivate habits in users, in order to win as much of that attention as possible. Successful companies build specialised teams and collect reams of personalised data, all intended to hook users on their products.\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e‘Much as a user might need to exercise willpower, responsibility and self-control, and that’s great, we also have to acknowledge the other side of the street,’ said Tristan Harris, an ethical design proponent who works at Google. (He spoke outside his role at the search giant.) Major tech companies, Harris told me, ‘have 100 of the smartest statisticians and computer scientists, who went to top schools, whose job it is to break your willpower.’\u003c/p\u003e\u003cp\u003eIn short, it’s not exactly a fair fight.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eI\u003c/span\u003et is a testament to the strange relationship between Silicon Valley and compulsion that when Nir Eyal’s book on how to build habit-forming products was published, it generated no controversy. Instead, \u003cem\u003eHooked\u003c/em\u003e (2014), which teaches web designers to ‘create a craving’ in their users, was a bestseller. Prominent tech writers praised it, as did the founder of WordPress. Eyal hosted a symposium at Stanford University.\u003c/p\u003e\u003cp\u003eAs a consultant to Silicon Valley startups, Eyal helps his clients mimic what he calls the ‘narcotic-like properties’ of sites such as Facebook and Pinterest. His goal, Eyal told \u003cem\u003eBusiness Insider\u003c/em\u003e, is to get users ‘continuing through the same basic cycle. Forever and ever.’ In \u003cem\u003eHooked\u003c/em\u003e, he sets out to answer a simple question: ‘How is it that these companies, producing little more than bits of code displayed on a screen, can seemingly control users’ minds?’\u003c/p\u003e\u003cp\u003eThe answer, he argues, is a simple four-step design model. Think of Facebook’s news feed. The first two steps are straightforward – you encounter a \u003cem\u003etrigger\u003c/em\u003e (whatever prompts you to scroll down on the feed) and an opportunity for \u003cem\u003eaction\u003c/em\u003e (you actually scroll down). Critically, the outcome of this action shouldn’t be predictable – instead, it should offer a \u003cem\u003evariable reward\u003c/em\u003e, such that the user is never quite sure what she’s going to get. On Facebook, that might be a rewarding cat video, or an obnoxious post from an acquaintance.\u003c/p\u003e\u003cp\u003eFinally, according to Eyal, the process should give you a chance to make some kind of investment – clicking the \u003cem\u003eLike \u003c/em\u003ebutton, for example, or leaving a comment. The investment should gradually ramp up, until the user feels more and more invested in the cycle of trigger, action and reward.\u003c/p\u003e\u003cp\u003eThen you’re hooked.\u003c/p\u003e\u003cp\u003eIf this sounds a bit like Skinner’s experiments, that’s because it’s modelled on them. As with the pigeons, uncertain reward can lead to obsessive behaviour. The gambling industry has been using these techniques for years, too: as Skinner himself recognised, the classic high-rep, variable-reward device is the slot machine.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;pullquote\&quot;\u003e\u003cspan\u003eThere are differences between a slot machine and a website, of course\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003eNatasha Schüll is an anthropologist at New York University who studies human-machine interactions. She fielded requests from interested Silicon Valley designers after the publication of \u003cem\u003eAddiction by Design \u003c/em\u003e(2012), her ethnography of gambling addicts and machine designers in Las Vegas.\u003c/p\u003e\u003cp\u003ePeople expect gambling addicts to care about winning. But according to Schüll, compulsive gamblers pursue a kind of trance-like focus, which she calls ‘the machine zone’. In this zone, Schüll writes, ‘time, space and social identity are suspended in the mechanical rhythm of a repeating process’.\u003c/p\u003e\u003cp\u003eThere are differences between a slot machine and a website, of course. With the former, the longer you’re engaged by variable rewards, the more money you lose. For a tech company in the attention economy, the longer you’re engaged by variable rewards, the more time you spend online, and the more money they make through ad revenue. While we tend to describe the internet in terms of distraction, what’s being developed, when you check email or Facebook neurotically, or get sucked into Candy Crush, is actually a particular kind of focus, one that prioritises digital motion and reward.\u003c/p\u003e\u003cp\u003eIn the gambling world, people tend to blame the addicts. Overwhelmingly, the academic literature on gambling has focused on the minds and behaviours of addicts themselves. What Schüll argues is that there’s something in between the gambler and the game – a particular human-machine interaction, the terms of which have been deliberately engineered.\u003c/p\u003e\u003cp\u003eYet we keep blaming people. As Schüll puts it: ‘It just seems very duplicitous to design with the goal of capturing attention, and then to put the whole burden onto the individual.’\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eO\u003c/span\u003ene of the sharpest critics of Nir Eyal is Nir Eyal. Over the phone, he comes across as thoughtful, serious and sensitive to the ethical implications of his life’s work. He often consults with healthcare providers, applying \u003cem\u003eHooked\u003c/em\u003e’s tactics to, for example, digital tools that remind people to take their medicines on time. He says that he refuses to consult for porn and gambling sites. The book’s goal, Eyal said, was to inspire products ‘that could help people live happier, healthier, more connected, richer lives’.\u003c/p\u003e\u003cp\u003e‘The fact is, you can’t sell something to people if they don’t want that thing,’ Eyal said. ‘What I’m teaching is persuasion. It is not coercion. Coercion is when you get people to do things they don’t want to do. And frankly I don’t know how to do that.’\u003c/p\u003e\u003cp\u003eIn \u003cem\u003eAddiction by Design\u003c/em\u003e, Schüll writes that ‘industry designers actively marshal technology to delude gamblers – at times worrying about their delusionary tactics… and at other times defending these tactics by insisting that they give gamblers “what they want”.’\u003c/p\u003e\u003cp\u003eThat sounded a lot like Eyal’s claim: you can’t sell anything that a customer doesn’t already want. I asked Schüll about the parallels. ‘I think [Eyal] has his heart in the right place,’ she said. But she argues that, when it comes to machine design, it’s not exactly about giving people what they do or do not want. What matters, Schüll says, is ‘the accentuating, accelerating and elaborating that happens between the wanting and the giving’.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;pullquote\&quot;\u003e\u003cspan\u003eas people have applied persuasive and hook-forming design principles to the internet, a moral queasiness has been there from the start\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003eIn other words, there’s a difference between what we \u003cem\u003ewant\u003c/em\u003e and what we \u003cem\u003eget\u003c/em\u003e. We go online looking for entertainment, connection, information. Often we do want to be distracted. Companies seem to be very good at amplifying that outcome – taking what we want and giving us something that’s a few notches \u003cem\u003emore\u003c/em\u003e. It’s the difference between wanting to go on Facebook for 10 minutes and ending up there for 30.\u003c/p\u003e\u003cp\u003eFinding a term for this amplification can be difficult. At worst, it smacks of coercion. At best, it represents an imbalance of power between ordinary consumers and the engineers trying to circumvent their willpower. Either way, gambling is instructive, in that it offers a frightening lesson: well-designed machines can bring people into zones of profitable compulsion. And as people have applied persuasive and hook-forming design principles to the internet, a moral queasiness has been there from the start.\u003c/p\u003e\u003cp\u003eIn one of the very first papers on captology – the process of using computers to change people’s behaviours – the Stanford psychologist B J Fogg, who has taught many of Silicon Valley’s tech leaders, included a coda on ethics. ‘High-tech persuaders would do well to base their design on defensible ethical standards,’ Fogg wrote, back in 1998. It was not exactly a rousing call to enforcement and moral rigor.\u003c/p\u003e\u003cp\u003eIn \u003cem\u003eHooked\u003c/em\u003e, Eyal includes a handy moral rubric. It’s supposed to help designers determine whether or not they’re applying the hook model ethically. I asked Eyal what would prevent someone from reading his book and building a coercive or harmful tool anyway. ‘Nothing,’ he admitted. ‘Nothing stops them.’ But he argues that, for many companies, ‘there is an incentive to self-regulate’ because unhappily hooked users can burn out.\u003c/p\u003e\u003cp\u003eThese appeals to moderation, though, are fundamentally out of sync with the basic profit model of Silicon Valley.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eI\u003c/span\u003emagine the internet as a nearly infinite, Borgesian library. Each article, widget, slide, game level and landing page forms a room in the library. Every time you use a link to go to a new page, you pass through a door. \u003c/p\u003e\u003cp\u003eAt first, if you want to make money, you sell whatever is in the room. Maybe it’s excellent journalism. Maybe it’s a game or a recipe. Maybe it’s an item that will get shipped to someone’s house. In this model, the internet offers a straightforward transactional experience in digital space.\u003c/p\u003e\u003cp\u003eOver time, instead of making money from whatever is in each room, companies begin to monetise the doors. They equip them with sensors. Each time you go through one, someone gets paid. Immediately, some people will start adding a \u003cem\u003elot \u003c/em\u003eof new doors. Other people will build rooms that are largely empty, but that function as waystations, designed to get as many people as possible to enter and leave.\u003c/p\u003e\u003cp\u003eWhen you open an article on, say, Slate.com, you enter an article room. Slate makes money because it sells a certain number of metered doors in each of these digital spaces. We call these doors ‘advertisements’. This architecture creates a rather strange effect, because while the ostensible goal of Slate is to get people into its rooms to read fine journalism, it actually gets paid by attracting people and then quickly sending them out – either to an advertiser’s website, or to another article.\u003c/p\u003e\u003cp\u003eAnd, in fact, this is how Slate functions. In a viral piece it published in 2013, the tech writer Farhad Manjoo partnered with Chartbeat to track how long Slate readers actually stayed on a given article. They found that 38 per cent opened the article and didn’t read it at all. Of those who began reading, fewer than 25 per cent made it to the end, and 5 per cent seemingly looked at the headline and then left. Manjoo locates this twitchiness in some vague cultural moment, suggesting that ‘we live in the age of skimming’. But this pattern shouldn’t surprise us. It’s simply a profit model working as designed.\u003c/p\u003e\u003cp\u003eAt some point, you no longer make money by building excellent rooms. You make money by figuring out how to get people to pass through as many doors as possible – to have them scanning across the web, that scrolling hallway of doors, in a state of constant motion, click-click-clicking away.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eT\u003c/span\u003eristan Harris grew up practicing sleight-of-hand magic, which, he says, taught him how easily the human mind can be manipulated. While at Stanford, he studied persuasive technologies with Fogg. A number of future Silicon Valley luminaries were in the class; Harris’ partner on a class project went on to co-found Instagram. After leaving Stanford, Harris designed interfaces for Apple, and co-founded Apture, a multimedia search tool, acquired by Google in 2011. Today, Harris is a design philosopher there. On the side, he’s a vocal proponent of ethical design, and a leader of a small community working on a concept called Time Well Spent.\u003c/p\u003e\u003cp\u003eIn an ideal Time Well Spent digi-verse, websites would ask users what they \u003cem\u003ereally \u003c/em\u003ewant. To achieve this, Harris imagines a much more flexible web. If you want to spend 15 minutes on Facebook, looking at pictures of old friends, Facebook will help you do that, and gently nudge you off when your time is up. If you want to work quietly on your computer for two hours, without receiving any emails, your server will hold non-urgent messages for you, and deliver them at the end of the rest period. And if you want to play Angry Birds until your eyeballs fall out, you can do that, too.\u003c/p\u003e\u003cp\u003eCertain technologies already help people exercise this kind of control. One app, Freedom, allows users to shut down access to certain sites. Saent, a new productivity tool, helps users track and share their online behaviour to reduce distraction.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;pullquote\&quot;\u003e\u003cspan\u003eThe organic web is like organic food: even if these tools were available, they’d require effort and know-how to access\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e‘We have to change from just competing for raw attention to competing for whether or not there’s a net positive contribution to people’s lives,’ Harris told me. That’s a nice idea; the question is how to get there. Making ‘a net positive contribution to people’s lives’ doesn’t necessarily satisfy investors. \u003c/p\u003e\u003cp\u003eHarris compares Time Well Spent’s goals to the organic food movement. The internet, in his estimation, looks like the conventional food system – limited options, most of them toxic. He is looking for ways to develop tools that let people organicise their web. He even imagines government certifications, like the organic standards, that let websites certify themselves as promoting more thoughtful, balanced usage.\u003c/p\u003e\u003cp\u003eThis analogy seems smart, but also worrying. The organic food system is tiny, niche and inaccessible to most people. It allows an affluent handful to opt out of the larger political conversation about industrial food regulation. The same issues seem to apply for the organic web: even if these tools were available, they’d require a certain degree of effort and know-how to access. Already, tools such as Freedom seem to cater to a narrow, tech-savvy professional class. Two-thirds of Saent’s early adopters are software developers.\u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;drop\&quot;\u003eW\u003c/span\u003ehen you read enough articles about internet compulsion and distraction, you start to notice a strange pattern. Writers work themselves into a righteous fury about prevalence and potency of addict-like behaviours. They compare tech companies to casino owners and other proprietors of regulated industries. And then, at the peak of their rage, they suggest it’s the users – not the designers – who should change.\u003c/p\u003e\u003cp\u003eIt’s faintly absurd. You get, for example, the technology critic and venture capitalist Bill Davidow on \u003cem\u003eThe Atlantic\u003c/em\u003e’s website writing about tech companies that ‘hijack neuroscience’, comparing them both to tobacco companies and casinos. Having described a social epidemic, he laments that there’s ‘no simple solution to this problem’. Then, suddenly mild, he suggests that users could maybe place their smartphones out of reach, sometimes, in order to focus on the people around them.\u003c/p\u003e\u003cp\u003eDavidow is missing the obvious point. If the situation really is as exploitative as he claims, and you aren’t naïve enough to believe that industries would regulate themselves, then you basically have one option: you regulate them.\u003c/p\u003e\u003cp\u003e‘Regulation’ is a scary word, especially for those of us accustomed to the libertarian mores that have governed the past two decades of internet growth. It’s understandable that we’re hesitant to talk about regulating distraction-inducing technologies. For one thing, we typically think of compulsive behaviour as the fault of machines or individuals, rather than as a designed experience, angled toward strategic ends. For another, we tend to associate regulation with paternalism that limits the choices of users.\u003c/p\u003e\u003cp\u003eIn this case, though, it’s possible to imagine regulation that actually \u003cem\u003eexpands\u003c/em\u003e users’ choices. It doesn’t need to be especially invasive or dramatic, and it would be designed to give users more control over their experiences online.\u003c/p\u003e\u003cp\u003eThat task would not be easy. The designer drug market provides a helpful analogy here. Every time governments ban these substances – which include synthetic cannabinoids, often called K2 or Spice – designers simply come out with a new, slightly different version that slips through the strictures of the law. Similarly, with something as slippery as distraction, and as polymorphous as the web, it’s easy to imagine companies finding ways to tweak their designs and find new ways to hook users. Still, regulation can send a message. And it can target some of the most common tools that designers use to draw users into a digital machine zone.\u003c/p\u003e\u003cp\u003eHere are three things we could do. First, we could require major social media and gaming sites, email providers and smartphone makers to offer distraction dashboards, so users could control certain elements of their experiences.\u003c/p\u003e\u003cp\u003eFacebook already allows users to turn off some (but not all) notifications. These dashboards would give users a new level of control over when, how and how often they receive notifications. We could require companies to let the \u003cem\u003eusers \u003c/em\u003edecide how many deliveries of email they receive per day, or how often a social network can update their feeds. Dashboards could also allow users to shape certain features of page layout, such as the amount of new content they see on a single page. \u003c/p\u003e\u003cp\u003e\u003cspan class=\&quot;pullquote\&quot;\u003e\u003cspan\u003e‘Twitter knows how much you’re checking Twitter. Gaming companies know how much you’re using free-to-play games. If they wanted to do something, they could\u003cspan\u003e’\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003eIt might be better to ban certain features of compulsive design outright. The most obvious target here is continuous or infinite scroll. Right now, sites such as Facebook and Twitter automatically and continuously refresh the page; it’s impossible to get to the bottom of the feed. Analogously, Tinder will let you swipe left or right pretty much indefinitely. YouTube, Netflix and similar sites automatically load the next video or show.\u003c/p\u003e\u003cp\u003eBy the \u003cem\u003eHooked\u003c/em\u003e model, these tools let websites constantly reset the trigger. For the company, the advantage is clear: they keep you on the site longer. But infinite scroll has no clear benefit for users. It exists almost entirely to circumvent self-control. Giving users a chance to pause and make a choice at the end of each discrete page or session tips the balance of power back in the individual’s direction. It allows people more control over their own hook cycles.\u003c/p\u003e\u003cp\u003eAs a second area for regulation, sites should be required to flag users who display especially compulsive behaviours. While full-blown internet addiction is difficult to define, something along those lines does seem to exist – and sites such as Facebook probably know who’s sick. This is a form of regulation that Eyal does advocate. ‘In the past, if you were an alcohol distiller, you could throw up your hands and say, look, I don’t know who’s an alcoholic,’ he said. ‘Today, Facebook knows how much you’re checking Facebook. Twitter knows how much you’re checking Twitter. Gaming companies know how much you’re using their free-to-play games. If these companies wanted to do something, they could.’ Of course, if citizens wanted to do something, we could, too, by compelling companies to provide cut-off points, and to alert users when their usage patterns resemble psychologically problematic behaviour. \u003c/p\u003e\u003cp\u003eA third option would be a gentler form of feedback. In this model, certain sites or browsers would be required to include tools that let users monitor themselves – how long they’ve been on a site, how many times they’ve visited in a day, and other metrics. Sites could even let users set their own cut-off points: \u003cem\u003eIf I’ve been on Twitter for more than an hour today, please lock me out.\u003c/em\u003e \u003c/p\u003e\u003cp\u003eWill this work? Probably not. At least in the United States, we’ve been notoriously hesitant to regulate tech companies. But sometimes it’s important to at least discuss regulation, in order to reframe the basic terms of the conversation. Digital tools offer a lot of wonderful services to users. They do so not because users and producers have identical incentives, but because users can form contracts: we trade our attention and privacy. In return, we receive services.\u003c/p\u003e\u003cp\u003eAs in any contract, there’s a balance of power. If the architecture of today’s web is any indication, that balance is skewed toward the designers. Unless we want to keep pinging around like Skinner’s pigeons (or like poor Michael S), it’s worth paying a little more attention to those whom our attention pays.\u003c/p\u003e&quot;,&quot;licence&quot;:null,&quot;type&quot;:&quot;Essay&quot;,&quot;creative_commons&quot;:null}"></div>
+</div>
+
+<div class='article__actions'>
+<div class='container'>
+<div class='article__inline-sidebar'>
+<div class='gutter'>
+<div class='article__actions__buttons'>
+<span data-react-class="Aeon.Components.QuestionButton" data-react-props="{&quot;question_id&quot;:2340,&quot;count&quot;:48}" class="article__actions__buttons__conversations"></span>
+<span data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:579,&quot;className&quot;:&quot;save save--button save--button&quot;,&quot;article&quot;:&quot;Essay#579&quot;,&quot;path&quot;:&quot;/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it/save&quot;}" class="article__actions__buttons__save"></span>
+<span data-react-class="Aeon.Components.SocialShareButtons" data-react-props="{&quot;pageUrl&quot;:&quot;https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it&quot;,&quot;facebookCount&quot;:3551,&quot;pageTitle&quot;:&quot;If the internet is addictive, why don’t we regulate it?&quot;,&quot;additionalClasses&quot;:&quot;social-sharing--buttons&quot;}" class="article__actions__buttons__social"></span>
+</div>
+<div class='article__questions'>
+<span data-react-class="Aeon.Components.QuestionCard" data-react-props="{&quot;path&quot;:&quot;/conversations/should-addictive-websites-be-subject-to-regulation&quot;,&quot;question_id&quot;:2340,&quot;title&quot;:&quot;Should addictive websites be subject to regulation?&quot;,&quot;section_slug&quot;:&quot;technology&quot;,&quot;responses_count&quot;:48}"></span>
+</div>
+</div>
+</div>
+<div class='article__body__content'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='article__body__content entry-content'>
+<div class='gutter'>
+<div class='has-dropcap'>
+<p>When I go online, I feel like one of B F Skinner’s white Carneaux pigeons. Those pigeons spent the pivotal hours of their lives in boxes, obsessively pecking small pieces of Plexiglas. In doing so, they helped Skinner, a psychology researcher at Harvard, map certain behavioural principles that apply, with eerie precision, to the design of 21st‑century digital experiences.</p><p>Skinner trained his birds to earn food by tapping the Plexiglas. In some scenarios, the pigeons got food every time they pecked. In other arrangements, Skinner set timed intervals between each reward. After the pigeon got food, the system stopped dispensing treats for, say, 60 seconds. Once that period had elapsed, if the bird pecked, it got another payday. The pigeons never <em>quite</em> mastered the timing, but they got close. Skinner would randomly vary the intervals between food availability. One time there’d be food available again in 60 seconds. The next, it might be after five seconds, or 50 seconds, or 200 seconds.</p><p>Under these unstable conditions, the pigeons went nuts. They’d peck and peck. One pigeon hit the Plexiglas 2.5 times <em>per second </em>for 16 hours. Another tapped 87,000 times over the course of 14 hours, getting a reward less than 1 per cent of the time.</p><p>So? Well, here’s a simple illustration of how Skinner’s pigeon research applies to contemporary digital life. I’ve picked a hypothetical example: let’s call him Michael S, a journalist. Sending and receiving emails are important parts of his job. On average, he gets an email every 45 minutes. Sometimes, the interval between emails is only two minutes. Other times, it’s three hours. Although many of these emails are unimportant or stress-inducing, some of them are fun. Before long, whenever Michael S has an internet connection, he starts refreshing his email inbox every 30 minutes, and then every five minutes and then, occasionally, every two minutes. Before long, it’s a compulsive tic – the pecking pigeon of web usage.</p><p>Should we blame Michael S for wasting hours of his life hitting a small button? We could. He does have poor self-control, and he chose a profession in which email is an important form of communication.</p><p>Then again, would we blame Skinner’s pigeons, stuck in a box, pecking away until they get their grains and hemp seeds, while a pioneering researcher plumbs the glitches in their brains? Who’s in charge, really, of this whole scenario? The pigeons? Or Skinner, who designed the box in the first place?</p><p><div class='shortcode-inline-newsletter'><div class='shortcode-inline-newsletter__title'>Get Aeon straight to your inbox</div><form action='https://aeonmagazine.us5.list-manage.com/subscribe/post?u=89c6e02ebaf75bbc918731474&amp;id=411a82e59d' method='post' name='mc-embedded-subscribe-form' target='_blank'><div class='fieldset email'><input name='EMAIL' placeholder='Email address' type='email'></div><div class='fieldset frequency'><label><input checked='checked' name='group[10469][1]' type='checkbox' value='1'>Daily</label><label><input name='group[10469][2]' type='checkbox' value='2'>Weekly</label></div><div class='fieldset submit'><input class='button' type='submit' value='Subscribe'></div></form></div></p><p><span class="drop">B</span>y 2015, it’s a platitude to describe the internet as distracting. We casually talk about digital life in terms of addiction and compulsion. In the 2000s, users nicknamed the first mainstream smartphone the <em>crackberry</em>. In conversation, we describe basic tools and apps – Facebook, email, Netflix, Twitter – using terms otherwise reserved for methamphetamine and slot machines.</p><p>Psychologists have been discussing the possibility of internet addiction since 1996, just three years after the release of the first mainstream web browser. But there’s no consensus about how to diagnose internet addiction, or whether it’s even a real thing. Estimates of its prevalence vary wildly. Unlike heroin, the internet doesn’t kill people, and has obvious utility. Plus, it can be difficult to disentangle the medium (the internet) from the addictive experience (pornography, for example, or online gambling).</p><p>In any case, these diagnostic categories tend toward extremes. They don’t seem to encompass the full range of experiences on display when people joke about crackberries, or talk about getting sucked into Tumblr and Facebook.</p><p>Yet, for millions of people, the internet is often understood in terms of compulsion. Critics blame the internet itself for this state of affairs, or they blame individual users. Neither makes much sense. The internet is not a predetermined experience. It’s a system of connections and protocols. There’s nothing about a global computer network that necessitates addiction-like behaviours.</p><p><span class="pullquote">T<span>ech companies have the smartest statisticians and computer scientists, whose job it is to break your willpower</span></span></p><p>So should individuals be blamed for having poor self-control? To a point, yes. Personal responsibility matters. But it’s important to realise that many websites and other digital tools have been engineered specifically to elicit compulsive behaviour.</p><p>A handful of corporations determine the basic shape of the web that most of us use every day. Many of those companies make money by capturing users’ attention, and turning it into pageviews and clicks. They’ve staked their futures on methods to cultivate habits in users, in order to win as much of that attention as possible. Successful companies build specialised teams and collect reams of personalised data, all intended to hook users on their products.</p><p><span></span></p><p>‘Much as a user might need to exercise willpower, responsibility and self-control, and that’s great, we also have to acknowledge the other side of the street,’ said Tristan Harris, an ethical design proponent who works at Google. (He spoke outside his role at the search giant.) Major tech companies, Harris told me, ‘have 100 of the smartest statisticians and computer scientists, who went to top schools, whose job it is to break your willpower.’</p><p>In short, it’s not exactly a fair fight.</p><p><span class="drop">I</span>t is a testament to the strange relationship between Silicon Valley and compulsion that when Nir Eyal’s book on how to build habit-forming products was published, it generated no controversy. Instead, <em>Hooked</em> (2014), which teaches web designers to ‘create a craving’ in their users, was a bestseller. Prominent tech writers praised it, as did the founder of WordPress. Eyal hosted a symposium at Stanford University.</p><p>As a consultant to Silicon Valley startups, Eyal helps his clients mimic what he calls the ‘narcotic-like properties’ of sites such as Facebook and Pinterest. His goal, Eyal told <em>Business Insider</em>, is to get users ‘continuing through the same basic cycle. Forever and ever.’ In <em>Hooked</em>, he sets out to answer a simple question: ‘How is it that these companies, producing little more than bits of code displayed on a screen, can seemingly control users’ minds?’</p><p>The answer, he argues, is a simple four-step design model. Think of Facebook’s news feed. The first two steps are straightforward – you encounter a <em>trigger</em> (whatever prompts you to scroll down on the feed) and an opportunity for <em>action</em> (you actually scroll down). Critically, the outcome of this action shouldn’t be predictable – instead, it should offer a <em>variable reward</em>, such that the user is never quite sure what she’s going to get. On Facebook, that might be a rewarding cat video, or an obnoxious post from an acquaintance.</p><p>Finally, according to Eyal, the process should give you a chance to make some kind of investment – clicking the <em>Like </em>button, for example, or leaving a comment. The investment should gradually ramp up, until the user feels more and more invested in the cycle of trigger, action and reward.</p><p>Then you’re hooked.</p><p>If this sounds a bit like Skinner’s experiments, that’s because it’s modelled on them. As with the pigeons, uncertain reward can lead to obsessive behaviour. The gambling industry has been using these techniques for years, too: as Skinner himself recognised, the classic high-rep, variable-reward device is the slot machine.</p><p><span class="pullquote"><span>There are differences between a slot machine and a website, of course</span></span></p><p>Natasha Schüll is an anthropologist at New York University who studies human-machine interactions. She fielded requests from interested Silicon Valley designers after the publication of <em>Addiction by Design </em>(2012), her ethnography of gambling addicts and machine designers in Las Vegas.</p><p>People expect gambling addicts to care about winning. But according to Schüll, compulsive gamblers pursue a kind of trance-like focus, which she calls ‘the machine zone’. In this zone, Schüll writes, ‘time, space and social identity are suspended in the mechanical rhythm of a repeating process’.</p><p>There are differences between a slot machine and a website, of course. With the former, the longer you’re engaged by variable rewards, the more money you lose. For a tech company in the attention economy, the longer you’re engaged by variable rewards, the more time you spend online, and the more money they make through ad revenue. While we tend to describe the internet in terms of distraction, what’s being developed, when you check email or Facebook neurotically, or get sucked into Candy Crush, is actually a particular kind of focus, one that prioritises digital motion and reward.</p><p>In the gambling world, people tend to blame the addicts. Overwhelmingly, the academic literature on gambling has focused on the minds and behaviours of addicts themselves. What Schüll argues is that there’s something in between the gambler and the game – a particular human-machine interaction, the terms of which have been deliberately engineered.</p><p>Yet we keep blaming people. As Schüll puts it: ‘It just seems very duplicitous to design with the goal of capturing attention, and then to put the whole burden onto the individual.’</p><p><span class="drop">O</span>ne of the sharpest critics of Nir Eyal is Nir Eyal. Over the phone, he comes across as thoughtful, serious and sensitive to the ethical implications of his life’s work. He often consults with healthcare providers, applying <em>Hooked</em>’s tactics to, for example, digital tools that remind people to take their medicines on time. He says that he refuses to consult for porn and gambling sites. The book’s goal, Eyal said, was to inspire products ‘that could help people live happier, healthier, more connected, richer lives’.</p><p>‘The fact is, you can’t sell something to people if they don’t want that thing,’ Eyal said. ‘What I’m teaching is persuasion. It is not coercion. Coercion is when you get people to do things they don’t want to do. And frankly I don’t know how to do that.’</p><p>In <em>Addiction by Design</em>, Schüll writes that ‘industry designers actively marshal technology to delude gamblers – at times worrying about their delusionary tactics… and at other times defending these tactics by insisting that they give gamblers “what they want”.’</p><p>That sounded a lot like Eyal’s claim: you can’t sell anything that a customer doesn’t already want. I asked Schüll about the parallels. ‘I think [Eyal] has his heart in the right place,’ she said. But she argues that, when it comes to machine design, it’s not exactly about giving people what they do or do not want. What matters, Schüll says, is ‘the accentuating, accelerating and elaborating that happens between the wanting and the giving’.</p><p><span class="pullquote"><span>as people have applied persuasive and hook-forming design principles to the internet, a moral queasiness has been there from the start</span></span></p><p>In other words, there’s a difference between what we <em>want</em> and what we <em>get</em>. We go online looking for entertainment, connection, information. Often we do want to be distracted. Companies seem to be very good at amplifying that outcome – taking what we want and giving us something that’s a few notches <em>more</em>. It’s the difference between wanting to go on Facebook for 10 minutes and ending up there for 30.</p><p>Finding a term for this amplification can be difficult. At worst, it smacks of coercion. At best, it represents an imbalance of power between ordinary consumers and the engineers trying to circumvent their willpower. Either way, gambling is instructive, in that it offers a frightening lesson: well-designed machines can bring people into zones of profitable compulsion. And as people have applied persuasive and hook-forming design principles to the internet, a moral queasiness has been there from the start.</p><p>In one of the very first papers on captology – the process of using computers to change people’s behaviours – the Stanford psychologist B J Fogg, who has taught many of Silicon Valley’s tech leaders, included a coda on ethics. ‘High-tech persuaders would do well to base their design on defensible ethical standards,’ Fogg wrote, back in 1998. It was not exactly a rousing call to enforcement and moral rigor.</p><p>In <em>Hooked</em>, Eyal includes a handy moral rubric. It’s supposed to help designers determine whether or not they’re applying the hook model ethically. I asked Eyal what would prevent someone from reading his book and building a coercive or harmful tool anyway. ‘Nothing,’ he admitted. ‘Nothing stops them.’ But he argues that, for many companies, ‘there is an incentive to self-regulate’ because unhappily hooked users can burn out.</p><p>These appeals to moderation, though, are fundamentally out of sync with the basic profit model of Silicon Valley.</p><p><span class="drop">I</span>magine the internet as a nearly infinite, Borgesian library. Each article, widget, slide, game level and landing page forms a room in the library. Every time you use a link to go to a new page, you pass through a door. </p><p>At first, if you want to make money, you sell whatever is in the room. Maybe it’s excellent journalism. Maybe it’s a game or a recipe. Maybe it’s an item that will get shipped to someone’s house. In this model, the internet offers a straightforward transactional experience in digital space.</p><p>Over time, instead of making money from whatever is in each room, companies begin to monetise the doors. They equip them with sensors. Each time you go through one, someone gets paid. Immediately, some people will start adding a <em>lot </em>of new doors. Other people will build rooms that are largely empty, but that function as waystations, designed to get as many people as possible to enter and leave.</p><p>When you open an article on, say, Slate.com, you enter an article room. Slate makes money because it sells a certain number of metered doors in each of these digital spaces. We call these doors ‘advertisements’. This architecture creates a rather strange effect, because while the ostensible goal of Slate is to get people into its rooms to read fine journalism, it actually gets paid by attracting people and then quickly sending them out – either to an advertiser’s website, or to another article.</p><p>And, in fact, this is how Slate functions. In a viral piece it published in 2013, the tech writer Farhad Manjoo partnered with Chartbeat to track how long Slate readers actually stayed on a given article. They found that 38 per cent opened the article and didn’t read it at all. Of those who began reading, fewer than 25 per cent made it to the end, and 5 per cent seemingly looked at the headline and then left. Manjoo locates this twitchiness in some vague cultural moment, suggesting that ‘we live in the age of skimming’. But this pattern shouldn’t surprise us. It’s simply a profit model working as designed.</p><p>At some point, you no longer make money by building excellent rooms. You make money by figuring out how to get people to pass through as many doors as possible – to have them scanning across the web, that scrolling hallway of doors, in a state of constant motion, click-click-clicking away.</p><p><span class="drop">T</span>ristan Harris grew up practicing sleight-of-hand magic, which, he says, taught him how easily the human mind can be manipulated. While at Stanford, he studied persuasive technologies with Fogg. A number of future Silicon Valley luminaries were in the class; Harris’ partner on a class project went on to co-found Instagram. After leaving Stanford, Harris designed interfaces for Apple, and co-founded Apture, a multimedia search tool, acquired by Google in 2011. Today, Harris is a design philosopher there. On the side, he’s a vocal proponent of ethical design, and a leader of a small community working on a concept called Time Well Spent.</p><p>In an ideal Time Well Spent digi-verse, websites would ask users what they <em>really </em>want. To achieve this, Harris imagines a much more flexible web. If you want to spend 15 minutes on Facebook, looking at pictures of old friends, Facebook will help you do that, and gently nudge you off when your time is up. If you want to work quietly on your computer for two hours, without receiving any emails, your server will hold non-urgent messages for you, and deliver them at the end of the rest period. And if you want to play Angry Birds until your eyeballs fall out, you can do that, too.</p><p>Certain technologies already help people exercise this kind of control. One app, Freedom, allows users to shut down access to certain sites. Saent, a new productivity tool, helps users track and share their online behaviour to reduce distraction.</p><p><span class="pullquote"><span>The organic web is like organic food: even if these tools were available, they’d require effort and know-how to access</span></span></p><p>‘We have to change from just competing for raw attention to competing for whether or not there’s a net positive contribution to people’s lives,’ Harris told me. That’s a nice idea; the question is how to get there. Making ‘a net positive contribution to people’s lives’ doesn’t necessarily satisfy investors. </p><p>Harris compares Time Well Spent’s goals to the organic food movement. The internet, in his estimation, looks like the conventional food system – limited options, most of them toxic. He is looking for ways to develop tools that let people organicise their web. He even imagines government certifications, like the organic standards, that let websites certify themselves as promoting more thoughtful, balanced usage.</p><p>This analogy seems smart, but also worrying. The organic food system is tiny, niche and inaccessible to most people. It allows an affluent handful to opt out of the larger political conversation about industrial food regulation. The same issues seem to apply for the organic web: even if these tools were available, they’d require a certain degree of effort and know-how to access. Already, tools such as Freedom seem to cater to a narrow, tech-savvy professional class. Two-thirds of Saent’s early adopters are software developers.</p><p><span class="drop">W</span>hen you read enough articles about internet compulsion and distraction, you start to notice a strange pattern. Writers work themselves into a righteous fury about prevalence and potency of addict-like behaviours. They compare tech companies to casino owners and other proprietors of regulated industries. And then, at the peak of their rage, they suggest it’s the users – not the designers – who should change.</p><p>It’s faintly absurd. You get, for example, the technology critic and venture capitalist Bill Davidow on <em>The Atlantic</em>’s website writing about tech companies that ‘hijack neuroscience’, comparing them both to tobacco companies and casinos. Having described a social epidemic, he laments that there’s ‘no simple solution to this problem’. Then, suddenly mild, he suggests that users could maybe place their smartphones out of reach, sometimes, in order to focus on the people around them.</p><p>Davidow is missing the obvious point. If the situation really is as exploitative as he claims, and you aren’t naïve enough to believe that industries would regulate themselves, then you basically have one option: you regulate them.</p><p>‘Regulation’ is a scary word, especially for those of us accustomed to the libertarian mores that have governed the past two decades of internet growth. It’s understandable that we’re hesitant to talk about regulating distraction-inducing technologies. For one thing, we typically think of compulsive behaviour as the fault of machines or individuals, rather than as a designed experience, angled toward strategic ends. For another, we tend to associate regulation with paternalism that limits the choices of users.</p><p>In this case, though, it’s possible to imagine regulation that actually <em>expands</em> users’ choices. It doesn’t need to be especially invasive or dramatic, and it would be designed to give users more control over their experiences online.</p><p>That task would not be easy. The designer drug market provides a helpful analogy here. Every time governments ban these substances – which include synthetic cannabinoids, often called K2 or Spice – designers simply come out with a new, slightly different version that slips through the strictures of the law. Similarly, with something as slippery as distraction, and as polymorphous as the web, it’s easy to imagine companies finding ways to tweak their designs and find new ways to hook users. Still, regulation can send a message. And it can target some of the most common tools that designers use to draw users into a digital machine zone.</p><p>Here are three things we could do. First, we could require major social media and gaming sites, email providers and smartphone makers to offer distraction dashboards, so users could control certain elements of their experiences.</p><p>Facebook already allows users to turn off some (but not all) notifications. These dashboards would give users a new level of control over when, how and how often they receive notifications. We could require companies to let the <em>users </em>decide how many deliveries of email they receive per day, or how often a social network can update their feeds. Dashboards could also allow users to shape certain features of page layout, such as the amount of new content they see on a single page. </p><p><span class="pullquote"><span>‘Twitter knows how much you’re checking Twitter. Gaming companies know how much you’re using free-to-play games. If they wanted to do something, they could<span>’</span></span></span></p><p>It might be better to ban certain features of compulsive design outright. The most obvious target here is continuous or infinite scroll. Right now, sites such as Facebook and Twitter automatically and continuously refresh the page; it’s impossible to get to the bottom of the feed. Analogously, Tinder will let you swipe left or right pretty much indefinitely. YouTube, Netflix and similar sites automatically load the next video or show.</p><p>By the <em>Hooked</em> model, these tools let websites constantly reset the trigger. For the company, the advantage is clear: they keep you on the site longer. But infinite scroll has no clear benefit for users. It exists almost entirely to circumvent self-control. Giving users a chance to pause and make a choice at the end of each discrete page or session tips the balance of power back in the individual’s direction. It allows people more control over their own hook cycles.</p><p>As a second area for regulation, sites should be required to flag users who display especially compulsive behaviours. While full-blown internet addiction is difficult to define, something along those lines does seem to exist – and sites such as Facebook probably know who’s sick. This is a form of regulation that Eyal does advocate. ‘In the past, if you were an alcohol distiller, you could throw up your hands and say, look, I don’t know who’s an alcoholic,’ he said. ‘Today, Facebook knows how much you’re checking Facebook. Twitter knows how much you’re checking Twitter. Gaming companies know how much you’re using their free-to-play games. If these companies wanted to do something, they could.’ Of course, if citizens wanted to do something, we could, too, by compelling companies to provide cut-off points, and to alert users when their usage patterns resemble psychologically problematic behaviour. </p><p>A third option would be a gentler form of feedback. In this model, certain sites or browsers would be required to include tools that let users monitor themselves – how long they’ve been on a site, how many times they’ve visited in a day, and other metrics. Sites could even let users set their own cut-off points: <em>If I’ve been on Twitter for more than an hour today, please lock me out.</em> </p><p>Will this work? Probably not. At least in the United States, we’ve been notoriously hesitant to regulate tech companies. But sometimes it’s important to at least discuss regulation, in order to reframe the basic terms of the conversation. Digital tools offer a lot of wonderful services to users. They do so not because users and producers have identical incentives, but because users can form contracts: we trade our attention and privacy. In return, we receive services.</p><p>As in any contract, there’s a balance of power. If the architecture of today’s web is any indication, that balance is skewed toward the designers. Unless we want to keep pinging around like Skinner’s pigeons (or like poor Michael S), it’s worth paying a little more attention to those whom our attention pays.</p>
+<div class='follow-topics-banner'>
+<span class='follow-topics-banner__topic section--technology'>
+<a href='/technology/internet-communication'>Internet &amp; Communication</a>
+<span data-react-class="Aeon.Components.FollowButton" data-react-props="{&quot;className&quot;:&quot;follow-button--inline follow-button--inline-small&quot;,&quot;name&quot;:&quot;&quot;,&quot;following&quot;:null,&quot;follows&quot;:false,&quot;icon&quot;:false,&quot;followPath&quot;:&quot;/technology/internet-communication/follow&quot;}"></span>
+</span>
+<span class='follow-topics-banner__topic section--technology'>
+<a href='/technology/technology-the-self'>Technology &amp; the Self</a>
+<span data-react-class="Aeon.Components.FollowButton" data-react-props="{&quot;className&quot;:&quot;follow-button--inline follow-button--inline-small&quot;,&quot;name&quot;:&quot;&quot;,&quot;following&quot;:null,&quot;follows&quot;:false,&quot;icon&quot;:false,&quot;followPath&quot;:&quot;/technology/technology-the-self/follow&quot;}"></span>
+</span>
+<span class='follow-topics-banner__topic section--technology'>
+<a href='/technology/future-of-technology'>Future of Technology</a>
+<span data-react-class="Aeon.Components.FollowButton" data-react-props="{&quot;className&quot;:&quot;follow-button--inline follow-button--inline-small&quot;,&quot;name&quot;:&quot;&quot;,&quot;following&quot;:null,&quot;follows&quot;:false,&quot;icon&quot;:false,&quot;followPath&quot;:&quot;/technology/future-of-technology/follow&quot;}"></span>
+</span>
+<a class="follow-topics-banner__all-topics" href="/sections">All topics &rarr;
+</a></div>
+
+</div>
+<div class='cf'>
+<div class='article__shares'>
+<span data-react-class="Aeon.Components.SocialShareButtons" data-react-props="{&quot;pageUrl&quot;:&quot;https://aeon.co/essays/if-the-internet-is-addictive-why-don-t-we-regulate-it&quot;,&quot;facebookCount&quot;:3551,&quot;pageTitle&quot;:&quot;If the internet is addictive, why don’t we regulate it?&quot;,&quot;additionalClasses&quot;:&quot;social-sharing--buttons&quot;}" class="article__actions__buttons__social"></span>
+</div>
+<div class='article__site'>
+aeon.co
+</div>
+<time class='article__date published' datetime='2015-11-24 11:00:08 UTC'>24 November, 2015</time>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='support-bar'>
+<div class='container support-bar__top'>
+<div class='column'>
+<div class='support-bar__inner gutter article-list__heading support-bar__headlines'>
+<h2>Ideas should be free</h2>
+<h3>If you enjoy Aeon, please show your support</h3>
+</div>
+</div>
+</div>
+<div class='container support-bar__main'>
+<div class='column'>
+<div class='support-bar__inner gutter'>
+<div class='support-bar__heading'>Aeon is not-for-profit<br />and free for everyone</div>
+<a class='support-bar__button' href='/donate'>Make a Donation</a>
+</div>
+</div>
+<div class='column'>
+<div class='support-bar__inner gutter'>
+<div class='support-bar__heading'>Get Aeon straight <br />to your inbox</div>
+<a class='support-bar__button' onclick="document.body.classList.toggle('modal-newsletter--open'); return false;">Sign up</a>
+</div>
+</div>
+<div class='column'>
+<div class='support-bar__inner gutter'>
+<div class='support-bar__heading'>Follow us on <br />Facebook</div>
+<a target="_blank" class="support-bar__button" href="https://www.facebook.com/AeonMagazine">Like
+</a></div>
+</div>
+</div>
+</div>
+
+<div class='article__related'>
+<div class='article-list--col-3 article-list--index article-list--list article-list__wrapper'>
+<div class='article-list container'>
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='right' data-align-y='top' data-backdrop-strength='2' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<figure class='responsive-image' style="background-image: url('https://epsilon.aeon.co/images/d3c4911b-c96b-4bb7-949e-e9283d10c728/card_concious_exotica.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1656,&quot;path&quot;:&quot;/essays/1656/save&quot;}"></div></div>
+<span class='article-card__class'>
+Essay<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>Computing &amp; Artificial Intelligence</span></div>
+<p class='article-card__title'>
+Conscious exotica
+</p>
+<h2 class='article-card__standfirst'>
+From algorithms to aliens, could humans ever understand minds that are radically unlike our own?
+</h2>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+<span class='article-card__authors__author'>Murray  Shanahan</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/essays/beyond-humans-what-other-kinds-of-minds-might-be-out-there"></a>
+</div>
+</div>
+</article>
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='center' data-align-y='center' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<figure class='responsive-image' style="background-image: url('https://epsilon.aeon.co/images/b5d94021-d327-440b-85ef-57f17a3f94f6/card_sized-mikael-hvidtfeldt-christensen-15576455834_faa4c5b69d_o.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1662,&quot;path&quot;:&quot;/ideas/1662/save&quot;}"></div></div>
+<span class='article-card__class'>
+Idea<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>Computing &amp; Artificial Intelligence</span></div>
+<p class='article-card__title'>
+Now it’s time to prepare for the Machinocene
+</p>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+<span class='article-card__authors__author'>Huw Price</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/ideas/now-it-s-time-to-prepare-for-the-machinocene"></a>
+</div>
+</div>
+</article>
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='center' data-align-y='center' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<figure class='responsive-image' style="background-image: url('https://omicron.aeon.co/images/aaca2625-f1bf-4a28-adad-aa447def47a9/card_primitive-technology-tiled-hut-main.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+<div class='article-card__overlay__video-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-miterlimit:10;}
+</style>
+<polygon class="st0" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
+<circle class="st0" cx="597.4" cy="597.4" r="587.4"></circle>
+</svg>
+
+</div>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1608,&quot;path&quot;:&quot;/videos/1608/save&quot;}"></div></div>
+<span class='article-card__class'>
+Video<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>Making</span></div>
+<p class='article-card__title'>
+Make shelter: how to build an awesome hut only with naturally occurring materials
+</p>
+<h2 class='article-card__standfirst'>
+14 minutes
+</h2>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/videos/make-shelter-how-to-build-an-awesome-hut-only-with-naturally-occurring-materials"></a>
+</div>
+</div>
+</article>
+
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='center' data-align-y='bottom' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<span class='article-card__audio-corner'>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--audio'>
+<i class='material-icons'>volume_up</i>
+</div>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--play'>
+<i class='material-icons'>play_arrow</i>
+</div>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--pause'>
+<i class='material-icons'>pause</i>
+</div>
+</span>
+<div data-react-class="Aeon.Components.AudioPlayer" data-react-props="{&quot;soundcloud_id&quot;:&quot;288284702&quot;,&quot;soundcloud_secret_token&quot;:&quot;s-9fJzJ&quot;,&quot;soundcloud_client_id&quot;:&quot;fba382dd16fff276623c38d3e3b0a709&quot;,&quot;title&quot;:&quot;The Soviet InterNyet&quot;,&quot;background_image&quot;:&quot;https://nu.aeon.co/images/c15c3575-e39b-42a3-ba32-6ba5400504b0/card_essay-sputnik_00107217_hr_en.jpg&quot;}"></div>
+<figure class='responsive-image' style="background-image: url('https://nu.aeon.co/images/c15c3575-e39b-42a3-ba32-6ba5400504b0/card_essay-sputnik_00107217_hr_en.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1630,&quot;path&quot;:&quot;/essays/1630/save&quot;}"></div></div>
+<span class='article-card__class'>
+Essay<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>History of Technology</span></div>
+<p class='article-card__title'>
+The Soviet InterNyet
+</p>
+<h2 class='article-card__standfirst'>
+Soviet scientists tried for decades to network their nation. What stalemated them is now fracturing the global internet
+</h2>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+<span class='article-card__authors__author'>Benjamin  Peters </span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/essays/how-the-soviets-invented-the-internet-and-why-it-didn-t-work"></a>
+</div>
+</div>
+</article>
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='center' data-align-y='center' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<span class='article-card__audio-corner'>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--audio'>
+<i class='material-icons'>volume_up</i>
+</div>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--play'>
+<i class='material-icons'>play_arrow</i>
+</div>
+<div class='article-card__audio-corner__button article-card__audio-corner__button--pause'>
+<i class='material-icons'>pause</i>
+</div>
+</span>
+<div data-react-class="Aeon.Components.AudioPlayer" data-react-props="{&quot;soundcloud_id&quot;:&quot;286834698&quot;,&quot;soundcloud_secret_token&quot;:&quot;s-i7L4Y&quot;,&quot;soundcloud_client_id&quot;:&quot;fba382dd16fff276623c38d3e3b0a709&quot;,&quot;title&quot;:&quot;The economy is more a messy, fractal living thing than a machine&quot;,&quot;background_image&quot;:&quot;https://alpha.aeon.co/images/215d5d1a-ba43-4653-8c77-e3f356a87407/card_sized-rachel-elaine-9529996261_81f66da693_o.jpg&quot;}"></div>
+<figure class='responsive-image' style="background-image: url('https://alpha.aeon.co/images/215d5d1a-ba43-4653-8c77-e3f356a87407/card_sized-rachel-elaine-9529996261_81f66da693_o.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1632,&quot;path&quot;:&quot;/ideas/1632/save&quot;}"></div></div>
+<span class='article-card__class'>
+Idea<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>Future of Technology</span></div>
+<p class='article-card__title'>
+The economy is more a messy, fractal living thing than a machine
+</p>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+<span class='article-card__authors__author'>George Zarkadakis</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/ideas/the-economy-is-more-a-messy-fractal-living-thing-than-a-machine"></a>
+</div>
+</div>
+</article>
+<article class='article-card article-card--col-3 article-card--section-technology' data-align-x='right' data-align-y='bottom' data-backdrop-strength='3' data-playing='false'>
+<div class='gutter gutter--outer'>
+<div class='article-card__inner'>
+<div class='article-card__image-wrap' data-image-loaded='false'>
+<div class='article-card__badge'><svg xmlns="http://www.w3.org/2000/svg" width="189.238" height="191.238" viewBox="0 0 189.238 191.238"><title>aeon-original-badge</title><path d="M617.141,612.934a61.757,61.757,0,0,0-.679-11.306,10.077,10.077,0,0,0-2.108-4.655,2.733,2.733,0,0,0-2.16-.924q-2.017,0-3.288,2.611-2.279,4.55-2.279,12.478v1.791H617.14m9.508,3.428h-19.83q0.35,9.512,3.826,15.038,2.665,4.248,6.417,4.245a6.145,6.145,0,0,0,4.212-1.717,20.974,20.974,0,0,0,4.064-6.16l1.314,1.126q-2.938,7.933-6.495,11.23a11.745,11.745,0,0,1-8.235,3.3q-8.046,0-12.178-8.188-3.323-6.6-3.324-16.366,0-11.967,4.89-19.054t11.463-7.085q5.489,0,9.527,5.961t4.348,17.668" transform="translate(-545.381 -544.381)" fill="#fff"></path><path d="M582.4,619.251c-5.124,1.741-7.69,4.61-7.69,8.507v3.894c0,2.452,1.129,4.3,3.386,4.3a4.532,4.532,0,0,0,4.3-4.818l0-11.887m8.708,24.182c-3.176,0-5.636-1.639-6.661-5.325a9.609,9.609,0,0,1-8.814,5.325c-5.735,0-9.634-4.4-9.634-11.986v-2.359c0-9.017,6.97-13.319,16.4-16.8V604.7c0-2.458-1.025-3.893-3.385-3.893-2.459,0-3.28,1.435-3.28,4.1v4.3h-8.3v-3.893c0-7.275,4-12.6,11.989-12.6s11.785,5.532,11.785,13.326V634.11c0,1.54.614,2.362,2.047,2.462v6.861h-2.149Z" transform="translate(-545.381 -544.381)" fill="#fff"></path><path d="M711.92,641.3V607.362c0-6.48-.437-9.335-1.97-11.534a4.576,4.576,0,0,0-4.283-2.524c-1.647,0-3.3.879-5.27,3.073a59.823,59.823,0,0,0-6.182,7.546c0.634-3.543.586-12.047,0.586-12.047-5.6,3.292-8.449,4.172-13.827,4.394v0.985a17.613,17.613,0,0,1,3.623,1.208c0.107,3.627.107,6.263,0.107,6.922v9.338l-0.107,9.334v10.77c0,2.523,0,3.516-.107,6.481a8.453,8.453,0,0,1-3.181,1.863v1.1h16.02v-1.1a9.1,9.1,0,0,1-2.96-1.863V605.6l0.544-.546c1.76-1.646,3.4-2.635,4.505-2.635,2.3,0,2.96,1.756,2.96,7.251v31.634a12.315,12.315,0,0,1-3.293,1.87v1.093H715v-1.313a8.3,8.3,0,0,1-3.076-1.652" transform="translate(-545.381 -544.381)" fill="#fff"></path><path d="M638.927,617.806c0,9.983,7.194,18.138,16,18.138,9.017,0,16.211-8.046,16.211-18.138,0-9.77-7.194-17.609-16.1-17.609s-16.108,7.839-16.108,17.609m40.99,0.213A24.889,24.889,0,1,1,655.032,592.7a25.136,25.136,0,0,1,24.885,25.321" transform="translate(-545.381 -544.381)" fill="#fff"></path><text transform="translate(15.369 148.948)" font-size="30.359" fill="#fff" font-family="Atlas Grotesk">ORIGINAL</text><line y1="1" x2="189.238" y2="1" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></line><line x1="189.238" y1="190.238" y2="190.238" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"></line></svg>
+</div>
+<figure class='responsive-image' style="background-image: url('https://nu.aeon.co/images/0a2fc863-34d0-4f7c-b88c-5b945512edbb/card_slingshots-oceanic-main.jpg')">
+<div class='sizer__wrapper'>
+<div class='sizer'></div>
+</div>
+</figure>
+
+<div class='article-card__overlay'>
+<div class='article-card__overlay__video-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1194.8 1194.8" style="enable-background:new 0 0 1194.8 1194.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-miterlimit:10;}
+</style>
+<polygon class="st0" points="457.2,844.9 457.2,349.9 839.6,599.6 "></polygon>
+<circle class="st0" cx="597.4" cy="597.4" r="587.4"></circle>
+</svg>
+
+</div>
+</div>
+</div>
+<div class='article-card__contents'>
+<div class='article-card__contents__wrap container'>
+<div class='gutter gutter--inner'>
+<div class='article-card__meta'>
+<div class='article-card__save'><div data-react-class="Aeon.Components.Save" data-react-props="{&quot;id&quot;:1582,&quot;path&quot;:&quot;/videos/1582/save&quot;}"></div></div>
+<span class='article-card__class'>
+Video<span class='article-card__separator separator'>/</span></span><span class='article-card__topic'>History of Technology</span></div>
+<p class='article-card__title'>
+Why Ancient Pacific mariners were the NASA scientists of their day
+</p>
+<h2 class='article-card__standfirst'>
+2 minutes
+</h2>
+<p class='article-card__authors'>
+<span class='article-card__authors__inner'>
+</span>
+</p>
+</div>
+</div>
+</div>
+<a class="article-card__link" href="/videos/why-ancient-pacific-mariners-were-the-nasa-scientists-of-their-day"></a>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</div>
+
+</article>
+<div data-react-class="Aeon.Components.Question" data-react-props="{&quot;question&quot;:{&quot;type&quot;:&quot;Question&quot;,&quot;id&quot;:2340,&quot;title&quot;:&quot;Should addictive websites be subject to regulation?&quot;,&quot;url&quot;:&quot;http://aeon.co/conversations/should-addictive-websites-be-subject-to-regulation&quot;,&quot;state&quot;:&quot;published&quot;,&quot;published_at&quot;:&quot;2015-11-24T11:00:08.784Z&quot;,&quot;scheduled_at&quot;:null,&quot;responses_path&quot;:&quot;/conversations/should-addictive-websites-be-subject-to-regulation/responses&quot;,&quot;responses_count&quot;:25,&quot;descendant_count&quot;:48,&quot;section_slug&quot;:&quot;technology&quot;,&quot;edit_path&quot;:&quot;/editorial/questions/should-addictive-websites-be-subject-to-regulation/edit&quot;,&quot;destroy_path&quot;:&quot;/editorial/questions/should-addictive-websites-be-subject-to-regulation&quot;,&quot;follow_path&quot;:&quot;/conversations/should-addictive-websites-be-subject-to-regulation/follow&quot;,&quot;latest_response_at&quot;:&quot;2016-10-21T11:38:47.945Z&quot;,&quot;latest_reply_at&quot;:&quot;2016-10-21T18:36:02.744Z&quot;,&quot;updated_at&quot;:&quot;2016-10-21T18:36:02.791Z&quot;},&quot;path&quot;:&quot;/conversations/should-addictive-websites-be-subject-to-regulation&quot;,&quot;sign_in_path&quot;:&quot;/sign-in&quot;,&quot;type&quot;:&quot;QuestionInline&quot;,&quot;linked_articles&quot;:{}}"></div>
+
+
+<footer class='footer'>
+<div class='container footer__main'>
+<div class='column footer__links'>
+<div class='column'>
+<div class='gutter'>
+<nav class='footer__nav'>
+<a href="/essays">Essays</a>
+<a href="/ideas">Ideas</a>
+<a href="/videos">Videos</a>
+</nav>
+</div>
+</div>
+<div class='column'>
+<div class='gutter'>
+<nav class='footer__nav'>
+<a href="https://aeon.co/about">About</a>
+<a href="https://aeon.co/contact">Contact</a>
+<a href="/partners">Partners</a>
+</nav>
+</div>
+</div>
+<div class='column'>
+<div class='gutter'>
+<nav class='footer__nav'>
+<a href="https://aeon.co/feed.rss">RSS Feed</a>
+<a href="/donate">Donate</a>
+<a href="https://aeon.co/community-guidelines">Community Guidelines</a>
+</nav>
+</div>
+</div>
+</div>
+<div class='column footer__social'>
+<div class='gutter'>
+<p>Follow Aeon</p>
+<div>
+<p>
+<div class="fb-like" data-href="https://www.facebook.com/AeonMagazine/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+</p>
+<p>
+<a href="https://twitter.com/aeonmag" class="twitter-follow-button" data-show-count="false" data-size="default">Follow @aeonmag</a>
+</p>
+</div>
+</div>
+</div>
+<div class='column footer__newsletter'>
+<div class='gutter'>
+<div class='shortcode-inline-newsletter'>
+<div class='shortcode-inline-newsletter__title'>Get Aeon straight to your inbox</div>
+<form action='https://aeonmagazine.us5.list-manage.com/subscribe/post?u=89c6e02ebaf75bbc918731474&amp;id=411a82e59d' method='post' name='mc-embedded-subscribe-form' target='_blank'>
+<div class='fieldset email'>
+<input name='EMAIL' placeholder='Email address' type='email'>
+</div>
+<div class='fieldset frequency'>
+<label>
+<input checked='checked' name='group[10469][1]' type='checkbox' value='1'>
+Daily
+</label>
+<label>
+<input name='group[10469][2]' type='checkbox' value='2'>
+Weekly
+</label>
+</div>
+<div class='fieldset submit'>
+<input class='button' type='submit' value='Subscribe'>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+<div class='container footer__copyright'>
+<div class='gutter'>
+&copy; Aeon Media Group Ltd. 2016.
+<a href="https://aeon.co/terms-and-conditions">Terms &amp; Conditions.</a>
+</div>
+</div>
+</footer>
+
+<div id='modal'></div>
+<script src="https://nu.aeon.co/assets/application-e7a6f1d7357b1e091bf121efd91e9554c3b78f824903368ba9b79a45bde86adc.js"></script>
+<script>
+  window.Aeon.Data.SignInPath = "/sign-in"
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45522988-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<div id='fb-root'></div>
+<script>
+  // facebook like button
+  (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=430086400490662"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+  // twitter follow button
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+</body>
+</html>

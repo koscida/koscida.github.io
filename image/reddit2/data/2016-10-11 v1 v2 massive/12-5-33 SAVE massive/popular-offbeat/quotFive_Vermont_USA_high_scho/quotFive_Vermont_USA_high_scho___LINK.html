@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+<head>
+ <meta name="apple-itunes-app" content="app-id=284901416"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+ <meta property="fb:pages" content="249655421622" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwEPUFdACQEAXFNUAwI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+<meta property="twitter:description" content="DUXBURY, Vt. (AP) — A man accused of driving the wrong way on an interstate, crashing into a car and killing five high school students, is facing trial on an unrelated domestic assault charge, prosecutors said Monday.…" />
+<meta property="twitter:image" content="http://binaryapi.ap.org/7c1632d995f3499e917f2a3f432c73c6/460x.jpg" />
+<meta property="twitter:image:alt" content="Fatal Crash Vermont" />
+<meta property="twitter:title" content="Man in wrong-way fatal crash faces domestic assault trial" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/APNews" />
+<meta property="twitter:url" content="http://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash" />
+<meta property="twitter:site" content="@ap" />
+<meta name="twitter:app:name:iphone" content="AP Mobile" />
+<meta name="twitter:app:name:googleplay" content="AP Mobile" />
+<meta name="twitter:app:id:googleplay" content="mnn.Android" />
+<meta name="twitter:app:url:googleplay" content="apmobile://article/9afe2a386b684bdb8759e93132d1a885" />
+<link href="http://bigstory.ap.org/profiles/ap/themes/ap_vertical/touch-icon.png" rel="apple-touch-icon" />
+<meta name="twitter:app:url:ipad" content="apmobile://article/9afe2a386b684bdb8759e93132d1a885" />
+<meta name="twitter:app:id:ipad" content="284901416" />
+<meta name="twitter:app:id:iphone" content="284901416" />
+<meta name="twitter:app:url:iphone" content="apmobile://article/9afe2a386b684bdb8759e93132d1a885" />
+<meta name="twitter:app:name:ipad" content="AP Mobile" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="118162278248556" />
+<meta property="al:ios:url" content="apmobile://article/9afe2a386b684bdb8759e93132d1a885" />
+<meta property="al:ios:app_store_id" content="284901416" />
+<meta property="og:image" content="http://binaryapi.ap.org/7c1632d995f3499e917f2a3f432c73c6/460x.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="http://bigstory.ap.org/sites/bigstory/files/AP_Favicon_0_0.png" type="image/png" />
+<link rel="canonical" href="http://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash" />
+<link rel="shortlink" href="/node/13131618" />
+<meta property="al:android:url" content="apmobile://article/9afe2a386b684bdb8759e93132d1a885" />
+<meta property="al:ios:app_name" content="AP Mobile" />
+<meta property="og:url" content="http://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash" />
+<meta property="og:description" content="DUXBURY, Vt. (AP) — A man accused of driving the wrong way on an interstate, crashing into a car and killing five high school students, is facing trial on an unrelated domestic assault charge, prosecutors said Monday.…" />
+<meta property="al:android:app_name" content="AP Mobile" />
+<meta property="og:site_name" content="The Big Story" />
+<meta property="og:title" content="Man in wrong-way fatal crash faces domestic assault trial" />
+<meta property="al:android:package" content="mnn.Android" />
+<meta property="al:web:url" content="http://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash" />
+<meta name="description" content="WILLISTON, Vt. (AP) — Five Vermont high school juniors were killed when the car they were riding in was hit by a wrong-way driver, who authorities said then stole a police cruiser and crashed into seven more cars before the cruiser burst into flames. &quot;The loss of five teens in such a senseless tragedy is unimaginable and heartbreaking,&quot; Gov. Peter Shumlin said. State police said they believe Steven Bourgoin, 36, was behind the wheel of a pickup truck traveling the wrong way on an interstate in Williston Saturday night when he crashed into a car, which then caught fire. The five teenagers in the car were all pronounced dead at the scene. They were identified as Mary Harris, 16, of Moretown; Cyrus Zschau, 16, of Moretown; Liam Hale, 16, of Fayston; Janie Cozzi, 15, of Fayston; and Eli Brookens, 16, of Waterbury. A Williston police officer was the first to arrive on the scene. As he tried to extinguish the car fire, a man, later identified as Bourgoin, jumped in the officer&#039;s cruiser and took off, state police said. When a Richmond police officer tried to stop him, Bourgoin turned the cruiser around and began heading north in a southbound lane, back toward the crash scene, hitting seven other vehicles along the way, authorities said. Bourgoin was then thrown from the cruiser, which went up in flames, state police said. He was taken to the University of Vermont Medical Center, where he was listed in critical condition early Monday morning. It was not immediately clear if he had an attorney. State police said at least nine other people were injured in the series of crashes and were taken to UVM Medical Center with non-life-threatening injuries. Four of the students who were killed attended Harwood Union High School, said Amy Rex, the school&#039;s co-principal. A fifth student attended a different school. &quot;This is an unprecedented tragedy; we have suffered a tremendous loss,&quot; Rex said. &quot;These students were vibrant members of our school community, actively involved and all with a promise for a bright future.&quot; A vigil for the students will be held Monday evening at Harwood Union High School. Gov. Shumlin said in a statement that he planned to attend. &quot;Vermont is a community, and today we join the Harwood Union family, and share the sadness and loss of the families and friends of these teens,&quot; said Shumlin. &quot;My deepest sympathies are with their loved ones.&quot;" />
+<meta name="keywords" content="Vermont, General news, Automotive accidents, Vehicle fires, Transportation accidents, Accidents, Accidents and disasters, Transportation, Fires, Vermont state government, Peter Shumlin, University of Vermont" />
+<meta name="rights" content="2012 Associated Press" />
+    <title>Vermont community mourns loss of 5 students killed in crash</title>  
+  <link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_oMbXc7k1lztVmWIZmJx0DLukZ3iBp1nckbHvyT91Shs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_p69lZbWUy3tnxSLKPWqUnUfG0F2tSCrnOkNR4QRch-I.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_VrBCHR8E7uqiQrVBsfdeoB3xVH_m6Iw9DgnkF2XKjfA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_LSHsoZF7jquocBUwsskOBTpxrHPtiNoy7kfY7C0_24g.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_GDyPfWxLYAGs0EZ7rrEyCcTUwCza-o_8EwsSKvDXab0.css" media="print" />
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link type="text/css" rel="stylesheet" href="http://bigstory.ap.org/sites/bigstory/files/css/css_KCNZ7YudgplVMn0e5YXrEptF8K7nkEFZt5Yrs5EjYM0.css" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="http://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/profiles/ap/themes/bigstory_v2/assets/js/responsive_ads.js"></script>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-27590430-2";
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+googletag.slots = googletag.slots || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/drupal.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["topic_box_2"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/13131618", [300, 250], "dfp-ad-topic_box_2")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["leaderboard"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/13131618", [[728, 90], [970, 66], [970, 90], [970, 250]], "dfp-ad-leaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["mobileleaderboard"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/13131618", [[300, 50], [320, 50]], "dfp-ad-mobileleaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["leaderboard"] = googletag.defineSlot("/15786418//15786418/BigStory/AP/site/node/13131618", [[[[728], [90]], [[970], [66]], [[970], [90]], [[970], [250]]]], "dfp-ad-leaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["mobileleaderboard"] = googletag.defineSlot("/15786418//15786418/BigStory/AP/site/node/13131618", [[[[300], [50]], [[320], [50]]]], "dfp-ad-mobileleaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["half_page"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/13131618", [[300, 250], [300, 600]], "dfp-ad-half_page")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["mediumrectangle"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/13131618", [300, 250], "dfp-ad-mediumrectangle")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _sf_startpt=(new Date()).getTime()
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "11304492" });(function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/jquery.hoverIntent.minified.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/jquery.masonry.min.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes_masonry.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes_flyout.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+});
+googletag.enableServices();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//--><!]]>
+</script>
+<script type="text/javascript" src=""></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function () {
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.async = true;
+s.src = 'http://s.ntv.io/serve/load.js';
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/dynamic-carousel.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/jquery.wmuslider.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/ap_carousel.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.CKEDITOR_BASEPATH = '/profiles/ap/libraries/ckeditor/'
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/contrib/google_analytics/googleanalytics.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-27590430-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://use.typekit.com/uta3cck.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/package-quojs-2.3.6/quo.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/optional/responsive_dfp_box/js/responsive_dfp.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var AP_SOCIAL = {"refresh_delay":"3600","node_id":"13131618"}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/js/mondernizr.custom.min.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/vendor/modernizr.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/jquery-scrolltofixed.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/custom.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/jquery.magnific-popup.min.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/core.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/gallery.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/image.js?oejbiz"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/omega/omega/js/omega-mediaqueries.js?oejbiz"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"bigstory_v2","theme_token":"CTQrtc_F8aJ6JveN5xN4Q9_HnpainAm3FcoorRH93eg","js":{"0":1,"profiles\/ap\/modules\/custom\/optional\/ap_social\/js\/ap_social.min.js":1,"1":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"2":1,"http:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1,"10":1,"11":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/jquery.hoverIntent.minified.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/jquery.masonry.min.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes_masonry.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes_flyout.js":1,"12":1,"13":1,"":1,"14":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/dynamic-carousel.js":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/jquery.wmuslider.js":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/ap_carousel.js":1,"15":1,"profiles\/ap\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"16":1,"17":1,"http:\/\/use.typekit.com\/uta3cck.js":1,"18":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/package-quojs-2.3.6\/quo.js":1,"profiles\/ap\/modules\/custom\/optional\/responsive_dfp_box\/js\/responsive_dfp.js":1,"19":1,"profiles\/ap\/themes\/bigstory_v2\/js\/mondernizr.custom.min.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/vendor\/modernizr.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/jquery-scrolltofixed.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/custom.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/jquery.magnific-popup.min.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/core.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/gallery.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/image.js":1,"profiles\/ap\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/css\/flyout.css":1,"profiles\/ap\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/ap\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/ap\/modules\/contrib\/views\/css\/views.css":1,"profiles\/ap\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/ap\/modules\/custom\/core\/ap_microformats\/ap_microformats.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/siro.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/glyphicon.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/fonts.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/foundation.min.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/styles-bigStory.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/style.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/magnific-popup.css":1,"profiles\/ap\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-branding.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-menu.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-visuals.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/print.css":1,"ie::normal::profiles\/ap\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1}},"responsive_dfp_box":{"responsive_leaderboard":{"desktop":"\n\u003Cdiv  id=\u0022dfp-ad-leaderboard\u0022 class=\u0022dfp-tag-wrapper\u0022\u003E\n    \u003Cscript type=\u0022text\/javascript\u0022\u003E\n    googletag.cmd.push(function() {\n      googletag.display(\u0022dfp-ad-leaderboard\u0022);\n    });\n  \u003C\/script\u003E\n\u003C\/div\u003E\n","mobile":"\n\u003Cdiv  id=\u0022dfp-ad-mobileleaderboard\u0022 class=\u0022dfp-tag-wrapper\u0022\u003E\n    \u003Cscript type=\u0022text\/javascript\u0022\u003E\n    googletag.cmd.push(function() {\n      googletag.display(\u0022dfp-ad-mobileleaderboard\u0022);\n    });\n  \u003C\/script\u003E\n\u003C\/div\u003E\n"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"urlIsAjaxTrusted":{"\/article\/9afe2a386b684bdb8759e93132d1a885\/vermont-community-mourns-loss-5-students-killed-crash":true},"omega":{"layouts":{"primary":"normal","order":["narrow","normal"],"queries":{"narrow":"screen and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"screen and (min-width: 1040px) and (min-device-width: 1040px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" href="/profiles/ap/themes/bigstory_v2/assets/css/fix-ie8.css"><![endif]-->
+  <!--[if lt IE 10]><link rel="stylesheet" href="/profiles/ap/themes/bigstory_v2/assets/css/fix-ie9.css"><![endif]-->
+  <!--[if lt IE 9]><script src="/profiles/ap/themes/bigstory_v2/assets/js/fix-ie8.js"></script><![endif]-->
+  <!--[if IE 9]><script src="/profiles/ap/themes/bigstory_v2/assets/js/fix-ie9.js"></script><![endif]-->
+  <!--[if lt IE 10]><script src="/profiles/ap/themes/bigstory_v2/assets/js/css3-multi-column.js"></script><![endif]-->
+  <script type="text/javascript">
+      $(function(){
+          if( $('body').hasClass("node-type-ap-article") ){
+              var script_quo = document.createElement('script')
+              script_quo.src = '/profiles/ap/themes/bigstory_v2/assets/js/package-quojs-2.3.6/quo.js'
+              document.documentElement.firstChild.appendChild(script_quo);
+          }
+      });
+  </script>
+
+<!-- Taboola script goes here 
+<script src="http://hosted.ap.org/specials/jquery-1.11.2.min.js"></script> -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  'http://cdn.taboola.com/libtrc/associatedpress-ap/loader.js');
+</script>
+</head>
+<body  class="html not-front not-logged-in page-node page-node- page-node-13131618 node-type-ap-article context-article">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <header>
+    <nav class="top-bar" data-topbar="">
+        <ul class="title-area">
+            <li class="name">
+                <a class="logo" href="/">
+                    <!--[if gte IE 9]><!-->
+                    <img src="/profiles/ap/themes/bigstory_v2/assets/images/ap_logo_bigstory.svg" width="291" alt="">
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                      <img class="fix-ie8-logo" src="/profiles/ap/themes/bigstory_v2/assets/images/ap_logo_bigstory.png" width="291" alt="">
+                    <![endif]-->
+                </a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span><!-- menu --></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!--<nav id="nav">-->
+            <!--menu dinamico-->
+            <ul class="right medium-3 menuLinks">
+                
+                            <li class="hide-for-medium">
+            
+                            <a href="http://bigstory.ap.org/latest">
+                    Latest News                </a>
+            
+
+                        </li>
+           
+        
+                            <li class="hide-for-medium">
+            
+                            <a href="http://bigstory.ap.org/the-conversation">
+                    The Conversation                </a>
+            
+
+                        </li>
+           
+                        <li class="hide-for-small search-li dividerbigstory">
+                    <a id="idsearchform" type="button" data-options="align:left" data-dropdown="headerSearch" data-options="is_hover:false">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <div data-dropdown-content="" class="small content searchform drop-left open" id="headerSearch" style="display: none; position: absolute; left: -295px; top: 3px;">
+                        
+                        <form action="/" method="post" id="search-block-form" accept-charset="UTF-8">
+                                    <!--<div class="container-inline">
+                                    <div class="form-item form-type-textfield form-item-search-block-form">-->
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <div class="row collapse">
+                                    <div class="small-10 colu">
+                                        <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--2" name="search_block_form" value=""  maxlength="128" class="form-text">
+                                    </div>
+                                    <div  class="small-2 colu" id="edit-actions">
+                                        <input id="butonsearch" class="button postfix" type="submit" name="op" value="Go" >
+                                    </div>
+                                    <input type="hidden" name="form_id" value="search_block_form">
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="searchForm show-for-small">
+                    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8" >
+                            <!--<div class="container-inline">-->
+                        <div class="">
+                            <div class="small-12 columns">
+                                <div class="row collapse" style="float:left">
+                                    <div class="small-10 columns">
+                                        <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--2" name="search_block_form" value=""  maxlength="128" class="form-text"/>
+                                    </div>
+                                    <div  class="small-2 columns" id="edit-actions2">
+                                        <input id="butonsearch" class="button postfix" type="submit" name="op" value="Go" />
+                                    </div>
+                                <input type="hidden" name="form_id" value="search_block_form"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="divider show-for-small"></li>
+                <!--<li class="ad_nav">
+                    <a href="#"><img src="/profiles/ap/themes/bigstory_v2/assets/sample/ad_88x31.png" alt=""></a>
+                </li>-->
+            </ul>
+            <!--</nav>-->
+        </section>
+    </nav>
+</header>
+<div class="block block-boxes block-boxes-responsive-dfp block-responsive-leaderboard block-boxes-responsive-leaderboard odd block-without-title" id="block-boxes-responsive-leaderboard">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id='boxes-box-responsive_leaderboard' class='boxes-box'><div class="boxes-box-content"><div id="responsive_leaderboard-responsive-ad" class="responsive-ad"></div></div></div>    </div>
+  </div>
+
+</div>  </div>
+</div><!--<div>    <div id="whitelabel_header" class="clearfix">
+      </div>
+    <div class="menu-zone-inner-wrapper">
+	  <div>
+	    	  </div>
+  </div>
+</div>--></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+            <div id="section-article-full">
+
+
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                 
+            <div class="tabs clearfix"></div>        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    
+<section class="row article">
+<!-- Main article BEGIN -->
+<article class="large-9 medium-8 columns">
+    <section class="articleHeader">
+	<meta property="fb:pages" content="249655421622" />
+        
+        <div class="byline-dateline">
+            <!--
+                        <a href="/tags/sports">Sports</a>
+                        -->
+        </div>
+
+                          <h1 class="story-heading">Man in wrong-way fatal crash faces domestic assault trial <span></span></h1>
+                
+      <div class="story-meta-footer">
+          
+        <div class="byline-dateline"> 
+            <div id="byline"><div class="field field-name-field-byline-original field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">By <a href="/content/wilson-ring">WILSON RING</a> and <a href="/content/lisa-rathke">LISA RATHKE</a></div></div></div></div>
+            <div id="dateline">
+                   <span  class="updated" title="2016-10-10T20:19:51-04:00">Oct. 10, 2016 8:19 PM EDT</span> 
+            </div>
+        </div>
+          
+      </div>
+
+    </section>
+
+    <!-- sticky Tool-bar BEGIN -->
+    <section class="article_toolbar sticky" id="sticky-article-toolbar">
+        <div class="small-12 left">
+            
+<a class="share_bt hide-for-small" id="facebook" href="#"><i></i></a>
+<a class="share_bt hide-for-small" id="twitter" href="#"><i></i></a>
+<a class="share_bt hide-for-small" id="email" href="mailto:?subject=AP Big Story: Man in wrong-way fatal crash faces domestic assault trial&body=From AP, %0D%0A %0D%0AMan in wrong-way fatal crash faces domestic assault trial. %0D%0A %0D%0ADUXBURY, Vt. (AP) &#x2014; A man accused of driving the wrong way on an interstate, crashing into a car and killing five high school students, is facing trial on an unrelated domestic assault charge, prosecutors said Monday.  %0D%0A %0D%0Ahttp://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash"><i></i></a>
+<a href="#" class="share_bt" id="shareAll" data-dropdown="social-dropdown" onclick="javascript:return false;"><i></i>
+  <span class="share_bt" id="sharesTotal"></span>
+</a>
+
+<div class="right">
+  <a href="#" class="share_bt right" id="commentsAnchor"><i></i><span id="comments-count"></span></a>
+</div>
+
+<div id="social-dropdown-parent">
+  <div id="social-dropdown" class="f-dropdown">
+    <h6>Share article</h6>
+    <ul class="small-block-grid-3">
+      <li><a class="share_bt" id="facebook" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="twitter" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="linkedin" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="googleplus" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="reddit" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="tumblr" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="email" href="mailto:?subject=AP Big Story: Man in wrong-way fatal crash faces domestic assault trial&body=From AP, %0D%0A %0D%0AMan in wrong-way fatal crash faces domestic assault trial. %0D%0A %0D%0ADUXBURY, Vt. (AP) &#x2014; A man accused of driving the wrong way on an interstate, crashing into a car and killing five high school students, is facing trial on an unrelated domestic assault charge, prosecutors said Monday.  %0D%0A %0D%0Ahttp://bigstory.ap.org/article/9afe2a386b684bdb8759e93132d1a885/vermont-community-mourns-loss-5-students-killed-crash"><i></i></a></li>
+    </ul>
+  </div>
+</div>
+        </div>
+    </section>
+    
+ <script type="text/javascript">var only_one_photo = 0;</script> 
+<section class="slideshow lead-photo" id="lead-photo-slideshow">
+    <div class="photo-count">
+        4 photos    </div>
+    <script>var total_imgs =4</script>
+
+    <ul class="gallery popup-gallery" id="ul-gallery">
+        
+                                                <li class="visible">
+                            <a class="open-gallery" href="http://binaryapi.ap.org/7c1632d995f3499e917f2a3f432c73c6/460x.jpg" title="In this still image from video provided by WCAX-TV, workers remove vehicles from Interstate 89 early Sunday, Oct. 9, 2016, in Williston, Vt., after a wrong-way driver caused a crash just before midnight that killed multiple people, before stealing a police cruiser, striking several vehicles and injuring several people. 
+ (WCAX-TV via AP)">
+                                <img src="http://binaryapi.ap.org/7c1632d995f3499e917f2a3f432c73c6/460x.jpg" alt="Fatal Crash Vermont" title="Fatal Crash Vermont" />
+                            </a>
+                        </li>                      
+                                                                        </ul>
+    
+    <script type="text/javascript">     
+        var imageParams = new Array();
+        imageParams[1] = {"imageUrl":"http:\/\/binaryapi.ap.org\/173f3c9806a94210a2f6e3a90ee3ab31\/460x.jpg","imageTitle":"Wendy Peterson, left, and Kristi McKnight, right, staff at Harwood Union High School, update a marquee in front of the school Monday, Oct. 10, 2016, in Duxbury, Vt., with an invitation to the public to attend a vigil for four students from the school, and a fifth member of the community, killed in a wrong-way crash on Interstate 89 Sunday. The five teenagers were killed when a pickup truck speeding in the wrong direction on the highway slammed into their car, sending it up in flames. (AP Photo\/Wilson Ring)","imageAlt":"Deadly Wrong Way Crashes"};imageParams[2] = {"imageUrl":"http:\/\/binaryapi.ap.org\/6cc38bd0a84c400cb78690000c7cb9bc\/460x.jpg","imageTitle":"In this still image from video provided by WCAX-TV, workers remove vehicles from Interstate 89 early Sunday, Oct. 9, 2016, in Williston, Vt., after a wrong-way driver caused a crash just before midnight that killed multiple people, before stealing a police cruiser, striking several vehicles and injuring several people. \n (WCAX-TV via AP)","imageAlt":"Fatal Crash Vermont"};imageParams[3] = {"imageUrl":"http:\/\/binaryapi.ap.org\/9c111e5685bc437e8065e407eca9668d\/460x.jpg","imageTitle":"In this still image from video provided by WCAX-TV, a worker attaches a wrecker cable to a vehicle on Interstate 89 early Sunday, Oct. 9, 2016, in Williston,Vt., after a wrong-way driver caused a crash just before midnight that killed multiple people, before stealing a police cruiser, striking several vehicles and injuring several people.  (WCAX-TV via AP)","imageAlt":"Fatal Crash Vermont"}; 
+
+    </script> 
+    
+        
+    <div class="field-name-caption"><block><p>In this still image from video provided by WCAX-TV, workers remove vehicles from Interstate 89 early Sunday, Oct. 9, 2016, in Williston, Vt., after a wrong-way driver caused a crash just before midnight that killed multiple people, before stealing a police cruiser, striking several vehicles and injuring several people. 
+ (WCAX-TV via AP)</p></block></div>    
+
+    <div id="information-small" class="small-12 show-for-small-only">
+	<div class="small-10 columns byline-dateline">
+            	</div>
+        <a id="infoGallery"><span class="caption overlay-caption" data-thumb-index="0">i</span></a>
+    </div>
+</section>
+ 
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        if (total_imgs == 1) {
+            var aImg = $('.popup-gallery li a');
+            
+            var text = aImg.attr('title').replace('&#x2019;', '\'').replace('\\\'', '\'');
+            
+            $('.field-name-caption').html('<block><p>' + text + '</p></block>');
+        }     
+        
+        var chrMax = 100;
+        
+        var origText = $('.field-name-caption block p').text().replace('&amp;', '&').replace('&#x2019;', '\'').replace('\\\'', '\'');
+
+        var charLength = $('.field-name-caption block p').text().length;
+        
+        var screen_width = $( window ).width();
+        var width_mobile = 650;
+        
+        var pAbsoluteShow = 0;
+        
+        if (charLength > chrMax) {
+            var shortText = jQuery.trim(origText).substring(0, chrMax).split(" ").slice(0, -1).join(" ") + "... ";
+            $('.field-name-caption block p').text(shortText);            
+            $('.field-name-caption block p').append('<a id="readMore">Read more</a>');
+        }
+        
+
+        var screen_width = $( window ).width();
+
+        if (screen_width <= width_mobile) {  
+        
+        $$('.mfp-figure figure').tap(function() { 
+            var screen_width = $( window ).width();
+
+            if (screen_width <= width_mobile) {  
+                switchPDescription(); 
+            }
+        }); 
+
+        $$('#p-absolute').unbind('tap').tap(function() { 
+            var screen_width = $( window ).width();
+
+            if (screen_width <= width_mobile) {                      
+                switchPDescription(); 
+            }
+        }); 
+
+        $$('.mfp-figure figure').unbind('swipeLeft').swipeLeft(function() { 
+            var screen_width = $( window ).width();
+
+            if (screen_width <= width_mobile) {                      
+                if (mfp.index == (total_imgs - 1)) {
+                    mfp.index = 0;
+                }
+                else {
+                    mfp.index = mfp.index + 1;
+                }      
+                mfp.updateItemHTML();
+            }
+        });
+
+        $$('.mfp-figure figure').unbind('swipeRight').swipeRight(function() {                
+            var screen_width = $( window ).width();
+
+            if (screen_width <= width_mobile) {                   
+                if (mfp.index == 0) {
+                    mfp.index = total_imgs - 1;
+                }
+                else {
+                    mfp.index = mfp.index -1;
+                }
+                mfp.updateItemHTML();
+            }
+        });    
+        
+        }
+
+       function configMobile() {
+            var screen_width = $( window ).width();
+            
+            if (screen_width <= width_mobile) {        
+                showDescription(pAbsoluteShow);       
+            }
+        }
+
+
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            
+            gallery: {
+              enabled: true,
+              navigateByImgClick: true,
+              preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title');
+                }
+            },
+
+            callbacks: {
+                
+                open: function() {
+
+                    $('.mfp-bottom-carrousel').html("");
+
+                    var img_total = 0;
+
+                    $('.popup-gallery li a').each(function(idx,el){
+
+                        img_total = img_total + 1;
+                        var _img = document.createElement('img');
+
+                        $(_img).attr('id', 'thumb-gallery-'+idx );
+                        $(_img).attr('src', $(el).attr('href'));
+                        $(_img).attr('alt', $(el).attr('title'));
+
+
+                        if (idx == 0) $(_img).addClass('select');
+
+                        $(_img).click(function(){
+                            mfp.direction = (idx >= mfp.index);
+                            mfp.index = idx;
+                            mfp.updateItemHTML();
+
+                            updateCarousel(idx);
+                        });
+
+                        if (only_one_photo == 0) {
+                            $('.mfp-bottom-carrousel').append(_img);
+                        }
+
+                    })
+
+                    var width_img_total = (img_total * 120) + 3;
+
+                    $('.mfp-bottom-carrousel').width(width_img_total + 'px');
+                    
+                    configMobile();
+                },
+                close: function() {
+                    $('#p-absolute').hide();
+                    pAbsoluteShow = 0;
+                }
+                // e.t.c.
+            }
+        });
+        
+        $('#readMore').click(function(){
+            $('.open_gallery').click();
+            mfp.index = 0;
+            mfp.updateItemHTML();
+            updateCarousel(0);
+        });  
+        
+        $('#infoGallery').click(function(){
+            pAbsoluteShow = 1;
+            $('.open_gallery').click();
+            mfp.index = 0;
+            mfp.updateItemHTML();
+            updateCarousel(0);
+        });   
+        
+        $('#button_comments').click(function(){
+            if( $('#articleComments').is(":visible") ) {
+                $('#articleComments').css('cssText', 'display: none !important');
+                $('#button_comments').removeClass('comments_visible');
+                $('#button_comments').html('SEE COMMENTS');
+            }
+            else {
+                $('#articleComments').css('cssText', 'display: block !important');
+                $('#button_comments').addClass('comments_visible');
+                $('#button_comments').html('HIDE COMMENTS');                
+            }
+        });
+    });
+
+
+    </script>
+
+ 
+
+    <div class="field field-name-field-ndn-video field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><script>
+<!--//--><![CDATA[// ><!--
+
+$(document).ready(function(){
+$( "#ndn" ).insertBefore( "#lead-photo-slideshow" );
+});
+
+//--><!]]>
+</script><div id="ndn" style="display:block"><center><br /><div class="ndn_embed" data-config-distributor-id="92351" data-config-height="9/16w" data-config-playlist-id="10212" id="ndn-video-player-1" style="width:80%;"> </div>
+<p></p></center></div>
+</div></div></div><div  class="hnews-hidden"><div  class="hnews-author-org hnews-author-org"><div  class="hnews-author-org hnews-author-org">By: <span  class="author vcard"><a href="/content/wilson-ring" class="fn">WILSON RING</a></span> (<span  class="source-org vcard"><span  class="org fn">AP</span></span>), <span  class="author vcard"><a href="/content/lisa-rathke" class="fn">LISA RATHKE</a></span> (<span  class="source-org vcard"><span  class="org fn">AP</span></span>)</div></div><span  class="dateline">DUXBURY, Vt.</span><a  rel="item-license" id="license-c64cf7d453174914a700f25e3bd69378" href="#license-c64cf7d453174914a700f25e3bd69378">Copyright 2016 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a><div  class="geo hnews-geo"><span  class="latitude">44.327</span><span  class="longitude">-72.7526</span></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden entry-content"><div class="field-items"><div class="field-item even"><p><block><p>DUXBURY, Vt. (AP) — A man accused of driving the wrong way on an interstate, crashing into a car and killing five high school students, is facing trial on an unrelated domestic assault charge, prosecutors said Monday.</p>
+<p>A police affidavit says Steven Bourgoin hit his girlfriend in the head and threatened to throw her down the stairs in May. Police say when she tried to leave with their 2-year-old child, Bourgoin got into the vehicle, drove them around and threatened to kill them. The now ex-girlfriend received custody of the child last month, prosecutors said.</p>
+<p>Bourgoin remained unconscious and in critical condition at a hospital Monday. Police say that after crashing into the teens' car he took a police cruiser and crashed into seven more cars. They say he was injured when he was thrown from the vehicle, which went up in flames.</p>
+<p>Prosecutors say Bourgoin is their prime suspect in the teens' deaths, but they haven't charged him. They applied for an arrest warrant on charges related to use of the police cruiser.</p>
+<p>It was unknown if Bourgoin has an attorney. A public defender representing him in the domestic violence case didn't immediately return a phone call seeking comment.</p>
+<p>Chittenden County state's attorney TJ Donovan raised questions about the motive for the crashes. When asked if the driver was trying to kill himself, he said he "would not classify what occurred on Interstate 89 as an accident."</p>
+<p>Meanwhile, Democratic Gov. Peter Shumlin ordered flags to fly at half-staff. He called the teens' deaths "unimaginable and heartbreaking."</p>
+<p>The teens died at the scene of the crash in Williston on Saturday night. They were Mary Harris, 16, of Moretown; Cyrus Zschau, 16, of Moretown; Liam Hale, 16, of Fayston; Janie Cozzi, 15, of Fayston; and Eli Brookens, 16, of Waterbury.</p>
+<p>Classmates, teachers and staff at Harwood Union High School in Duxbury, where four of the five were students, held a candlelight vigil for them. About 1,000 people attended. Many cried before releasing lanterns that floated off into the chilly night.</p>
+<p>Darrell Mays, Mary's uncle, thanked the community for supporting the family but said their grief was only just beginning to be felt. He urged the students left behind to honor their friends who died.</p>
+<p>"Live a great life," he said. "That's what you can do for your friends who died."</p>
+<p>Dan Weintraub, Janie's soccer coach and European history teacher at Kimball Union Academy in Meriden, New Hampshire, said her teammates and coaches deeply loved her.</p>
+<p>"She always came to every practice with a huge smile and put in a 100 percent effort," he said. "Everybody followed her lead."</p>
+<p>Bourgoin, 36, is a warehouse associate at Lake Champlain Chocolates. A spokeswoman said workers were as shocked and saddened as everyone else in the area.</p>
+<p>Around midday Monday, the boys and girls soccer teams at Harwood started kicking balls around the field. Two of the students killed were on the boys varsity soccer team, and all had grown up playing soccer.</p>
+<p>Assistant soccer coach Joe Yalicki said a varsity game that had been scheduled for Monday was canceled but the team wanted to get together.</p>
+<p>"They agreed to get together today just to do something, kick the ball around, laughing and crying, a little of both," said Yalicki, who graduated from Harwood in 2009 and had known all five students since they were in eighth grade.</p>
+<p>Mason Lemery, 16, a Harwood soccer team member, said the last 24 hours had been "really hard."</p>
+<p>"We're just trying to remember all the good memories of them, doing what they would have wanted us to do, come out here and play soccer," he said.</p>
+<p>In Waitsfield, one of the communities that makes up the Harwood school district, free soft-serve ice cream was given out Monday at the Canteen Creamery, where Cyrus worked.</p>
+<p>"Cyrus was a big presence here, but his friends were as well," said store owner Charlie Menard, who had Cyrus' name written on the white hat he was wearing.</p>
+<p>___</p>
+<p>Rathke reported from Montpelier and Burlington. Associated Press writer Kathy McCormack contributed to this report from Concord, New Hampshire.</p>
+<p>___</p>
+<p>This story has been corrected to show Harwood Union High School is in Duxbury, not Moretown.</p>
+</block></p></div></div></div><div class="field field-name-field-dynamiccontent field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div id="dynamiccontent">
+<!--SELECT YOUR PARAGRAPH NUMBER IMMEDIATELY BELOW--><script>
+<!--//--><![CDATA[// ><!--
+
+jQuery("#dynamiccontent").insertAfter(".field-name-body p:eq(3)");
+
+//--><!]]>
+</script><!--ENTER YOUR EMBED CODE IMMEDIATELY FOLLOWING THIS ARROW--></div>
+</div></div></div>
+
+    </article>
+    <div class="clearfix"></div>
+    <div class="loadMore show-full-article">
+        <section id="articleExpand">
+            <div class="fade"></div>
+    	   <button>SEE FULL ARTICLE</button>
+        </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+            <div class="for-taboola">
+        <div class="block block-block block-31 block-block-31 odd block-without-title" id="block-block-31">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="taboola-mid-article-native"> 
+<script>
+<!--//--><![CDATA[// ><!--
+jQuery("#taboola-mid-article-native").insertAfter(".field-name-body p:eq(4)");
+//--><!]]>
+</script></div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-d',
+    container: 'taboola-mid-article-native',
+    placement: 'Mid Article Native',
+    target_type: 'mix'
+  });
+
+//--><!]]>
+</script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+div.zem_rp_wrap {
+    display: none !important;
+}
+
+.for-taboola {
+padding: 0px 8px 0px 8px;
+}
+
+@media (max-width: 479px) {
+  .show-on-desktop, .show-on-tablets, .hide-on-mobile { display: none; }
+  .ad-block{margin-bottom: 50px !important;}
+}
+@media (min-width: 480px) and (max-width: 979px) {
+  .show-on-desktop, .hide-on-tablets, .show-on-mobile { display: none; }
+}
+@media (min-width: 980px) {
+  .hide-on-desktop, .show-on-tablets, .show-on-mobile { display: none; }
+}
+/*--><!]]>*/
+</style><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  'http://cdn.taboola.com/libtrc/associatedpress-ap/loader.js');
+
+//--><!]]>
+</script><p> </p>
+<div id="taboola-below-article-thumbnails-2nd"></div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-e',
+    container: 'taboola-below-article-thumbnails-2nd',
+    placement: 'Below Article Thumbnails 2nd',
+    target_type: 'mix'
+  });
+
+//--><!]]>
+</script><div id="taboola-below-article-text-links"> </div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'hybrid-text-links-a',
+    container: 'taboola-below-article-text-links',
+    placement: 'Below Article Text Links',
+    target_type: 'mix'
+  });
+
+//--><!]]>
+</script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+
+//--><!]]>
+</script><p> </p>
+    </div>
+  </div>
+
+</div>        </div>
+    
+    <!-- ad -->
+    <section class="columns ad-block hide-on-desktop">
+        <div class="block block-dfp block-topic-box-2 block-dfp-topic-box-2 odd block-without-title" id="block-dfp-topic-box-2">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-topic_box_2-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-topic_box_2" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-topic_box_2");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div>        <!--<img src="/profiles/ap/themes/bigstory_v2/assets/sample/ad_300x250.png" alt="" />-->
+    </section>
+
+
+    <div class="loadMore hide-for-medium-up btn-load-more-comments">
+        <button id="button_comments" class="small-12 left">SEE COMMENTS</button>
+    </div>
+    
+    <section id="articleComments" class="large-8 medium-8 left columns hide-for-small">
+	<h4>Comments</h4>
+	    </section>    
+
+</section>
+
+    </div>
+  </div>
+
+</div><div class="block block-block block-50 block-block-50 even block-without-title" id="block-block-50">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <script>
+<!--//--><![CDATA[// ><!--
+
+$(document).ready(function(){
+$( "#block-block-50" ).insertBefore( ".for-taboola" );
+});
+
+
+//--><!]]>
+</script><h4>Discuss this story on Twitter or Facebook</h4>
+<p><a class="button-twitter" href="https://twitter.com/AP" target="_blank">@AP on Twitter</a><a class="button-facebook" href="https://www.facebook.com/APNews/" target="_blank">AP on Facebook</a></p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+#block-block-50 {
+    padding-top: 20px;
+}
+
+#block-block-50 h4{
+    display: block;
+    font-weight: 400;
+    color: #282B30;
+    font-size: 1.4375rem;
+    padding-bottom: 10px;
+    padding-left:20px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#block-block-50 p{
+    padding-top: 15px;
+}
+
+#block-block-50 a:link{
+text-decoration: none;
+}
+
+.button-twitter{
+    background-color: #1c94d0; /* Blue */
+    width:260px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    margin-left:20px;
+    margin-bottom:20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Arial",sans-serif!important;
+    font-size: 18px;
+}
+
+.button-facebook{
+    background-color: #3b5998; /* Deep Blue */
+    width:260px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    margin-left:20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Arial",sans-serif!important;
+    font-size: 18px;
+}
+
+.button-twitter:hover {
+    color:#F0F0F0;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.24), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.button-facebook:hover {
+    color:#F0F0F0; 
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.24), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+/*--><!]]>*/
+</style>    </div>
+  </div>
+
+</div>      </div>
+</div><aside class="grid-4 region region-sidebar-first" id="region-sidebar-first">
+  <div class="region-inner region-sidebar-first-inner">
+    <div class="block block-block block-41 block-block-41 odd block-without-title" id="block-block-41">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="taboola-right-rail-thumbnails"> </div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'organic-thumbnails-rr',
+    container: 'taboola-right-rail-thumbnails',
+    placement: 'Right Rail Thumbnails',
+    target_type: 'mix'
+  });
+
+//--><!]]>
+</script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+
+//--><!]]>
+</script>    </div>
+  </div>
+
+</div><div class="block block-dfp block-half-page block-dfp-half-page even block-without-title" id="block-dfp-half-page">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-half_page-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-half_page" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-half_page");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div><div class="block block-block block-6 block-block-6 odd block-without-title" id="block-block-6">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+#block-block-6
+{
+margin-top: 15px;
+}
+
+#block-block-6 .slug
+{
+position: relative;
+}
+/*--><!]]>*/
+</style><div class="slug">Advertisement</div>
+<div id="ap_widget_container_1e69b0e153d9eaeaa6a722345a9e84df"></div>
+<script src="http://dne.ap.org/widget-content/1e69b0e153d9eaeaa6a722345a9e84df"></script>    </div>
+  </div>
+
+</div><div class="block block-ap-misc block-ap-tags-detail block-ap-misc-ap-tags-detail even block-without-title" id="block-ap-misc-ap-tags-detail">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div  class="ap-article-tags categories">
+    
+    
+    
+<h3 class="h3_tags">Topics</h3>
+<div class="tags">
+<a href="/tags/sports" rel="tag">Sports</a>, <a href="/tags/accidents" rel="tag">Accidents</a>, <a href="/tags/transportation-accidents" rel="tag">Transportation accidents</a>, <a href="/tags/accidents-and-disasters" rel="tag">Accidents and disasters</a>, <a href="/tags/general-news" rel="tag">General news</a>, <a href="/tags/transportation" rel="tag">Transportation</a>, <a href="/tags/crime" rel="tag">Crime</a>, <a href="/tags/legal-proceedings" rel="tag">Legal proceedings</a>, <a href="/tags/law-and-order" rel="tag">Law and order</a>, <a href="/tags/trials" rel="tag">Trials</a>, <a href="/tags/assault-and-battery" rel="tag">Assault and battery</a>, <a href="/tags/violent-crime" rel="tag">Violent crime</a>, <a href="/tags/vermont" rel="tag">Vermont</a>, <a href="/tags/fires" rel="tag">Fires</a>, <a href="/tags/coaching" rel="tag">Coaching</a>, <a href="/tags/soccer" rel="tag">Soccer</a>, <a href="/tags/automotive-accidents" rel="tag">Automotive accidents</a>, <a href="/tags/high-school-sports" rel="tag">High school sports</a>, <a href="/tags/peter-shumlin" rel="tag">Peter Shumlin</a>, <a href="/tags/montpelier" rel="tag">Montpelier</a>, <a href="/tags/domestic-assault" rel="tag">Domestic assault</a>, <a href="/tags/burlington" rel="tag">Burlington</a>, <a href="/tags/vehicle-fires" rel="tag">Vehicle fires</a>, <a href="/tags/high-school-soccer" rel="tag">High school soccer</a>, <a href="/tags/university-vermont" rel="tag">University of Vermont</a>, <a href="/tags/vermont-state-government" rel="tag">Vermont state government</a></div>
+</div>    </div>
+  </div>
+
+</div><div class="block block-dfp block-mediumrectangle block-dfp-mediumrectangle odd block-without-title" id="block-dfp-mediumrectangle">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-mediumrectangle-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-mediumrectangle" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-mediumrectangle");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div>  </div>
+</aside>  </div>
+</div>  
+  <div id="zone-postscript-row-two" class="zone zone-postscript-row-two clearfix container-12">
+    <div class="grid-6 region region-postscript-fourth" id="region-postscript-fourth">
+  <div class="region-inner region-postscript-fourth-inner">
+    <div class="block block-block block-36 block-block-36 odd block-without-title" id="block-block-36">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <script>
+<!--//--><![CDATA[// ><!--
+
+$(document).ready(function(){
+$( "#block-block-36" ).insertAfter( ".menuLinks" );
+});
+
+//--><!]]>
+</script><p class="audio">
+<a href="http://player.streamguys.com/apnews/sgplayer/index.php" onclick="javascript:void window.open('http://player.streamguys.com/apnews/sgplayer/index.php','1444770899860','width=848,height=254,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=800,top=0');return false;"><span style="color: white; font-size: 0.6em">AP Radio News:</span></a><br /><audio controls="controls" preload="none"><br /><source src="http://apnews.streamguys1.com/apnews?cache-buster=' + Math.random()" type="audio/mpeg"></source><br /><source src="http://apnews.streamguys1.com/apnews?cache-buster=' + Math.random()" type="audio/ogg"></source><br />
+Your browser does not support the audio element. </audio></p>
+<p></p>
+<div id="externalimage"><a href="http://player.streamguys.com/apnews/sgplayer/index.php" onclick="javascript:void window.open('http://player.streamguys.com/apnews/sgplayer/index.php','1444770899860','width=848,height=254,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=800,top=0');return false;"><img alt="" src="http://bigstory.ap.org/sites/bigstory/files/14449449681_external_link.png" /></a>
+</div>
+
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+
+audio
+{ 
+float: right; 
+display: block;
+margin-top: -26px;
+width: 300px;
+height: 45px
+
+} 
+
+#block-block-36 
+{ 
+height: 50px; 
+width: 300px; 
+float: right;
+position: relative
+}
+
+p.audio
+{
+border-bottom-color: #333;
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0 0 0 0;
+border-image-repeat: stretch stretch;
+border-image-slice: 100% 100% 100% 100%;
+border-image-source: none;
+border-image-width: 1 1 1 1;
+border-left-color: #333;
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: #333;
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: #333;
+border-top-style: none;
+border-top-width: 0px;
+box-sizing: border-box;
+color: #333;
+cursor: auto;
+font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-language-override: normal;
+font-size: 16px;
+font-size-adjust: none;
+font-stretch: normal;
+font-style: normal;
+font-synthesis: weight style;
+font-variant: normal;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-weight: 400;
+line-height: 45px;
+margin-bottom: 20px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: -17px;
+outline-color: #333;
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+text-rendering: optimizelegibility;
+vertical-align: baseline;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+-moz-border-right-colors: none;
+-moz-border-top-colors: none
+
+}
+
+
+#externalimage
+{
+    position: absolute;
+    top: 9px;
+    width: 28px;
+    right: 302px;
+}
+
+
+ @media only screen and (max-device-width: 480px) {
+   /* define mobile specific styles come here */
+#block-block-36 
+{ 
+height: 70px; 
+width: 300px; 
+float: right
+}
+
+audio
+{ 
+float: left;
+display: block;
+margin-top: -20px;
+width: 250px;
+height: 45px
+
+} 
+
+#externalimage
+{
+ position: absolute;
+right: 5px;
+width: auto;
+height: auto
+}
+
+
+ }
+
+
+
+
+/*--><!]]>*/
+</style>    </div>
+  </div>
+
+</div>  </div>
+</div>  </div>
+</section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    
+<footer>
+  <div id="siteFooter">
+    <div class="row">
+        <div class="medium-4 columns">
+            <h5>Get the AP Mobile app</h5>
+<a href="http://www.ap.org/apmobile/"><img src="http://bigstory.ap.org/sites/bigstory/files/Mobile-App-Download-New.png"></a>
+        </div>
+        <div class="medium-4 columns">
+            <h5>AP Sites</h5>
+            <ul class="">
+                <li><a href="http://summergames.ap.org" >Summer Games</a></li>
+                <li><a href="http://racing.ap.org" >Auto Racing</a></li>
+                <li><a href="http://collegebasketball.ap.org" >College Basketball</a></li>
+                <li><a href="http://collegefootball.ap.org" >College Football</a></li>
+                <li><a href="http://pro32.ap.org" >Football</a></li>
+            </ul>
+        </div>
+        <div class="medium-4 columns">
+            <h5>Follow AP</h5>
+            <ul class="">
+                <li><a href="https://www.facebook.com/pages/Associated-Press/107751995914945">Facebook</a></li>
+                <li><a href="https://twitter.com/AP">Twitter</a></li>
+                <li><a href="https://plus.google.com/+AP/">Google+</a></li>
+                <li><a href="https://www.linkedin.com/company/associated-press">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div class="medium-12 columns"> 
+            AP News | 
+           &copy; 2016 Associated Press  | 
+            <a href="/content/privacy-policy">Privacy Policy</a>  |  
+            <a href="/content/terms-use">Terms of Use</a>  | 
+            <a href="http://www.ap.org/books">AP Books</a>  |  
+            <a href="http://www.apimages.com/">AP Images</a>  |  
+            <a href="http://www.ap.org/">ap.org</a>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+#dfp-ad-leaderboard{
+text-align: center;
+}
+
+#dfp-ad-mobileleaderboard{
+text-align: center;
+}
+
+#articleComments h4{
+  display:none;
+}
+
+#button_comments{
+display:none;
+}
+
+#commentsAnchor{
+   display:none;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+$("#block-dfp-curate-box-desktop").addClass("gemini-ad-ef96f291-b42f-4f0e-a436-7790cb6efc65");
+});
+</script></footer>  </div>
+</div></footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+    <noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=11304492&cv=2.0&cj=1" /></noscript>  </div>
+</div><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _sf_async_config={uid:11689,domain:""};(function() {function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src', (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") + "js/chartbeat.js"); document.body.appendChild(e); }var oldonload = window.onload;window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/optional/ap_social/js/ap_social.min.js?oejbiz"></script>
+  <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"560baa128a","applicationID":"12082643","transactionName":"MlRTYkFSWkNUU0EKDQsecFVHWlteGl5aBwc6QVBRVmxCWVBH","queueTime":0,"applicationTime":610,"atts":"HhNQFAlISU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Testing 1140.css</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+	<link href="1140.css" rel="stylesheet" type="text/css" media="all">
+	
+	<style>
+		html, body {
+			background: #eee;
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		
+		#container12 { background-color: #ff9999; }
+		#container16 { background-color: #99ff99; }
+		
+		#grid {
+			position: absolute;
+			height: 100%;
+		    top: 0;
+		    left: 0;
+			z-index: 1;
+		}
+		#grid span {
+			height: 100%;
+			border: 1px solid #cc6666;
+			border-top: 0;
+			border-bottom: 0;
+		}
+		
+		#columns {
+			position: relative;
+			height: 100%;
+		    top: 0;
+		    left: 0;
+			z-index: 2;
+		}
+		
+		h1, h2 {
+			text-align: center;
+			margin: 20px;
+		}
+		
+		.row span {
+			height: 30px;
+			background: #999;
+			display: block;
+			text-align: center;
+			line-height: 30px;
+			border: 1px solid #888;
+		}
+		.row .nest {
+			background: #ee8888;
+		}
+		.row .nest span {
+			background-color: rgba(153, 153, 153, 0.7)
+		}
+		
+	</style>
+
+</head>
+<body>
+	
+	<!------------------------------------------------------------>
+	<!--					Container 12						-->
+	<!-- 					Filled in Columns					-->
+	<!------------------------------------------------------------>
+	
+	<div id="container12" class="container12">
+	
+		<div id="grid" class="container12">
+			<span class="column1"></span><span class="column1"></span>
+			<span class="column1"></span><span class="column1"></span>
+			<span class="column1"></span><span class="column1"></span>
+			<span class="column1"></span><span class="column1"></span>
+			<span class="column1"></span><span class="column1"></span>
+			<span class="column1"></span><span class="column1"></span>
+		</div>
+
+		
+		<div id="columns">
+			
+			<h1>Container 12</h1>
+			
+			<h2>Regular/Alpha Columns</h2>
+			
+			<div class="row">	<div class="column1"><span> 1col</span></div>	<div class="column11"><span>11col</span></div>	</div>
+			<div class="row">	<div class="column2"><span> 2col</span></div>	<div class="column10"><span>10col</span></div>	</div>
+			<div class="row">	<div class="column3"><span> 3col</span></div>	<div class="column9"> <span> 9col</span></div>	</div>
+			<div class="row">	<div class="column4"><span> 4col</span></div>	<div class="column8"> <span> 8col</span></div>	</div>
+			<div class="row">	<div class="column5"><span> 5col</span></div>	<div class="column7"> <span> 7col</span></div>	</div>
+			<div class="row">	<div class="column6"><span> 6col</span></div>	<div class="column6"> <span> 6col</span></div>	</div>
+			<div class="row">	<div class="column7"><span> 7col</span></div>	<div class="column5"> <span> 5col</span></div>	</div>
+			<div class="row">	<div class="column8"><span> 8col</span></div>	<div class="column4"> <span> 4col</span></div>	</div>
+			<div class="row">	<div class="column9"><span> 9col</span></div>	<div class="column3"> <span> 3col</span></div>	</div>
+			<div class="row">	<div class="column10"><span>10col</span></div>	<div class="column2"> <span> 2col</span></div>	</div>
+			<div class="row">	<div class="column11"><span>11col</span></div>	<div class="column1"> <span> 1col</span></div>	</div>
+			<div class="row">	<div class="column12"><span>12col</span></div>													</div>
+	
+	
+			<h2>Prefix &amp; Regular/Alpha Columns</h2>
+			<div class="row">	<div class="column11 prefix1">		<span>11col  1prefix</span>		</div></div>
+			<div class="row">	<div class="column10 prefix2">		<span>10col  2prefix</span>		</div></div>
+			<div class="row">	<div class="column9  prefix3">		<span> 9col  3prefix</span>		</div></div>
+			<div class="row">	<div class="column8  prefix4">		<span> 8col  4prefix</span>		</div></div>
+			<div class="row">	<div class="column7  prefix5">		<span> 7col  5prefix</span>		</div></div>
+			<div class="row">	<div class="column6  prefix6">		<span> 6col  6prefix</span>		</div></div>
+			<div class="row">	<div class="column5  prefix7">		<span> 5col  7prefix</span>		</div></div>
+			<div class="row">	<div class="column4  prefix8">		<span> 4col  8prefix</span>		</div></div>
+			<div class="row">	<div class="column3  prefix9">		<span> 3col  9prefix</span>		</div></div>
+			<div class="row">	<div class="column2  prefix10">		<span> 2col 10prefix</span>		</div></div>
+			<div class="row">	<div class="column1  prefix11">		<span> 1col 11prefix</span>		</div></div>
+		
+		
+			<h2>Prefix &amp; Regular/Alpha Columns</h2>
+			<div class="row">	<div class="column10 prefix1">	<span>10col 1prefix</span>	</div></div>
+			<div class="row">	<div class="column8  prefix2">	<span>8col  2prefix</span>	</div></div>
+			<div class="row">	<div class="column6  prefix3">	<span>6col  3prefix</span>	</div></div>
+			<div class="row">	<div class="column4  prefix4">	<span>4col  4prefix</span>	</div></div>
+			<div class="row">	<div class="column2  prefix5">	<span>2col  5prefix</span>	</div></div>
+		
+		
+			<h2>Nested Columns</h2>
+			<div class="row">	
+				<div class="column2"><span> 2col</span></div>
+				<div class="column10 nest">
+					<div class="column6"><span>6col</span></div>
+					<div class="column4"><span>4col</span></div>
+					<div class="column2"><span>2col</span></div>
+				</div>
+			</div>
+			<div class="row">	
+				<div class="column2"><span> 2col</span></div>
+				<div class="column10 nest">
+					<div class="column6 beta-left">		<span>6col beta-left</span></div>
+					<div class="column4">				<span>4col</span></div>
+					<div class="column2 beta-right">	<span>2col beta-right</span></div>
+				</div>
+			</div>
+			<div class="row">	
+				<div class="column2"><span> 2col</span></div>
+				<div class="column10 nest">
+					<div class="column6 omega">	<span>6col omega</span></div>
+					<div class="column4 omega">	<span>4col omega</span></div>
+					<div class="column2 omega">	<span>2col omega</span></div>
+				</div>
+			</div>
+		</div>
+			
+	</div> <!-- End column 12 -->
+		
+		
+		
+		
+	<!------------------------>
+	<!-- Container 16		-->
+	<!-- Filled in Columns	-->
+	<!------------------------>
+	<h1>Container 16</h1>
+	
+	<h2>Filled columns</h2>
+	<div class="container16">
+		<div class="row">
+			<div class="column1">
+				<span></span>
+			</div>
+			<div class="column15">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column2">
+				<span></span>
+			</div>
+			<div class="column14">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column3">
+				<span></span>
+			</div>
+			<div class="column13">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column4">
+				<span></span>
+			</div>
+			<div class="column12">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column5">
+				<span></span>
+			</div>
+			<div class="column11">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column6">
+				<span></span>
+			</div>
+			<div class="column10">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column7">
+				<span></span>
+			</div>
+			<div class="column9">
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column8">
+				<span></span>
+			</div>
+			<div class="column8">
+				<span></span>
+			</div>
+		</div>
+	</div>
+		
+		
+</body>

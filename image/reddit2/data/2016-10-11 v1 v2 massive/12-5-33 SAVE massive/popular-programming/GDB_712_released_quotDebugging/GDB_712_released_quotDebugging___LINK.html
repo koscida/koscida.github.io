@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GDB 7.12 released!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="contents" href="index.html#02192" id="c">
+<link rel="index" href="maillist.html#02192" id="i">
+<link rel="prev" href="msg02191.html" id="p">
+<link rel="next" href="msg02193.html" id="n">
+<link rel="alternate" title="info-gnu RSS" href="#" type="application/rss+xml">
+<link rel="canonical" href="https://www.mail-archive.com/info-gnu@gnu.org/msg02192.html">
+<link rel="stylesheet" href="/normalize.css" media="screen">
+<link rel="stylesheet" href="/master.css" media="screen">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/ie.css" media="screen">
+<![endif]-->
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+document.onkeydown = NavigateThrough;
+function NavigateThrough (event)
+{
+  if (!document.getElementById) return;
+  if (window.event) event = window.event;
+  if (event.target.tagName == 'INPUT') return;
+  if (event.ctrlKey || event.metaKey) return;
+  var link = null;
+  switch (event.keyCode ? event.keyCode : event.which ? event.which : null) {
+    case 74:
+    case 80:
+      link = document.getElementById ('p');
+      break;
+    case 75:
+    case 78:
+      link = document.getElementById ('n');
+      break;
+    case 69:
+      link = document.getElementById ('e');
+      break;
+    }
+  if (link && link.href) document.location = link.href;
+}
+</script>
+<div itemscope itemtype="http://schema.org/Article" class="container">
+<div class="skipLink">
+<a href="#nav">Skip to site navigation (Press enter)</a>
+</div>
+<div class="content" role="main">
+<div class="msgHead">
+<h1>
+<span class="subject"><a href="/search?l=info-gnu@gnu.org&amp;q=subject:%22GDB+7.12+released%5C%21%22&amp;o=newest" rel="nofollow"><span itemprop="name">GDB 7.12 released!</span></a></span>
+</h1>
+<p class="darkgray font13">
+<span class="sender pipe"><a href="/search?l=info-gnu@gnu.org&amp;q=from:%22Joel+Brobecker%22" rel="nofollow"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Joel Brobecker</span></span></a></span>
+<span class="date"><a href="/search?l=info-gnu@gnu.org&amp;q=date:20161007" rel="nofollow">Fri, 07 Oct 2016 13:50:21 -0700</a></span>
+</p>
+</div>
+<div itemprop="articleBody" class="msgBody">
+<!--X-Body-of-Message-->
+<pre>
+
+            GDB 7.12 released!</pre><pre>
+
+Release 7.12 of GDB, the GNU Debugger, is now available via anonymous
+FTP.  GDB is a source-level debugger for Ada, C, C++, Objective-C,
+Pascal and many other languages.  GDB can target (i.e., debug programs
+running on) more than a dozen different processor architectures, and GDB
+itself can run on most popular GNU/Linux, Unix and Microsoft Windows
+variants.
+
+You can download GDB from the GNU FTP server in the directory:
+
+        <a  rel="nofollow" href="ftp://ftp.gnu.org/gnu/gdb">ftp://ftp.gnu.org/gnu/gdb</a>
+
+The vital stats:
+
+  Size   md5sum                            Name
+  19MiB  a0a3a00f7499b0c5278ba8676745d180  gdb-7.12.tar.xz
+  35MiB  4fa2eccb4f10442887793c04315c92a3  gdb-7.12.tar.gz
+
+There is a web page for GDB at:
+
+        <a  rel="nofollow" href="http://www.gnu.org/software/gdb/">http://www.gnu.org/software/gdb/</a>
+
+That page includes information about GDB mailing lists (an announcement
+mailing list, developers discussion lists, etc.), details on how to
+access GDB's source repository, locations for development snapshots,
+preformatted documentation, and links to related information around
+the net.  We will put errata notes and host-specific tips for this release
+on-line as any problems come up.  All mailing lists archives are also
+browsable via the web.
+
+This version of GDB now builds with a C++ compiler by default.
+It is still possible to build GDB with a C compiler by simply
+configuring it with --disable-build-with-cxx.  However, future
+release will require a C++ compiler to build GDB.
+
+GDB 7.12 brings new features and improvements, including:
+
+ * New target support: Andes NDS32 (nds32*-*-elf)
+
+ * Rust: Debugging programs written in Rust is now supported.
+
+ * Fortran: Support structures with fields of dynamic types and
+   arrays of dynamic types.
+
+ * Various Python enhancements (new convenience functions,
+   enhanced support for breakpoints).
+
+ * Various GDBserver enhancements:
+
+    ** btrace recording without maintaining an active GDB connection.
+    ** tracepoints and fast tracepoints support added on s390-linux,
+       s390x-linux, powerpc64-linux, and powerpc64le-linux.
+
+ * Support for the following remote target protocols and ROM monitors
+   has been removed:
+
+   target m32rsdi        Remote M32R debugging over SDI
+   target mips           MIPS remote debugging protocol
+   target pmon           PMON ROM monitor
+   target ddb            NEC's DDB variant of PMON for Vr4300
+   target rockhopper     NEC RockHopper variant of PMON
+   target lsi            LSI variant of PMO
+
+For a complete list and more details on each item, please see the
+gdb/NEWS file.
+
+-- 
+Joel Brobecker
+
+-- 
+If you have a working or partly working program that you'd like
+to offer to the GNU project as a GNU package,
+see <a  rel="nofollow" href="https://www.gnu.org/help/evaluation.html">https://www.gnu.org/help/evaluation.html</a>.
+</pre>
+
+</div>
+<div class="msgButtons margintopdouble">
+<ul class="overflow">
+<li class="msgButtonItems"><a class="button buttonleft " accesskey="p" href="msg02191.html">Previous message</a></li>
+<li class="msgButtonItems textaligncenter"><a class="button" accesskey="c" href="index.html#02192">View by thread</a></li>
+<li class="msgButtonItems textaligncenter"><a class="button" accesskey="i" href="maillist.html#02192">View by date</a></li>
+<li class="msgButtonItems textalignright"><a class="button buttonright " accesskey="n" href="msg02193.html">Next message</a></li>
+</ul>
+</div>
+<a name="tslice"></a>
+<div class="tSliceList margintopdouble">
+<ul class="icons monospace">
+
+</ul>
+</div>
+<div class="overflow msgActions margintopdouble">
+<div class="msgReply" >
+<h2>
+					Reply via email to
+</h2>
+<form method="POST" action="/mailto.php">
+<input type="hidden" name="subject" value="GDB 7.12 released!">
+<input type="hidden" name="msgid" value="20161007183357.01F9242309@joel.gnat.com">
+<input type="hidden" name="relpath" value="info-gnu@gnu.org/msg02192.html">
+<input type="submit" value=" Joel Brobecker ">
+</form>
+</div>
+</div>
+</div>
+<div class="aside" role="complementary">
+<div class="logo">
+<a href="/"><img src="/logo.png" width=247 height=88 alt="The Mail Archive"></a>
+</div>
+<form class="overflow" action="/search" method="get">
+<input type="hidden" name="l" value="info-gnu@gnu.org">
+<label class="hidden" for="q">Search the site</label>
+<input class="submittext" type="text" id="q" name="q" placeholder="Search info-gnu">
+<input class="submitbutton" name="submit" type="image" src="/submit.png" alt="Submit">
+</form>
+<div class="nav margintop" id="nav" role="navigation">
+<ul class="icons font16">
+<li class="icons-home"><a href="/">The Mail Archive home</a></li>
+<li class="icons-list"><a href="/info-gnu@gnu.org/">info-gnu - all messages</a></li>
+<li class="icons-about"><a href="/info-gnu@gnu.org/info.html">info-gnu - about the list</a></li>
+<li class="icons-expand"><a href="/search?l=info-gnu@gnu.org&amp;q=subject:%22GDB+7.12+released%5C%21%22&amp;o=newest&amp;f=1" title="e" id="e">Expand</a></li>
+<li class="icons-prev"><a href="msg02191.html" title="p">Previous message</a></li>
+<li class="icons-next"><a href="msg02193.html" title="n">Next message</a></li>
+</ul>
+</div>
+<div class="listlogo margintopdouble">
+
+</div>
+<div class="margintopdouble">
+
+</div>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+<ul>
+<li><a href="/">The Mail Archive home</a></li>
+<li><a href="/faq.html#newlist">Add your mailing list</a></li>
+<li><a href="/faq.html">FAQ</a></li>
+<li><a href="/faq.html#support">Support</a></li>
+<li><a href="/faq.html#privacy">Privacy</a></li>
+<li class="darkgray">20161007183357.01F9242309@joel.gnat.com</li>
+</ul>
+</div>
+</body>
+</html>

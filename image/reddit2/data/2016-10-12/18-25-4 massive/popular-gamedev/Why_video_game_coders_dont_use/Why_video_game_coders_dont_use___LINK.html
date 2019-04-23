@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset='utf-8'>
+  <title>Why video game coders don't use TDD, and why it matters</title>
+  <meta name="author" content="Chris Parsons" />
+  <meta name="description" content="a blog by Chris Parsons" />
+  
+  <link href="http://chrismdp.com/atom.xml" rel="alternate" title="Chris Parsons" type="application/atom+xml" />
+  
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+  
+  <script type="text/javascript">
+   /* <![CDATA[ */
+     (function() {
+       var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+         s.type = 'text/javascript';
+           s.async = true;
+          s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+          t.parentNode.insertBefore(s, t);
+      })();
+    /* ]]> */
+  </script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="/css/style.min.css" rel="stylesheet">
+  
+  <link href="/css/font-awesome/font-awesome.css" rel="stylesheet">
+  <!--[if IE 7]>
+    <link href="css/font-awesome/font-awesome-ie7.css" rel="stylesheet">
+  <![endif]-->
+  
+  <!-- Load Open sans from Google Font Directory -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.8.3.min.js"%3E%3C/script%3E'))</script>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-431118-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+  <style>
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+     }
+    .post .entry-content { font-size: 1.1em; }
+    .entry-content h2, .entry-content h1 { margin: 25px 0px 15px 0; }
+  </style>
+</head>
+<body>
+  <div class='container' id='content'>
+    <div class='row'>
+  <div class='col-xs-12 page-header'>
+    <p>
+      <a href='http://chrismdp.com'>a blog by Chris Parsons</a>
+    </p>
+    <h1>Why video game coders don't use TDD, and why it matters</h1>
+  </div>
+</div>
+<div class='row' id='post'>
+  <div class='col-sm-8'>
+    <article class='post single-post'>
+      <div class='entry-content'>
+        <p><img src="/files/nes-test-station.jpg" alt="NES test station" /></p>
+
+<p>Whilst working on <a href="http://soltrader.net">Sol Trader</a>, I’ve written many unit tests for my code. Many of these tests have been written before the code itself, using a practice called Test-driven Development (TDD).</p>
+
+<p>Test-driven development is the practice of writing a failing test in order to specify the behaviour of a piece of code, then writing the code to satisfy the tests afterwards. We then refactor and improve our code from there.</p>
+
+<p>In most programming environments, people are talking about TDD and trying to practice it. It’s even become an essential bullet point on job adverts, as if not practicing TDD makes us fundamentally worse programmers (which isn’t true, by the way.) TDD seems to be everywhere.</p>
+
+<p>Everywhere, that is, except the games industry.</p>
+
+<p>Why is this? Is it because TDD is flawed in some way, or simply not applicable here, or that practices have grown up to counter the need for TDD?</p>
+
+<h2 id="the-benefits-of-tdd">The benefits of TDD</h2>
+
+<p>Let’s begin to answer this by looking at the specific advantages TDD gives us:</p>
+
+<ul>
+  <li>
+    <p><strong>It forces usage-first coding.</strong> TDD represents another client for our code, independent from our production code. It asks specific questions of the codebase to ensure that it’s correct. It forces us to think about our code from the point of view of ‘what it does’ first, rather than ‘how it works’. This can often lead to surprising realisations about the code we actually need, and prevents us from writing spurious code we might think we need, but actually represents wasted effort.</p>
+  </li>
+  <li>
+    <p><strong>It helps us minimise code size and complexity.</strong> If we adhere strictly to the principle of only writing enough code to satisfy the test, then our tests should capture every possible path through our code. Additionally we only have enough code to satisfy the exact problem we’ve used tests to define - this is important because <a href="/2012/09/code-is-a-liability/">code is a liability, not an asset</a>. The same is true of code complexity. If we find ourselves writing reams of tests to satisfy a particular piece of code, that code is too complicated or very risky and a prime source of bugs.</p>
+  </li>
+  <li>
+    <p><strong>It provides design feedback.</strong> Well designed code is easy to test. Therefore, when initial tests become harder to write, that might be because our code isn’t well designed, or well understood. Typically, pure functions are easier to test and reason about as they have no side effects: testing these functions is very easy and therefore our code tends to gravitate towards them.</p>
+  </li>
+  <li>
+    <p><strong>It allows for verification over time.</strong> I’ve listed this last, as I don’t see it as the most important benefit of TDD. As I refactor my code, tests become simple enough to be self evident and the tests can be safely deleted. At the system level, ensuring that a complicated system continues to work after significant change is useful, but considerable effort is required to write tests that check an entire system safely. Poorly written tests give a sense of false confidence to those new to the practice, which can be highly dangerous - our <a href="/2011/10/your-tests-are-lying-to-you/">tests can start lying to us</a>. In practice, a few end-to-end tests to verify basic functionality of a module are worth the effort, but many more can slow development and provide false confidence.</p>
+  </li>
+</ul>
+
+<h2 id="how-games-industry-experts-verify-their-code">How games industry experts verify their code</h2>
+
+<p>Let’s look at expert coders in the games industry and discover what they do to gain these advantages. Here are some observations:</p>
+
+<ul>
+  <li>
+    <p><strong>They write the production usage code first.</strong> Casey Muratori on <a href="http://handmadehero.org">Handmade Hero</a> writes his code from the point of view of the usage of the code first, by writing exactly the calling code before defining structures and basic methods. This gains many of the advantages of TDD, using production code rather like tests to discover what the code should do. By implementing a client for the code first, we discover what the code should look like before we write it.</p>
+  </li>
+  <li>
+    <p><strong>They fail fast using assertions.</strong> Assertions are conditions in the code that are often only present in developmental builds, causing an artificial exception or crash when the condition is not true. They ensure that the running program is in a good set of known states: code running in the wrong state is a hugely common cause of bugs. As unit tests only check a certain set of known states from the outside, assertions are useful in catching unexpected behaviour that wasn’t initially thought of. As the code tends toward purer functions with less possible states, the usefulness of assertions within that section of code diminishes. They also do not provide design feedback on the code in the way that TDD does.</p>
+  </li>
+  <li>
+    <p><strong>They rely on static compilation to catch type errors.</strong> Static compilation is a form of testing. If we are thinking carefully about the distinct types we are using, avoiding <a href="http://c2.com/cgi/wiki?PrimitiveObsession">Primitive Obsession</a>, then this distinction between types will help ensure that we aren’t passing the wrong things to the wrong functions, or confusing distinct concepts in our code.</p>
+  </li>
+  <li>
+    <p><strong>They use automated testing where the code is risky.</strong> John Carmack recently wrote about the value of testing in his <a href="http://gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php">essay on functional code</a>:</p>
+  </li>
+</ul>
+
+<div class="alert alert-info"><em>"Whenever I come across a finicky looking bit of code now, I split it out into a separate pure function and write tests for it. Frighteningly, I often find something wrong in these cases, which means I'm probably not casting a wide enough net."<br /><br />-- John Carmack</em></div>
+
+<h2 id="what-are-games-developers-missing">What are games developers missing?</h2>
+
+<p>Games developers have a number of techniques that give them similar benefits to TDD. We see that by writing usage code first, developers get good feedback on their design as they go. Code verification over time is taken care of through judicious use of assertions and using automated tests with risky code.</p>
+
+<p>The area that games developers miss out by not using TDD is in the reduction of code size and complexity. However, in high performance computing, the size of the compiled system and the branching complexity are constant concerns. There’s a real performance penalty through having too much code, breaking branch prediction and accessing memory too often by jumping the execution path all over the place. The fastest and most efficient code boils down to data transformation as functionally as is possible within the obvious constraints of the gaming environment.</p>
+
+<p>If all of this is taken into account, games developers have side-stepped the need for TDD.</p>
+
+<p>However, there are bad reasons to dismiss TDD in games. There’s a perception that games are too ‘emergent’ and complex to apply TDD to. This is false. Games are more deterministic than people think, especially in the inner workings of the code. Moving to a more functional programming style makes this explicit, although often enough so much risk is removed from the code that TDD’s design feedback is less useful.</p>
+
+<p>There are clearly areas in games development where TDD is the wrong approach - games are about ‘feel’ and the ‘experience’, and we can’t test-drive ‘fun’, or test the output of complex interactions of hundreds of entities. Sometimes however TDD is dismissed because we cannot imagine how we might begin to test our code: this says more about the quality of our code than the merits of TDD as a practice.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Video games devs don’t do TDD for two reasons:</p>
+
+<ul>
+  <li>
+    <p><strong>The good reason:</strong> the best practices in the industry deliver many of the same benefits as TDD.</p>
+  </li>
+  <li>
+    <p><strong>The bad reason:</strong> an insufficient knowledge of TDD and good code design can lead people to believe it’s just not relevant to games. The smokescreen of “we cannot TDD fun” can mask a poor understanding of good coding architecture.</p>
+  </li>
+</ul>
+
+<p>In practice, I attempt to TDD much of my low level code, especially my functional core code which is simply transforming data from one type to another. I use TDD where I’m weakest as a programmer: reasoning about pointer and bitfield arithmetic aren’t my strong points and therefore I like to test-drive it!</p>
+
+<p>I don’t use TDD at all for UI testing and where the ‘feel’ of something is important, and for self-evident code.</p>
+
+<p>TDD has helped to teach me about good code design, side effects, the perils of state, architecture, programming in a functional style and the evils of prevalent inheritance-based object-oriented approaches. Perhaps the real value is not in the continued practice, but in the lessons that it teaches?</p>
+
+        <div class='alert alert-info' role='alert'>
+  <div class='clearfix' style='float:right; padding-left: 10px'>
+    <!--<img src='/files/soltrader_icon_logo_big.png' style='width: 100px' alt='sol trader logo'><br/>-->
+    <!--<img src='/files/sol-square-1.png' style='width: 100px; padding-bottom: 10px' alt='sol trader shot 1'><br/>-->
+    <!--<img src='/files/sol-square-2.png' style='width: 100px; padding-bottom: 10px' alt='sol trader shot 2'><br/>-->
+  </div>
+  <div class='clearfix'>
+    <p>Check out my indie game <a href='http://soltrader.net'>Sol Trader</a>, an epic space action adventure. Be part of a living society you can befriend, understand and manipulate to your own ends.</p>
+
+    <div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/5C/80A/494/1458D7D6C263FB37">
+    </div><script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+
+    <br/>
+    <br/>
+    <iframe src="http://store.steampowered.com/widget/396680/" frameborder="0" width="550" height="190"></iframe>
+    <br/>
+    <a class="twitter-follow-button"
+      href="https://twitter.com/soltdr"
+      data-show-count="true"
+      data-lang="en">
+      Follow
+    </a>
+    <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    <br/>
+    <div class="fb-like" data-width='430' data-href="https://www.facebook.com/soltrader" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <br/>
+  </div>
+</div>
+
+
+      </div>
+      <div class='clr'></div>
+      <section id='comments'>
+        <div id="disqus_thread"></div>
+        <script>
+          function disqus_config() {
+            this.page.url = 'http://chrismdp.com/2015/03/why-games-coders-dont-use-tdd-and-why-it-matters//';
+            this.page.identifier = '/2015/03/why-games-coders-dont-use-tdd-and-why-it-matters/';
+            this.page.title = "Why video game coders don't use TDD, and why it matters";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//chrismdp.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </section>
+    </article>
+  </div>
+  <div class='sidebar col-sm-4'>
+    <p>
+      Posted March 11, 2015
+    </p>
+    <div class='widget'>
+      <h4>Share this</h4>
+      
+      
+
+<div class='share'>
+  <div class='tweet-button'><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="http://chrismdp.com/2015/03/why-games-coders-dont-use-tdd-and-why-it-matters/" data-via="chrismdp">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+  <div class="fb-like" data-href="http://chrismdp.com/2015/03/why-games-coders-dont-use-tdd-and-why-it-matters/" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+  <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+  <script type="IN/Share" data-url="http://chrismdp.com/2015/03/why-games-coders-dont-use-tdd-and-why-it-matters/" data-counter="right"></script>
+  <br/>
+</div>
+
+    </div>
+    <div class='widget'>
+      <h4>Post Categories</h4>
+      <ul class='tags'>
+        <li><a class='tag' href='/tag/sol trader/'>sol trader</a></li><li><a class='tag' href='/tag/tdd/'>tdd</a></li><li><a class='tag' href='/tag/indie games/'>indie games</a></li><li><a class='tag' href='/tag/game development/'>game development</a></li><li><a class='tag' href='/tag/testing/'>testing</a></li><li><a class='tag' href='/tag/code/'>code</a></li><li><a class='tag' href='/tag/functional programming/'>functional programming</a></li>
+      </ul>
+    </div>
+    <div class='widget'>
+      <h4>Related posts</h4>
+      
+      <p>
+        <a href="/2016/06/5-ways-i-screwed-up-sol-traders-launch-a-postmortem/">5 ways I screwed up Sol Trader's launch: a post-mortem</a><br/>
+        <span class='text-muted'>28 Jun 2016</span>
+      </p>
+      
+      <p>
+        <a href="/2016/05/how-bdd-nails-your-prototyping-stage/">Extreme YAGNI: How BDD nails your prototyping stage</a><br/>
+        <span class='text-muted'>04 May 2016</span>
+      </p>
+      
+      <p>
+        <a href="/2016/02/gossip-the-best-new-sol-trader-feature-for-ages/">Gossip: the best new Sol Trader feature for ages</a><br/>
+        <span class='text-muted'>09 Feb 2016</span>
+      </p>
+      
+      <p>
+        <a href="/2016/01/top-5-space-games-of-2015/">The top 5 space games of 2015</a><br/>
+        <span class='text-muted'>28 Jan 2016</span>
+      </p>
+      
+      <p>
+        <a href="/2016/01/sol-trader-at-egx-rezzed-2016/">Sol Trader at EGX Rezzed: 7-9 April 2016</a><br/>
+        <span class='text-muted'>25 Jan 2016</span>
+      </p>
+      
+    </div>
+    <div class='widget'>
+      <h4>Chris Parsons</h4>
+
+<p><img alt='Chris Parsons' src='/images/chris_barca.png' style='float: right; width:100px; padding: 7px 0px 10px 20px'/></p>
+
+<p>I am a programmer, writer and trainer. I consult in technical architecture and agile management, and I train and coach teams in <a href='/tag/agile'>agile</a>, <a href='/tag/bdd'>BDD</a>, <a href='/tag/testing'>automated testing</a>, <a href='/tag/craftsmanship'>clean code</a> and <a href='/tag/team'>great team practices</a>. I have also released the indie game <a href='http://soltrader.net'>Sol Trader</a>.</p>
+
+<p>Clients have included large organisations such as the <a href='http://bbc.co.uk'>BBC</a> and <a href='http://www.cabinetoffice.gov.uk/'>Cabinet Office</a> (working at <a href='http://digital.cabinetoffice.gov.uk/about/'>GDS</a> on the new <a href='http://gov.uk'>GOV.UK</a> platform and the first version of <a href='/tag/e-petitions'>e-petitions</a>) as well as a number of startups.</p>
+
+<p>I have spoken on <a href='/tag/ruby'>Ruby</a>, <a href='/tag/cucumber'>Cucumber</a>, <a href='/tag/bdd'>BDD</a>, <a href='tag/tdd'>TDD</a>, being agile, code quality and programmer education at conferences including Rubyconf, the Scottish Ruby Conference, and Software Craftsmanship North America and Software Craftsmanship UK.</p>
+
+<p>If you'd like to me to work with your team then <a href='mailto:chris@thinkcodelearn.com'>get in touch</a>.</p>
+
+    </div>
+    <div class='widget'>
+      <h4>Sol Trader (OUT NOW)</h4>
+
+<a href='http://soltrader.net?utm_source=chrismdp.com&utm_medium=sidebar-blog-ad&utm_campaign=chrismdp-sidebar-3&utm_content=image'>
+  <img src='/files/soltrader_icon_logo_big.png' style='float:left; width: 80px; padding: 0px 15px 0px 0px' alt='sol trader logo'>
+</a>
+<p>
+  My 2D indie space game for PC and Mac: a thinking person's space sim inspired by Elite and Dwarf Fortress.
+</p>
+<div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/5C/80A/494/1458D7D6C263FB37">
+</div><script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+
+    </div>
+    <div class='widget'>
+      <h4>Check out: Card Pirates</h4>
+
+<a href='http://cardpirates.com?utm_source=chrismdp.com&utm_medium=sidebar-blog-ad&utm_campaign=chrismdp-sidebar-1&utm_content=image'>
+  <img src='/files/card-pirates-square.png' style='float:left; width: 80px; padding: 0px 15px 0px 0px'>
+</a>
+<p>
+  A card game I designed for 2 - 4 players, coming soon for iPhone and iPad.
+</p>
+<p>
+  <a href='http://cardpirates.com?utm_source=chrismdp.com&utm_medium=sidebar-blog-ad&utm_campaign=chrismdp-sidebar-1&utm_content=get-the-latest-link'>Get the latest info</a>
+</p>
+
+    </div>
+    <div class='widget'>
+      <script type="text/javascript">
+  function twitch(data) {
+    $(document).ready(function() {
+      $('#streaming').html("<b class='twitchLoading'>Querying twitch.tv...</b> <a href='http://www.twitch.tv/chrismdp_'>http://www.twitch.tv/chrismdp_</a>");
+      if (data && data['stream']) {
+        $("#streaming").html("<h4>CHRIS IS LIVE CODING <b>NOW</b> (" + data["stream"]["viewers"] + " WATCHING)</h4> <img src='/files/lightbulb_on.png' style='float:left; width: 48px; padding: 16px 31px 0px 15px'/> " + data['stream']['channel']['status'] + "<br/><br/><a id='watch_now' href='#'>Click to toggle video</a><div style='margin-top:15px' id='embedded_twitch_video'></div>");
+        var show_video = false;
+        $('#watch_now').click(function() {
+          show_video = !show_video;
+          if (show_video) {
+            $('#embedded_twitch_video').html("<object type='application/x-shockwave-flash' height='225' width='300' id='live_embed_player_flash' data='http://www.twitch.tv/widgets/live_embed_player.swf?channel=chrismdp_' bgcolor='#000000'><param name='allowFullScreen' value='true' /><param name='allowScriptAccess' value='always' /><param name='allowNetworking' value='all' /><param name='movie' value='http://www.twitch.tv/widgets/live_embed_player.swf' /><param name='flashvars' value='hostname=www.twitch.tv&channel=chrismdp_&auto_play=true&start_volume=25' /></object><a href='http://www.twitch.tv/chrismdp_' style='padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline; text-align:center;'>Watch live video from chrismdp_ on www.twitch.tv</a>");
+          } else {
+            $('#embedded_twitch_video').html("");
+          }
+        });
+      } else {
+        $("#streaming").html("<h4>NOT CURRENTLY LIVE CODING</h4> <img src='/files/lightbulb.png' style='float:left; width: 48px; padding: 16px 31px 0px 15px'/><a href='http://www.twitch.tv/chrismdp_'>Follow for notifications of new live coding sessions</a><br/><a href='https://www.youtube.com/watch?v=u2ZOfYEuRHI&list=PLGQLg2DFLiGiMOzv8gZpEGczM_O2B5iah'>View Sol Trader livestream archives on YouTube</a>");
+      }
+    });
+  }
+</script>
+<script type='text/javascript' src='https://api.twitch.tv/kraken/streams/chrismdp_?callback=twitch'></script>
+<div id='streaming'></div>
+
+    </div>
+    <div class='widget'>
+      <h4>More</h4>
+      <ul class='list-unstyled'>
+        <li>
+          <i class='icon-chevron-right'></i>
+          <a href='/all'>Archives</a>
+        </li>
+        <li>
+          <i class='icon-chevron-right'></i>
+          <a href='/tags'>All Categories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <footer>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-2 social-networks'>
+          <p>Subscribe:</p>
+          <a class='icon-file' href='http://feeds.feedburner.com/ChrisParsons'></a>
+        </div>
+        <div class='col-sm-4 social-networks'>
+          <p>Find me on:</p>
+          <a class='icon-twitter' href='http://twitter.com/chrismdp'></a>
+          <a class='icon-github' href='http://github.com/chrismdp'></a>
+          <a class='icon-linkedin' href='http://linkedin.com/in/chrisparsons'></a>
+          <a class='icon-bullhorn' href='http://lanyrd.com/chrismdp'></a>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id='footer-extra'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-4'>
+          &copy;
+          Chris Parsons
+        </div>
+        <div class='col-sm-4'></div>
+        <div class='col-sm-4'>
+          <i class='icon-envelope'></i>
+          <a href='mailto:chris@thinkcodelearn.com'>chris@thinkcodelearn.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.touchSwipe.js"></script>
+  <script type="text/javascript" src="/js/jquery.hotkeys.min.js"></script>
+  <script type="text/javascript" src="/js/functions.min.js?v=2"></script>
+</body>
+</html>

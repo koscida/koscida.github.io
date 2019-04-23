@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" prefix="fb: http://www.facebook.com/2008/fbml, og: http://ogp.me/ns#">
+<head>
+<title>Computational Law, Symbolic Discourse and the AI Constitution&mdash;Stephen Wolfram Blog</title>
+<meta charset="UTF-8">
+<meta name="Description" content="Stephen Wolfram on using a symbolic discourse language to create legal contracts and even constitutions that are smart, computational, and unambiguous, and work for both humans and AIs." />
+<script type="text/javascript" src="/common/javascript/jquery/core/1.7.1/jquery.js"></script>
+<script type="text/javascript" src="/wp-content/themes/sw-v2/sw.js"></script>
+<link rel="stylesheet" href="/wp-content/themes/sw-v2/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/common/templates/www.stephenwolfram.com/css/main-styles.css" />
+<link rel="alternate" type="application/rss+xml" title="Stephen Wolfram Blog RSS Feed" href="http://blog.stephenwolfram.com/feed/" />
+<link rel="alternate" type="application/atom+xml" title="Stephen Wolfram Blog Atom Feed" href="http://blog.stephenwolfram.com/feed/atom/" />
+<link rel="pingback" href="http://blog.stephenwolfram.com/xmlrpc.php" />
+<script type="text/javascript" src="http://wac.36F4.edgecastcdn.net/0036F4/small/blogsw/js/menu.js"></script>
+<link rel="stylesheet" href="/common/javascript/jquery/ui/1.10.2/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="/common/javascript/jquery/plugins/colorbox/colorbox.css">
+<script src="/common/javascript/jquery/ui/1.10.2/ui/jquery.ui.core.js"></script>
+<script src="/common/javascript/jquery/ui/1.10.2/ui/jquery.ui.widget.js"></script>
+<script src="/common/javascript/jquery/ui/1.10.2/ui/jquery.ui.mouse.js"></script>
+<script src="/common/javascript/jquery/ui/1.10.2/ui/jquery.ui.slider.js"></script>
+<script src="/common/javascript/jquery/plugins/colorbox/jquery.colorbox.js"></script>
+<link rel="alternate" type="application/rss+xml" title="Stephen Wolfram Blog &raquo; Computational Law, Symbolic Discourse and the AI Constitution Comments Feed" href="http://blog.stephenwolfram.com/2016/10/computational-law-symbolic-discourse-and-the-ai-constitution/feed/" />
+<script type='text/javascript' src='http://blog.stephenwolfram.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://blog.stephenwolfram.com/wp-content/plugins/wolfram-cdf-plugin/cdfplugin.js?ver=2.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.stephenwolfram.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.stephenwolfram.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='How to Teach Computational Thinking' href='http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/' />
+<link rel='shortlink' href='http://blog.stephenwolfram.com/?p=12365' />
+<link rel='canonical' href='http://blog.stephenwolfram.com/2016/10/computational-law-symbolic-discourse-and-the-ai-constitution/'/>
+
+<!-- WP-SWFObject 2.3 by unijimpe -->
+<script src="/wp-content/plugins/wp-swfobject/2.0/swfobject.js" type="text/javascript"></script>
+   <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-33987538-1', 'blog.stephenwolfram.com');
+     ga('send', 'pageview');
+
+   </script>
+<script src="/common/javascript/wal/1.1.1/walLoad.js"></script>
+
+</head>
+
+<body id="blog" class="single single-post postid-12365 single-format-standard">
+<div id="wrapper">
+		<header id="header">
+		<h1 id="logo"><a href="/">Stephen Wolfram</a></h1>
+		<nav id="nav">
+			<ul>
+				<li class="about"><a href="http://www.stephenwolfram.com/about/">ABOUT</a></li>
+				<li class="blog"><a href="http://blog.stephenwolfram.com">BLOG</a></li>
+				<li class="publications"><a href="http://www.stephenwolfram.com/publications/">PUBLICATIONS</a></li>
+				<li class="media"><a href="http://www.stephenwolfram.com/media/">MEDIA</a></li>
+				<li class="scrapbook"><a href="http://www.stephenwolfram.com/scrapbook/page1/">SCRAPBOOK</a></li>
+				<li class="contact"><a href="http://www.stephenwolfram.com/contact/">CONTACT</a></li>
+				<li><a class="contact" href="http://www.stephenwolfram.com/contact/" class="big-social-icon contact" title="Contact"></a></li>
+				<li><a class="twitter" href="http://twitter.com/#!/stephen_wolfram" class="big-social-icon twitter" title="Twitter" target="_blank"></a></li>
+				<li><a class="facebook" href="http://www.facebook.com/pages/Stephen-Wolfram/188916357807416" class="big-social-icon facebook" title="Facebook" target="_blank"></a></li>
+				<li><a class="linkedin" href="http://www.linkedin.com/in/stephenwolfram" class="big-social-icon linkedin" title="LinkedIn" target="_blank"></a></li>
+			</ul>
+		</nav>
+	</header>	<div id="content">
+
+<script type="text/javascript">
+$(document).ready(function() {
+$("#join-small").addClass('join-small-js');
+$("#exit-button").addClass('exit-button-js');
+$("#respond").addClass('respond-js');
+});
+</script>
+
+	
+		<h1 class="blog-post-title">Computational Law, Symbolic Discourse and the AI Constitution</h1>
+		<time  class="date" datetime="2016-10-12">October 12, 2016</time>
+		<div class="post_content">
+			<p><a name="leibniz's-dream"></a></p>
+<h2>Leibniz&#8217;s Dream</h2>
+<p><img src="http://blog.stephenwolfram.com/data/uploads/2016/10/comp-law-inline.png" alt="Computational Law, Discourse Language and the AI Constitution" title="Computational Law, Discourse Language and the AI Constitution" width="305" height="135" class="alignright size-full wp-image-12428" /> <a href="http://blog.stephenwolfram.com/2013/05/dropping-in-on-gottfried-leibniz/">Gottfried Leibniz</a>&#8212;who died 300 years ago this November&#8212;worked on many things.  But a theme that recurred throughout his life was the goal of turning human law into an exercise in computation.  Of course, as we know, he didn&#8217;t succeed.  But three centuries later, I think we&#8217;re finally ready to give it a serious try again.  And I think it&#8217;s a really important thing to do&#8212;not just because it&#8217;ll enable all sorts of new societal opportunities and structures, but because I think it&#8217;s likely to be critical to the future of our civilization in its <a href="http://blog.stephenwolfram.com/2015/11/how-should-we-talk-to-ais">interaction with artificial intelligence</a>.</p>
+<p>Human law, almost by definition, dates from the very beginning of civilization&#8212;and undoubtedly it&#8217;s the <a href="http://www.wolframalpha.com/docs/timeline/">first system of rules</a> that humans ever systematically defined.  Presumably it was a model for the axiomatic structure of mathematics as defined by the likes of <a href="http://www.wolframalpha.com/input/?i=euclid">Euclid</a>.  And when science came along, &#8220;natural laws&#8221; (as their name suggests) were at first viewed as conceptually similar to human laws, except that they were supposed to define constraints for the universe (or God) rather than for humans.</p>
+<p>Over the past few centuries we&#8217;ve had amazing success formalizing mathematics and exact science.  And out of this there&#8217;s a more general idea that&#8217;s emerged: the idea of computation.  In computation, we&#8217;re dealing with arbitrary systems of rules&#8212;not necessarily ones that correspond to mathematical concepts we know, or features of the world we&#8217;ve identified.  So now the question is: can we use the ideas of computation, in very much the way Leibniz imagined, to formalize human law?<span id="more-12365"></span></p>
+<p>The basic issue is that human law talks about human activities, and (unlike say for the mechanics of particles) we don&#8217;t have a general formalism for describing human activities.  When it comes to talking about money, for example, we often can be precise. And as a result, it&#8217;s pretty easy to write a very formal contract for paying a subscription, or determining how an option on a publicly traded stock should work.</p>
+<p>But what about all the things that typical legal contracts deal with?  Well, clearly we have one way to write legal contracts: just use natural language (like English).  It&#8217;s often very stylized natural language, because it&#8217;s trying to be as precise as possible.  But ultimately it&#8217;s never going to be precise.  Because at the lowest level it&#8217;s always going to depend on the meanings of words, which for natural language are effectively defined just by the practice and experience of the users of the language.</p>
+<p><a name="a-new-kind-of-language"></a></p>
+<h2>A New Kind of Language</h2>
+<p>For a computer language, though, it&#8217;s a different story.  Because now the constructs in the language are absolutely precise: instead of having a vague, societally defined effect on human brains, they&#8217;re defined to have a very specific effect on a computer.  Of course, traditional computer languages don&#8217;t directly talk about things relevant to human activities: they only directly talk about things like setting values for variables, or calling abstractly defined functions.</p>
+<p>But what I&#8217;m excited about is that we&#8217;re starting to have a bridge between the precision of traditional computer languages and the ability to talk about real-world constructs.  And actually, it&#8217;s something I&#8217;ve personally been working on for more than three decades now: our knowledge-based <a href="http://www.wolfram.com/language">Wolfram Language</a>.</p>
+<p>The Wolfram Language is precise: everything in it is defined to the point where a computer can unambiguously work with it.   But its unique feature among computer languages is that it&#8217;s knowledge based. It&#8217;s not just a language to describe the low-level operations of a computer; instead, built right into the language is as much knowledge as possible about the real world.  And this means that the language includes not just numbers like <a href="http://www.wolframalpha.com/input/?i=2.7">2.7</a> and strings like &#8220;abc&#8221;, but also constructs like the <a href="http://www.wolframalpha.com/input/?i=united+states">United States</a>, or the <a href="http://www.wolframalpha.com/input/?i=consumer+price+index">Consumer Price Index</a>, or an <a href="http://www.wolframalpha.com/input/?i=elephant">elephant</a>.  And that&#8217;s exactly what we need in order to start talking about the kinds of things that appear in legal contracts or human laws.</p>
+<p>I should make it clear that the Wolfram Language as it exists today doesn&#8217;t include everything that&#8217;s needed.  We&#8217;ve got a <a href="http://reference.wolfram.com/language/">large and solid framework</a>, and we&#8217;re off to a good start.  But there&#8217;s more about the world that we have to encode to be able to capture the full range of human activities and human legal specifications.</p>
+<p>The Wolfram Language has, for example, a definition of what a <a href="http://www.wolframalpha.com/input/?i=banana">banana</a> is, broken down by all kinds of details.  So if one says &#8220;you should eat a banana&#8221;, the language has a way to represent &#8220;a banana&#8221;.  But as of now, it doesn&#8217;t have a meaningful way to represent &#8220;you&#8221;, &#8220;should&#8221; or &#8220;eat&#8221;.  </p>
+<p>Is it possible to represent things like this in a precise computer language?  Absolutely!  But it takes language design to set up how to do it.  Language design is a <a href="http://blog.stephenwolfram.com/2008/01/ten-thousand-hours-of-design-reviews/">difficult business</a>&#8212;in fact, it&#8217;s probably the most intellectually demanding thing I know, requiring a strange mixture of high abstraction together with deep knowledge and down-to-earth practical judgment.  But I&#8217;ve been doing it now for <a href="http://blog.stephenwolfram.com/2016/04/my-life-in-technology-as-told-at-the-computer-history-museum/">nearly four decades</a>, and I think I&#8217;m finally ready for the challenge of doing language design for everyday discourse.  </p>
+<p>So what&#8217;s involved?  Well, let&#8217;s first talk about it in a simpler case: the case of mathematics.  Consider the function <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt>, which adds things like numbers together.   When we use the English word &#8220;plus&#8221; it can have all sorts of meanings.  One of those meanings is adding numbers together.  But there are other meanings, that are related, say, by various analogies (&#8220;product X plus&#8221;, &#8220;the plus wire&#8221;, &#8220;it&#8217;s a real plus&#8221;,  &#8230;).</p>
+<p>When we come to define <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt> in the Wolfram Language we want to build on the everyday notion of &#8220;plus&#8221;, but we want to make it precise.  And we can do that by picking the specific meaning of &#8220;plus&#8221; that&#8217;s about adding things like numbers together.   And once we know that this is what <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt> means, we immediately know all sorts of properties, and can do explicit computations with it.</p>
+<p>Now consider a concept like &#8220;magnesium&#8221;. It&#8217;s not as perfect and abstract a concept as <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt>.  But physics and chemistry give us a clear definition of the element <a href="http://www.wolframalpha.com/input/?i=magnesium">magnesium</a>&#8212;which we can then use in the Wolfram Language to have a well-defined &#8220;magnesium&#8221; entity.</p>
+<p>It&#8217;s very important that the Wolfram Language is a symbolic language&#8212;because it means that the things in it don&#8217;t immediately have to have &#8220;values&#8221;; they can just be symbolic constructs that stand for themselves.  And so, for example, the entity &#8220;magnesium&#8221; is represented as a symbolic construct, that doesn&#8217;t itself &#8220;do&#8221; anything, but can still <a href="http://www.wolfram.com/language/elementary-introduction/16-real-world-data.html">appear in a computation</a>, just like, for example, a number (like 9.45) can appear. </p>
+<p>There are many kinds of constructs that the Wolfram Language supports.  Like &#8220;<a href="http://www.wolframalpha.com/input/?i=new+york+city">New York City</a>&rdquo; or &#8220;<a href="http://www.wolframalpha.com/input/?i=last+christmas">last Christmas</a>&#8221; or &#8220;<a href="http://reference.wolfram.com/language/ref/GeoWithinQ.html">geographically contained within</a>&rdquo;.  And the point is that the design of the language has defined a precise meaning for them.  New York City, for example, is taken to mean the precise legal entity considered to be New York City, with geographical borders defined by law.  Internal to the Wolfram Language, there&#8217;s always a precise canonical representation for something like New York City (it&#8217;s <tt><a href="http://reference.wolfram.com/language/ref/Entity.html">Entity["City", {"NewYork", "NewYork", "UnitedStates"}]</a></tt>).  And this internal representation is all that matters when it comes to computation.  Yes, it&#8217;s convenient to refer to New York City as &#8220;<a href="http://www.wolframalpha.com/input/?i=nyc">nyc</a>&rdquo;, but in the Wolfram Language that natural language form is immediately converted to the precise internal form. </p>
+<p>So what about &#8220;you should eat a banana&#8221;?  Well, we&#8217;ve got to go through the same language design process for something like &#8220;eat&#8221; as for <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt> (or &#8220;banana&#8221;).  And the basic idea is that we&#8217;ve got to figure out a standard meaning for &#8220;eat&#8221;.  For example, it might be &#8220;ingestion of food by a person (or animal)&#8221;.  Now, there are plenty of other possible meanings for the English word &#8220;eat&#8221;&#8212;for example, ones that use analogies, as in &#8220;this function eats its arguments&#8221;.  But the idea&#8212;like for <tt><a href="http://reference.wolfram.com/mathematica/ref/Plus.html">Plus</a></tt>&#8212;is to ignore these, and just to define a standard notion of &#8220;eat&#8221; that is precise, and suitable for computation.</p>
+<p>One gets a reasonable idea of what kinds of constructs one has to deal with just by thinking about parts of speech in English.  There are nouns.  Sometimes (as in &#8220;banana&#8221; or &#8220;elephant&#8221;) there&#8217;s a pretty precise definition of what these correspond to, and usually the Wolfram Language already knows about them.  Sometimes it&#8217;s a little vaguer but still concrete (as in &#8220;chair&#8221; or &#8220;window&#8221;), and sometimes it&#8217;s abstract (like &#8220;happiness&#8221; or &#8220;justice&#8221;).  But in each case one can imagine one or several <a href="http://reference.wolfram.com/language/guide/KnowledgeRepresentationAndAccess.html">entities</a> that capture a definite meaning for the noun&#8212;just like the Wolfram Language already has entities for thousands of kinds of things.</p>
+<p>Beyond nouns, there are verbs.  There&#8217;s typically a certain superstructure that exists around verbs.  Grammatically there might be a subject for the verb, and an object, and so on.  Verbs are similar to functions in the Wolfram Language: each one deals with certain arguments, that for example correspond to its subject, object, etc.  Now of course in English (or any other natural language) there are all sorts of elaborate special cases and extra features that can be associated with verbs.  But basically we don&#8217;t care about these.  Because we&#8217;re really just trying to define symbolic constructs that represent certain concepts.  We don&#8217;t have to capture every detail of how a particular verb works; we&#8217;re just using the English verb as a way to give us a kind of &#8220;cognitive hook&#8221; for the concept.</p>
+<p>We can go through other parts of speech.  Adverbs that modify verbs; adjectives that modify nouns.  These can sometimes be represented in the Wolfram Language by constructs like <tt><a href="http://reference.wolfram.com/mathematica/ref/EntityInstance.html">EntityInstance</a></tt>, and sometimes by options to functions.  But the important point in all cases is that we&#8217;re not trying to faithfully reproduce how the natural language works; we&#8217;re just using the natural language as a guide to how concepts are set up.</p>
+<p>Pronouns are interesting.  They work a bit like variables in pure anonymous functions.  In &#8220;you should eat a banana&#8221;, the &#8220;you&#8221; is like a free variable that&#8217;s going to be filled in with a particular person.</p>
+<p>Parts of speech and grammatical structures suggest certain general features to capture in a symbolic representation of discourse.  There are a bunch of others, though.  For example, there are what amount to &#8220;calculi&#8221; that one needs to represent notions of time (&#8220;within the time interval&#8221;, &#8220;starting later&#8221;, etc.) or of space (&#8220;on top of&#8221;, &#8220;contained within&#8221;, etc.).  We&#8217;ve already got many calculi like these in the Wolfram Language; the most straightforward are ones about numbers (&#8220;greater than&#8221;, etc.) or sets (&#8220;member of&#8221;), etc.  Some calculi have long histories (&#8220;<a href="https://en.wikipedia.org/wiki/Temporal_logic" target="_blank">temporal logic</a>&rdquo;, &#8220;<a href="http://www.wolframalpha.com/input/?i=set+theory">set theory</a>&rdquo;, etc.); others still have to be constructed. </p>
+<p>Is there a global theory of what to do?  Well, no more than there&#8217;s a global theory of how the world works.  There are concepts and constructs that are part of how our world works, and we need to capture these.  No doubt there&#8217;ll be new things that come along in the future, and we&#8217;ll want to capture those too.  And my experience from building Wolfram|Alpha is that the best thing to do is just to build each thing one needs, without starting off with any kind of global theory.  After a while, one may notice that one&#8217;s built similar things several times, and one may go in and unify them.</p>
+<p>One can get deep into the foundations of science and philosophy about this.  Yes, there&#8217;s a <a href="http://www.wolframscience.com/nksonline/toc.html">computational universe</a> out there of all the possible rules by which systems can operate (and, yes, I&#8217;ve spent a good part of my life studying the basic science of this).  And there&#8217;s <a href="http://blog.stephenwolfram.com/2007/09/my-hobby-hunting-for-our-universe/">our physical universe</a> that presumably operates according to certain rules from the computational universe.  But from these rules can emerge all sorts of <a href="http://www.wolframscience.com/nksonline/section-2.1">complex behavior</a>, and in fact the phenomenon of <a href="http://www.wolframscience.com/nksonline/section-12.6">computational irreducibility</a> implies that in a sense there&#8217;s no limit to what can be built up.</p>
+<p>But there&#8217;s not going to be an overall way to talk about all this stuff.  And if we&#8217;re going to be dealing with any finite kind of discourse it&#8217;s going to only capture certain features.  Which features we choose to capture is going to be determined by what concepts have evolved in the history of our society.  And usually these concepts will be mirrored in the words that exist in the languages we use. </p>
+<p>At a foundational level, computational irreducibility implies that there&#8217;ll always be new concepts that could be introduced.  Back in antiquity, <a href="http://www.wolframalpha.com/input/?i=aristotle">Aristotle</a> introduced logic as a way to capture certain aspects of human discourse.  And there are other frameworks that have been introduced in the history of philosophy, and more recently, natural language processing and artificial intelligence research.  But computational irreducibility effectively implies that none of them can ever ultimately be complete.  And we must expect that as the concepts we consider relevant evolve, so too must the symbolic representation we have for discourse.</p>
+<p><a name="the-discourse-workflow"></a></p>
+<h2>The Discourse Workflow</h2>
+<p>OK, so let&#8217;s say we&#8217;ve got a symbolic representation for discourse.  How&#8217;s it actually going to be used?  Well, there are some good clues from the way natural language works.  </p>
+<p>In standard discussions of natural language, it&#8217;s common to talk about &#8220;interrogative statements&#8221; that ask a question, &#8220;declarative statements&#8221; that assert something and &#8220;imperative statements&#8221; that say to do something.  (Let&#8217;s ignore &#8220;exclamatory statements&#8221;, like expletives, for now.)</p>
+<p>Interrogative statements are what we&#8217;re dealing with all the time in Wolfram|Alpha: &#8220;<a href="http://www.wolframalpha.com/input/?i=what+is+the+density+of+gold%3F">what is the density of gold?</a>&rdquo;, &#8220;<a href="http://www.wolframalpha.com/input/?i=what+is+3%2B7%3F">what is 3+7?</a>&rdquo;, &#8220;<a href="http://www.wolframalpha.com/input/?i=what+is+the+current+temperature%3F">what was the latest reading from that sensor?</a>&rdquo;, etc.  They&#8217;re also common in notebooks used to interact with the Wolfram Language: there&#8217;s an input (<tt>In[1]:= 2+2</tt>) and then there&#8217;s a corresponding output (<tt>Out[1]= 4</tt>).  </p>
+<p>Declarative statements are all about filling in particular values for variables.  In a very coarse way, one can <a href="http://reference.wolfram.com/language/ref/Set.html">set values</a> (<tt>x=7</tt>), as in typical procedural languages.  But it&#8217;s typically better to think about having environments in which one&#8217;s asserting things.  Maybe those environments are supposed to represent the real world, or some corner of it.  Or maybe they&#8217;re supposed to represent some fictional world, where for example dinosaurs didn&#8217;t go extinct, or something.</p>
+<p>Imperative statements are about making things happen in the world: &#8220;<a href="http://www.wolframalpha.com/input/?i=open+the+pod+bay+door">open the pod bay doors</a>&rdquo;, &#8220;pay Bob <a href="http://www.wolframalpha.com/input/?i=0.23+bitcoin">0.23 bitcoin</a>&rdquo;, etc. </p>
+<p>In a sense, interrogative statements determine the state of the world, declarative statements assert things about the state of the world, and imperative statements change the state of the world.  </p>
+<p>In different situations, we can mean different things by &#8220;the world&#8221;.  We could be talking about abstract constructs, like integers or logic operations, that just are the way they are.  We could be talking about natural laws or other features of our physical universe that we can&#8217;t change.  Or we could be talking about our local environment, where we can move around tables and chairs, choose to eat bananas, and so on.  Or we could be talking about our mental states, or the internal state of something like a computer.</p>
+<p>There are lots of things one can do if one has a general symbolic representation for discourse.  But one of them&#8212;which is the subject of this post&#8212;is to express things like legal contracts.  The beginning of a contract, with its various whereas clauses, recitals, definitions and so on tends to be dense with declarative statements (&#8220;this is so&#8221;).  Then the actual terms of the contract tend to end up with imperative statements (&#8220;this should happen&#8221;), perhaps depending on certain things determined by interrogative statements (&#8220;did this happen?&#8221;).</p>
+<p>It&#8217;s not hard to start seeing the structure of contracts as being much like programs.  In simple cases, they just contain logical conditionals: &#8220;if X then Y&#8221;.  In other cases they&#8217;re more modeled on math: &#8220;if this amount of X happens, that amount of Y should happen&#8221;.  Sometimes there&#8217;s iteration: &#8220;keep doing X until Y happens&#8221;.  Occasionally there&#8217;s some recursion: &#8220;keep applying X to every Y&#8221;.  And so on.</p>
+<p>There are already some places where legal contracts are routinely represented by what amount to programs.  The most obvious are <a href="http://reference.wolfram.com/language/guide/Finance.html">financial contracts</a> for things like <a href="http://reference.wolfram.com/language/ref/FinancialBond.html">bonds</a> and <a href="http://reference.wolfram.com/language/ref/FinancialDerivative.html">options</a>&#8212;which just amount to little programs that define payouts based on various formulas and conditionals. </p>
+<p>There&#8217;s a whole industry of using &#8220;<a href="https://en.wikipedia.org/wiki/Business_rules_engine" target="_blank">rules engines</a>&#8221; to encode certain kinds of regulations as &#8220;if then&#8221; rules, usually mixed with formulas.  In fact, such things are almost universally used for tax and insurance computations. (They&#8217;re also common in pricing engines and the like.)</p>
+<p>Of course, it&#8217;s no coincidence that one talks about &#8220;legal codes&#8221;.  The word code&#8212;which comes from the Latin <em>codex</em>&#8212;originally referred to systematic collections of legal rules.  And when programming came along a couple of millennia later, it used the word &#8220;code&#8221; because it basically saw itself as similarly setting up rules for how things should work, except now the things had to do with the operation of computers rather than the conduct of worldly affairs.</p>
+<p>But now, with our <a href="http://www.wolfram.com/language/principles/">knowledge-based</a> computer language and the idea of a symbolic discourse language, what we&#8217;re trying to do is to make it so we can talk about a broad range of worldly affairs in the same kind of way that we talk about computational processes&#8212;so we put all those legal codes and contracts into computational form.</p>
+<p><a name="code-versus-language"></a></p>
+<h2>Code versus Language</h2>
+<p>How should we think about symbolic discourse language compared to ordinary natural language?  In a sense, the symbolic discourse language is a representation in which all the nuance and &#8220;poetry&#8221; have been &#8220;crushed&#8221; out of the natural language.  The symbolic discourse language is precise, but it&#8217;ll almost inevitably lose the nuance and poetry of the original natural language.</p>
+<p>If someone says &#8220;2+2&rdquo; to <a href="http://www.wolframalpha.com/">Wolfram|Alpha</a>, it&#8217;ll dutifully answer &#8220;4&rdquo;.  But what if instead they say, &#8220;hey, will you work out 2+2 for me&#8221;.  Well, that sets up a different mood.  But Wolfram|Alpha will take that input and convert it to exactly the same symbolic form as &#8220;2+2&rdquo;, and similarly just respond &#8220;4&rdquo;. </p>
+<p>This is exactly the kind of thing that&#8217;ll happen all the time with symbolic discourse language.  And if the goal is to answer precise questions&#8212;or, for that matter, to create a precise legal contract, it&#8217;s exactly what one wants.  One just needs the hard content that will actually have a consequence for what one&#8217;s trying to do, and in this case one doesn&#8217;t need the &#8220;extras&#8221; or &#8220;pleasantries&#8221;.</p>
+<p>Of course, what one chooses to capture depends on what one&#8217;s trying to do.  If one&#8217;s trying to get psychological information, then the &#8220;mood&#8221; of a piece of natural language can be very important.  Those &#8220;exclamatory statements&#8221; (like expletives) carry meaning one cares about.  But one can still perfectly well imagine capturing things like that in a symbolic way&#8212;for example by having an &#8220;emotion track&#8221; in one&#8217;s symbolic discourse language.  (Very coarsely, this might be represented by <a href="https://www.wolfram.com/mathematica/new-in-10/built-in-classifier-collection/find-the-sentiment-polarity-of-a-text.html">sentiment</a> or by position in an emotion space&#8212;or, for that matter, by a whole symbolic language derived, say, from emoji.)</p>
+<p>In actual human communication through natural language, &#8220;meaning&#8221; is a slippery concept, that inevitably depends on the context of the communication, the history of whoever is communicating, and so on.  My notion of a symbolic discourse language isn&#8217;t to try to magically capture the &#8220;true meaning&#8221; of a piece of natural language.  Instead, my goal is just to capture some meaning that one can then compute with.</p>
+<p>For convenience, one might choose to start with natural language, and then try to translate it into the symbolic discourse language.  But the point is for the symbolic discourse language to be the real representation: the natural language is just a guide for trying to generate it.  And in the end, the notion is that if one really wants to be sure one&#8217;s accurate in what one&#8217;s saying, one should say it directly in the symbolic discourse language, without ever using natural language.</p>
+<p>Back in the 1600s, one of Leibniz&#8217;s big concerns was to have a representation that was independent of which natural language people were using (French, German, Latin, etc.).  And one feature of a symbolic discourse language is that it has to operate &#8220;below&#8221; the level of specific natural languages.</p>
+<p>There&#8217;s a rough kind of universality among human languages, in that it seems to be possible to represent any human concept at least to some approximation in any language.  But there are plenty of nuances that are extremely hard to translate&#8212;between different languages, or the different cultures that surround them (or even the same language at different times in history).  But in the symbolic discourse language, one&#8217;s effectively &#8220;crushing out&#8221; these differences&#8212;and getting something that is precise, even though it typically won&#8217;t correspond exactly to any particular human natural language.</p>
+<p>A symbolic discourse language is about representing things in the world.  Natural language is just one way to try to describe those things.  But there are others.  For example, one might <a href="http://blog.stephenwolfram.com/2015/05/wolfram-language-artificial-intelligence-the-image-identification-project">give a picture</a>.  One could try to describe certain features of the picture in natural language (&#8220;a cat with a hat on its head&#8221;)&#8212;or one could go straight from the picture to the symbolic discourse language.</p>
+<p>In the example of a picture, it&#8217;s very obvious that the symbolic discourse language isn&#8217;t going to capture everything.  Maybe it could capture something like &#8220;he is taking the diamond&#8221;.  But it&#8217;s not going to specify the color of every pixel, and it&#8217;s not going to describe all conceivable features of a scene at every level of detail.</p>
+<p>In some sense, what the symbolic discourse language is doing is to specify a model of the system it&#8217;s describing.  And <a href="http://www.wolframscience.com/nksonline/section-8.1">like any model</a>, it&#8217;s capturing some features, and idealizing others away.  But the importance of it is that it provides a solid foundation on which computations can be done, conclusions can be drawn, and actions can be taken. </p>
+<p><a name="why-now"></a></p>
+<h2>Why Now?</h2>
+<p>I&#8217;ve been thinking about creating what amounts to a general symbolic discourse language for nearly 40 years.  But it&#8217;s only recently&#8212;with the current state of the Wolfram Language&#8212;that I&#8217;ve had the framework to actually do it.  And it&#8217;s also only recently that I&#8217;ve understood how to think about the problem in a sufficiently practical way.</p>
+<p>Yes, it&#8217;s nice in principle to have a symbolic way to represent things in the world.  And in specific cases&#8212;like answering questions in Wolfram|Alpha&#8212;it&#8217;s completely clear why it&#8217;s worth doing this.  But what&#8217;s the point of dealing with more general discourse?  Like, for example, when do we really want to have a &#8220;general conversation&#8221; with a machine?</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Turing_test" target="_blank">Turing test</a> says that being able to do this is a sign of achieving general AI.  But &#8220;general conversations&#8221; with machines&#8212;without any particular purpose in mind&#8212;so far usually seem in practice to devolve quickly into party tricks and Easter eggs.  At least that&#8217;s our experience looking at interactions people have with Wolfram|Alpha, and it also seems to be the experience with decades of chatbots and the like.</p>
+<p>But the picture quickly changes if there&#8217;s a purpose to the conversation: if you&#8217;re actually trying to get the machine to do something, or learn something from the machine.  Still, in most of these cases, there&#8217;s no real reason to have a general representation of things in the world; it&#8217;s sufficient just to represent specific machine actions, particular customer service goals, or whatever.  But if one wants to tackle the general problem of law and contracts, it&#8217;s a different story.  Because inevitably one&#8217;s going to have to represent the full spectrum of human affairs and issues.  And so now there&#8217;s a definite goal to having a symbolic representation of the world: one needs it to be able to say what should happen and have machines understand it.</p>
+<p>Sometimes it&#8217;s useful to do that because one wants the machines just to be able to check whether what was supposed to happen actually did; sometimes one wants to actually have the machines automatically enforce or do things.  But either way, one needs the machine to be able to represent general things in the world&#8212;and so one needs a symbolic discourse language to be able to do this.</p>
+<p><a name="some-history"></a></p>
+<h2>Some History</h2>
+<p>In a sense, it&#8217;s a very obvious idea to have something like a symbolic discourse language.  And indeed it&#8217;s an idea that&#8217;s come up repeatedly across the course of centuries.  But it&#8217;s proved a very difficult idea to make work, and it has a history littered with (sometimes quite wacky) failures. </p>
+<p>Things in a sense started well.  Back in antiquity, logic as discussed by Aristotle provided a very restricted example of a symbolic discourse language.  And when the formalism of mathematics began to emerge it provided another example of a restricted symbolic discourse language.</p>
+<p>But what about more general concepts in the world?  There&#8217;d been many efforts&#8212;between the <a href="http://www.wolframalpha.com/input/?i=tetractys">Tetractys</a> of the Pythagoreans and the <a href="http://www.wolframalpha.com/input/?i=i+ching">I Ching</a> of the Chinese&#8212;to assign symbols or numbers to a few important concepts.  But around 1300 <a href="http://www.wolframalpha.com/input/?i=ramon+llull">Ramon Llull</a> took it further, coming up with a whole combinatorial scheme for representing concepts&#8212;and then trying to implement this with circles of paper that could supposedly mechanically determine the validity of arguments, particularly religious ones.  </p>
+<p>Four centuries later, Gottfried Leibniz was an enthusiast of Llull&#8217;s work, at first imagining that perhaps all concepts could be converted to numbers and truth then determined by doing something like factoring into primes.  Later, Leibniz starting talking about a <em><a href="https://en.wikipedia.org/wiki/Characteristica_universalis" target="_blank">characteristica universalis</a></em> (or, as <a href="http://www.wolframalpha.com/input/?i=descartes">Descartes</a> called it, an &#8220;alphabet of human thoughts&#8221;)&#8212;essentially a universal symbolic language.  But he never really tried to construct such a thing, instead chasing what one might consider &#8220;special cases&#8221;&#8212;including the one that led him to calculus.</p>
+<p>With the decline of Latin as the universal natural language in the 1600s, particularly in areas like science and diplomacy, there had already been efforts to invent &#8220;<a href="https://en.wikipedia.org/wiki/Philosophical_language" target="_blank">philosophical languages</a>&#8221; (as they were called) that would represent concepts in an abstract way, not tied to any specific natural language.  The most advanced of these was by <a href="http://www.wolframalpha.com/input/?i=john+wilkins">John Wilkins</a>&#8212;who in 1668 produced a <a href="https://archive.org/details/AnEssayTowardsARealCharacterAndAPhilosophicalLanguage" target="_blank">book</a> cataloging over 10,000 concepts and representing them using strange-looking glyphs, with a rendering of the Lord&#8217;s Prayer as an example.</p>
+<p>In some ways these efforts evolved into the development of encyclopedias and later thesauruses, but as language-like systems, they basically went nowhere.  Two centuries later, though, as the concept of internationalization spread, there was a burst of interest in constructing new, country-independent languages&#8212;and out of this emerged <a href="https://en.wikipedia.org/wiki/Volap%C3%BCk" target="_blank">Volapük</a> and then <a href="https://en.wikipedia.org/wiki/Esperanto" target="_blank">Esperanto</a>.  These languages were really just artificial natural languages; they weren&#8217;t an attempt to produce anything like a symbolic discourse language.  I always used to enjoy seeing signs in Esperanto at European airports, and was disappointed in the 1980s when these finally disappeared.  But, as it happens, right around that time, there was another wave of <a href="https://en.wikipedia.org/wiki/Constructed_language" target="_blank">language construction</a>.  There were languages like <a href="https://en.wikipedia.org/wiki/Lojban" target="_blank">Lojban</a>, intended to be as unambiguous as possible, and ones like the interestingly minimal <a href="https://en.wikipedia.org/wiki/Toki_Pona" target="_blank">Toki Pona</a> intended to support the simple life, as well as the truly bizarre <a href="https://en.wikipedia.org/wiki/Ithkuil" target="_blank">Ithkuil</a>, intended to encompass the broadest range of linguistic and supposedly cognitive structures.</p>
+<p>Along the way, there were also attempts to simplify languages like English by expressing everything in terms of 1000 or 2000 basic words (instead of the usual 20,000&#8211;30,000)&#8212;as in the &#8220;Simple English&#8221; <a href="https://en.wikipedia.org/wiki/Simple_English_Wikipedia" target="_blank">version of Wikipedia</a> or the <a href="https://xkcd.com/thing-explainer/" target="_blank">xkcd Thing Explainer</a>. </p>
+<p>There were a few, more formal, efforts.  One example was <a href="http://www.wolframalpha.com/input/?i=hans+freudenthal">Hans Freudenthal</a>&rsquo;s 1960 <a href="https://en.wikipedia.org/wiki/Lincos_(artificial_language)" target="_blank">Lincos</a> &#8220;language for cosmic intercourse&#8221; (i.e. communication with extraterrestrials) which attempted to use the notation of mathematical logic to capture everyday concepts.  In the early days of the field of artificial intelligence, there were plenty of discussions of &#8220;knowledge representation&#8221;, with approaches based variously on the grammar of natural language, the structure of predicate logic or the formalism of databases.  Very few large-scale projects were attempted (<a href="http://www.wolframalpha.com/input/?i=doug+lenat">Doug Lenat</a>&rsquo;s <a href="https://en.wikipedia.org/wiki/Cyc" target="_blank">Cyc</a> being a notable counterexample), and when I came to develop Wolfram|Alpha I was disappointed at how little of relevance to our needs seemed to have emerged.</p>
+<p>In a way I find it remarkable that something as fundamental as the construction of a symbolic discourse language should have had so little serious attention paid to it in the past.  But at some level it&#8217;s not so surprising.  It&#8217;s a difficult, large project, and it somehow lies in between established fields.  It&#8217;s not a linguistics project.  Yes, it may ultimately illuminate how languages work, but that&#8217;s not its main point.  It&#8217;s not a computer science project because it&#8217;s really about content, not algorithms.  And it&#8217;s not a philosophy project because it&#8217;s mostly about specific nitty-gritty and not much about general principles.</p>
+<p>There&#8217;ve been a few academic efforts in the last half century or so, discussing ideas like &#8220;<a href="https://en.wikipedia.org/wiki/Semantic_primes" target="_blank">semantic primes</a>&#8221; and &#8220;<a href="https://en.wikipedia.org/wiki/Natural_semantic_metalanguage" target="_blank">natural semantic metalanguage</a>&rdquo;.  Usually such efforts have tried to attach themselves to the field of linguistics&#8212;but their emphasis on abstract meaning rather than pure linguistic structure has put them at odds with prevailing trends, and none have turned into large-scale projects.</p>
+<p>Outside of academia, there&#8217;s been a steady stream of proposals&#8212;sometimes promoted by wonderfully eccentric individuals&#8212;for systems to organize and name concepts in the world.  It&#8217;s not clear how far this pursuit has come since Ramon Llull&#8212;and usually it&#8217;s only dealing with pure ontology, and never with full meaning of the kind that can be conveyed in natural language.</p>
+<p>I suppose one might hope that with all the recent advances in machine learning there&#8217;d be some magic way to automatically learn an abstract representation for meaning.  And, yes, one can take Wikipedia, for example, or a text corpus, and use <a href="http://reference.wolfram.com/language/ref/DimensionReduction.html">dimension reduction</a> to derive some effective &#8220;space of concepts&#8221;.  But, not too surprisingly, simple Euclidean space doesn&#8217;t seem to be a very good model for the way concepts relate (one can&#8217;t even faithfully represent <a href="http://reference.wolfram.com/language/ref/GraphDistance.html">graph distances</a>).  And even the problem of taking possible meanings for words&#8212;as a dictionary might list them&#8212;and breaking them into clusters in a space of concepts doesn&#8217;t seem to be easy to do effectively.</p>
+<p>Still, as I&#8217;ll discuss later, I think there&#8217;s a very interesting interplay between symbolic discourse language and machine learning.  But for now my conclusion is that there&#8217;s not going to be any alternative but to use human judgment to construct the core of any symbolic discourse language that&#8217;s intended for humans to use. </p>
+<p><a name="contracts-into-code"></a></p>
+<h2>Contracts into Code</h2>
+<p>But let&#8217;s get back to contracts.  Today, there are hundreds of billions of them being signed every year around the world (and vastly more being implicitly entered into)&#8212;though the number of &#8220;original&#8221; ones that aren&#8217;t just simple modifications is probably just in the millions (and is perhaps comparable to the number of original computer programs or apps being written.)</p>
+<p>So can these contracts be represented in precise symbolic form, as Leibniz hoped 300 years ago?  Well, if we can develop a decently complete symbolic discourse language, it should be possible.  (Yes, every contract would have to be defined relative to some underlying set of &#8220;governing law&#8221; rules, etc., that are in some ways like the built-in functions of  the symbolic discourse language.)</p>
+<p>But what would it mean?  Among other things, it would mean that contracts themselves would become computable things.  A contract would be converted to a program in the symbolic discourse language.  And one could do abstract operations just on this program.  And this means one can imagine formally determining&#8212;in effect through a kind of generalization of logic&#8212;whether, say, a given contract has some particular implication, could ever lead to some particular outcome, or is equivalent to some other contract.  </p>
+<p>Ultimately, though, there&#8217;s a theoretical problem with this.  Because questions like this can run into issues of formal <a href="http://www.wolframscience.com/nksonline/section-12.8-text">undecidability</a>, which means there&#8217;s no guarantee that any systematic finite computation will answer them.  The same problem arises in reasoning about typical software programs people write, and in practice it&#8217;s a mixed bag, with some things being decidable, and others not.</p>
+<p>Of course, even in the Wolfram Language as it is today, there are plenty of things (such as the very basic &#8220;are these expressions equal?&#8221;) that are ultimately in principle undecidable.  And there are certainly questions one can ask that run right into such issues.  But an awful lot of the kinds of questions that people naturally ask turn out to be answerable with modest amounts of computation.  And I wouldn&#8217;t be surprised if this were true for questions about contracts too.  (It&#8217;s worth noting that human-formulated questions tend to run into undecidability much less than questions picked, say at random, from the whole computational universe of possibilities.)</p>
+<p>If one has contracts in computational form, there are other things one can expect to do too.  Like to be able to automatically work out what the contracts imply for a large range of possible inputs.  The 1980s revolution in quantitative finance started when it became clear one could automatically compute distributions of outcomes for simple options contracts.  If one had lots (perhaps billions) of contracts in computational form, there&#8217;d be a lot more that could be done along these lines&#8212;and no doubt, for better or worse, whole new areas of financial engineering that could be developed.</p>
+<p><a name="where-do-the-inputs-come-from"></a></p>
+<h2>Where Do the Inputs Come From?</h2>
+<p>OK, so let&#8217;s say one has a computational contract.  What can one directly do with it?  Well, it depends somewhat on what the form of its inputs is.  One important possibility is that they&#8217;re in a sense &#8220;born computational&#8221;: that they&#8217;re immediately statements about a computational system (&#8220;how many accesses has this ID made today?&#8221;, &#8220;what is the ping time for this connection?&#8221;, &#8220;how much bitcoin got transferred?&#8221;, etc.).  And in that case, it should be possible to immediately and unambiguously &#8220;evaluate&#8221; the contract&#8212;and find out if it&#8217;s being satisfied.  </p>
+<p>This is something that&#8217;s very useful for lots of purposes&#8212;both for humans interacting with machines, and machines interacting with machines.  In fact, there are plenty of cases where versions of it are already in use.  One can think of computer security provisions such as firewall rules as one example.  There are others that are gradually emerging, such as automated SLAs (service-level agreements) and automated terms-of-service.  (I&#8217;m certainly hoping our company, for example, will be able to make these a routine part of our business practices before too long.)</p>
+<p>But, OK, it&#8217;s certainly not true that every input for every contract is &#8220;born computational&#8221;: plenty of inputs have to come from seeing what happens in the &#8220;outside&#8221; world (&#8220;did the person actually go to place X?&#8221;, &#8220;was the package maintained in a certain environment?&#8221;, &#8220;did the information get leaked to social media?&#8221;, &#8220;is the parrot dead?&#8221;,  etc.).  And the first thing to say is that in modern times it&#8217;s become vastly easier to automatically determine things about the world, not least because one can just make measurements with sensors.  Check the GPS trace.  Look at the car counting sensor.  And so on.  The whole <a href="http://devices.wolfram.com/">Internet of Things</a> is out there to provide input about the real world for computational contracts.</p>
+<p>Having said this, though, there&#8217;s still an issue.  Yes, with a GPS trace there&#8217;s a definite answer (assuming the GPS is working properly) for whether someone or something went to a particular place.  But let&#8217;s say one&#8217;s trying to determine something less obviously numerical.  Let&#8217;s say, for example, that one&#8217;s trying to determine whether a piece of fruit should be considered &#8220;<a href="https://www.ams.usda.gov/grades-standards/fruits" target="_blank">Fancy Grade</a>&#8221; or not.  Well, given some pictures of the piece of fruit an expert can pretty unambiguously tell.  But how can we make this computational?</p>
+<p>Well, here&#8217;s a place where we can use modern machine learning.  We can set up some neural net, say in the Wolfram Language, and then <a href="http://blog.stephenwolfram.com/2015/05/wolfram-language-artificial-intelligence-the-image-identification-project/">show it lots of examples</a> of fruit that&#8217;s Fancy Grade and that&#8217;s not.  And from my experience (and those of our customers!) most of the time we&#8217;ll get a system that&#8217;s really good at a task like grading fruit.  It&#8217;ll certainly be much faster than humans, and it&#8217;ll probably be more reliable and more consistent too.</p>
+<p>And this gives a whole new way to set up contracts about things in the world.  Two parties can just agree that the contract should say &#8220;if the machine learning system says X then do Y&#8221;.  In a sense it&#8217;s like any other kind of computational contract: the machine learning system is just a piece of code.  But it&#8217;s a little different.  Because normally one expects that one can readily examine everything that a contract says: one can in effect read and understand the code.  But with machine learning in the middle, there can no longer be any expectation of that.</p>
+<p>Nobody specifically set up all those millions of numerical weights in the neural net; they were just determined by some approximate and somewhat random process from whatever training data that was given.  Yes, in principle we can measure everything about what&#8217;s happening inside the neural net.  But there&#8217;s no reason to expect that we&#8217;ll ever be able to get an understandable explanation&#8212;or prediction&#8212;of what the net will do in any particular case.  Most likely it&#8217;s an example of the phenomenon I call <a href="http://www.wolframscience.com/nksonline/section-12.6-text">computational irreducibility</a>&#8211;which means there really isn&#8217;t any way to see what will happen much more efficiently than just by running it.</p>
+<p>What&#8217;s the difference with asking a human expert, then, whose thought processes one can&#8217;t understand?  Well, in practice machine learning is much faster so one can make much more use of &#8220;expert judgment&#8221;.  And one can set things up so they&#8217;re repeatable, and one can for example systematically test for biases one thinks might be there, and so on. </p>
+<p>Of course, one can always imagine cheating the machine learning.  If it&#8217;s repeatable, one could use machine learning itself to try to learn cases where it would fail.  And in the end it becomes rather like computer security, where holes are being found, patches are being applied, and so on.  And in some sense this is no different from the typical situation with contracts too: one tries to cover all situations, then it becomes clear that something hasn&#8217;t been correctly addressed, and one tries to write a new contract to address it, and so on.</p>
+<p>But the important bottom line is that with machine learning one can expect to get &#8220;judgment oriented&#8221; input into contracts.  I expect the typical pattern will be this: in the contract there&#8217;ll be something stated in the symbolic discourse language (like &#8220;X will personally do Y&#8221;).  And at the level of the symbolic discourse language there&#8217;ll be a clear meaning to this, from which, for example, all sorts of implications can be drawn.  But then there&#8217;s the question of whether what the contract said is actually what happened in the real world.  And, sure, there can be lots of sensor data that gives information on this.  But in the end there&#8217;ll be a &#8220;judgment call&#8221; that has to be made.  Did the person actually personally do this?  Well&#8212;like for a remote exam proctoring system&#8212;one can have a camera watching the person, one can record their pattern of keystrokes, and maybe even measure their EEG.  But something&#8217;s got to synthesize this data, and make the judgment call about what happened, and turn this in effect into a symbolic statement.  And in practice I expect it will typically end up being a machine learning system that does this.</p>
+<p><a name="smart-contracts"></a></p>
+<h2>Smart Contracts</h2>
+<p>OK, so let&#8217;s say we&#8217;ve got ways to set up computational contracts.  How can we enforce them?  Well, ones that basically just involve computational processes can at some level enforce themselves.  A particular piece of software can be built to issue licenses only in such-and-such a way.  A cloud system can be built to make a download available only if it receives a certain amount of bitcoin.  And so on.</p>
+<p>But how far do we trust what&#8217;s going on?  Maybe someone hacked the software, or the cloud.  How can we be sure nothing bad has happened?  The basic answer is to use the fact that the world is a big place.  As a (sometime) physicist it makes me think of measurement in quantum mechanics.  If we&#8217;re just dealing with a little quantum effect, there&#8217;s always interference that can happen.  But when we do a real measurement, we&#8217;re amplifying that little quantum effect to the point where so many things (atoms, etc.) are involved that it&#8217;s unambiguous what happened&#8212;in much the same way as the <a href="http://www.wolframscience.com/nksonline/section-9.3">Second Law of Thermodynamics</a> makes it inconceivable that all the air molecules in a room will spontaneously line up on one side.</p>
+<p>And so it is with <a href="http://www.wolframalpha.com/input/?i=bitcoin">bitcoin</a>, <a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank">Ethereum</a>, etc.  The idea is that some particular thing that happened (&#8220;X paid Y such-and-such&#8221; or whatever) is shared and recorded in so many places that there can&#8217;t be any doubt about it.  Yes, it&#8217;s in principle possible that all the few thousand places that actually participate in something like bitcoin today could collude to give a fake result.  But the idea is that it&#8217;s like with gas molecules in a room: the probability is inconceivably small.  (As it happens, my <a href="http://www.wolframscience.com/nksonline/section-12.2">Principle of Computational Equivalence</a> suggests that there&#8217;s more than an analogy with the gas molecules, and that actually the underlying principles at work are basically exactly the same.  And, yes, there are lots of interesting technical details about the operation of distributed blockchain ledgers, distributed consensus protocols, etc., but I&#8217;m not going to get into them here.)</p>
+<p>It&#8217;s popular these days to talk about &#8220;smart contracts&#8221;.  When I&#8217;ve been talking about &#8220;computational contracts&#8221; I mean contracts that can be expressed computationally.  But by &#8220;smart contracts&#8221; people usually mean contracts that can both be expressed computationally and execute automatically.  Most often the idea is to set up a smart contract in a distributed computation environment like Ethereum, and then to have the code in the contract evaluate based on inputs from the computation environment.</p>
+<p>Sometimes the input is intrinsic&#8212;like the passage of time (who could possibly tamper with the clock of the whole internet?), or physically generated random numbers.  And in cases like this, one has fairly pure smart contracts, say for paying subscriptions, or for running distributed lotteries.  </p>
+<p>But more often there has to be some input from the outside&#8212;from something that happens in the world.  Sometimes one just needs public information: the <a href="http://www.wolframalpha.com/input/?i=apple+and+microsoft+stock+prices">price of a stock</a>, the <a href="http://www.wolframalpha.com/input/?i=temperature+in+tokyo">temperature at a weather station</a>, or a <a href="http://www.wolframalpha.com/input/?i=pervaya+molniya+nuclear+explosion">seismic event like a nuclear explosion</a>.  But somehow the smart contract needs access to an &#8220;oracle&#8221; that can give it this information.  And conveniently enough, there is one good such oracle available in the world: Wolfram|Alpha.  And indeed Wolfram|Alpha is becoming widely used as an oracle for smart contracts.  (Yes, our general public terms of service say you currently just shouldn&#8217;t rely on Wolfram|Alpha for anything you consider critical&#8212;though hopefully soon those terms of service will get more sophisticated, and computational.) </p>
+<p>But what about non-public information from the outside world?  The current thinking for smart contracts tends to be that one has to get humans in the loop to verify the information: that in effect one has to have a jury (or a democracy) to decide whether something is true.  But is that really the best one can do?  I tend to suspect there&#8217;s another path, that&#8217;s like using machine learning to inject human-like judgment into things.  Yes, one can use people, with all their inscrutable and hard-to-systematically-influence behavior.  But what if one replaces those people in effect by AIs&#8212;or even a collection of today&#8217;s machine-learning systems?</p>
+<p>One can think of a machine-learning system as being a bit like a <a href="https://en.wikipedia.org/wiki/Cryptosystem" target="_blank">cryptosystem</a>.  To attack it and spoof its input one has to do something like inverting how it works.  Well, given a single machine-learning system there&#8217;s a certain effort needed to achieve this.  But if one has a whole collection of sufficiently independent systems, the effort goes up.  It won&#8217;t be good enough just to change a few parameters in the system.  But if one just goes out into the computational universe and picks systems at random then I think one can expect to have the same kind of independence as by having different people.  (To be fair, I don&#8217;t yet quite know how to apply the <a href="http://blog.stephenwolfram.com/2015/03/frontiers-of-computational-thinking-a-sxsw-report/#mining-the-computational-universe">mining of the computational universe</a> that I&#8217;ve done for programs like cellular automata to the case of systems like neural nets.)</p>
+<p>There&#8217;s another point as well: if one has a sufficiently dense net of sensors in the world, then it becomes increasingly easy to be sure about what&#8217;s happened.  If there&#8217;s just one motion sensor in a room, it might be easy to cover it.  And maybe even if there are several sensors, it&#8217;s still possible to avoid them, <em>Mission Impossible</em>-style.  But if there are enough sensors, then by synthesizing information from them one can inevitably build up an understanding of what actually happened.  In effect, one has a model of how the world works, and with enough sensors one can validate that the model is correct.</p>
+<p>It&#8217;s not surprising, but it always helps to have redundancy.  More nodes to ensure the computation isn&#8217;t tampered with.  More machine-learning algorithms to make sure they aren&#8217;t spoofed.  More sensors to make sure they&#8217;re not fooled.  But in the end, there has to be something that says what should happen&#8212;what the contract is.  And the contract has to be expressed in some language in which there are definite concepts.  So somehow from the various redundant systems one has in the world, one has to make a definite conclusion&#8212;one has to turn the world into something symbolic, on which the contract can operate. </p>
+<p><a name="writing-computational-contracts"></a></p>
+<h2>Writing Computational Contracts</h2>
+<p>Let&#8217;s say we have a good symbolic discourse language.  Then how should contracts actually get written in it?</p>
+<p>One approach is to take existing contracts written in English or any other natural language, and try to translate (or parse) them into the symbolic discourse language.  Well, what will happen is somewhat like what happens with Wolfram|Alpha today.  The translator will not know exactly what the natural language was supposed to mean, and so it will give several possible alternatives.  Maybe there was some meaning that the original writer of the natural-language contract had in mind.  But maybe the &#8220;poetry&#8221; of that meaning can&#8217;t be expressed in the symbolic discourse language: it requires something more definite.  And a human is going to have to decide which alternative to pick.</p>
+<p>Translating from natural-language contracts may be a good way to start, but I suspect it will quickly give way to writing contracts directly in the symbolic discourse language.  Today lawyers have to learn to write legalese.  In the future, they&#8217;re going to have to learn to write what amounts to code: contracts expressed precisely in a symbolic discourse language.</p>
+<p>One might think that writing everything as code, rather than natural-language legalese, would be a burden.  But my guess is that it will actually be a great benefit.  And it&#8217;s not just because it will let contracts operate more easily.  It&#8217;s also that it will help lawyers think better about contracts.  It&#8217;s an old claim (the <a href="https://en.wikipedia.org/wiki/Linguistic_relativity" target="_blank">Sapir&#8211;Whorf hypothesis</a>) that the language one uses affects the way one thinks.  And this is no doubt somewhat true for natural languages.  But in my experience it&#8217;s <a href="http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/">dramatically true</a> for computer languages.  And indeed I&#8217;ve been amazed over the years at how my thinking has changed as we&#8217;ve added more to the Wolfram Language.  When I didn&#8217;t have a way to express something, it didn&#8217;t enter my thinking.  But once I had a way to express it, I could think in terms of it.</p>
+<p>And so it will be, I believe, for legal thinking.  When there&#8217;s a precise symbolic discourse language, it&#8217;ll become possible to think more clearly about all sorts of things.</p>
+<p>Of course, in practice it&#8217;ll help that there&#8217;ll no doubt be all sorts of automated annotation: &#8220;if you add that clause, it&#8217;ll imply X, Y and Z&#8221;, etc.  It&#8217;ll also help that it&#8217;ll routinely be possible to take some contract and simulate its consequences for a range of inputs.  Sometimes one will want statistical results (&#8220;is this biased?&#8221;).  Sometimes one will want to hunt for particular &#8220;bugs&#8221; that will only be found by trying lots of inputs.</p>
+<p>Yes, one can read a contract in natural language, like one can read a math paper.  But if one really wants to know its implications one needs it in computational form, so one can run it and see what it implies&#8212;and also so one can give it to a computer to implement.</p>
+<p><a name="the-world-with-computational-contracts"></a></p>
+<h2>The World with Computational Contracts</h2>
+<p>Back in ancient Babylon it was a pretty big deal when there started to be written laws like the <a href="http://www.wolframalpha.com/input/?i=code+of+hammurabi">Code of Hammurabi</a>.  Of course, with very few people able to read, there was all sorts of clunkiness at first&#8212;like having people recite the laws in order from memory.  Over the centuries things got more streamlined, and then about 500 years ago, with the advent of widespread literacy, laws and contracts started to be able to get more complex (which among other things allowed them to be more nuanced, and to cover more situations).  </p>
+<p>In recent decades the trend has accelerated, particularly now that it&#8217;s so easy to copy and edit documents of any length. But things are still limited by the fact that humans are in the loop, authoring and interpreting the documents.  Back 50 years ago, pretty much the only way to define a procedure for anything was to write it down, and have humans implement it.  But then along came computers, and programming.  And very soon it started to be possible to define vastly more complex procedures&#8212;to be implemented not by humans, but instead by computers.</p>
+<p>And so, I think, it will be with law.  Once computational law becomes established, the complexity of what can be done will increase rapidly.  Typically a contract defines some model of the world, and specifies what should happen in different situations.  Today the logical and algorithmic structure of models defined by contracts still tends to be fairly simple.  But with computational contracts it&#8217;ll be feasible for them to be much more complex&#8212;so that they can for example more faithfully capture how the world works.</p>
+<p>Of course, that just makes defining what should happen even more complex&#8212;and before long it might feel a bit like constructing an operating system for a computer, that tries to cover all the different situations the computer might find itself in.</p>
+<p>In the end, though, one&#8217;s going to have to say what one wants.  One might be able to get a certain distance by just giving specific examples.  But ultimately I think one&#8217;s going to have to use a symbolic discourse language that can express a higher level of abstraction. </p>
+<p>Sometimes one will be able to just write everything in the symbolic discourse language.  But often, I suspect, one will use the symbolic discourse language to define what amount to goals, and then one will have to use machine-learning kinds of methods to fill in how to define a contract that actually achieves them.</p>
+<p>And as soon as there&#8217;s computational irreducibility involved, it&#8217;ll typically be impossible to know for sure that there are no bugs, or &#8220;unintended consequences&#8221;.  Yes, one can do all kinds of automated tests.  But in the end it&#8217;s theoretically impossible to have any finite procedure that can guarantee to check all possibilities.</p>
+<p>Today there are plenty of legal situations that are too complex to handle without expert lawyers.  And in a world where computational law is common, it won&#8217;t just be convenient to have computers involved, it&#8217;ll be necessary. </p>
+<p>In a sense it&#8217;s similar to what&#8217;s already happened in many areas of engineering.  Back when humans had to design everything themselves, humans could typically understand the structures that were being built.  But once computers are involved in design it becomes inevitable that they&#8217;re needed in figuring out how things work too. </p>
+<p>Today a fairly complex contract might involve a hundred pages of legalese.  But once there&#8217;s computational law&#8212;and particularly contracts constructed automatically from goals&#8212;the lengths are likely to increase rapidly.   At some level it won&#8217;t matter, though&#8212;just as it doesn&#8217;t really matter how long the code of a program one&#8217;s using is.  Because the contract will in effect just be run automatically by computer.  </p>
+<p>Leibniz saw computation as a simplifying element in the practice of law.  And, yes, some things will become simpler and better defined.  But a vast ocean of complexity will also open up.</p>
+<p><a name="what-does-it-mean-for-ais"></a></p>
+<h2>What Does It Mean for AIs?</h2>
+<p>How should one tell an AI what to do?  Well, you have to have some form of communication that both humans and AIs can understand&#8212;and that is rich enough to describe what one wants.  And as I&#8217;ve described elsewhere, what I think this basically means is that one has to have a knowledge-based computer language&#8212;which is precisely what the Wolfram Language is&#8212;and ultimately one needs a full symbolic discourse language.</p>
+<p>But, OK, so one tells an AI to do something, like &#8220;go get some cookies from the store&#8221;.  But what one says inevitably won&#8217;t be complete.  The AI has to operate within some model of the world, and with some code of conduct.  Maybe it can figure out how to steal the cookies, but it&#8217;s not supposed to do that; presumably one wants it to follow the law, or a certain code of conduct.</p>
+<p>And this is where computational law gets really important: because it gives us a way to provide that code of conduct in a way that AIs can readily make use of.  </p>
+<p>In principle, we could have AIs ingest the complete corpus of laws and historical cases and so on, and try to learn from these examples.  But as AIs become more and more important in our society, it&#8217;s going to be necessary to define all sorts of new laws, and many of these are likely to be &#8220;born computational&#8221;, not least, I suspect, because they&#8217;ll be too algorithmically complex to be usefully described in traditional natural language.</p>
+<p>There&#8217;s another problem too: we really don&#8217;t just want AIs to follow the letter of the law (in whatever venue they happen to be), we want them to behave ethically too, whatever that may mean.  Even if it&#8217;s within the law, we probably don&#8217;t want our AIs lying and cheating; we want them somehow to enhance our society along the lines of whatever ethical principles we follow.</p>
+<p>Well, one might think, why not just teach AIs ethics like we could teach them laws?  In practice, it&#8217;s not so simple.  Because whereas laws have been somewhat decently codified, the same can&#8217;t be said for ethics.  Yes, there are philosophical and religious texts that talk about ethics.  But it&#8217;s a lot vaguer and less extensive than what exists for law.</p>
+<p>Still, if our symbolic discourse language is sufficiently complete, it certainly should be able to describe ethics too.  And in effect we should be able to set up a system of computational laws that defines a whole code of conduct for AIs.</p>
+<p>But what should it say?  One might have a few immediate ideas.  Perhaps one could combine all the ethical systems of the world.  Obviously hopeless.  Perhaps one could have the AIs just watch what humans do and learn their system of ethics from it.  Similarly hopeless. Perhaps one could try something more local, where the AIs switch their behavior based on geography, cultural context, etc. (think &#8220;protocol droid&#8221;). Perhaps useful in practice, but hardly a complete solution.</p>
+<p>So what can one do?  Well, perhaps there are a few principles one might agree on.  For example, at least the way we think about things today, most of us don&#8217;t want humans to go extinct (of course, maybe in the future, having mortal beings will be thought too disruptive, or whatever).   And actually, while most people think there are all sorts of things wrong with our current society and civilization, people usually don&#8217;t want it to change too much, and they definitely don&#8217;t want change forced upon them.</p>
+<p>So what should we tell the AIs?  It would be wonderful if we could just give the AIs some simple set of almost axiomatic principles that would make them always do what we want.  Maybe they could be based on <a href="https://en.wikipedia.org/wiki/Isaac_Asimov" target="_blank">Asimov</a>&rsquo;s <a href="http://www.wolframalpha.com/input/?i=three+laws+of+robotics">Three Laws of Robotics</a>.   Maybe they could be something seemingly more modern based on some kind of global optimization.  But I don&#8217;t think it&#8217;s going to be that easy. </p>
+<p>The world is a complicated place; if nothing else, that&#8217;s basically guaranteed by the phenomenon of computational irreducibility.  And it&#8217;s pretty much inevitable that there&#8217;s not going to be any finite procedure that&#8217;ll force everything to &#8220;come out the way one wants&#8221; (whatever that may be).</p>
+<p>Let me take a somewhat abstruse, but well defined, example from mathematics.  We think we know what integers are.  But to really be able to answer all questions about integers (including about infinite collections of them, etc.) we need to set up axioms that define how integers work.  And that&#8217;s what <a href="http://www.wolframalpha.com/input/?i=giuseppe+peano">Giuseppe Peano</a> tried to do in the late 1800s.  For a while it looked good, but then in 1931 <a href="http://www.wolframalpha.com/input/?i=kurt+godel">Kurt Gödel</a> surprised the world with his <a href="http://www.wolframalpha.com/input/?i=incompleteness+theorem">Incompleteness Theorem</a>, which implied among other things, that actually, try as one might, there was never going to be a finite set of axioms that would define the integers as we expect them to be, and nothing else.  </p>
+<p>In some sense, Peano&#8217;s original axioms actually got quite close to defining just the integers we want.  But Gödel showed that they also allow bizarre non-standard integers, where for example the operation of addition isn&#8217;t finitely computable.</p>
+<p>Well, OK, that&#8217;s abstract mathematics.  What about the real world?  Well, one of the things that we&#8217;ve learned since Gödel&#8217;s time is that the real world can be thought of in computational terms, pretty much just like the mathematical systems Gödel considered.  And in particular, one can expect the same phenomenon of computational irreducibility (which itself is closely related to G&ouml;del&#8217;s Theorem).  And the result of this is that whatever simple intuitive goal we may define, it&#8217;s pretty much inevitable we&#8217;ll have to build up what amount to an arbitrarily complicated collection of rules to try to achieve it&#8212;and whatever we do, there&#8217;ll always be at least some &#8220;unintended consequences&#8221;.</p>
+<p>None of this should really come as much of a surprise.  After all, if we look at actual legal systems as they&#8217;ve evolved over the past couple of thousand years, there always end up being a lot of laws.  It&#8217;s not like there&#8217;s a single principle from which everything else can be derived; there inevitably end up being lots of different situations that have to be covered.</p>
+<p><a name="principles-of-the-world"></a></p>
+<h2>Principles of the World?</h2>
+<p>But is all this complexity just a consequence of the &#8220;mechanics&#8221; of how the world works?  Imagine&#8212;as one expects&#8212;that AIs get more and more powerful.  And that more and more of the systems of the world, from money supplies to border controls, are in effect put in the hands of AIs.  In a sense, then, the AIs play a role a little bit like governments, providing an infrastructure for human activities. </p>
+<p>So, OK, perhaps we need a &#8220;constitution&#8221; for the AIs, just like we set up constitutions for governments.  But again the question comes: what should the constitution have in it? </p>
+<p>Let&#8217;s say that the AIs could mold human society in pretty much any way.  How would we want it molded?  Well, that&#8217;s an old question in political philosophy, debated since antiquity.  At first an idea like <a href="http://www.wolframalpha.com/input/?i=utilitarianism">utilitarianism</a> might sound good: somehow maximize the well-being of as many people as possible.  But imagine actually trying to do this with AIs that in effect control the world.  Immediately one is thrust into concrete versions of questions that philosophers and others have debated for centuries.  Let&#8217;s say one can sculpt the probability distribution for happiness among people in the world.  Well, now we&#8217;ve got to get precise about whether it&#8217;s the mean or the median or the mode or a quantile or, for that matter, the kurtosis of the distribution that we&#8217;re trying to maximize. </p>
+<p>No doubt one can come up with rhetoric that argues for some particular choice.  But there just isn&#8217;t an abstract &#8220;right answer&#8221;.  Yes, we can have a symbolic discourse language that expresses any choice.  But there&#8217;s no mathematical derivation of the answer and there&#8217;s no law of nature that forces a particular answer.  I suppose there could be a &#8220;best answer given our biological nature&#8221;.  But as things advance, this won&#8217;t be on solid ground either, as we increasingly manage to use technology to transcend the biology that evolution has delivered to us.</p>
+<p>Still, we might argue, there&#8217;s at least one constraint: we don&#8217;t want a scheme where we&#8217;ll go extinct&#8212;and where nothing will in the end exist.  Even this is going to be a complicated thing to discuss, because we need to say what the &#8220;we&#8221; here is supposed to be: just how &#8220;evolved&#8221; relative to the current human condition can things be, and not consider &#8220;us&#8221; to have gone extinct?</p>
+<p>But even independent of this, there&#8217;s another issue: given any particular setup, computational irreducibility can make it in a sense irreducibly difficult to find out its consequences.  And so in particular, given any specific optimization criterion (or constitution), there may be no finite procedure that will determine whether it allows for infinite survival, or whether in effect it implies civilization will &#8220;halt&#8221; and go extinct. </p>
+<p>OK, so things are complicated.  What can one actually do?  For a little while there&#8217;ll probably be the notion that AIs must ultimately have human owners, who must act according to certain principles, following the usual way human society operates.  But realistically this won&#8217;t last long.</p>
+<p>Who would be responsible for a public-domain AI system that&#8217;s spread across the internet?  What happens when the bots it spawns start misbehaving on social media (yes, the notion that social media accounts are just for humans will soon look very &#8220;early 21st century&#8221;)?</p>
+<p>Of course, there&#8217;s an important question of why AIs should &#8220;follow the rules&#8221; at all.  After all, humans certainly don&#8217;t always do that.  It&#8217;s worth remembering, though, that we humans are probably a particularly difficult case: after all, we&#8217;re the product a multibillion-year process of natural selection, in which there&#8217;s been a continual competitive struggle for survival.  AIs are presumably coming into the world in very different circumstances, and without the same need for &#8220;brutish instincts&#8221;.  (Well, I can&#8217;t help thinking of AIs from different companies or countries being imbued by their creators with certain brutish instincts, but that&#8217;s surely not a necessary feature of AI existence.)</p>
+<p>In the end, though, the best hope for getting AIs to &#8220;follow the rules&#8221; is probably by more or less the same mechanism that seems to maintain human society today: that following the rules is the way some kind of dynamic equilibrium is achieved.  But if we can get the AIs to &#8220;follow the rules&#8221;, we still have to define what the rules&#8212;the AI Constitution&#8212;should be.</p>
+<p>And, of course, this is a hard problem, with no &#8220;right answer&#8221;.  But perhaps one approach is to see what&#8217;s happened historically with humans.  And one important and obvious thing is that there are different countries, with different laws and customs.  So perhaps at the very least we have to expect that there&#8217;d be multiple AI Constitutions, not just one.</p>
+<p>Even looking at countries today, an obvious question is how many there should be.  Is there some easy way to say that&#8212;with technology as it exists, for example&#8212;7 billion people should be expected to organize themselves into about 200 countries?  </p>
+<p>It sounds a bit like asking how many planets the solar system should end up with.  For a long time this was viewed as a &#8220;random fact of nature&#8221; (and widely used by philosophers as an example of something that, unlike 2+2=4, doesn&#8217;t &#8220;have to be that way&#8221;).  But particularly having seen so many exoplanet systems, it&#8217;s become clear that our solar system actually pretty much has to have about the number of planets it does. </p>
+<p>And maybe after we&#8217;ve seen the sociologies of enough video-game virtual worlds, we&#8217;ll know something about how to &#8220;derive&#8221; the number of countries.  But of course it&#8217;s not at all clear that AI Constitutions should be divided anything like countries. </p>
+<p>The physicality of humans has the convenient consequence that at least at some level one can divide the world geographically.  But AIs don&#8217;t need to have that kind of spatial locality.  One can imagine some other schemes, of course.  Like let&#8217;s say one looks at the space of personalities and motivations, and finds clusters in it.  Perhaps one could start to say &#8220;here&#8217;s an AI Constitution for that cluster&#8221; and so on.  Maybe the constitutions could fork, perhaps almost arbitrarily (a &#8220;<a href="http://www.wolframalpha.com/input/?i=git+software">Git</a>-like model of society&#8221;). I don&#8217;t know how things like this would ultimately work, but they seem more plausible than what amounts to a single, consensus, AI Constitution for everywhere and everyone.</p>
+<p>There are so many issues, though.  Like here&#8217;s one.  Let&#8217;s assume AIs are the dominant power in our world.  But let&#8217;s assume that they successfully follow some constitution or constitutions that we&#8217;ve defined for them.  Well, that&#8217;s nice&#8212;but does it mean nothing can ever change in the world?  I mean, just think if we were still all operating according to laws that had been set up 200 years ago: most of society has moved on since then, and wants different laws (or at least different interpretations) to reflect its principles.</p>
+<p>But what if precise laws for AIs were burnt in around the year 2020, for all eternity?  Well, one might say, real constitutions always have explicit clauses that allow for their own modification (in the US Constitution it&#8217;s <a href="http://www.wolframalpha.com/input/?i=US+Constitution,+article+5&#038;lk=1&#038;rawformassumption=%22ClashPrefs%22+-%3E+%7B%22FamousText%22,+%7B%22USConstitution%22,+%22ArticleFive%22%7D%7D">Article V</a>).  But looking at the actual <a href="https://www.constituteproject.org/" target="_blank">constitutions of countries around the world</a> isn&#8217;t terribly encouraging.  Some just say basically that the constitution can be changed if some supreme leader (a person) says so.  Many say that the constitution can be changed through some democratic process&#8212;in effect by some sequence of majority or similar votes.  And some basically define a bureaucratic process for change so complex that one wonders if it&#8217;s formally undecidable whether it would ever come to a conclusion. </p>
+<p>At first, the democratic scheme seems like an obvious winner.  But it&#8217;s fundamentally based on the concept that people are somehow easy to count (of course, one can argue about which people, etc.).  But what happens when personhood gets more complicated?  When, for example, there are in effect uploaded human consciousnesses, deeply intertwined with AIs?  Well, one might say, there&#8217;s always got to be some &#8220;indivisible person&#8221; involved.  And yes, I can imagine little clumps of pineal gland cells that are maintained to define &#8220;a person&#8221;,  just like in the past they were thought to be the seat of the soul.  But from the basic science I&#8217;ve done I think I can say for certain that none of this will ultimately work&#8212;because in the end the computational processes that define things just don&#8217;t have this kind of indivisibility. </p>
+<p>So what happens to &#8220;democracy&#8221; when there are no longer &#8220;people to count&#8221;?  One can imagine all sorts of schemes, involving identifying the density of certain features in &#8220;people space&#8221;.  I suppose one can also imagine some kind of bizarre voting involving transfinite numbers of entities, in which perhaps the axiomatization of set theory has a key effect on the future of history.</p>
+<p>It&#8217;s an interesting question how to set up a constitution in which change is &#8220;burned in&#8221;.   There&#8217;s a very simple example in bitcoin, where the protocol just defines by fiat that the value of mined bitcoin goes down every year.  Of course, that setup is in a sense based on a model of the world&#8212;and in particular on something like <a href="https://en.wikipedia.org/wiki/Moore%27s_law" target="_blank">Moore&#8217;s Law</a> and the apparent short-term predictability of technological development.  But following the same general idea, one might starting thinking about a constitution that says &#8220;change 1% of the symbolic code in this every year&#8221;.  But then one&#8217;s back to having to decide &#8220;which 1%?&#8221;.  Maybe it&#8217;d be based on usage, or observations of the world, or some machine-learning procedure.  But whatever algorithm or meta-algorithm is involved, there&#8217;s still at some point something that has to be defined once and for all.</p>
+<p>Can one make a general theory of change?  At first, this might seem hopeless.  But in a sense exploring the computational universe of programs is like seeing a spectrum of all possible changes.  And there&#8217;s definitely some general science that can be done on such things.  And maybe there&#8217;s some setup&#8212;beyond just &#8220;fork whenever there could be a change&#8221;&#8212;that would let one have a constitution that appropriately allows for change, as well as changing the way one allows for change, and so on. </p>
+<p><a name="making-it-happen"></a></p>
+<h2>Making It Happen</h2>
+<p>OK, we&#8217;ve talked about some far-reaching and foundational issues.  But what about the here and now?  Well, I think the exciting thing is that 300 years after Gottfried Leibniz died, we&#8217;re finally in a position to do what he dreamed of: to create a general symbolic discourse language, and to apply it to build a framework for computational law.  </p>
+<p>With the Wolfram Language we have the foundational symbolic system&#8212;as well as a lot of knowledge of the world&#8212;to start from.  There&#8217;s still plenty to do, but I think there&#8217;s now a definite path forward.  And it really helps that in addition to the abstract intellectual challenge of creating a symbolic discourse language, there&#8217;s now also a definite target in mind: being able to set up practical systems for computational law.</p>
+<p>It&#8217;s not going to be easy.  But I think the world is ready for it, and needs it.  There are simple smart contracts already in things like bitcoin and Ethereum, but there&#8217;s vastly more that can be done&#8212;and with a full symbolic discourse language the whole spectrum of activities covered by law becomes potentially accessible to structured computation.  It&#8217;s going to lead to all sorts of both practical and conceptual advances.  And it&#8217;s going to enable new legal, commercial and societal structures&#8212;in which, among other things, computers are drawn still further into the conduct of human affairs.</p>
+<p>I think it&#8217;s also going to be critical in defining the overall framework for AIs in the future.  What ethics, and what principles, should they follow?  How do we communicate these to them?  For ourselves and for the AIs we need a way to formulate what we want.  And for that we need a symbolic discourse language.  Leibniz had the right idea, but 300 years too early.  Now in our time I&#8217;m hoping we&#8217;re finally going to get to build for real what he only imagined.  And in doing so we&#8217;re going to take yet another big step forward in harnessing the power of the computational paradigm.</p>
+		</div>
+            		<div class="post_foot single">
+			 <div class="category">
+			 	<p>Posted in: <a href="/category/artificial-intelligence" title="View all posts in Artificial Intelligence">Artificial Intelligence</a>, <a href="/category/computational-thinking" title="View all posts in Computational Thinking">Computational Thinking</a>, <a href="/category/future-perspectives" title="View all posts in Future Perspectives">Future Perspectives</a>, <a href="/category/other" title="View all posts in Other">Other</a></p>
+			</div>
+			 <div class="post_footer_left">
+                  <p><a href="http://blog.stephenwolfram.com/2016/10/computational-law-symbolic-discourse-and-the-ai-constitution/#respond" class="comments-link"  title="Comment on Computational Law, Symbolic Discourse and the AI Constitution">Comments</a></p>
+            </div>
+			<div class="social">
+	<div class="socialIcons">
+		<a class="facebook icon" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fblog.stephenwolfram.com%2F2016%2F10%2Fcomputational-law-symbolic-discourse-and-the-ai-constitution%2F&amp;t=Computational+Law%2C+Symbolic+Discourse+and+the+AI+Constitution" title="Share on Facebook" target="blank"></a>
+
+		<a class="twitter icon" href="http://twitter.com/home?status=Currently%20reading%20http%3A%2F%2Fblog.stephenwolfram.com%2F2016%2F10%2Fcomputational-law-symbolic-discourse-and-the-ai-constitution%2F" title="Share on Twitter" target="_blank"></a>
+
+		<a class="reddit icon" href="http://www.reddit.com/submit?url=http%3A%2F%2Fblog.stephenwolfram.com%2F2016%2F10%2Fcomputational-law-symbolic-discourse-and-the-ai-constitution%2F&amp;title=Computational+Law%2C+Symbolic+Discourse+and+the+AI+Constitution" title="Share on Reddit" target="_blank"></a>
+
+		<a class="linkedin icon" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fblog.stephenwolfram.com%2F2016%2F10%2Fcomputational-law-symbolic-discourse-and-the-ai-constitution%2F&amp;title=Computational+Law%2C+Symbolic+Discourse+and+the+AI+Constitution" title="Share on Linkedin" target="_blank"></a>
+
+		<a class="more-post" href="http://www.addthis.com/bookmark.php?pub=L4DJFTEHPAW2JE1G&amp;url=http%3A%2F%2Fblog.stephenwolfram.com%2F2016%2F10%2Fcomputational-law-symbolic-discourse-and-the-ai-constitution%2F&amp;title=Computational+Law%2C+Symbolic+Discourse+and+the+AI+Constitution" target="_blank" title="Bookmark using any bookmark manager">More</a>
+	</div>
+</div>		</div>
+<div id="footer_more_posts" class="singlenav">
+	<p class="entry_bottom_heading first">RELATED POSTS</p>		<div class="footer_post_wrapper">
+			<div class="footer_thumbnail"><a href="http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/"><img src="http://blog.stephenwolfram.com/data/uploads/2016/09/how-to-teach-computational-thinking-thumb.png" alt=""></a></div>
+			<div class="footer_post">
+				<p><a href="http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/">How to Teach Computational Thinking</a></p>
+				<p>September 7, 2016</p>
+			</div>
+		</div>
+				<div class="footer_post_wrapper">
+			<div class="footer_thumbnail"><a href="http://blog.stephenwolfram.com/2015/11/how-should-we-talk-to-ais/"><img src="http://blog.stephenwolfram.com/data/uploads/2015/11/how-should-we-talk-to-ais-thumb.png" alt=""></a></div>
+			<div class="footer_post">
+				<p><a href="http://blog.stephenwolfram.com/2015/11/how-should-we-talk-to-ais/">How Should We Talk to AI<span class="lower">s</span>?</a></p>
+				<p>November 18, 2015</p>
+			</div>
+		</div>
+				<div class="footer_post_wrapper">
+			<div class="footer_thumbnail"><a href="http://blog.stephenwolfram.com/2015/05/wolfram-language-artificial-intelligence-the-image-identification-project/"><img src="http://blog.stephenwolfram.com/data/uploads/2015/05/wolfram-language-artificial-intelligence-the-image-identification-project.png" alt=""></a></div>
+			<div class="footer_post">
+				<p><a href="http://blog.stephenwolfram.com/2015/05/wolfram-language-artificial-intelligence-the-image-identification-project/">Wolfram Language Artificial Intelligence: The Image Identification Project</a></p>
+				<p>May 13, 2015</p>
+			</div>
+		</div>
+							<p class="entry_bottom_heading">PREVIOUS POST</p>
+		<div class="footer_post_wrapper">
+			<div class="footer_thumbnail"><a href="http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/"><img src="http://blog.stephenwolfram.com/data/uploads/2016/09/how-to-teach-computational-thinking-thumb.png" alt=""></a></div>
+			<div class="footer_post">
+				<p><a href="http://blog.stephenwolfram.com/2016/09/how-to-teach-computational-thinking/" rel="prev">How to Teach Computational Thinking</a></p>
+				<p>September 7, 2016</p>
+			</div>
+		</div>
+		<div style="clear: both;"><!-- --></div>
+</div>
+<div style="clear: both;"><!-- --></div>
+	
+
+	<div id="comments_wrapper">
+    <span id="comments"></span>
+
+
+
+<div id="respond">
+
+<h3 class="comments-heading"><div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/10/computational-law-symbolic-discourse-and-the-ai-constitution/#respond" style="display:none;">cancel [x]</a></div></h3>
+
+
+
+<div id="join-small">
+    <div class="input-fields">
+        <div class="inner">
+            <input type="text" id="fakeComment">
+            <label for="fakeComment" class="placeholder show">Join the discussion</label>
+            <img src="/wp-content/themes/sw-v2/images/join-button.png" id="join-button" alt="">
+        </div>
+    </div>
+</div>
+
+<form action="http://blog.stephenwolfram.com/wp-comments-post.php" method="post" id="commentform">
+<div id="join-big">
+        <div id="exit-button"><div id="exit-image"></div><div style="clear: both;"></div></div>
+    <div id="comment-area"><div><textarea name="comment" id="comment" tabindex="1"></textarea></div></div>
+	<p><span id="commentError" style="color: red; margin: 0; padding: 0 0 15px 0; display:none">Please enter your comment (at least 5 characters).</span></p>
+    <div class="level">
+        <div class="half-length"><label for="author">Name (required)</label></div>
+        <div class="half-length "><div class="pad-left"><label for="email">Email (will not be published; required)</label></div></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div>
+        <div class="half-length"><input type="text" name="author" id="author" value="" size="22" tabindex="2" aria-required='true' /><p><span id="nameError" style="color:red; display:none">Please enter your name.</span></p></div>
+        <div class="half-length "><div class="pad-left"><input type="text" name="email" id="email" value="" size="22" tabindex="3" aria-required='true' /></div>
+		<p><span id="emailError" style="margin-left: 10px; color:red; display:none">Please&nbsp;enter&nbsp;a&nbsp;valid&nbsp;email&nbsp;address.</span></p></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="level">
+        <div class="half-length"><label for="url">Website</label></div>
+        <div style="clear:both;"></div>
+        <div class="half-length"><input type="text" name="url" id="url" value="" size="22" tabindex="4" /></div>
+        <div style="clear:both;"></div>
+        <p><input name="submit" type="submit" id="submit" class="button" tabindex="5" value="Submit comment &raquo;" onclick="return checkCommentFields()" /></p>
+        <div style="clear:both;"></div>
+    </div>
+<div class="post_separator_no_margin"></div>
+</div>
+
+
+
+         
+
+
+
+<input type='hidden' name='comment_post_ID' value='12365' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+
+</form>
+
+
+</div><!-- respond -->
+
+</div><!-- wrapper -->
+<script type="text/javascript">
+function checkCommentFields()
+{
+
+    if($(".socialLoggedIn").is(":visible"))
+        return true;
+
+
+    var ret = true;
+    if($("#author").val().trim().length < 2)
+    {
+        $("#nameError").fadeIn();
+        ret = false;
+    }
+    else
+    {
+        $("#nameError").fadeOut();
+    }
+
+    if(!validEmail($("#email").val().trim()))
+    {
+        $("#emailError").fadeIn();
+        ret = false;
+    }
+    else
+    {
+        $("#emailError").fadeOut();
+    }
+
+    if($("#comment").val().trim().length < 5)
+    {
+        $("#commentError").fadeIn();
+        ret = false;
+    }
+    else
+    {
+        $("#commentError").fadeOut();
+    }
+
+    return ret;
+}
+
+$(document).ready(function(){
+    $('.comment-author a').attr("target", "_blank");
+    if(window.location.href.indexOf("comment-page-1") > -1) {
+        $('#comment-section').removeClass('hide');
+    }
+
+    $("#author").keyup(function() {
+        if($("#nameError").is(":visible") && $("#author").val().trim().length >= 2)
+            $("#nameError").fadeOut();
+    });
+
+    $("#email").keyup(function() {
+        if($("#emailError").is(":visible") && validEmail($("#email").val().trim()))
+            $("#emailError").fadeOut();
+    });
+
+    $("#comment").keyup(function() {
+        if($("#commentError").is(":visible") && $("#comment").val().trim().length >= 5)
+            $("#commentError").fadeOut();
+    });
+});
+
+
+
+function validEmail(email)
+{
+    signPos = email.indexOf("@");
+    dotPos = email.lastIndexOf(".");
+
+    if (email.length < 6 || signPos == -1 || dotPos == -1 || (dotPos < signPos) || (dotPos - signPos == 1) || dotPos == email.length-1 )
+    {
+        return false;
+    }
+
+    return true;
+}
+</script>		<footer id="footer">&copy; Stephen Wolfram, LLC | <a href="/terms">Terms</a> | <a href="/feed/" target="_blank">RSS</a></footer>
+</div>
+
+<div id="sidebar">
+		<form class="headerSearchBox" method="get" action="http://blog.stephenwolfram.com/" id="search">
+		<input class="searchboxsub" type="text" value="" name="s" id="query_1" placeholder="Search Blog" />
+		<input type="submit" class="headerSearchSubmit" value="" title="Search">
+	</form>
+	<div class="sidebar-pod">
+		<p class="sidebar-heading">Recent Posts</p>
+		<div class="sidebar-inner">
+			<div id="postContainer">loading...</div>
+		</div>
+		<a href="" id="loadMore" class="more-recent-posts">More &darr;</a>
+	<span id="total_posts" class="total111"></span>	</div>
+	<div class="sidebar-pod">
+		<p class="sidebar-heading">Popular Categories</p>
+		<div class="categories-list-row sidebar-inner">
+			<ul class="categories-list">
+			<li><a href="/category/artificial-intelligence">Artificial Intelligence</a></li><li><a href="/category/big-picture">Big Picture</a></li><li><a href="/category/companies-and-business">Companies and Business</a></li><li><a href="/category/computational-science">Computational Science</a></li><li><a href="/category/computational-thinking">Computational Thinking</a></li><li><a href="/category/data-science">Data Science</a></li><li><a href="/category/education">Education</a></li><li><a href="/category/future-perspectives">Future Perspectives</a></li><li><a href="/category/historical-perspectives">Historical Perspectives</a></li><li><a href="/category/life-and-times">Life and Times</a></li><li><a href="/category/life-science">Life Science</a></li></ul><ul class="categories-list"><li><a href="/category/mathematica">Mathematica</a></li><li><a href="/category/mathematics">Mathematics</a></li><li><a href="/category/new-kind-of-science">New Kind of Science</a></li><li><a href="/category/new-technology">New Technology</a></li><li><a href="/category/personal-analytics">Personal Analytics</a></li><li><a href="/category/physical-science">Physical Science</a></li><li><a href="/category/software-design">Software Design</a></li><li><a href="/category/wolfram-alpha">Wolfram|Alpha</a></li><li><a href="/category/wolfram-language">Wolfram Language</a></li><li><a href="/category/other">Other</a></li>			</ul>
+		</div>
+	</div>
+	<div class="sidebar-pod">
+		<p class="sidebar-heading">Archive</p>
+		<div class="sidebar-archive sidebar-inner">
+			<ul>
+									<li class="first"><a href="http://blog.stephenwolfram.com/2016/">2016</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2015/">2015</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2014/">2014</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2013/">2013</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2012/">2012</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2011/">2011</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2010/">2010</a></li>
+										<li class="first"><a href="http://blog.stephenwolfram.com/2009/">2009</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2008/">2008</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2007/">2007</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2006/">2006</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2004/">2004</a></li>
+										<li><a href="http://blog.stephenwolfram.com/2003/">2003</a></li>
+								</ul>
+		</div>
+	</div>
+</div>
+<script src="/common/javascript/jquery/plugins/scrolldepth/jquery.scrolldepth.min.js"></script>
+<script>
+$.scrollDepth();
+</script>
+</div><!-- end of "outerWrap" -->
+
+<!--noscript.en.html-->
+
+<style>
+#_noscript,
+#_noscript * {
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    z-index: 99999999999;
+}
+
+#_noscript {
+    background: #fff6aa;
+    bottom: 0;
+    left: 0;
+    min-width: 320px;
+    padding: 7px 14px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#_noscript p {
+    color: #000;
+    display: block;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 auto;
+    padding: 0 30px 0 0;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+}
+
+#_noscript i {
+    background: url('/common/framework/img/noscript.png') no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    line-height: 0;
+    margin: 1px 7px 0 0;
+    vertical-align: top;
+    width: 18px;
+}
+
+#_noscript a {
+    color: #dd1100;
+    text-decoration: none;
+}
+
+#_noscript a:focus,
+#_noscript a:hover { color: #000; }
+</style>
+<noscript id="_noscript">
+    <div>
+        <p><i></i>Enable JavaScript to interact with content and submit forms on Wolfram websites. <a href="http://www.enable-javascript.com/" target="_blank" data-walElId="GUINoscript">Learn how&nbsp;»</a></p>
+    </div>
+</noscript>
+
+<!--/noscript.en.html-->
+<script src="/common/eucd/eucd.min.js"></script>
+</body>
+</html>

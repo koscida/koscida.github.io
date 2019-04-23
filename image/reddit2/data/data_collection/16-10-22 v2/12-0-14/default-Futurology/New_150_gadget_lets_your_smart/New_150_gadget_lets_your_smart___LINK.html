@@ -1,0 +1,1773 @@
+<!DOCTYPE HTML>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+  <meta property="fb:pages" content="14994122055" />
+
+        <script src="http://cdn.optimizely.com/js/2919670295.js"></script>
+    <script type="text/javascript">
+        (function(){
+            var newgallery = false;
+            var updatedGallery = false;
+
+            if(document.cookie.indexOf("newgallery") >= 0) {
+                newgallery = document.cookie.replace(/.*newgallery=([a-z]+).*/,"$1");
+                newgallery = (newgallery === "true" || newgallery === "false") ? newgallery : false;
+            }
+
+            if(window.location.search.indexOf("newgallery") >= 0) {
+                updatedGallery = window.location.search.replace(/.*newgallery=([a-z]+).*/,"$1");
+                updatedGallery = (updatedGallery === "true" || updatedGallery === "false") ? updatedGallery : false;
+            }
+
+            if(updatedGallery) {
+                document.cookie = "newgallery="+updatedGallery+"; path=/";
+            } else if(newgallery) {
+                window.location.search = (window.location.search.length == 0 ||window.location.search === "?") ? "?newgallery="+newgallery : window.location.search.replace(/newgallery=[A-Za-z0-9\-\_]+/,'') + "&newgallery="+newgallery;
+            }
+        })();
+    </script>
+    <!-- Chartbeat -->
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <!-- Chartbeat -->
+    <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>New $150 gadget lets your smartphone detect cancer with laboratory precision | Inhabitat - Green Design, Innovation, Architecture, Green Building</title>
+
+
+<meta property="og:title" content="New $150 gadget lets your smartphone detect cancer with laboratory precision" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" />
+<meta property="og:description" content="Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results." />
+                <meta property="og:image" content="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-706x369.jpg" />
+        <meta property="og:image:width" content="706" />
+        <meta property="og:image:height" content="369" />
+                        <meta property="og:image" content="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-537x357.jpg" />
+        <meta property="og:image:width" content="537" />
+        <meta property="og:image:height" content="357" />
+                        <meta property="og:image" content="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-537x509.jpg" />
+        <meta property="og:image:width" content="537" />
+        <meta property="og:image:height" content="509" />
+        <meta property="fb:admins" content="100000063057076" />
+<meta property="fb:app_id" content="577444782306322" />
+
+<!-- Pagination Meta Tags INTAT-900 -->
+
+<!--     WP HEAD     -->
+<link rel="pingback" href="http://inhabitat.com/xmlrpc.php" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      var OneSignal = OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("http://inhabitat.com");
+        var oneSignal_options = {};
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '98c441f8-dab7-4a24-a3c7-4dbe7fe1661e';
+oneSignal_options['autoRegister'] = false;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['subdomainName'] = "https://inahbitat.onesignal.com";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.5d451968-8243-4fe2-88cd-3c94a5f2a4fc";
+oneSignal_options['promptOptions'] = { };
+
+        OneSignal.init(oneSignal_options);
+      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+<link rel="alternate" type="application/rss+xml" title="Inhabitat - Green Design, Innovation, Architecture, Green Building &raquo; Feed" href="http://inhabitat.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Inhabitat - Green Design, Innovation, Architecture, Green Building &raquo; Comments Feed" href="http://inhabitat.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Inhabitat - Green Design, Innovation, Architecture, Green Building &raquo; New $150 gadget lets your smartphone detect cancer with laboratory precision Comments Feed" href="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/feed/" />
+<link rel='stylesheet' id='theme-my-login-css'  href='http://assets.inhabitat.com/wp-content/plugins/theme-my-login/theme-my-login.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='output-css'  href='http://assets.inhabitat.com/wp-content/plugins/addthis/css/output.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='blog_widget-css'  href='http://assets.inhabitat.com/wp-content/plugins/blog-widgets/css/default.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='ihmp_style-css'  href='http://assets.inhabitat.com/wp-content/plugins/ihmostpopular/css/ihmp.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='simplr-forms-style-css'  href='http://assets.inhabitat.com/wp-content/plugins/simplr-registration-form/simplr_reg.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='wsl-widget-css'  href='http://assets.inhabitat.com/wp-content/plugins/wordpress-social-login/assets/css/style.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='inhabitatresponsive-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='inhabitatresponsive-style-css'  href='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/style.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='inhabitatresponsive-gallery-css'  href='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/css/gallery.css?ver=16.10.12.00' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='inhabitatresponsive-ie-css'  href='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/css/ie.css?ver=16.10.12.00' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/swfobject.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/jquery/jquery.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://intatprod.api.oneall.com/socialize/library.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/js/src/jquery.nicescroll.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mainConfig = {"gaPage":"article","galleryDelay":"30000","gallerySlideDelay":"20000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/js/main.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/js/vendors.js?ver=16.10.12.00'></script>
+<link rel='prev' title='Elon Musk announces all new Teslas will be self-driving' href='http://inhabitat.com/elon-musk-announces-all-new-teslas-will-be-self-driving/' />
+<link rel='next' title='New Source solar panels pull clean drinking water from the air' href='http://inhabitat.com/new-source-solar-panels-pull-clean-drinking-water-from-the-air/' />
+<link rel='https://api.w.org/' href='http://inhabitat.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://inhabitat.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://inhabitat.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.5.3" />
+<link rel='shortlink' href='http://inhabitat.com/?p=875440' />
+<link rel="alternate" type="application/json+oembed" href="http://inhabitat.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://inhabitat.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F&#038;format=xml" />
+<script type="application/ld+json">
+					{
+					  "@context": "http://schema.org",
+					  "@type": "Article",
+					  "headline": "New $150 gadget lets your smartphone detect cancer with laboratory precision",
+					  "image": [
+					    "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-600x480.jpg", "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-600x480.jpg", "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-600x480.jpg"
+					  ],
+					  "datePublished": "2016-10-20T06:15:29+00:00",
+					  "description": "Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results."
+					}
+				</script><link rel='shortcut icon' href='http://assets.inhabitat.com/favicon.ico' type='image/x-icon' />
+<meta name="description" content="Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results." />
+<meta name="keywords" content="washington state university, smartphone spectrometer, cancer screening, cancer biomarkers, detecting cancer, early detection of cancer, lei li,cancer,cancer screening,design for health,lei li,science,smartphone,spectrometer" />
+<link rel="canonical" href="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" />
+<!-- /all in one seo pack -->
+<style type="text/css" media="screen">
+    /* Begin Gallery Plus CSS */
+        .gallery {
+        margin: auto;
+    }
+    .gallery-item {
+        float: left;
+        margin-top: 10px;
+        text-align: center;
+        /*  width: {$itemwidth}%; */
+    }
+    .gallery-caption {
+        margin-left: 0;
+    }
+    /* End Gallery Plus CSS */
+</style><script data-cfasync="false" src="http://load.sumome.com/" data-sumo-site-id="15fdfcbc76767ec92a349c49c7a705d3d6711683fb3451e8ffdb2f4e042ca3ca" async></script>
+<!--End of Twitter Card Plugin-->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://inhabitat.com//">
+<meta name="twitter:title" content="New portable smartphone spectrometer screens for cancer and costs">
+<meta name="twitter:description" content="While smartphone spectrometers are already being used to help detect cancer, they have only been able to evaluate one sample at a time, making the work slow and tedious. A breakthrough by a&hellip;">
+<meta name="twitter:image" content="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-163x156.jpg">
+<meta name="twitter:site" content="@inhabitat">
+<!--End of Twitter Card Plugin-->
+
+<!-- Start Of Script Generated By WP-EMail 2.40 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+	var email_ajax_url = 'http://inhabitat.com/wp-content/plugins/wp-email/wp-email.php';
+	var email_max_allowed = '5';
+	var email_verify = '';
+	var email_text_error = 'The Following Error Occurs:';
+	var email_text_name_invalid = '- Your Name is empty/invalid';
+	var email_text_email_invalid = '- Your Email is empty/invalid';
+	var email_text_remarks_invalid = '- Your Remarks is invalid';
+	var email_text_friend_names_empty = '- Friend Name(s) is empty';
+	var email_text_friend_name_invalid = '- Friend Name is empty/invalid:';
+	var email_text_max_friend_names_allowed = '- Maximum 5 Friend Names allowed';
+	var email_text_friend_emails_empty = '- Friend Email(s) is empty';
+	var email_text_friend_email_invalid = '- Friend Email is invalid:';
+	var email_text_max_friend_emails_allowed = '- Maximum 5 Friend Emails allowed';
+	var email_text_friends_tally = '- Friend Name(s) count does not tally with Friend Email(s) count';
+	var email_text_image_verify_empty = '- Image Verification is empty';
+/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-EMail 2.40 -->
+
+<!-- Start Of Script Generated By WP-Polls 2.40 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+	var polls_ajax_url = 'http://inhabitat.com/wp-content/plugins/wp-polls/wp-polls.php';
+	var polls_text_wait = 'Your last request is still being processed. Please wait a while ...';
+	var polls_text_valid = 'Please choose a valid poll answer.';
+	var polls_text_multiple = 'Maximum number of choices allowed:';
+	var poll_show_loading = 1;
+	var poll_show_fading = 1;
+/* ]]> */
+</script>
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://assets.inhabitat.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+<!-- End Of Script Generated By WP-Polls 2.40 -->
+<!-- Vipers Video Quicktags v6.3.0 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox {             display: block;             max-width: 100%;             visibility: visible !important;             margin: 10px auto;         }         .vvqbox img {             max-width: 100%;             height: 100%;         }         .vvqbox object {             max-width: 100%;         } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "http://inhabitat.com/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+<!-- Start: GPT Async -->
+<script type="text/javascript" src="http://c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+<script type="text/javascript">
+	try {
+		amznads.getAds('3073');
+	} catch(e) { /*ignore */}
+</script>
+
+<script type='text/javascript'>
+	var gptadslots=[];
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function(){ var gads = document.createElement('script');
+		gads.async = true; gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+
+<script type="text/javascript">
+	var overlaySlots = [];
+    var slotNames = {};
+	
+	googletag.cmd.push(function() {
+        	//Slots
+        	    //Adslot 0 declaration
+	        gptadslots[0] = googletag.defineSlot('/2922/Inhabitat/article/300x250_top', [[300,250]],'div-gpt-ad-640345142228066413-0').setTargeting('kw',["top"]).addService(googletag.pubads());
+
+        	    //Adslot 1 declaration
+	        gptadslots[1] = googletag.defineSlot('/2922/Inhabitat/article/300x250_content', [[300,250]],'div-gpt-ad-640345142228066413-1').setTargeting('kw',["content"]).addService(googletag.pubads());
+
+        	    //Adslot 2 declaration
+	        gptadslots[2] = googletag.defineSlot('/2922/Inhabitat/article/300x250_bottom', [[300,250]],'div-gpt-ad-640345142228066413-2').setTargeting('kw',["bottom"]).addService(googletag.pubads());
+
+        
+		//Thirdparties
+	
+        	//Options & Targets
+		googletag.pubads().enableSingleRequest();
+        
+		googletag.pubads().setTargeting('environment',["production"]).setTargeting('article',["new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision"]).setTargeting('category',["medical-technology-2"]);		
+		googletag.pubads().enableAsyncRendering();
+		googletag.enableServices();
+	});
+
+	window.getGPTSlot = function(idx) {
+        return gptadslots[idx];
+    };
+</script>
+
+<script type="text/javascript">
+var key = 'amznslots';
+var values = amznads.getTokens();
+
+try { amznads.setTargetingForGPTAsync('amznslots'); } catch(e) { /*ignore*/ }
+</script>
+<!-- End: GPT -->
+<script type="text/javascript" src="/advertising/js/ab_check.js"></script>
+<script type="text/javascript">var $=jQuery.noConflict();</script>
+<!-- Start Google Analytics Account -->
+<script type="text/javascript">
+    window.google_analytics_uacct = "UA-1086017-1";
+</script>
+<!-- End Google Analytics Account -->
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1086017-1', 'auto');  // Replace with your property ID.
+var page = document.location.pathname;
+    ga('send','pageview',page + '/article/');
+
+</script>
+<!-- End Google Analytics -->
+
+<!-- FM Tracking Pixel -->
+<script type='text/javascript' src='http://static.fmpub.net/site/inhabitat'></script>
+<!-- FM Tracking Pixel -->
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "9095000" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=9095000&amp;cv=2.0&amp;cj=1" alt="inhabitat" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- Ad-Block -->
+<script type="text/javascript">
+	(function() {
+		function async_load(script_url)
+		{ var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://'); var s = document.createElement('script'); s.src = protocol + script_url; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }
+		bm_website_code = '65F943B8B9F64CF1';
+		jQuery(document).ready(function()
+			{async_load('asset.pagefair.com/measure.min.js')}
+			);
+		jQuery(document).ready(function()
+			{async_load('asset.pagefair.net/ads.min.js')}
+			);
+	})();
+</script>
+<!-- End of Ad-Block -->
+    <script>
+        //var SolarWidgetName = 'wapp_signup_widget'; //Change to this variable to set the original widget
+        var SolarWidgetName = 'solar_widget_placeholder';
+    jQuery(document).ready(function() {
+        $('.solar_widget').html($('#'+SolarWidgetName).html()).removeClass('solar_widget').addClass("px400");
+        jQuery(window).resize(function() {
+            if(jQuery('.single.post-content #'+SolarWidgetName) && !$('.single.post-content div#'+SolarWidgetName).first().is(':visible')) {
+                var $calculateWidget = jQuery('.single.post-content #'+SolarWidgetName);
+                var $prevElement = $calculateWidget.prev();
+
+                $prevElement.removeAttr("style");
+            } else if(jQuery('.single.post-content #'+SolarWidgetName) && $('.single.post-content div#'+SolarWidgetName).first().is(':visible')) {
+                resizeSolarWidget();
+            }
+        });
+    });
+    function resizeSolarWidget() {
+        var $calculateWidget = jQuery('.single.post-content #'+SolarWidgetName);
+        $calculateWidget.removeAttr("style");
+        var $prevElement = $calculateWidget.prev();
+        $prevElement.css( "width", "calc( 100% - 400px )" );
+        $prevElement.css( "margin-right", "20px" );
+        $prevElement.css( "float", "left" );
+        setTimeout(function(){
+            $prevElement.removeAttr("class");
+            $calculateWidget.addClass("px300");
+            setTimeout(function(){
+                $prevElement.removeAttr("class");
+                $calculateWidget.addClass("px300");
+                setTimeout(function(){
+                    $prevElement.removeAttr("class");
+                    $calculateWidget.addClass("px300");
+                },2000);
+            },2000);
+        },2000);
+    }
+
+    </script>
+    <script type="text/javascript" src="http://s.ntv.io/serve/load.js" async></script>
+	<!-- SET: FAVICON -->
+		<!-- END: FAVICON -->
+
+    
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://inhabitat.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/js/html5.js"></script>
+	<![endif]-->
+
+    
+    	<!-- END: SCRIPTS -->
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<div style="display: none; visibility: hidden">
+	<script>
+		var clearErrorMessages = function() {
+			jQuery("#loginform div.errors").html("");
+			jQuery("#loginform div.messages").html("");
+			jQuery("#loginform input.user_name").removeClass("error");
+			jQuery("#loginform input.user_passwd").removeClass("error");
+			
+			jQuery("#signupform div.errors").html("");
+			jQuery("#signupform input.user_name").removeClass("error");
+			jQuery("#signupform input.user_email").removeClass("error");							
+			
+			jQuery("#lostpasswdform div.errors").html("");
+			jQuery("#lostpasswdform input.user_login").removeClass("error");
+		};
+	</script>
+	<div id="loginWidget" name="loginWidget">		
+		<div class="colorbox-widget"> 
+			<div id="login-widget" class="login widget-log">
+				<h2 class="widget-title">LOGIN</h2>
+				<div class="login mu_login">
+					<form name="loginform" id="loginform" action="http://inhabitat.com/login?action=login" method="post">
+						<div class="errors"></div>
+						<div class="messages"></div>
+						<div class="user_name">
+							<input type="text" name="log" class="user_name" value="" maxlength="60" tabindex="1" placeholder="Username">
+						</div>
+						<div class="user_passwd">
+							<input type="password" name="pwd" class="user_passwd" value="" tabindex="2" placeholder="Password">
+						</div>
+						<div class="submit">
+							<input type="button" class="submit" name="wp-submit" id="wp-submit" value="Log In" tabindex="3" onclick="doLogin()">
+						</div>
+						<div>
+							<a href="http://inhabitat.com/login?action=lostpassword" rel="nofollow" class='overlayLostPasswd'>Lost your password?</a>
+						</div>
+						
+						<div>
+							
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.2.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{float:left}.wp-social-login-provider-list{float:left;padding:0px 10px}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{} 
+</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Facebook&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Twitter&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Google&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+	</div> 
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+						</div>
+						
+						<input type="hidden" name="redirect_to" value="http://inhabitat.com/check-login">
+						<input type="hidden" name="testcookie" value="1">
+						<input type="hidden" name="instance" value="">
+					</form>
+					<div id="loginform-loading" class="loading">
+						Logging In <img src="http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/images/loading.gif" />
+					</div>
+					<script>
+						var doLogin = function() {
+							jQuery.ajax({
+								url: "http://inhabitat.com/wp-admin/admin-ajax.php",
+								beforeSend: function() {
+									jQuery("#loginform").hide();
+									jQuery("#loginform-loading").show();
+								},
+								data: {
+									action: 'ajax_auth_login',
+									username: jQuery("#loginform input.user_name").val(),
+									password: jQuery("#loginform input.user_passwd").val()
+								},
+								dataType: 'JSON',
+								type: 'POST'
+							})
+							.done(function(json){
+								clearErrorMessages();
+								jQuery("#loginform").show();
+								jQuery("#loginform-loading").hide();
+								
+								if(json.errors) {
+									if(json.errors.password) {
+										jQuery("#loginform div.errors").prepend("<p>"+json.errors.password.join('<br />')+"</p>");
+										jQuery("#loginform input.user_passwd").addClass("error");
+									}
+
+									if(json.errors.username) {
+										jQuery("#loginform div.errors").prepend("<p>"+json.errors.username.join('<br />')+"</p>");
+										jQuery("#loginform input.user_name").addClass("error");
+									}
+
+									if(json.errors.default) {
+										jQuery("#loginform div.errors").prepend("<p>"+json.errors.default.join('<br />')+"</p>");
+									}
+
+									jQuery("#loginform .lateOverlayLostPasswd").colorbox({inline:true, href:"#lostpasswdWidget", innerWidth:"536px", innerHeight:"410px",  scrolling:false,opacity: 0.45});
+								}
+
+								if(json.result.isAuth) {
+									window.location.reload(true);
+								} else {
+									jQuery.colorbox.resize();
+								}
+							})
+							.fail(function() {
+								jQuery("#loginform div.errors").prepend("<p>Unable to connect to server, please try again</p>");
+							});
+						}
+					</script>
+				</div>
+			</div>
+		</div>				
+	</div>
+	<div id="registerWidget" name="registerWidget">
+		<div class="colorbox-widget"> 
+			<div id="register-widget" class="login widget-reg">
+				<h2 class="widget-title">SIGN UP</h2>
+				<div class="login mu_register">					
+					<form id="signupform" method="post" action="http://inhabitat.com/login?action=register">
+						<div class="errors"></div>						
+						<input type="hidden" name="stage" value="validate-user-signup">
+						<h2>Create an Inhabitat account</h2>
+						<input type='hidden' name='signup_form_id' value='565281906' /><input type="hidden" id="_signup_form" name="_signup_form" value="21ba3e6bcd" />						<div class="user_name">
+							<input name="user_name" type="text" class="user_name" value="" maxlength="60" placeholder="Username"><br>
+						</div>
+						<div class="user_email">
+							<input name="user_email" type="text" class="user_email" value="" maxlength="200" placeholder="Email"><br>
+						</div>
+						<div class="newsletter" id="newsletter">
+							<input type="checkbox" name="newsletter" value="on" id="newsletter-checkbox">
+							<label for="newsletter-checkbox"></label>
+							<label for="newsletter-checkbox" class="newsletter-label">Sign up for weekly newsletter</label>
+						</div>
+						<div class="casl-checkbox-container" id="casl-checkbox-container">
+							<input type="checkbox" name="newsletter-casl" value="on" id="casl-checkbox-overlay">
+							<label for="casl-checkbox-overlay"></label>
+							<label for="casl-checkbox-overlay" class="casl-label">I agree to receive emails from the site. I can withdraw my consent at any time by unsubscribing.</label>
+						</div>
+						<div class="casl-container-overlay">
+							<span id="casl-container-register">Do you live in Canada? <a href="" id="casl-register-overlay">Register here.</a></span>
+						</div>
+						<input id="signupblog" type="hidden" name="signup_for" value="user">
+						<input type="hidden" name="redirect_to" value="/sign-up-for-emails/?action=register&amp;nh=true">
+						<div class="recaptcha">
+							<div class="g-recaptcha registration-captcha" data-sitekey="6Lf1KiMTAAAAADeDJv8FiY9v5zK42cvAxIlcULC-"></div>
+						</div>
+						<div class="submit">
+							<input type="button" name="submit" id="wp-submit" class="submit" value="Sign Up" onclick="doReg()">
+						</div>
+						<div>
+							
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.2.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{float:left}.wp-social-login-provider-list{float:left;padding:0px 10px}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{} 
+</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Facebook&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Twitter&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Google&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+	</div> 
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+						</div>						
+					</form>
+					<div id="signupform-loading" class="loading">
+						Signing Up <img src="http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/images/loading.gif" />
+					</div>
+					<script>
+						jQuery('#casl-register-overlay').click(function(event){
+							event.preventDefault();
+							jQuery('.colorbox-widget .login').addClass('casl');
+							$("div.user-drop-holder a.user-signup").colorbox.resize();
+						});
+
+						var doReg = function() {
+							jQuery.ajax({
+								url: "http://inhabitat.com/wp-admin/admin-ajax.php",
+								beforeSend: function() {
+									jQuery("#signupform").hide();
+									jQuery("#signupform-loading").show();
+								},
+								data: {
+									action: 'ajax_auth_reg',
+									username: 	jQuery("#signupform input.user_name").val(),
+									email: 		jQuery("#signupform input.user_email").val(),
+									"g-recaptcha-response": jQuery("#signupform .g-recaptcha-response").val(),
+									mailchimp: 	jQuery("#signupform #newsletter-checkbox").is(":checked") ? jQuery("#signupform #newsletter-checkbox").val() : "",
+									casl: jQuery('.colorbox-widget .login').hasClass('casl') ? jQuery('#signupform #casl-checkbox-overlay').is(':checked') : true
+								},
+								dataType: 'JSON',
+								type: 'POST'
+							})
+							.done(function(json){
+								clearErrorMessages();
+								jQuery("#signupform").show();
+								jQuery("#signupform-loading").hide();
+								
+								if(json.errors) {
+									if(json.errors.email) {
+										jQuery("#signupform div.errors").prepend("<p>"+json.errors.email.join('<br />')+"</p>");
+										jQuery("#signupform input.user_email").addClass("error");
+									}
+
+									if(json.errors.username) {
+										jQuery("#signupform div.errors").prepend("<p>"+json.errors.username.join('<br />')+"</p>");
+										jQuery("#signupform input.user_name").addClass("error");
+									}
+
+									if(json.errors.mailchimp) {
+										jQuery("#signupform div.errors").prepend("<p>"+json.errors.username.join('<br />')+"</p>");
+									}
+
+									if(json.errors.recaptcha) {
+										jQuery("#signupform div.errors").prepend("<p>"+json.errors.recaptcha.join('<br />')+"</p>");
+									}
+
+									if(json.errors.default) {
+										jQuery("#signupform div.errors").prepend("<p>"+json.errors.default.join('<br />')+"</p>");
+									}
+								}
+
+								if(json.result.isAuth) {
+									jQuery("#signupform").html(json.result.message);
+								} else {
+									jQuery.colorbox.resize();
+								}
+							})
+							.fail(function() {
+								jQuery("#signupform div.errors").prepend("<p>Unable to connect to server, please try again</p>");
+							});
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="lostpasswdWidget" name="lostpasswdWidget">
+		<div class="colorbox-widget"> 
+			<div id="lostpasswd-widget" class="login widget-los">
+				<h2 class="widget-title">LOST PASSWORD</h2>
+				<div class="login mu_lost">
+					<form name="lostpasswordform" id="lostpasswdform" action="http://inhabitat.com/login/?action=lostpassword" method="post">
+						<div class="errors"></div>
+						<div class="user_login">
+							<input type="text" name="user_login" class="user_login" class="input" value="" tabindex="5" placeholder="Username or E-mail">
+						</div>
+						<div class="submit">
+							<input type="button" name="wp-submit" id="wp-submit" value="Retrieve Password" tabindex="6" onclick="doLost()">
+						</div>
+						
+						<input type="hidden" name="redirect_to" value="/login/?checkemail=confirm">
+						<input type="hidden" name="instance" value="">
+					</form>
+					<div id="lostpasswdform-loading" class="loading">
+						Checking for Account <img src="http://assets.inhabitat.com/wp-content/themes/inhabitatresponsive/images/loading.gif" />
+					</div>
+					<script>
+						var doLost = function() {
+							jQuery.ajax({
+								url: "http://inhabitat.com/wp-admin/admin-ajax.php",
+								beforeSend: function() {
+									jQuery("#lostpasswdform").hide();
+									jQuery("#lostpasswdform-loading").show();
+								},
+								data: {
+									action: 'ajax_auth_lost',
+									userlogin: jQuery("#lostpasswdform input.user_login").val()
+								},
+								dataType: 'JSON',
+								type: 'POST'
+							})
+							.done(function(json){
+								clearErrorMessages();
+								jQuery("#lostpasswdform").show();
+								jQuery("#lostpasswdform-loading").hide();
+								
+								if(json.errors) {
+									if(json.errors.userlogin) {
+										jQuery("#lostpasswdform div.errors").prepend("<p>"+json.errors.userlogin.join('<br />')+"</p>");
+										jQuery("#lostpasswdform input.user_login").addClass("error");
+									}
+
+									if(json.errors.default) {
+										jQuery("#lostpasswdform div.errors").prepend("<p>"+json.errors.userlogin.join('<br />')+"</p>");
+									}
+								}
+
+								if(json.result.hasSent) {
+									jQuery("div.user-drop-holder a.user-login").click();
+									clearErrorMessages();
+									jQuery("#loginform div.messages").prepend("<p>"+json.result.message+"</p>");
+									
+								} else {
+									jQuery.colorbox.resize();
+								}
+							})
+							.fail(function() {
+								jQuery("#lostpasswdform div.errors").prepend("<p class='error'>Unable to connect to server, please try again</p>");
+							});
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- wrapper starts -->
+<div class="wrapper">
+
+<!-- container starts -->
+    <div class="container">
+
+				<!-- Header Starts -->
+				<div id="header" class="">
+						                        						<div class="main-container">
+								<div class="header-in">
+                                                                            
+                                        <div id="floating-addthis" class="">
+                                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style slideInLeft">
+                                                <a class="addthis_button_facebook ga-track" data-event="Facebook Button Clicks"></a>
+                                                <a class="ga-track at300b" data-event="Instagram Button Clicks" target="_blank" title="Instagram" href="https://www.instagram.com/inhabitatdesign/"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(18, 86, 136);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Instagram" alt="Instagram" class="at-icon at-icon-instagram" style="width: 32px; height: 32px;"><g><path d="M23.734 22.9a.79.79 0 0 1-.794.795H9.02a.79.79 0 0 1-.793-.794v-8.436h1.835c-.17.533-.26 1.12-.26 1.705 0 3.333 2.787 6.028 6.21 6.028 3.44 0 6.225-2.695 6.225-6.03 0-.585-.09-1.17-.26-1.704h1.757V22.9zm-3.698-6.94c0 2.15-1.796 3.894-4.023 3.894-2.214 0-4.01-1.745-4.01-3.893 0-2.148 1.796-3.892 4.01-3.892 2.227 0 4.023 1.745 4.023 3.893zm3.698-4.687a.9.9 0 0 1-.898.9H20.57a.9.9 0 0 1-.898-.9V9.125a.9.9 0 0 1 .898-.898h2.266a.9.9 0 0 1 .898.898v2.148zM26 8.565A2.58 2.58 0 0 0 23.435 6H8.565A2.58 2.58 0 0 0 6 8.565v14.87A2.58 2.58 0 0 0 8.565 26h14.87A2.58 2.58 0 0 0 26 23.435V8.565z" fill-rule="evenodd"></path></g></svg></span></a>
+                                                <a class="addthis_button_pinterest_share ga-track" data-event="Pinterest Button Clicks"></a>
+                                                <a class="addthis_button_twitter ga-track" data-event="Twitter Button Clicks"></a>
+                                                <a class="addthis_button_stumbleupon ga-track hide-iphone" data-event="Stumble Button Clicks"></a>
+                                                <a class="addthis_button_reddit ga-track" data-event="Reddit Button Clicks"></a>
+                                                <a class="addthis_button_email ga-track" data-event="Email Button Clicks"></a>
+                                            </div>
+                                        </div>
+                                    										<div class="logo">
+											                                            <a href="http://inhabitat.com"><span class="sprite logo"></span></a>
+                                        </div>
+                                        										<ul class="socials-list">
+                                            <li class=" "><a href="https://www.instagram.com/inhabitatdesign/" class="instagram" target="_blank">instagram</a></li>
+											<li class=" "><a href="http://twitter.com/inhabitat" class="twitter" target="_blank">twitter</a></li>
+											<li class=" "><a href="http://www.facebook.com/inhabitat" class="facebook" target="_blank">facebook</a></li>
+											<li class="hide-iphone"><a href="http://www.pinterest.com/inhabitat/" class="pinterest" target="_blank">pinterest</a></li>
+																						<li class="last user">
+												<a href="#" class="user">user</a>
+												<div class="drop-holder user-drop-holder">
+													<ul>
+														<li><a href="#" class="user-login">Log In</a></li>
+														<li><a href="#" class="user-signup">Sign Up</a></li>
+													</ul>
+												</div>
+											</li>
+										    										</ul>
+										<div class="nav-area">
+											<nav id="nav">
+												<a href="#" class="nav-opener"><span>opener</span></a>
+												<div class="nav-holder">
+													<ul class="flex">
+														<li class=" "><a href="http://inhabitat.com/news/" title="News">News</a></li>
+														<li class=" "><a href="http://inhabitat.com/environment/" title="Environment">Environment</a></li>
+														<li><a href="http://inhabitat.com/architecture/" title="Architecture">Architecture</a></li>
+														<li><a href="http://inhabitat.com/design/" title="Design">Design</a></li>
+														<li><a href="http://inhabitat.com/innovation/" title="Innovation">Innovation</a></li>
+														<li class="flexMenu-viewMore">
+															<a href="#" title="View More">More</a>
+															<ul class="flexMenu-popup" style="display: none">
+																<li><a href="http://inhabitat.com/about/" title="About">About</a></li>
+                                                                <li><a href="http://inhabitat.com/mission/" title="Mission">Mission</a></li>
+                                                                <li><a href="http://inhabitat.com/submit-story/" title="Submit a Story">Submit a story</a></li>
+                                                                <li><a href="http://inhabitat.com/advertising/" title="Advertise with us">Advertise with us</a></li>
+                                                                <li><a href="http://inhabitat.com/contact/" title="Contact">Contact</a></li>
+                                                                <li><a href="http://inhabitat.com/press/" title="Press">Press</a></li>
+                                                                <li><a href="http://www.internetbrands.com/ibterms/" title="Legal">Legal</a></li>
+                                                                <li><a href="http://www.internetbrands.com/ib/privacy/enthusiasts?site=inhabitat.com" title="Privacy Policy">Privacy Policy</a></li>
+                                                                <li><a href="http://www.internetbrands.com/privacy/cookie-policy.html" title="Cookie Policy">Cookie Policy</a></li>
+															</ul>
+														</li>
+													</ul>
+																											<ul class="social user-drop-holder">
+															<li><a href="#" class="user-login" title="User Log In">Log In</a></li>
+															<li><a href="#" class="user-signup" title="New User Sign Up">Sign Up</a></li>
+														</ul>
+																										</div>
+											</nav>
+											<form action="/" class="search-form">
+												<fieldset>
+													<a href="#" class="opener">
+														<i class="icon-search"></i>
+													</a>
+													<div class="slide js-slide-hidden">
+														<div class="slide-holder">
+															<label for="search"><i class="icon-search"></i></label>
+															<div class="input-holder">
+																<input type="search" id="search" name="s" placeholder="Search articles">
+																<span class="search-cancel icon-cancel-1"></span>
+															</div>
+
+														</div>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+								</div> <!-- END OF header-in -->
+						</div> <!-- END OF main-container -->
+
+						
+						<div id="post-header">
+							<div class="wrapper-container">
+								<!--<span class="title"><h2>New $150 gadget lets your smartphone detect cancer with laboratory precision</h2></span>
+								<span class="sharebar">
+									<div class="socials">
+										<a class="social-btn facebook ga-track" data-event="Facebook Button Clicks" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" title="Share on Facebook for New $150 gadget lets your smartphone detect cancer with laboratory precision"><span class="icon-facebook-1"></span> Share</a>
+										<a class="social-btn pinterest ga-track" data-event="Pinterest Button Clicks" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-img-url="http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FIPhone-5S.jpg" data-img-description="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision"  title="Share on Pinterest for New $150 gadget lets your smartphone detect cancer with laboratory precision"><span class="icon-pinterest"></span> Pin</a>
+										<a class="social-btn twitter ga-track" data-event="Twitter Button Clicks" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-short-title="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" data-site-url="http%3A%2F%2Finhabitat.com%2F" title="Share on Twitter for New $150 gadget lets your smartphone detect cancer with laboratory precision"><span class="icon-twitter"></span> Tweet</a>
+
+										<a class="social-btn comments"><span class="icon-comment"></span> Comment</a>
+                                        <a class="social-btn stumbleupon"><span class="icon-comment"></span> Comment</a>
+										<a class="social-btn addthis" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-title="New $150 gadget lets your smartphone detect cancer with laboratory precision"><span>+</span></a>
+										<div class="clear"></div>
+									</div>
+								</span>-->
+							</div>
+						</div>
+										</div>
+                                    <!-- Beginning Async AdSlot 1369258419 for Ad unit Inhabitat/article/728x90_top  ### size: [[728,90]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1369258419]]) -->
+<div id='div-gpt-ad-640345142228066413-1369258419' class="google-ad ">
+	<script type='text/javascript'>
+    (function($,googletag){
+        var slotName = 'div-gpt-ad-640345142228066413-1369258419';
+		var hasCreated = false;
+
+        function createAd() {
+            hasCreated = true;
+    		googletag.cmd.push(function() {
+    			var slot = googletag.defineSlot('/2922/Inhabitat/article/728x90_top', [[728,90]],slotName).setTargeting('kw',["top"]).setCollapseEmptyDiv(true).addService(googletag.pubads());
+
+    			    				 amznads.setTargetingForGPTAsync('amznslots');
+    			    			    			googletag.display(slotName);
+    		});
+        }
+
+		$(window).resize(function() {
+			if(!hasCreated && $(window).width() <= 1019 ) {
+				if($("#"+slotName).parent().css('display') != "none") {
+					createAd();
+				}
+			} else if(hasCreated && $(window).width() > 1019) {
+				$("#div-gpt-ad-640345142228066413-1369258419").hide();
+			} else if(hasCreated && $(window).width() <= 1019) {
+				$("#div-gpt-ad-640345142228066413-1369258419").show();
+			}
+		});
+		$(window).resize();
+    })(jQuery,googletag);
+	</script>
+</div>
+<!-- End AdSlot 1369258419 | Template: slot-tablet-display-->
+                				<!-- Header ends -->
+<!-- maincontent Starts -->
+<!-- single.php -->
+<div class="maincontent single" data-permalink="">
+	<div class="main-container">
+		<div class="inner-page">
+			<div class="top-content">
+				<div class="left">
+					
+						<section class="single post" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/">
+							<header>
+                                                                								<h1 class="title" id="single-post-title">New $150 gadget lets your smartphone detect cancer with laboratory precision								</h1>
+								<h5><a class="post-category-link" href="http://inhabitat.com/news/">News</a></h5>
+								<div class="single-lead-image">
+                                    <img class="single-lead-image bttrlazyloading"
+	                                     data-bttrlazyloading-xs-src = "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-340x206.jpg"
+	                                     data-bttrlazyloading-sm-src = "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-660x400.jpg"
+	                                     data-bttrlazyloading-lg-src = "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-889x538.jpg"
+	                                     data-bttrlazyloading-threshold="0"
+	                                     />
+								</div>
+																<div class="share">
+									<ul>
+										<li class="time">
+											<a href="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/"><span class="sprite time"></span>2 days ago</a>
+										</li>
+										<li class="cats"> &nbsp;under <a href="http://inhabitat.com/medical-technology-2/">Medical Technology</a>, <a href="http://inhabitat.com/news/">News</a>, <a href="http://inhabitat.com/science-2/">Science</a></li>
+										<li class="author">
+                                            <div class="author-name">
+                                                by <a href="http://inhabitat.com/author/cdistasio/" title="Posts by Cat DiStasio" rel="author">Cat DiStasio</a>                                            </div>
+                                        </li>
+                                        <li class="comm"><a href="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/"><span class="sprite comm"></span>0 Comments</a></li>
+                                        <li class="fblike"><div class="fb-like" data-href="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+									</ul>
+									<span class="clear"></span>
+								</div> <!-- END OF share -->
+								<section class="single author-info">
+																		<a href="http://inhabitat.com/author/cdistasio/" rel="author">
+										<img alt='' src='http://0.gravatar.com/avatar/99f581cbbf80b59f63a395468c41a638?s=96&#038;d=http%3A%2F%2Finhabitat.com%2Fwp-content%2Fthemes%2Finhabitat-v3%2Fimg%2Fgravatar-default.gif&#038;r=g' srcset='http://0.gravatar.com/avatar/99f581cbbf80b59f63a395468c41a638?s=192&amp;d=http%3A%2F%2Finhabitat.com%2Fwp-content%2Fthemes%2Finhabitat-v3%2Fimg%2Fgravatar-default.gif&amp;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' />									</a>
+                  									<div class="author-name">
+                                        by <a href="http://inhabitat.com/author/cdistasio/" title="Posts by Cat DiStasio" rel="author">Cat DiStasio</a>									</div>
+									<!--<div class="socials">
+										<a class="social-btn facebook ga-track" data-event="Facebook Button Clicks" data-permalink="http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Share on Facebook"><span class="icon-facebook-1"></span> Share on Facebook</a><a class="social-btn pinterest ga-track" data-event="Pinterest Button Clicks" data-permalink="http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" data-img-url="http%3A%2F%2Finhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FIPhone-5S.jpg" data-img-description="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" title="Share on Pinterest"><span class="icon-pinterest"></span> Pin</a><a class="social-btn twitter ga-track" data-event="Twitter Button Clicks" data-permalink="http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" data-short-title="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" data-site-url="http%3A%2F%2Finhabitat.com%2F" title="Share on Twitter"><span class="icon-twitter"></span> Tweet</a><a class="social-btn addthis" data-permalink="http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" data-title="New $150 gadget lets your smartphone detect cancer with laboratory precision"><span>+</span></a>									</div>-->
+                                    <div style="clear:both;"></div>
+								</section>
+                                                                <section class="single slideshow">
+																		<a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery" data-idx='1' data-postid='875440'>View Slideshow</a>
+                                </section>
+                            							</header>
+							<section>
+								<div class="single post-content">
+									<p>While smartphone spectrometers are already being used to help detect cancer, they have only been able to evaluate one sample at a time, making the work slow and tedious. A breakthrough by a Washington State University research team led to <a href="https://news.wsu.edu/2016/10/18/wsu-portable-smartphone-laboratory-detects-cancer/">the creation of a low-cost multichannel smartphone spectrometer that uses optical sensors to scan multiple samples simultaneously</a>. The team, led by Lei Li, assistant professor in the School of Mechanical and Materials Engineering, found their <a href="http://inhabitat.com/tag/spectrometer" target="_blank">spectrometer</a> to be highly accurate and sensitive, thanks to the custom prism array designed especially for this device.</p>
+    <div class="gallery-extend gallery_shortcode">
+        <section class="thumbnails">
+            <div class="mask">
+                <ul class="thumbnails-list">
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="1"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-120x120.jpg" />
+                        </a></li>
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="2"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-120x120.jpg" />
+                        </a></li>
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="3"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-120x120.jpg" />
+                        </a></li>
+                                    </ul>
+            </div>
+        </section>
+    </div>
+            <script>
+			try{
+				if(!window.GalleryData) {
+					window.GalleryData = {};
+				}
+				window.GalleryData[875440] = [{"ID":875448,"post_author":"417116","post_date":"2016-10-19 08:57:43","post_date_gmt":"2016-10-19 12:57:43","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"IPhone 5S","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"iphone-5s","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:10","post_modified_gmt":"2016-10-19 12:58:10","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FIPhone-5S.jpg","menu_order":1,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/iphone-5s\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"IPhone 5S","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875446,"post_author":"417116","post_date":"2016-10-19 08:57:30","post_date_gmt":"2016-10-19 12:57:30","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer drawing","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer-drawing","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:15","post_modified_gmt":"2016-10-19 12:58:15","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer-drawing.jpg","menu_order":2,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer-drawing\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer drawing","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875447,"post_author":"417116","post_date":"2016-10-19 08:57:39","post_date_gmt":"2016-10-19 12:57:39","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:17","post_modified_gmt":"2016-10-19 12:58:17","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer.jpg","menu_order":3,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"}];
+				setGalleryActions();
+			}
+			catch (e) {
+				//Oh well
+			}
+        </script>
+    
+<p><div class='if-page-toggle' style='visibility:hidden;margin:0;padding:0'></div><!-- Beginning Async AdSlot 1 for Ad unit Inhabitat/article/300x250_content  ### size: [[300,250]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
+<div id='div-gpt-ad-640345142228066413-1' class='google-ad '>
+	<script type='text/javascript'>
+        	googletag.cmd.push(function() { googletag.display('div-gpt-ad-640345142228066413-1'); });
+        
+	</script>
+</div>
+<!-- End AdSlot 1 | Template: slot-->
+</p>
+<p><img class="aligncenter size-resp_homebig wp-image-875446" src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-889x591.jpg" alt="washington state university, smartphone spectrometer, cancer screening, cancer biomarkers, detecting cancer, early detection of cancer, lei li" width="889" height="591" /></p>
+<p>The WSU team has created a device, perhaps the first of its kind, with the same sensitivity level as existing laboratory equipment, capable of detecting proteins and cancer biomarkers with a high degree of accuracy. The team used a customized prism array they built through a hybrid manufacturing process, which makes it possible for the <a href="http://inhabitat.com/tag/smartphone/">smartphone</a> spectrometer to scan several samples at once in search of cancer biomarkers. The eight-channel smartphone spectrometer can detect human interleukin-6 (IL-6), a known biomarker for lung, prostate, liver, breast and epithelial cancers.</p>
+<p><a href="http://inhabitat.com/worlds-first-pocket-molecular-sensor-measures-the-chemical-makeup-of-everything/">Related: World&#8217;s first pocket spectrometer lets you measure the molecular makeup of nearly anything</a></p>
+
+            <div class="solar_widget_placeholder" data-id="wapp_signup_widget"></div>
+        <div class='clear-both'></div><p><img class="aligncenter size-resp_homebig wp-image-875447" src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-889x842.jpg" alt="washington state university, smartphone spectrometer, cancer screening, cancer biomarkers, detecting cancer, early detection of cancer, lei li" width="889" height="842" /></p>
+<p>The smartphone-based cancer screening device is also a cost-effective solution, with a price tag around $150. The design was based on the iPhone 5, but the team is currently working to make it compatible with other smartphone models. A portable, low-cost spectrometer that produces lab quality results is just the sort of device in high demand in rural areas and especially in developing countries where hospitals lack <a href="http://inhabitat.com/medical-technology-2/">high-tech cancer screening equipment</a> or are absent altogether.</p>
+<p>The team’s research was funded by the National Science Foundation along with a WSU startup fund, and the report on their results was <a href="http://www.sciencedirect.com/science/article/pii/S0956566316308983">recently published</a> in the journal Biosensors and Bioelectronics.</p>
+<p>Via <a href="https://news.wsu.edu/2016/10/18/wsu-portable-smartphone-laboratory-detects-cancer/">WSU</a></p>
+<p><em>Images via <a href="https://en.wikipedia.org/wiki/IPhone_5S#/media/File:IPhone_5S_main_camera.png">Wikipedia</a> and <a href="https://news.wsu.edu/2016/10/18/wsu-portable-smartphone-laboratory-detects-cancer/">Lei Li/WSU</a></em></p>
+    <div class="gallery-extend gallery_shortcode">
+        <section class="thumbnails">
+            <div class="mask">
+                <ul class="thumbnails-list">
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="1"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-120x120.jpg" />
+                        </a></li>
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="2"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-120x120.jpg" />
+                        </a></li>
+                    						                        <li class="thumbnail ga-track ga-track-which" data-event="Gallery Thumbnail Bottom"><a href="#popup-875440" class="lightbox-opener full-lightbox change-gallery " data-idx="3"
+												 data-postid="875440">                                                        <img class="bttrlazyloading" data-bttrlazyloading-xs-src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-120x120.jpg" />
+                        </a></li>
+                                    </ul>
+            </div>
+        </section>
+    </div>
+            <script>
+			try{
+				if(!window.GalleryData) {
+					window.GalleryData = {};
+				}
+				window.GalleryData[875440] = [{"ID":875448,"post_author":"417116","post_date":"2016-10-19 08:57:43","post_date_gmt":"2016-10-19 12:57:43","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"IPhone 5S","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"iphone-5s","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:10","post_modified_gmt":"2016-10-19 12:58:10","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FIPhone-5S.jpg","menu_order":1,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/iphone-5s\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"IPhone 5S","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875446,"post_author":"417116","post_date":"2016-10-19 08:57:30","post_date_gmt":"2016-10-19 12:57:30","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer drawing","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer-drawing","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:15","post_modified_gmt":"2016-10-19 12:58:15","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer-drawing.jpg","menu_order":2,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer-drawing\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer drawing","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875447,"post_author":"417116","post_date":"2016-10-19 08:57:39","post_date_gmt":"2016-10-19 12:57:39","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:17","post_modified_gmt":"2016-10-19 12:58:17","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer.jpg","menu_order":3,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"}];
+				setGalleryActions();
+			}
+			catch (e) {
+				//Oh well
+			}
+        </script>
+    
+								</div>
+                
+							</section>
+
+							<footer></footer>
+						</section>
+
+						<section class="comments">
+							<a id="comments" name="comments"></a><a id="errors" name="errors"></a>
+<div class="comment-show-more">
+
+	<span id="view-comment875440" class="comment-but-text ga-track" data-event="Comment" onclick="showComment(elem=875440)"><span class="sprite comm-white"></span>View Comments</span>
+</div><div id="comment-container875440" class="comment-form-container" style="display:none">
+		<form method="post" id="commentform" class="comment-form" name="commentform"  action="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/#comments">
+	
+	<h2 id="comment-title">LEAVE A COMMENT</h2>
+
+
+	<!--
+
+	<p>Please keep your comments relevant to this blog entry.  <strong>Email addresses are never displayed, but they are required to confirm your comments.</strong></p>
+	<p>Please note that gratuitous links to your site are viewed as spam and may result in removed comments.</p>
+	-->
+
+	<!-- You can start editing here. -->
+
+		<div>
+	
+	</div>
+
+	<h4 id="comment-message" class="error-comment" style="display:none; width: 534px !important;"></h4>
+
+
+
+
+	
+	<p>You must be logged in to post a comment. <a href="javascript:void(0);" class="login-btn">Log In</a></p>
+	<textarea name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
+
+
+	<div id="loginbox"  class="login-box group">
+
+		<div class="login-row">
+
+			<div class="comment-login">
+				<p>Login</p>
+
+				<p><input name="log_author" value="" class="mid" id="log_author" type="text" placeholder="Username"/></p>
+				<p><input name="log_pass" class="mid" id="log_pass" type="password" placeholder="Password"/></p>
+				<p>
+					<input name="rememberme" class="checkbox" id="rememberme" value="forever" type="checkbox" style="float:left;padding: 0; margin: 0 10px 0 0; width: auto;" />
+					<label for="rememberme" style="padding: 0;">Remember Me</label></p>
+				<p><input type="hidden" name="sidebarLogin_posted" value="1" /></p>
+
+				<a style="display:inline-block;margin-top:10px;" href="http://inhabitat.com/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+
+				
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.2.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{float:left}.wp-social-login-provider-list{float:left;padding:0px 10px}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{} 
+</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Facebook&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Twitter&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+		<a rel="nofollow" href="http://inhabitat.com/login/?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Google&#038;redirect_to=http%3A%2F%2Finhabitat.com%2Fnew-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+	</div> 
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+		  </div>
+
+		  <div class="separator"> <span>OR</span> </div>
+
+		  <div class="comment-signup">
+				<p>Signup with Inhabitat</p>
+				<p>
+					<input type="text" name="reg_author" id="reg_author" class="input" value="" size="20"  placeholder="Username"/>
+				</p>
+				<p>
+
+					<input type="text" name="reg_email" id="reg_email" class="input" value="" size="25"  placeholder="Email"/>
+				</p>
+		        <p style="float:none;">
+				<input type="checkbox" name="newsletter" style="width: auto;float:left;"/><label>Sign me up for weekly Inhabitat updates</label>
+		        </p>
+		        <div class="casl-containter">
+					<span id="casl-container-register">Do you live in Canada? <a href="" id="casl-open-overlay">Register here.</a></span>
+				</div>
+				<p id="reg_passmail"></p>
+				<div id="recaptcha-container" style="clear:both;"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="99799c7874" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="92"/></p></div>
+							</div>
+		</div>
+		<div class="recaptcha-box group">
+			<div class="single-comments-captcha">
+		<div class="g-recaptcha comments-captcha" data-sitekey="6Lf1KiMTAAAAADeDJv8FiY9v5zK42cvAxIlcULC-"></div>
+</div>
+		</div>
+	</div>
+	
+	<div class="submit-box">
+		<input name="comment_submit" type="submit" id="submit" value="Post comment" class="comment-button" />
+	</div>
+
+	
+		<input type="hidden" name="comment_post_ID" value="875440" />
+		<input type="hidden" name="bypass_password" value="true" />
+	    <input type="hidden" name="ret_url" value="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" />
+
+	      				<input type="hidden" name="redirect_to" value="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/#comments" />
+
+		   
+	</form>
+	<div class="clear"></div>
+	<div style="display:none;">
+	<script type="text/javascript">
+		//$.cookie('redirect_to_comment', '/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/#comments',{path:'/'});
+		var AjaxUrl = 'http://inhabitat.com/wp-admin/admin-ajax.php';
+		try {
+			$('.comment-form').wordpressComment();
+					} catch(e) {
+			try {
+				var pluginName = "wordpressComment",
+			        defaults = {}, self;
+
+			    function Plugin(element, options) {
+			        this.element = element;
+			        this.options = $.extend({}, defaults, options);
+			        this._defaults = defaults;
+			        this._name = pluginName;
+			        this.init();
+			    }
+			    Plugin.prototype.init = function() {
+			        var $el = $(this.element);
+			        self = this;
+			        var ajaxFocusHandler;
+			        $el.find(".login-btn").on("click", function() {
+			            var $loginBox = $el.find(".login-box");
+			            if ($loginBox.hasClass("opened")) {
+			                return false;
+			            }
+			            self.isLogged(ajaxFocusHandler).fail(function() {
+			                $loginBox.addClass("opened");
+			            });
+			        });
+			        $el.find('textarea[name="comment"]').on("focus", function() {
+			            var $loginBox = $el.find(".login-box");
+			            if ($loginBox.hasClass("opened")) {
+			                return false;
+			            }
+			            self.isLogged(ajaxFocusHandler).fail(function() {
+			                $loginBox.addClass("opened");
+			            });
+			        });
+			    };
+			    Plugin.prototype.isLogged = function(ajaxHandle) {
+			        var data = {
+			            action: "is_user_logged_in"
+			        };
+			        if (ajaxHandle && ajaxHandle.readyState > 0 && ajaxHandle.readyState < 4) {
+			            ajaxHandle.abort();
+			        }
+			        return ajaxHandle = $.post("/wp-admin/admin-ajax.php", data);
+			    };
+			    $.fn[pluginName] = function(options) {
+			        return this.each(function() {
+			            if (!$.data(this, "plugin_" + pluginName)) {
+			                $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+			            }
+			        });
+			    };
+			} catch(e1) {
+				console.error(e1);
+			}
+		}
+
+	</script>
+	
+	</div>
+	<!-- COMMENTS LIST -->
+
+	<div class='below-comment-form'>
+		<a name="comments"></a>		<br />
+	</div>
+	
+					<!-- If comments are open, but there are no comments. -->
+
+		 	
+
+	
+	<div id="respond">
+
+
+	</div>
+		</div>
+						</section>
+									<section id="recommended-for-you" class="related-post info-cols">
+				<h2>RECOMMENDED FOR YOU</h2>
+				<ul id="related-posts-output"><div class="col">
+	<div class="visual-imgs">
+	
+		<div class="img-block">
+			<a href="http://inhabitat.com/new-paper-based-urine-cancer-screenings-could-be-as-easy-as-testing-for-pregnancy/" class="ga-track" data-event="Related Post Click">
+				<div class="img-holder">
+					<div class="img-frame">
+
+                            
+							<img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2014/02/urine-based-paper-test.jpg"
+							alt="urine-based paper test">
+                            						</div>
+				</div> <span class="caption ga-track"
+				data-category="design" data-event="Related Post Click">design</span>
+				<div class="detail">
+                        						<p>View Gallery (2)</p>
+                        					</div>
+			</a>
+		</div>
+	</div>
+	<h3>
+		<a class="ga-track" data-event="Related Post Click" href="http://inhabitat.com/new-paper-based-urine-cancer-screenings-could-be-as-easy-as-testing-for-pregnancy/">New Paper-Based Urine Cancer Screenings Co...</a>
+	</h3>
+</div>
+
+	
+
+<div class="col">
+	<div class="visual-imgs">
+	
+		<div class="img-block">
+			<a href="http://inhabitat.com/dime-sized-cancer-detector-also-recognizes-hiv/" class="ga-track" data-event="Related Post Click">
+				<div class="img-holder">
+					<div class="img-frame">
+
+                            
+							<img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2011/03/Dime-Cancer-Detector-3.jpg"
+							alt="Dime-Sized Cancer Detector Also Recognizes HIV">
+                            						</div>
+				</div> <span class="caption ga-track"
+				data-category="design" data-event="Related Post Click">design</span>
+				<div class="detail">
+                        						<p>View Gallery (3)</p>
+                        					</div>
+			</a>
+		</div>
+	</div>
+	<h3>
+		<a class="ga-track" data-event="Related Post Click" href="http://inhabitat.com/dime-sized-cancer-detector-also-recognizes-hiv/">Dime-Sized Cancer Detector Also Recognizes...</a>
+	</h3>
+</div>
+
+	
+
+<div class="col">
+	<div class="visual-imgs">
+	
+		<div class="img-block">
+			<a href="http://inhabitat.com/help-stop-the-killing-of-wolves-boycott-discovery-channels-ridiculous-man-eating-super-wolves/" class="ga-track" data-event="Related Post Click">
+				<div class="img-holder">
+					<div class="img-frame">
+
+                            
+							<img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2014/08/Wolf-and-Cub.jpg"
+							alt="Wolf and Cub">
+                            						</div>
+				</div> <span class="caption ga-track"
+				data-category="environment" data-event="Related Post Click">environment</span>
+				<div class="detail">
+                        						<p>View Gallery (4)</p>
+                        					</div>
+			</a>
+		</div>
+	</div>
+	<h3>
+		<a class="ga-track" data-event="Related Post Click" href="http://inhabitat.com/help-stop-the-killing-of-wolves-boycott-discovery-channels-ridiculous-man-eating-super-wolves/">Help Stop The Killing of Wolves: Boycott D...</a>
+	</h3>
+</div>
+
+	
+</ul><!-- Similar Posts took 14.237 ms -->
+			</section>
+				</div>
+				<!-- Added Right Column automatically -->
+				<div class="right-wrapp">
+<div class="right">
+    <div class="right-inner">
+	    <!-- Beginning Async AdSlot 0 for Ad unit Inhabitat/article/300x250_top  ### size: [[300,250]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[]]) -->
+<div id='div-gpt-ad-640345142228066413-0' class="google-ad google-ad-1">
+	<script type='text/javascript'>
+	(function($,googletag,registerPromise,getGPTSlot){
+		function showHidden() {
+			if(!$(".right").is(":hidden")) {
+				googletag.cmd.push(function() {
+					googletag.display('div-gpt-ad-640345142228066413-0');
+					registerPromise( getGPTSlot(0), 'div-gpt-ad-640345142228066413-0', 20000 );
+				});
+				$(window).unbind("resize",showHidden);
+			}
+		}
+
+		$(window).on("resize",showHidden);
+	})(jQuery,googletag,registerPromise,getGPTSlot);
+	</script>
+</div>
+<!-- End AdSlot  | Template: slot-refresh-->
+
+    
+    
+    
+        <div class="solar_widget_placeholder_img" data-id="wapp_signup_widget">
+            
+            <div class="solar_widget_placeholder" data-id="wapp_signup_widget"></div>
+                </div>
+    
+    <!-- Beginning Async AdSlot 2 for Ad unit Inhabitat/article/300x250_bottom  ### size: [[300,250]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[]]) -->
+<div id='div-gpt-ad-640345142228066413-2' class="google-ad google-ad-3">
+	<script type='text/javascript'>
+	(function($,googletag,registerPromise,getGPTSlot){
+		function showHidden() {
+			if(!$(".right").is(":hidden")) {
+				googletag.cmd.push(function() {
+					googletag.display('div-gpt-ad-640345142228066413-2');
+					registerPromise( getGPTSlot(2), 'div-gpt-ad-640345142228066413-2', 20000 );
+				});
+				$(window).unbind("resize",showHidden);
+			}
+		}
+
+		$(window).on("resize",showHidden);
+	})(jQuery,googletag,registerPromise,getGPTSlot);
+	</script>
+</div>
+<!-- End AdSlot  | Template: slot-refresh-->
+
+
+
+    
+	
+        </div>
+    </div>
+</div> <!-- END OF RIGHT -->
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- lightbox in the page -->
+<div class="popup-holder">
+	<div id="popup-875440" class="lightbox popup-lightbox">
+		<a href="close" class="close"></a>
+		<div class="gallery-block">
+			<!-- gallery part in the lightbox -->
+			<div class="gallery gallery-lightbox">
+				
+<div class="gallery-extend isLightbox"  id="gallery-extend-lightbox">
+	<div id="slideshow-875440">
+		<section class="slide-show">
+			<div class="mask">
+				<a href="#popup-875440" class="start-slide lightbox-opener full-lightbox">
+					<span>Start Slideshow</span>
+				</a>
+				<div class="slideset" id="slideset-875440">
+					<ul class="slides">
+																													<li><img class="overlayimage" src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-1020x610.jpg" data-width="1020" data-height="610" /></li>
+																			<li><img class="overlayimage" src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-1020x610.jpg" data-width="1020" data-height="610" /></li>
+																			<li><img class="overlayimage" src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-1020x610.jpg" data-width="1020" data-height="610" /></li>
+										</ul>
+				</div>
+			</div>
+		</section>
+		<section class="content-mobile">
+			<div class="widget group">
+				<div class="wrapper">
+					<div class="socials tablet">
+						<a class="social-btn facebook" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/"><span
+							class="icon-facebook-1"></span> Share</a> <a
+							class="social-btn pinterest" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-img-url="http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F" data-img-description="" ><span
+							class="icon-pinterest"></span> Pin</a> <a
+							class="social-btn twitter" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-short-title="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" data-site-url="http%3A%2F%2Finhabitat.com%2F"><span
+							class="icon-twitter"></span> Tweet</a> <a class="social-btn"><span>+</span></a>
+					</div>
+					<div class="content-slide">
+						<div class="content">
+							<h2>Design</h2>
+							<p></p>
+						</div>
+						<span class="counter" id="current-slide"></span>
+					</div>
+					<div class="socials mobile">
+						<a class="social-btn facebook" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/"><span
+							class="icon-facebook-1"></span> Share</a> <a
+							class="social-btn pinterest" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-img-url="http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F" data-img-description="" ><span
+							class="icon-pinterest"></span> Pin</a> <a
+							class="social-btn twitter" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-short-title="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" data-site-url="http%3A%2F%2Finhabitat.com%2F"><span
+							class="icon-twitter"></span> Tweet</a> <a
+							class="social-btn addthis"><span>+</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="thumbnails">
+			<div class="mask">
+																<strong class="start slide-init"> <span class="action ga-track" data-event="Start Gallery">Start</span>Slideshow</strong>
+														<div class="thumbslider" id="thumbslider-875440">
+					<ul class="slides">
+																				<li class="slideshow-thumb"><a class="change-gallery"	href="javascript:void(0)" data-idx="1" data-postid="875440"> <img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/IPhone-5S-120x120.jpg"></a></li>
+																				<li class="slideshow-thumb"><a class="change-gallery"	href="javascript:void(0)" data-idx="2" data-postid="875440"> <img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-drawing-120x120.jpg"></a></li>
+																				<li class="slideshow-thumb"><a class="change-gallery"	href="javascript:void(0)" data-idx="3" data-postid="875440"> <img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Washington-State-University-smartphone-spectometer-120x120.jpg"></a></li>
+											</ul>
+				</div>
+			</div>
+		</section>
+	</div>>
+</div>
+
+<script>
+	try{
+		window.isDesktop = true;
+
+		if(!window.GalleryData) {
+			window.GalleryData = {};
+		}
+		window.GalleryData[875440] = [{"ID":875448,"post_author":"417116","post_date":"2016-10-19 08:57:43","post_date_gmt":"2016-10-19 12:57:43","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"IPhone 5S","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"iphone-5s","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:10","post_modified_gmt":"2016-10-19 12:58:10","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FIPhone-5S.jpg","menu_order":1,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/iphone-5s\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"IPhone 5S","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875446,"post_author":"417116","post_date":"2016-10-19 08:57:30","post_date_gmt":"2016-10-19 12:57:30","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer drawing","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer-drawing","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:15","post_modified_gmt":"2016-10-19 12:58:15","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer-drawing.jpg","menu_order":2,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer-drawing\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer drawing","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"},{"ID":875447,"post_author":"417116","post_date":"2016-10-19 08:57:39","post_date_gmt":"2016-10-19 12:57:39","post_content":"Researchers have created a low-cost, portable smartphone-based cancer screening device that can, for the first time, evaluate several samples at once with lab quality results. ","post_title":"Washington State University smartphone spectometer","post_excerpt":"","post_status":"inherit","comment_status":"open","ping_status":"closed","post_password":"","post_name":"washington-state-university-smartphone-spectometer","to_ping":"","pinged":"","post_modified":"2016-10-19 08:58:17","post_modified_gmt":"2016-10-19 12:58:17","post_content_filtered":"","post_parent":875440,"guid":"http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2016%2F10%2FWashington-State-University-smartphone-spectometer.jpg","menu_order":3,"post_type":"attachment","post_mime_type":"image\/jpeg","comment_count":"0","filter":"raw","permalink":"http:\/\/inhabitat.com\/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision\/washington-state-university-smartphone-spectometer\/","siteUrl":"http%3A%2F%2Finhabitat.com%2F","shortTitle":"Washington State University smartphone spectometer","description":"Researchers+have+created+a+low-cost%2C+portable+smartphone-based+cancer+screening+device+that+can%2C+for+the+first+time%2C+evaluate+several+samples+at+once+with+lab+quality+results.+"}];
+
+		if(document.pageURL === undefined){
+			document.pageURL = window.location.href;
+		}
+
+		
+		setGalleryActions();
+
+	}
+	catch (e) {
+		//Oh well
+	}
+</script>
+
+			</div>
+			<!-- sidebar content in the lightbox-->
+			<aside class="aside">
+		<div class="aside-wrapper">
+					<div class="widget gallery-extend">
+						<div class="wrapper">
+							<h2 class="post-title">New $150 gadget lets your smartphone detect cancer with labora...</h2>
+							<div class="socials">
+								<a class="social-btn facebook ga-track" data-event="Facebook Button Clicks"  data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/"><span class="icon-facebook-1"></span> Share</a>
+								<a class="social-btn pinterest ga-track" data-event="Pinterest Button Clicks" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-img-url="http%3A%2F%2Fassets.inhabitat.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F" data-img-description="" ><span class="icon-pinterest"></span> Pin</a>
+								<a class="social-btn twitter ga-track" data-event="Twitter Button Clicks" data-permalink="http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/" data-short-title="New+%24150+gadget+lets+your+smartphone+detect+cancer+with+laboratory+precision" data-site-url="http%3A%2F%2Finhabitat.com%2F"><span class="icon-twitter"></span> Tweet</a>
+							</div>
+							<div class="content-slide"  id="content-slide-875440">
+								<div class="content">
+									<h2></h2>
+									<p></p>
+								</div>
+								<span class="counter">Photo 1 of 12</span>
+							</div>
+						</div>
+						<div class="footer-add">
+                            <!-- Beginning Async AdSlot 249279873 for Ad unit Inhabitat/gallery/300x250_top  ### size: [[300,250]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[249279873]]) -->
+<div id='div-gpt-ad-640345142228066413-249279873'
+    class="google-ad google-overlay-ad"
+    data-mobile=""
+    data-template="gallery"
+    data-width="300"
+    data-height="250"
+    data-kw="top"
+    data-additional=""
+    data-prefix=""></div>
+<!-- End AdSlot 249279873 | Template: overlay-slot-->
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+		<div class="add">
+			<!-- Beginning Async AdSlot 1650889739 for Ad unit Inhabitat/gallery/728x90_bottom  ### size: [[728,90]] -->
+<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1650889739]]) -->
+<div id='div-gpt-ad-640345142228066413-1650889739'
+    class="google-ad google-overlay-ad"
+    data-mobile=""
+    data-template="gallery"
+    data-width="728"
+    data-height="90"
+    data-kw="bottom"
+    data-additional=""
+    data-prefix=""></div>
+<!-- End AdSlot 1650889739 | Template: overlay-slot-->
+		</div>	</div>
+</div>
+<!--
+<div class="home-content">
+<div class="main-container">
+<div class="inner-page">
+<div class="top-content">
+<div class="left">
+<div class="post">
+<div class="gallery gsmall" id="article_details">
+
+</div>
+
+
+<span class="clear"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+-->
+<!-- maincontent ends -->
+<div id="infiniteScroll" class="mainPage bottom-content">
+	<a href="http://inhabitat.com/wp-admin/admin-ajax.php"></a>
+</div>
+<!-- Start of eXelate Tag -->
+<script type="text/javascript">
+try {
+	(function() {
+        var args = {
+            article_name: "",
+            search: "",
+            category_name: "",
+            keywords: "",
+            site_url: ""
+        };
+
+        try {
+            args.article_name = "new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision";
+            args.search = "";
+            args.category_name = "medical-technology-2";
+            args.site_url = encodeURIComponent("http://inhabitat.com/new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision/");
+        } catch(e) { }
+
+		try{
+			args.keywords = "";
+		} catch(e) {  }
+
+		if(!args.keywords || args.keywords.length == "") {
+			for(element in document.getElementsByTagName("meta")) {
+				if(document.getElementsByTagName("meta")[element].name && document.getElementsByTagName("meta")[element].name == "keywords") {
+					args.keywords = document.getElementsByTagName("meta")[element].content;
+				}
+			}
+			args.keywords = encodeURIComponent(args.keywords).replace(/\%20/g,'+');
+		}
+
+        if(typeof window.exelateTags == "undefined") {
+            window.exelateTags = [];
+        }
+
+        window.exelateTags.push({
+            "src": "http://loadus.exelator.com/load/?p=258&g=137&articlename="+args.article_name+"&search="+args.search+"&Vertical=home&sitecat=home&category="+args.category_name+"&sitename=inhabitat&keywords="+args.keywords+"&pageurl="+args.site_url,
+            "postName": args.article_name,
+			"args":args
+        });
+	})();
+} catch(e) { }
+</script>
+<!-- End of eXelate Tag | Template: exelate-ifscroll-tag -->
+        <!-- footer.php -->
+		<div class="clear"></div>
+		                
+	
+<!-- AddThis Button Begin -->
+<script type="text/javascript">var addthis_product = 'wpp-3.1';
+var addthis_config = {"data_track_clickback":false,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};if (typeof(addthis_share) == "undefined"){ addthis_share = [];}</script><script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fc945af2eb4abb7"></script><script type="text/javascript">
+
+var addthis_config = {"data_track_clickback":false,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};
+var addthis_product = 'wpp-3.1';
+</script><script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fc945af2eb4abb7"></script><script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/akismet/_inc/form.js?ver=16.10.12.00'></script>
+<link rel='stylesheet' id='wp-email-css'  href='http://assets.inhabitat.com/wp-content/plugins/wp-email/email-css.css?ver=16.10.12.00' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://assets.inhabitat.com/wp-content/plugins/wp-polls/polls-css.css?ver=16.10.12.00' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?onload=gaCallback&#038;render=explicit&#038;ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/ib-google-captcha/js/gaExplicitRenderCallback.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/mosaic-inf/js/jquery.infinitescroll.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Ib_Scroll_Config = {"blog_id":"1","action":"ib_scroll","p":"875440","post_type":"post","script":"","paged":"1","delay":"0","opage":"1","category_name":"","cat":"","s":"","tag_id":"","tag":"","user_login":"","posts_per_page":"1","isMobile":"","isTablet":"","increment":"0","newgallery":"","loadingImg":"http:\/\/assets.inhabitat.com\/wp-content\/plugins\/ib-infinite-scroll\/images\/mosaic-loading.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/ib-infinite-scroll/js/single-infinite-scroll.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/jquery/jquery.form.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/wp-embed.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-includes/js/tw-sack.min.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/wp-email/email-js-packed.js?ver=16.10.12.00'></script>
+<script type='text/javascript' src='http://assets.inhabitat.com/wp-content/plugins/wp-polls/polls-js-packed.js?ver=16.10.12.00'></script>
+<!-- Start: GPT Async -->
+<script type='text/javascript'>
+	var timeout = null;
+
+		var overlaySlots = [];
+			jQuery('.gallery-extend.isLightbox').on('gallery:changeSlide',refreshOverlaySlots);
+	jQuery('.gallery-extend.isLightbox').on('gallery:lightbox-open',pausePromise);
+	jQuery('.gallery-extend.isLightbox').on('gallery:closed',resetPromise);
+	jQuery("div.gallery dl.gallery-item dt.gallery-icon a, section.thumbnails ul.thumbnails-list li.thumbnail a,div.gallery-extend section.slide-show div.mask a.start-slide.lightbox-opener, a.lightbox-opener.full-lightbox.change-gallery").on('click',createOverlaySlots)
+	</script>
+
+<!-- Start of eXelate Tag -->
+<script type="text/javascript">
+try {
+	(function(args,window) {
+		window.exelateConfig = args;
+		window.addExelateTag = function(_arg) {
+			var arg = {};
+
+			arg.site_url = encodeURIComponent(window.location.href);
+
+			if(typeof(window.exelateConfig.keywords) == "undefined") {
+				arg.keywords = "";
+				for(element in document.getElementsByTagName("meta")) {
+					if(document.getElementsByTagName("meta")[element].name && document.getElementsByTagName("meta")[element].name == "keywords") {
+						arg.keywords = encodeURIComponent(document.getElementsByTagName("meta")[element].content).replace(/\%20/g,'+');
+					}
+				}
+			}
+
+			if(typeof _arg == "object" && _arg != null) {
+				for(param in _arg) {
+					arg[param] = _arg[param];
+				}
+			}
+
+			for(param in arg) {
+				window.exelateConfig[param] = arg[param];
+			}
+
+			var script = document.createElement("script");
+			script.src = "http://loadus.exelator.com/load/?p=258&g=137&articlename="+window.exelateConfig.article_name+"&search="+window.exelateConfig.search+"&Vertical=home&sitecat=home&category="+window.exelateConfig.category_name+"&sitename=inhabitat&keywords="+window.exelateConfig.keywords+"&pageurl="+window.exelateConfig.site_url;
+			script.async = true;
+			document.body.appendChild(script);
+		}
+		window.addExelateTag();
+	})({"article_name":"new-150-gadget-lets-your-smartphone-detect-cancer-with-laboratory-precision","search":"","category_name":"medical-technology-2"},window)
+} catch(e) { }
+</script>
+<!-- End of eXelate Tag -->
+<!--wp_footer-->	<script>
+	//this set the post per page for infinite scroll detecting the device and and the section of the page
+    	var postPerPage = 1;
+	$(window).load(function() {
+	 // executes when complete page is fully loaded, including all frames, objects and images
+	// alert("window is loaded");
+	//$('.bottom-content .gblock:nth-child(3n)').addClass('last');
+
+	$('.rightc .share li a:contains("views")').each(
+	   function(){
+		   $(this).text($(this).text().replace(/views/gi, ''))
+	   });
+		//set the new post per page parameter to the infinite scroll JS object
+		//infiniteScroll.settings.query_args.posts_per_page = postPerPage;
+
+	});
+
+	$(window).resize(function(){
+		$(window).scroll();
+	});
+	</script>
+
+	            <script>
+                (function(setupSolarWidget){
+                                        setupSolarWidget("/wp-content/themes/inhabitatresponsive/images/300x100SLFADUNIT2.png", "http://track.understandsolar.com/1920c4ca-ca04-4327-a16d-9b7499029b90?lead_source=inhabitat&tracking_code=sidebar_adunit");
+                })(setupSolarWidget);
+            </script>
+	
+        <script type="text/javascript" src="http://eucookie.internetbrands.com/eucookie/scripts/v1.0.0/eucookie.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            if(typeof IbEuCookie != 'undefined')
+            { //default parameters
+            	IbEuCookie.handleIbCookieNotice();
+            }
+        })();
+    </script>
+
+    <!-- ChartBeat -->
+    <script type="text/javascript">
+        var _sf_async_config={uid:3223,domain:"inhabitat.com"};
+        (function(){
+            function loadChartbeat() {
+                window._sf_endpt=(new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src',
+                    (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+                    "static.chartbeat.com/js/chartbeat.js");
+                document.body.appendChild(e);
+            }
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+    <!-- End ChartBeat -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6fa5a78d24","applicationID":"19109354","transactionName":"bgZRZBFSDUoCW0YNV1dMclMXWgxXTEtbCl9VBg==","queueTime":0,"applicationTime":117,"atts":"QkFSEllIHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en-US" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-US" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!d){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[y[n]];return f&&f.push([b,n,r,i]),i}}function p(e,t){w[e]=v(e).concat(t)}function v(e){return w[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var w={},y={},b={on:p,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a};return b}function i(){return new r}function a(){d=!0,s=p.backlog={}}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o(),d=!1;p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=b.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(w,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-995.min.js"},y=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a(),origin:m,features:{},xhrWrappable:y};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>
+	Santa Clara County Sheriff&#8217;s Deputies Side with Inmates on Fourth Day of Hunger Strike | San Jose Inside</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.sanjoseinside.com/xmlrpc.php" />
+
+		<script>
+			function whichHeader() {
+				var screenWidth = document.documentElement.clientWidth,
+				header_img;
+				if (screenWidth <= 767) {
+					header_img = '';
+				} else if (screenWidth > 767 && screenWidth <= 979) {
+					header_img = '';
+				} else {
+					header_img = '';
+				}
+				return header_img;
+			}
+			var banner_img_src = whichHeader();
+		</script>
+	<link rel="alternate" type="application/rss+xml" title="San Jose Inside &raquo; Feed" href="http://www.sanjoseinside.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="San Jose Inside &raquo; Comments Feed" href="http://www.sanjoseinside.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="San Jose Inside &raquo; Santa Clara County Sheriff&#8217;s Deputies Side with Inmates on Fourth Day of Hunger Strike Comments Feed" href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/feed/" />
+<link rel='stylesheet' id='largo-stylesheet-css'  href='http://www.sanjoseinside.com/wp-content/themes/largo/css/style.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='largo-child-styles-css'  href='http://www.sanjoseinside.com/wp-content/themes/largo-child/style.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://www.sanjoseinside.com/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=3.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://www.sanjoseinside.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-content/themes/largo/js/modernizr.custom.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='canonical' href='http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/' />
+<link rel='shortlink' href='http://wp.me/p4nCYF-dBUc4' />
+
+<!-- Initialize GAM -->
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-8952751094992228");
+  GS_googleEnableAllServices();
+</script>
+<!-- end Init GAM -->
+
+<!-- Load GAM slots -->	
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_Top_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_Middle_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_InHouse1_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_InHouse2_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_P1_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_P2_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_P3_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_P4_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "SanJoseInside_Bottom_300x250");GA_googleFetchAds();
+</script>
+<!-- end Load GAM slots -->
+		
+		<script type="text/javascript">
+		var addthis_config = {
+			pubid: 'bnmi'
+		};
+		
+		var addthis_share = addthis_share || {}
+		addthis_share = {
+			passthrough : {
+				twitter: {
+					via: "SanJoseInside"
+				}
+			}
+		}
+		</script>
+		<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+	
+		<meta name="twitter:card" content="summary">
+
+		<meta name="twitter:site" content="@sanjoseinside">
+		<meta name="twitter:creator" content="@jennwadsworth">					<meta property="og:title" content="Santa Clara County Sheriff&#8217;s Deputies Side with Inmates on Fourth Day of Hunger Strike" />
+					<meta property="og:type" content="article" />
+					<meta property="og:url" content="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/"/>
+					<meta property="og:description" content="The union for Santa Clara County sheriff deputies has come out in support of jail inmates staging a two-week hunger strike." />
+			<meta property="og:site_name" content="San Jose Inside" /><meta property="og:image" content="http://www.sanjoseinside.com/wp-content/uploads/2015/11/Main-Jail1-772x350-21.jpg" /><link rel="shortcut icon" href="http://www.sanjoseinside.com/wp-content/uploads/2014/01/favicon.ico"/><meta name="news_keywords" content="News, Correctional Peace Officers Association, Deputy Sheriff’s Association, Elmwood Correctional Facility, Larry Lucero, Laurie Smith, Main Jail, Richard Glennon, Robert Pacheco, Santa Clara County"><meta name="original-source" content="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/" /><meta name="syndication-source" content="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/" />				<!-- WordPress Popular Posts v3.2.1 -->
+				<script type="text/javascript">//<![CDATA[
+
+					// Create XMLHttpRequest object and set variables
+					var xhr = ( window.XMLHttpRequest )
+					  ? new XMLHttpRequest()
+					  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+					url = 'http://www.sanjoseinside.com/wp-admin/admin-ajax.php',
+					params = 'action=update_views_ajax&token=af36002aef&id=201126516';
+					// Set request method and target URL
+					xhr.open( "POST", url, true );
+					// Set request header
+					xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+					// Hook into onreadystatechange
+					xhr.onreadystatechange = function() {
+						if ( 4 == xhr.readyState && 200 == xhr.status ) {
+							if ( window.console && window.console.log ) {
+								window.console.log( xhr.responseText );
+							}
+						}
+					}
+					// Send request
+					xhr.send( params );
+
+				//]]></script>
+				<!-- End WordPress Popular Posts v3.2.1 -->
+				
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Santa Clara County Sheriff&#039;s Deputies Side with Inmates on Fourth Day of Hunger Strike" />
+<meta property="og:url" content="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/" />
+<meta property="og:description" content="The union for Santa Clara County sheriff deputies has come out in support of jail inmates staging a two-week hunger strike." />
+<meta property="article:published_time" content="2016-10-20T23:27:09-07:00" />
+<meta property="article:modified_time" content="2016-10-24T04:14:16-07:00" />
+<meta property="article:author" content="http://www.sanjoseinside.com/author/jennifer-wadsworth/" />
+<meta property="og:site_name" content="San Jose Inside" />
+<meta property="og:image" content="http://www.sanjoseinside.com/wp-content/uploads/2015/11/Main-Jail1-772x350-21.jpg" />
+<meta name="twitter:site" content="@jetpack" />
+<meta name="twitter:image:src" content="http://www.sanjoseinside.com/wp-content/uploads/2015/11/Main-Jail1-772x350-21.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body class="single single-post postid-201126516 single-format-standard">
+<div id="top"></div>
+<div class="global-nav-bg">
+	<div class="global-nav">
+		<div id="site-info-header" class="row-fluid">
+			<div class="span3">Monday, October 24, 2016</div>
+			<div class="span6 site-tagline">A look inside San Jose politics and culture</div>
+			<div id="site-social" class="span3">
+				<a class="icon twitter" href="https://twitter.com/sanjoseinside" title="San Jose Inside on Twitter" target="_blank"><span>Twitter</span></a>
+				<a class="icon facebook" href="https://www.facebook.com/SanJoseInside" title="San Jose Inside on Facebook" target="_blank"><span>Facebook</span></a>
+			</div>
+		</div>
+    </div> <!-- /.global-nav -->
+</div> <!-- /.global-nav-bg -->
+
+<div id="page" class="hfeed clearfix">
+
+	
+	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
+				<h2 class="sitelogo"><a itemprop="url" href="http://www.sanjoseinside.com/"><span>San Jose Inside</span></a></h2>		
+		<div id="sponsor-header">
+			<p>San Jose Inside is made possible through support by:</p>
+			<ul class="sponsors-list">
+				<li><a href="http://www.metrosiliconvalley.com" title="Metro Silicon Valley" target="_blank"><img src="/wp-content/themes/largo-child/images/sponsors/metrosiliconvalley-logo.png" alt="Metro Silicon Valley" /></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<header class="print-header">
+		<p><strong>San Jose Inside</strong> (http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/)</p>
+	</header>
+
+	<nav id="main-nav" class="navbar clearfix">
+	  <div class="navbar-inner">
+	    <div class="container">
+
+	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+	      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <div class="label">More</div>
+	        <div class="bars">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </div>
+	      </a>
+
+	      <ul class="nav hidden-phone">
+	        <li id="menu-item-191" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-191"><a title="News" href="http://www.sanjoseinside.com/category/news/">News</a></li>
+<li id="menu-item-201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a title="Opinion" href="http://www.sanjoseinside.com/category/opinion/">Opinion</a></li>
+<li id="menu-item-181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a title="Investigative Reports" href="http://www.sanjoseinside.com/category/investigative-reports/">Investigative Reports</a></li>
+<li id="menu-item-200976041" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200976041"><a title="The Fly" href="http://www.sanjoseinside.com/category/the-fly/">The Fly</a></li>
+	      </ul>
+	      <ul class="nav">
+	        <li class="dropdown visible-phone" id="category-list">
+			  <a class="dropdown-toggle" data-toggle="dropdown" href="#category-list">
+			    Categories
+				<b class="caret"></b>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-191"><a title="News" href="http://www.sanjoseinside.com/category/news/">News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a title="Opinion" href="http://www.sanjoseinside.com/category/opinion/">Opinion</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a title="Investigative Reports" href="http://www.sanjoseinside.com/category/investigative-reports/">Investigative Reports</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200976041"><a title="The Fly" href="http://www.sanjoseinside.com/category/the-fly/">The Fly</a></li>
+			  </ul>
+			</li>
+	      </ul>
+	      
+	      <div id="header-search">
+				<form class="form-search" role="search" method="get" action="http://www.sanjoseinside.com/">
+					<div class="input-append">
+						<input type="text" placeholder="SEARCH" class="input-medium appendedInputButton search-query" value="" name="s" /><button type="submit" class="search-submit btn"><i class="icon icon-search"></i></button>
+					</div>
+				</form>
+			</div>
+
+	      <!-- Everything you want hidden at 940px or less, place within here -->
+	      <div class="nav-collapse">
+	        <ul class="nav">
+	        		        </ul>
+	        <ul class="nav visible-phone">
+		        <li class="divider"></li>
+		        	         </ul>
+	      </div>	      			
+	      
+	    </div>
+	  </div>
+	</nav>
+	
+<div id="main" class="row-fluid clearfix">
+<div id="content" class="span8" role="main">
+	
+<article id="post-201126516" class="post-201126516 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-correctional-peace-officers-association tag-deputy-sheriffs-association tag-elmwood-correctional-facility tag-larry-lucero tag-lauriesmith tag-main-jail tag-richard-glennon tag-robert-pacheco tag-santaclaracounty hnews item" itemscope itemtype="http://schema.org/Article">
+		<header>
+		<h4 class="entry-category"><a href="http://www.sanjoseinside.com/category/news/" title="View all posts in News">News</a></h4> 		<h1 class="entry-title" itemprop="headline">Santa Clara County Sheriff&#8217;s Deputies Side with Inmates on Fourth Day of Hunger Strike</h1>
+ 		<h5 class="byline"><span class="by-author"><span class="by">By</span> <span class="author vcard" itemprop="author"><a class="url fn n" href="http://www.sanjoseinside.com/author/jennifer-wadsworth/" title="More from Jennifer Wadsworth" rel="author">Jennifer Wadsworth</a></span></span><span class="twitter-byline"><a href="https://twitter.com/intent/user?screen_name=jennwadsworth"><i class="sprite"></i> @jennwadsworth</a></span><span class="sep"> / </span><time class="entry-date updated dtstamp pubdate" datetime="2016-10-20T16:27:09-07:00">October 20, 2016</time><span class="comments-count"><a class="comments-link" href="#comments" title="3 comments"><i class="sprite"></i> 3</a></span></h5>
+		
+ 		<div id="featured-cover"><div class="img-frame"><img width="772" height="350" src="http://www.sanjoseinside.com/wp-content/uploads/2015/11/Main-Jail1-772x350-21.jpg" class="attachment-featured-image wp-post-image" alt="Santa Clara County sheriff&#039;s deputies said they agree with inmates on hunger strike over what they call inhumane treatment by the jails." /></div><p class="wp-caption-text">Santa Clara County sheriff's deputies said they agree with inmates on hunger strike over what they call inhumane treatment by the jails. </p></div>	<div class="post-social clearfix">
+		<a class="addthis_button_facebook" title="Share on Facebook"><img src="/wp-content/themes/largo-child/images/share-facebook.png" /></a> 
+		<a class="addthis_button_twitter" title="Share on Twitter"><img src="/wp-content/themes/largo-child/images/share-twitter.png" /></a> 
+		<a class="addthis_button_email" title="Share via Email"><img src="/wp-content/themes/largo-child/images/share-email.png" /></a>
+	</div>
+ 		<meta itemprop="description" content="The union for Santa Clara County sheriff deputies has come out in support of jail inmates staging a two-week hunger strike.
+" />
+ 		<meta itemprop="datePublished" content="2016-10-20T16:27:09-07:00" />
+ 		<meta itemprop="dateModified" content="2016-10-23T21:14:16-07:00" />
+ 		<meta itemprop="image" content="http://www.sanjoseinside.com/wp-content/uploads/2015/11/Main-Jail1-772x350-21-140x140.jpg" />	</header><!-- / entry header -->
+		<div class="entry-content clearfix" itemprop="articleBody">
+		<p>The union for Santa Clara County sheriff deputies has come out <a href="http://www.sanjoseinside.com/2016/10/18/santa-clara-county-jail-inmates-join-nationwide-hunger-strike-over-solitary-confinement/" target="_blank">in support of jail inmates </a>staging a two-week hunger strike to protest the over-use of solitary confinement.</p>
+<p>“We find ourselves in agreement with the striking inmates,” said Dep. Roger Winslow, vice president of the Santa Clara County Deputy Sheriff’s Association.</p>
+<p>Winslow said the inmates’ list of demands point to oft-cited failures on the part of Sheriff Laurie Smith, who faced strong opposition from the union in her 2014 bid for re-election.</p>
+<p>“Despite these calls for reform from a range of voices, the sheriff refuses to implement commonsense policies that would help officers better serve and protect our community,” Winslow said. “Her lackluster response to the serious hunger strike at hand is yet another example of her incompetence.”</p>
+<p>The Santa Clara County Peace Officers' Association, which represents the correctional deputies who staff the jails, has yet to issue a public statement about the civil disobedience. The inmates, for their part, have stressed that their protest is not against the jail guards but the administration and its policies.</p>
+<p>Inmates are going on day four of the strike, which coincides with a nationwide prison uprising that began as a work stoppage. Estimates vary, but sources within the jail tell San Jose Inside that about 300 inmates are in different stages of fasting.</p>
+<p>The Sheriff’s Office, which oversees San Jose’s Main Jail and the Elmwood Correctional Facility in Milpitas, said nurses are keeping a close eye on the strikers. The jails will continue to prepare food for all inmates, but will donate rejected boxed meals to the local Salvation Army homeless shelter, according to sheriff spokesman Sgt. Richard Glennon.</p>
+<p>“We understand the concerns raised by the population in our care,” Sgt. Glennon said in a prepared statement. “We have implemented many recent reforms specifically addressing needs raised by the affected population.”</p>
+<p>For example, Glennon said, the jail has increased the amount of time inmates spend out of their cells, lowered the price of phone calls and provided additional clothing. Inmates dispute that last point. While they got additional T-shirts and socks, they still take turns wearing jackets during yard time and only get one clothing change a week.</p>
+<p>Several inmates have been calling San Jose Inside with updates as the strike progresses. They said nurses are handing out white fliers describing the health risks of extended fasting, which prompted some inmates to reconsider.</p>
+<p>Robert Pacheco—a 33-year-old inmate awaiting trial isolation for nearly five straight years—said he plans to start eating Friday after learning about how extended fasting can damage internal organs. He said his elderly mother, a cancer survivor, is going through dialysis and may need one of her seven children to donate a kidney.</p>
+<p>“They’re going to do a test on me to see if I’m even compatible to give her a kidney,” Pacheco said in a phone call Thursday. “I don’t want to go through the whole thing and damage my kidneys by not eating.”</p>
+<p>Fellow inmate and pretrial detainee Larry Lucero, 50, said he’s starting to feel the physical symptoms of the fast. A headache has set in, he said, while his vision blurs and his hands shake. He said he lost seven pounds in four days, dropping from 167 to 160. This isn’t his first hunger strike. As an inmate at Pelican Bay State Prison, he said, he went 21 days without food as part of <a href="http://www.npr.org/2014/03/06/286794055/how-four-inmates-launched-a-statewide-hunger-strike-from-solitary" target="_blank">an uprising of 30,000 prisoners</a> throughout the state. But the effects are more severe now that he’s a few years older.</p>
+<p>Many of the inmates have been preventing medical staff from trying to take their vitals or do anything except weigh them, Lucero said. It’s another way to ramp up the pressure and force the powers that be to negotiate with them.</p>
+<p>“We understand who holds the key, so it’s not a battle,” he said. “We’re just trying to get what we’re entitled to, right?”</p>
+<p>The inmates have <a href="https://prisonerhungerstrikesolidarity.files.wordpress.com/2016/08/5-demands-santa-clara-county-jails.pdf" target="_blank">five core demands</a>: to overhaul the classification system, to make solitary confinement a behavior-based penalty, to provide adequate clothing, to curb excessive commissary charges and to spend the Inmate Welfare Fund on education and rehabilitation. Inmates sent an open letter to the sheriff—<a href="https://prisonerhungerstrikesolidarity.wordpress.com/2016/08/29/upcoming-hunger-strike-end-solitary-confinement-and-inhumane-treatment-in-santa-clara-co-jails/" target="_blank">available here online</a>—weeks before they began refusing food.</p>
+<p>As part of the protest, inmates are boycotting the commissary, which reportedly charges $1 for a 25-cent package of dried noodles and $5 for an eight-pack of tortillas.</p>
+<p>Sheriff Smith said the jails have already ended solitary confinement, which civil rights groups call unconstitutional cruelty. The Main Jail has emptied out a row of designated solitary confinement cells in Third West Max in response to a lawsuit filed last year by the Prison Law Office on behalf of two inmates.</p>
+<p>But several of the men who were relocated from those cells to other parts of the jail said they continue to live in isolation. Many of them claim to have spent months or years with next to no human contact except their brief interactions with guards at mealtimes. Detainees holed up in one-man cells because of their high-risk classification—usually because of suspected gang affiliation—can’t access rehabilitative programs like Narcotics Anonymous or vocational classes.</p>
+<p>Inmates acknowledged that they may not be the most sympathetic characters, but noted that people accused of crimes still have a right to due process.</p>
+<p>“I understand that not everybody’s going to understand our plight … We're not saying to abolish solitary confinement,” Lucero clarified. “If we deserve to come back here based on disciplinary action, then put us back here. But not indefinitely.”</p>
+<p>Before the hunger strike, he said, the only highlight of the day was getting breakfast, lunch and dinner through a slot in the door. Now the only thing to look forward to is sleep, which has been hard to come by since the hunger pangs kicked in.</p>
+<p>“We’re not even living, we’re existing,” Lucero said. “Anything that makes life meaningful is sucked out of it.”</p>
+		<p class="author-bio">Jennifer Wadsworth is a staff writer for San Jose Inside and Metro Newspaper. Email tips to <a href="mailto:jenniferw@metronews.com" title="jenniferw@metronews.com">jenniferw@metronews.com</a> or follow her on Twitter at <a href="https://twitter.com/jennwadsworth" title="@jennwadsworth">@jennwadsworth</a>.</p>	</div><!-- .entry-content -->
+		<footer class="post-meta bottom-meta">
+ 			<div class="post-social clearfix">
+		<a class="addthis_button_facebook" title="Share on Facebook"><img src="/wp-content/themes/largo-child/images/share-facebook.png" /></a> 
+		<a class="addthis_button_twitter" title="Share on Twitter"><img src="/wp-content/themes/largo-child/images/share-twitter.png" /></a> 
+		<a class="addthis_button_email" title="Share via Email"><img src="/wp-content/themes/largo-child/images/share-email.png" /></a>
+	</div>
+
+ 		<!-- Other posts in this series -->
+ 		
+        <!-- Post tags -->
+            		<div class="tags clearfix">
+    			<h5>Filed Under:</h5>
+    			<ul>
+    				<li class="post-category-link"><a href="http://www.sanjoseinside.com/category/news/" title="Read Posts in the News category"><i class="icon-white icon-tag"></i>News</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/correctional-peace-officers-association/" title="Read Posts tagged with: Correctional Peace Officers Association"><i class="icon-white icon-tag"></i>Correctional Peace Officers Association</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/deputy-sheriffs-association/" title="Read Posts tagged with: Deputy Sheriff’s Association"><i class="icon-white icon-tag"></i>Deputy Sheriff’s Association</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/elmwood-correctional-facility/" title="Read Posts tagged with: Elmwood Correctional Facility"><i class="icon-white icon-tag"></i>Elmwood Correctional Facility</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/larry-lucero/" title="Read Posts tagged with: Larry Lucero"><i class="icon-white icon-tag"></i>Larry Lucero</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/lauriesmith/" title="Read Posts tagged with: Laurie Smith"><i class="icon-white icon-tag"></i>Laurie Smith</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/main-jail/" title="Read Posts tagged with: Main Jail"><i class="icon-white icon-tag"></i>Main Jail</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/richard-glennon/" title="Read Posts tagged with: Richard Glennon"><i class="icon-white icon-tag"></i>Richard Glennon</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/robert-pacheco/" title="Read Posts tagged with: Robert Pacheco"><i class="icon-white icon-tag"></i>Robert Pacheco</a></li><li class="post-tag-link"><a href="http://www.sanjoseinside.com/tag/santaclaracounty/" title="Read Posts tagged with: Santa Clara County"><i class="icon-white icon-tag"></i>Santa Clara County</a></li>    			</ul>
+    		</div>
+    	
+    	
+			</footer><!-- /.post-meta -->
+	</article><!-- #post-201126516 -->
+
+
+	<div id="comments" class="clearfix">
+	
+	
+			<h2 id="comments-title">
+			3 Comments		</h2>
+
+		
+		<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-1639302">
+			<article id="comment-1639302" class="comment">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/84280d670d1946d98146becbd313be66?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /><span class="fn">Tina Morgado</span> <a class="comment-time" href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/#comment-1639302"><time pubdate datetime="2016-10-20T18:28:25-07:00">Oct 20, 2016 @ 6:28 pm</time></a>
+											</div><!-- .comment-author .vcard -->
+
+					
+				</footer>
+
+				<div class="comment-content"><p>I&#8217;m all for the rights of the inmates. I experienced it and know there is definitely a biased mentality with zero compassion&#8230;.. Most of them are INNOCENT!</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1639306">
+			<article id="comment-1639306" class="comment">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/c9ad66c80c3046ccb340511e9a58387d?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /><span class="fn">JohnMichael O'Connor</span> <a class="comment-time" href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/#comment-1639306"><time pubdate datetime="2016-10-20T20:55:18-07:00">Oct 20, 2016 @ 8:55 pm</time></a>
+											</div><!-- .comment-author .vcard -->
+
+					
+				</footer>
+
+				<div class="comment-content"><p>Oh c&#8217;mon Tina.  Only most of them are innocent?  They are ALL innocent.  Just ask them, they&#8217;ll tell you.</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-1639314">
+			<article id="comment-1639314" class="comment">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/a6231db5ed211874d8e85b97374e6947?s=24&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D24&amp;r=G' class='avatar avatar-24 photo' height='24' width='24' /><span class="fn"><a href='http://www.janeandjohnqpublic.com' rel='external nofollow' class='url'>Jane and John Q</a></span> <a class="comment-time" href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-sheriffs-deputies-side-with-inmates-on-fourth-day-of-hunger-strike/#comment-1639314"><time pubdate datetime="2016-10-21T07:32:18-07:00">Oct 21, 2016 @ 7:32 am</time></a>
+											</div><!-- .comment-author .vcard -->
+
+					
+				</footer>
+
+				<div class="comment-content"><p>This is what happens when corruption is allowed to silence our victims, our poor and our most voiceless &#8211; strart looking at the top and all who protect the top   <a href="http://www.janeandjohnqpublic.com/blog/santa-clara-county-da-jeff-rosen-failed-to-do-his-job-in-audrie-pott-suicide-case-and-houghton-indictment" rel="nofollow">http://www.janeandjohnqpublic.com/blog/santa-clara-county-da-jeff-rosen-failed-to-do-his-job-in-audrie-pott-suicide-case-and-houghton-indictment</a></p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+		</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+			
+</div><!-- #comments -->
+</div><!--#content-->
+
+<aside id="sidebar" class="span4">
+		<div class="widget-area" role="complementary">
+		<aside id="text-3" class="widget widget-1 odd no-bg widget_text clearfix">			<div class="textwidget"><!-- Top Ad Slot -->
+<div class="ga_slot">
+<script type="text/javascript">
+GA_googleFillSlot("SanJoseInside_Top_300x250");
+</script>
+</div>
+<!-- end Top Ad Slot --></div>
+		</aside><aside id="text-6" class="widget widget-2 even no-bg widget_text clearfix">			<div class="textwidget"><!-- Middle Ad Slot -->
+<div class="ga_slot">
+<script type="text/javascript">
+GA_googleFillSlot("SanJoseInside_Middle_300x250");
+</script>
+</div>
+<!-- end Middle Ad Slot --></div>
+		</aside><aside id="text-2" class="widget widget-3 odd no-bg widget_text clearfix"><h3 class="widgettitle">Latest Tweets</h3>			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/sanjoseinside"  data-widget-id="430783096456114176" data-chrome="noheader nofooter transparent" data-tweet-limit="3">Loading tweets by @sanjoseinside...</a></div>
+		</aside><aside id="text-4" class="widget widget-4 even no-bg widget_text clearfix">			<div class="textwidget"><div id="ga_multislots">
+	<!-- Inhouse Ad Slots -->
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_InHouse1_300x250");
+	</script>
+	</div>
+	
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_InHouse2_300x250");
+	</script>
+	</div>
+	<!-- end Inhouse Ad Slots -->
+	
+	<!-- P1-4 Ad Slots -->
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_P1_300x250");
+	</script>
+	</div>
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_P2_300x250");
+	</script>
+	</div>
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_P3_300x250");
+	</script>
+	</div>
+	<div class="ga_slot ga_multislot">
+	<script type="text/javascript">
+	GA_googleFillSlot("SanJoseInside_P4_300x250");
+	</script>
+	</div>
+	<!-- end P1-4 Ad Slots -->
+</div></div>
+		</aside>
+<!-- WordPress Popular Posts Plugin v3.2.1 [W] [weekly] [comments] [custom] -->
+<aside id="wpp-2" class="widget widget-5 odd no-bg popular-posts clearfix">
+<h3 class="widgettitle">Trending Articles</h3>
+<ul>
+<li><a href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-addresses-trumps-election-rigging-claims/" title="Santa Clara County Addresses Trump’s Election-Rigging Claims" target="_self"><img src="http://www.sanjoseinside.com/wp-content/uploads/wordpress-popular-posts/201126505-48x48.jpg" title="Santa Clara County Addresses Trump’s Election-Rigging Claims" alt="Santa Clara County Addresses Trump’s Election-Rigging Claims" width="48" height="48" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <div class="list-content"><a href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-addresses-trumps-election-rigging-claims/" title="Santa Clara County Addresses Trump’s Election-Rigging Claims" class="wpp-post-title" target="_self">Santa Clara County Addresses Trump’s Election-Rigging Claims</a><span class="comment-count">18</span></div></li>
+<li><a href="http://www.sanjoseinside.com/2016/10/21/santa-clara-county-inmates-call-off-hunger-strike-after-negotiating-with-jail-officials/" title="Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials" target="_self"><img src="http://www.sanjoseinside.com/wp-content/uploads/wordpress-popular-posts/201126598-48x48.jpg" title="Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials" alt="Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials" width="48" height="48" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <div class="list-content"><a href="http://www.sanjoseinside.com/2016/10/21/santa-clara-county-inmates-call-off-hunger-strike-after-negotiating-with-jail-officials/" title="Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials" class="wpp-post-title" target="_self">Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials</a><span class="comment-count">16</span></div></li>
+<li><a href="http://www.sanjoseinside.com/2016/10/18/op-ed-california-has-a-bloated-unsustainable-death-penalty/" title="Op-Ed: California Has a Bloated, Unsustainable Death Penalty" target="_self"><img src="http://www.sanjoseinside.com/wp-content/uploads/wordpress-popular-posts/201126424-48x48.jpg" title="Op-Ed: California Has a Bloated, Unsustainable Death Penalty" alt="Op-Ed: California Has a Bloated, Unsustainable Death Penalty" width="48" height="48" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <div class="list-content"><a href="http://www.sanjoseinside.com/2016/10/18/op-ed-california-has-a-bloated-unsustainable-death-penalty/" title="Op-Ed: California Has a Bloated, Unsustainable Death Penalty" class="wpp-post-title" target="_self">Op-Ed: California Has a Bloated, Unsustainable Death Penalty</a><span class="comment-count">13</span></div></li>
+<li><a href="http://www.sanjoseinside.com/2016/10/14/san-jose-holds-8th-annual-crime-and-gang-prevention-summit/" title="San Jose Holds 8th Annual Crime and Gang Prevention Summit" target="_self"><img src="http://www.sanjoseinside.com/wp-content/uploads/wordpress-popular-posts/201126409-48x48.jpg" title="San Jose Holds 8th Annual Crime and Gang Prevention Summit" alt="San Jose Holds 8th Annual Crime and Gang Prevention Summit" width="48" height="48" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <div class="list-content"><a href="http://www.sanjoseinside.com/2016/10/14/san-jose-holds-8th-annual-crime-and-gang-prevention-summit/" title="San Jose Holds 8th Annual Crime and Gang Prevention Summit" class="wpp-post-title" target="_self">San Jose Holds 8th Annual Crime and Gang Prevention Summit</a><span class="comment-count">12</span></div></li>
+<li><a href="http://www.sanjoseinside.com/2016/10/17/san-jose-may-allow-pot-delivery-multiple-cultivation-sites/" title="San Jose May Allow Pot Delivery, Multiple Cultivation Sites" target="_self"><img src="http://www.sanjoseinside.com/wp-content/uploads/wordpress-popular-posts/201126417-48x48.jpg" title="San Jose May Allow Pot Delivery, Multiple Cultivation Sites" alt="San Jose May Allow Pot Delivery, Multiple Cultivation Sites" width="48" height="48" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a> <div class="list-content"><a href="http://www.sanjoseinside.com/2016/10/17/san-jose-may-allow-pot-delivery-multiple-cultivation-sites/" title="San Jose May Allow Pot Delivery, Multiple Cultivation Sites" class="wpp-post-title" target="_self">San Jose May Allow Pot Delivery, Multiple Cultivation Sites</a><span class="comment-count">12</span></div></li>
+
+</ul>
+</aside>
+<!-- End WordPress Popular Posts Plugin v3.2.1 -->
+<aside id="largo-recent-comments-widget-2" class="widget widget-6 even no-bg largo-recent-comments clearfix"><h3 class="widgettitle">Latest Comments</h3><ul id="recentcomments"><li class="recentcomments"><p class="comment-excerpt">Garcia is a joke. Guess he fits right in at the Peoples Banana Republic of San Jose </p><p class="comment-meta">&mdash;&nbsp;Mark on <a href="http://www.sanjoseinside.com/2016/08/30/sjpd-chief-eddie-garcia-more-gun-control-laws-needed-black-lives-matter-a-valid-movement/#comment-1639368">SJPD Chief Eddie Garcia: More Gun Control Laws Needed, Black Lives Matter a ‘Valid’ Movement</a></p></li><li class="recentcomments"><p class="comment-excerpt">Funny how that works, hanging chads only count for Democrats.
+What surprises me is with a straight face tell us that &hellip;</p><p class="comment-meta">&mdash;&nbsp;Empty Gun on <a href="http://www.sanjoseinside.com/2016/10/20/santa-clara-county-addresses-trumps-election-rigging-claims/#comment-1639367">Santa Clara County Addresses Trump’s Election-Rigging Claims</a></p></li><li class="recentcomments"><p class="comment-excerpt">Measure B: throwing more money away. $170.5 Million per mile (more recent estimates are $200M/ mile) to connect BART to &hellip;</p><p class="comment-meta">&mdash;&nbsp;Manumet on <a href="http://www.sanjoseinside.com/2016/10/12/endorsement-yes-on-measure-b/#comment-1639366">Endorsement: ‘Yes’ on Measure B</a></p></li><li class="recentcomments"><p class="comment-excerpt">Vote No on Measure B.
+Measure B: throwing more money away. $170.5 Million per mile (more recent estimates are $200M/ mile) &hellip;</p><p class="comment-meta">&mdash;&nbsp;Manumet on <a href="http://www.sanjoseinside.com/2016/10/12/endorsement-yes-on-measure-b/#comment-1639365">Endorsement: ‘Yes’ on Measure B</a></p></li><li class="recentcomments"><p class="comment-excerpt">Do away with the discriminatory, unfair, inhumane jail segregation policies. No more isolation rooms and no more protective custody without &hellip;</p><p class="comment-meta">&mdash;&nbsp;J.S. Robillard on <a href="http://www.sanjoseinside.com/2016/10/21/santa-clara-county-inmates-call-off-hunger-strike-after-negotiating-with-jail-officials/#comment-1639364">Santa Clara County Inmates Call Off 5-Day Hunger Strike after Negotiating with Jail Officials</a></p></li></ul></aside><aside id="text-5" class="widget widget-7 odd no-bg widget_text clearfix">			<div class="textwidget"><!-- Bottom Ad Slot -->
+<div class="ga_slot">
+<script type="text/javascript">
+GA_googleFillSlot("SanJoseInside_Bottom_300x250");
+</script>
+</div>
+<!-- end Bottom Ad Slot --></div>
+		</aside><aside id="mostpopulartags-2" class="widget widget-8 even no-bg widget_most_popular_tags clearfix"><h3 class="widgettitle">Popular Topics</h3><ul class='wp-tag-cloud'>
+	<li><a href='http://www.sanjoseinside.com/tag/citycouncil/' class='tag-link-271' title='810 topics' style='font-size: 16px;'>City Council</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/samliccardo/' class='tag-link-571' title='416 topics' style='font-size: 16px;'>Sam Liccardo</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/santaclaracounty/' class='tag-link-1591' title='377 topics' style='font-size: 16px;'>Santa Clara County</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/education/' class='tag-link-181' title='317 topics' style='font-size: 16px;'>Education</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/chuck-reed/' class='tag-link-171' title='310 topics' style='font-size: 16px;'>Chuck Reed</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/budget/' class='tag-link-311' title='309 topics' style='font-size: 16px;'>Budget</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/police/' class='tag-link-2831' title='263 topics' style='font-size: 16px;'>Police</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/boardofsupervisors/' class='tag-link-2401' title='206 topics' style='font-size: 16px;'>Board of Supervisors</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/sanjosepolicedepartment/' class='tag-link-971' title='201 topics' style='font-size: 16px;'>San Jose Police Department</a></li>
+	<li><a href='http://www.sanjoseinside.com/tag/election/' class='tag-link-1471' title='196 topics' style='font-size: 16px;'>Election</a></li>
+</ul>
+</aside><aside id="text-7" class="widget widget-9 odd no-bg widget_text clearfix">			<div class="textwidget"><a class="text-tiny text-center" href="/contact" title="Advertising Opportunities">Advertise with San Jose Inside &raquo;</a></div>
+		</aside><aside id="text-8" class="widget widget-10 even no-bg widget_text clearfix"><h3 class="widgettitle">Subscribe</h3>			<div class="textwidget"><p>Sign up to receive breaking news from San Jose Inside</p>
+<form id="newsletter-signup" method="post" action="http://t.lt02.net/q/IuKf8oWkv8lSpDcfDtXRd_k_B6GNK-LraM">
+<input type="hidden" name="crvs" value="dQa60RTU_rioh8E-FeX1kNzKnJT2iHIvPris7cBgiEqhYt7Bu0wp_Tz5mFuzJ1NVWbNsw65Ycwmd7TKZPLWyrMdvNQ6UcNgUrEbtx1zDPr7wn66s5B9HmBfKSA-5x19a"/>
+<div class="form-input">
+	<input type="text" name="email" maxlength="100" value="" placeholder="Email Address"/> <input class="btn-submit" type="submit" id="submit" value="GO"/>
+</div>
+</form></div>
+		</aside>	</div><!-- .widget-area -->
+	</aside>
+
+	</div> <!-- #main -->
+
+</div><!-- #page -->
+
+<div class="footer-bg clearfix">
+	<footer id="site-footer">
+		<div id="site-footer-content" class="row-fluid">
+			<div class="span6">
+				<a href="/" title="San Jose Inside" id="site-footer-logo">San Jose Inside | A look inside San Jose politics and culture</a>
+			</div>
+			<div id="footer-nav" class="span6">
+				<ul id="menu-navbar-categories-list-2" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-191"><a title="News" href="http://www.sanjoseinside.com/category/news/">News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a title="Opinion" href="http://www.sanjoseinside.com/category/opinion/">Opinion</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a title="Investigative Reports" href="http://www.sanjoseinside.com/category/investigative-reports/">Investigative Reports</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200976041"><a title="The Fly" href="http://www.sanjoseinside.com/category/the-fly/">The Fly</a></li>
+</ul>			</div>
+		</div>			
+		<div class="footer-bottom clearfix">
+			<p>Copyright &copy; 2016 San Jose Inside. All rights reserved. <span class="sep">|</span> <a href="/about-sji" title="About San Jose Inside">About Us</a> <span class="sep">|</span> <a href="/comments-policy/" title="Comments Policy">Comments Policy</a> <span class="sep">|</span> <a href="/contact" title="Advertise on San Jose Inside">Advertising & Partnerships</a> <span class="sep">|</span> <a href="/contact" title="Contact San Jose Inside">Contact Us</a> <span class="sep">|</span> <a href="/subscribe" title="Subscribe to San Jose Inside Newsletter">Newsletter</a> <span class="sep">|</span> <a href="https://www.facebook.com/SanJoseInside" title="San Jose Inside on Facebook">Facebook</a> <span class="sep">|</span> <a href="https://twitter.com/sanjoseinside" title="San Jose Inside on Twitter">Twitter</a></p>
+		</div>
+	</footer>
+</div>
+
+	<div style="display:none">
+	<div class="grofile-hash-map-84280d670d1946d98146becbd313be66">
+	</div>
+	<div class="grofile-hash-map-c9ad66c80c3046ccb340511e9a58387d">
+	</div>
+	<div class="grofile-hash-map-a6231db5ed211874d8e85b97374e6947">
+	</div>
+	</div>
+<!-- Start GA tracker -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+google.setOnLoadCallback(function() {
+    jQuery.noConflict();
+    jQuery('a[href^="http"]').not('a[href*="sanjoseinside.com"]').click(function() {
+        var href = jQuery(this).attr('href');
+        if (href.indexOf("://") > 0) {
+            var outgoing = '/outgoing/' + href.split("://",2)[1];
+            urchinTracker(outgoing);
+        }
+    });
+});
+_uacct = 'UA-3907221-1';
+window.google_analytics_uacct = 'UA-3907221-1';
+_userv = 2;
+urchinTracker();
+</script>
+<!-- End GA tracker -->
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qacct="p-d5buRHCDjoZz-";quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-d5buRHCDjoZz-" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-d5buRHCDjoZz-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript><!-- End Quantcast tag -->
+	
+		
+		<!--Twitter-->
+		<script>
+		jQuery(window).load(function(){!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");});
+		</script>
+		
+			<link rel='stylesheet' id='tweetable-css'  href='http://www.sanjoseinside.com/wp-content/plugins/tweetable-text-master/css/tweetable.css?ver=0.0.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-includes/js/comment-reply.min.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201643'></script>
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-content/themes/largo/js/largoPlugins.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-content/themes/largo/js/largoCore.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.sanjoseinside.com/wp-content/themes/largo/js/st_buttons.js?ver=1.0'></script>
+
+	<script src="http://stats.wp.com/e-201643.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:3.3',blog:'64736721',post:'201126516',tz:'-7'});
+	var load_cmc = function(){linktracker_init(64736721,201126516,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"85e58bf3f0","applicationID":"18309473","transactionName":"YQdQZ0IHDUNVBk1YXlhNc1BEDwxeGxZQX1ZaBw==","queueTime":0,"applicationTime":285,"atts":"TUBTEQodHk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
