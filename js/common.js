@@ -32,11 +32,11 @@ document.getElementById('navigationIcon').onclick = function(){
 	if(toggled) {
 		$this.classList.add("fa-bars");
 		$this.classList.remove("fa-close");
-		document.getElementById('navigationLarge').style.display = 'none';
+		document.getElementById('navigationPages').style.display = 'none';
 	} else {
 		$this.classList.add("fa-close");
 		$this.classList.remove("fa-bars");
-		document.getElementById('navigationLarge').style.display = 'block';
+		document.getElementById('navigationPages').style.display = 'block';
 	}
 	toggled = !toggled;
 };
