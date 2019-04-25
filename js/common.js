@@ -23,24 +23,18 @@ function addContactInfo() {
 
 /*
  * Navigation
- * Navigation for mobile. Opens and closes the navigation when the hamburger button gets pressed.
+ * Opens and closes the navigation when the hamburger button gets pressed.
  */
-var toggled = false;
+var $btn = document.getElementById('navButtonContainer'),
+    $nav = document.getElementById('navigation');
 
-document.getElementById('navigationIcon').onclick = function(){
-	var $this = document.getElementById('navigationIcon');
-	if(toggled) {
-		$this.classList.add("fa-bars");
-		$this.classList.remove("fa-close");
-		document.getElementById('navigationPages').style.display = 'none';
-	} else {
-		$this.classList.add("fa-close");
-		$this.classList.remove("fa-bars");
-		document.getElementById('navigationPages').style.display = 'block';
-	}
-	toggled = !toggled;
+$btn.onclick = function(){
+    if ($nav.classList.contains('open')) {
+        $nav.classList.remove('open');
+    } else {
+        $nav.classList.add('open');
+    }
 };
-
 
 
 
