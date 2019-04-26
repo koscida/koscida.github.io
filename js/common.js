@@ -30,9 +30,11 @@ var $btn = document.getElementById('navButtonContainer'),
 
 $btn.onclick = function(){
     if ($nav.classList.contains('open')) {
-        $nav.classList.remove('open');
+		$nav.classList.add('close');
+		$nav.classList.remove('open');
     } else {
-        $nav.classList.add('open');
+		$nav.classList.remove('close');
+		$nav.classList.add('open');
     }
 };
 
