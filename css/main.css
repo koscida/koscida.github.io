@@ -675,11 +675,11 @@ footer {
     #timeline #timeline-grid .timeline-group:nth-child(odd) {
       background: transparent; }
       #timeline #timeline-grid .timeline-group:nth-child(odd) .timeline-graph span {
-        background: #CDB6F8; }
+        background: #AD96F8; }
     #timeline #timeline-grid .timeline-group:nth-child(even) {
       background: #DFDEE9; }
       #timeline #timeline-grid .timeline-group:nth-child(even) .timeline-graph span {
-        background: #AD96F8; }
+        background: #8D76D8; }
     #timeline #timeline-grid .timeline-group .timeline-label {
       padding: 10px; }
     #timeline #timeline-grid .timeline-group .timeline-graph {

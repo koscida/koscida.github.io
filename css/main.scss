@@ -821,13 +821,13 @@ footer {
 					&:nth-child(odd) {
 						background: transparent;
 						.timeline-graph span {
-							background: $color-purple6-bad;
+							background: $color-purple4;
 						}
 					}
 					&:nth-child(even) { 
 						background: $color-grey-1;
 						.timeline-graph span {
-							background: $color-purple4;
+							background: $color-purple2;
 						}
 					}
 					.timeline-label {
