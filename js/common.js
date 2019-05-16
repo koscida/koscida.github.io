@@ -8,9 +8,9 @@ var doit;
 window.onload = function() {
 
 	addContactInfo();
-	
+
 	groupToggle();
-	
+
 	positionTimeline();
 };
 
@@ -45,7 +45,7 @@ $btn.onclick = function(){
 
 
 /*
- * Groups 
+ * Groups
  * - Toggle for groups
  * - Defaults to close, if screen is large, opens toggles
  */
@@ -59,7 +59,7 @@ function groupToggle() {
 	  	   	$groups[i].classList.add('open');
 		}
 	}
-	
+
 	// Set up tap/click listeners
 	var $groupsheader = document.getElementsByClassName('group-header');
 	for (var i=0; i<$groupsheader.length; i++) {
@@ -84,7 +84,7 @@ function groupToggleTapOrClick(event) {
 
 
 /*
- * Timeline 
+ * Timeline
  * - positions timeline items
  */
 function positionTimeline() {
@@ -94,27 +94,29 @@ function positionTimeline() {
 	var labelWidthpx = $(".timeline-label").width();
 	var graphWidthpx = grid.width()-labelWidthpx-20;
 	var unitWidthpx = graphWidthpx/gridSize;
-	
+
 	$(".timeline-item").each(function() {
 		var itemStart = $(this).attr("data-start");
 		var itemLen = $(this).attr("data-len");
 		var itemLeftpx = (itemStart-1)*unitWidthpx;
 		var itemWidthpx = ((itemLen*unitWidthpx)-4);
-		var itemWidthpct = ((itemLen/gridSize) * 100)-0.5;
 		if (itemLen == 1) { itemLeftpx -= 2; itemWidthpx += 3; }
-		
+
+		var itemWidthpct = ((itemLen/gridSize) * 100)-0.5;
+		var itemLeftpct = (itemLeftpx / graphWidthpx)* 100;
+
 		// first, move the items left, not animated
-		$(this).css({left: itemLeftpx + 'px', overflow: "visible"});
-		
+		$(this).css({"margin-left": itemLeftpct + '%', overflow: "visible"});
+
 		// expand the width
 		$(this).animate({width: itemWidthpct + "%"},750);
-		
+
 		// drag the timeline markers down
 		if ($(this).parent().parent().hasClass("timeline-header")) {
 			$(this).animate({height: gridHeightpx + 'px'},750);
 		}
 	});
-	
+
 }
 
 

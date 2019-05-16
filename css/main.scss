@@ -1,4 +1,4 @@
-$body-font-family: 'Dosis', helvetica, sans-serif;
+$body-font-family: helvetica, arial, sans-serif;
 $body-font-size: 18px;
 $body-font-weight: 300;
 $body-line-height: 1.5em;
@@ -33,7 +33,7 @@ $color-red: #C3407C;
 	$color-red3-bad:			#F26590;
 	$color-red2-bad:			#F25580;
 	$color-red1-bad:			#F24570;
-	
+
 	$color-red0:				#C3407C;
 	$color-red-1:				#B3306C;
 	$color-red-2:				#A22550;
@@ -50,7 +50,7 @@ $color-red: #C3407C;
 	$color-red-13-bad:			#020500;
 	$color-red-14-bad:			#020500;
 	$color-red-15-bad:			#020500;
-	
+
 $color-purple: #6D56B8;
 	$color-purple10-bad:		#FDF6F8;
 	$color-purple9-bad:			#FDE6F8;
@@ -91,7 +91,7 @@ $color-purple: #6D56B8;
 	$color-grey-13:				#1F1E29;
 	$color-grey-14:				#0F0E19;
 	$color-grey-15-bad:			#0F0E09;
-	
+
 $color-off-white: #F4E9DF;
 $color-white: #FFF;
 
@@ -102,7 +102,7 @@ $color-white: #FFF;
 
  /* **************************
   * 		GENERAL
-  * - set body 
+  * - set body
   * - set headers (h1, h2, etc)
   * - set text (p, a, .fa, etc.)
   *  set theme (light, dark, special)
@@ -138,7 +138,7 @@ h2 {	/* page title */
 	font-size: 48px;
 	line-height: 1.25em;
 	color: $color-grey-12;
-	
+
 	&:after {
 		position: absolute;
 		content: '';
@@ -162,7 +162,7 @@ h4 {	/* page sub-section headers */
 
 p {
 	line-height: 1.25em;
-	margin-bottom: 15px; 
+	margin-bottom: 15px;
 	line-height: 1.65em;
 }
 a {
@@ -202,14 +202,14 @@ b {
 /* *******************
  * 		LAYOUT
  * - set the header to static (navigation is separate, see below)
- * - set footer to bottom of page 
+ * - set footer to bottom of page
  *	// TODO: do this
  * - if aside, fix to 150px on right
  * // TODO: this has never been tested on mobile, styles pulled from v1
  */
 $padding: 15px;
 $pad: $padding;
- 
+
 $header-height: 65px;
 	$header-height-big: 85px;
 $header-z-index: 100;
@@ -223,16 +223,16 @@ header#header {
 	top: 0;
 	height: $header-height;
 	width: 100%;
-	
+
 	#headerContainer {
 		padding: $pad - 5 ($nav-disk-diameter/2) $pad - 5 $pad - 5;
 	}
-	
+
 }
 article#page {
 	margin-top: $header-height;
-	
-	aside#sidebar { 
+
+	aside#sidebar {
 		position: fixed;
 		top: $header-height;
 		width: $aside-width;
@@ -242,7 +242,7 @@ article#page {
 	}
 	section#content {
 		padding: 50px 0;
-		
+
 		> section {
 			padding: 50px $pad;
 		}
@@ -257,7 +257,7 @@ footer#footer {
 	header#header {
 		padding: 0 10%;
 		height: $header-height-big;
-		
+
 		#headerContainer {
 			padding: $pad 0;
 		}
@@ -277,21 +277,21 @@ footer#footer {
 
 /* ******************
  *		HEADER
- * - header bar 
- * - navigation 
+ * - header bar
+ * - navigation
  */
 
 header {
 	width: 100%;
 	background: linear-gradient(45deg, $color-purple0, $color-red0);
-	
+
 	-webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 	-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 	box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-    
+
     #headerContainer {
 		height: 100%;
-		
+
         #headerTitle {
 			height: 100%;
 		    display: flex;
@@ -303,28 +303,28 @@ header {
 			}
 		}
     }
-    
+
 	#navigation {
         position: relative;
         z-index: ($header-z-index + 1);
         width: 100%;
 		margin-top: -($header-height);
-		
+
 		transform-origin: right top;
 		transform: rotate(-90deg);
 		transform-style: initial;
-			&.close { 
+			&.close {
 				transition: all 0.3s ease;
 			}
-			&.open { 
-				transition: all 0.4s ease; 
+			&.open {
+				transition: all 0.4s ease;
 				transform: rotate(0deg);
 			}
 			#navigationLinks {
 				overflow: hidden;
 			}
-			
-        
+
+
         #navButtonContainer {
             position: absolute;
             top: -($nav-disk-diameter/2);
@@ -333,7 +333,7 @@ header {
             height: $nav-disk-diameter;
             z-index: ($header-z-index + 2);
             overflow: hidden;
-            
+
             #navButtonDisk {
                 width: $nav-disk-diameter;
                 height: $nav-disk-diameter;
@@ -342,7 +342,7 @@ header {
                 left: 0;
                 background: $color-grey-12;
                 border-radius: 50%;
-                
+
                 -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
             	-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
             	box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -356,7 +356,7 @@ header {
                 border: 0;
                 position: absolute;
                 z-index: ($header-z-index + 4);
-                
+
                 &#navClose {
                     bottom: ($nav-disk-diameter/8);
                     left: ($nav-disk-diameter/8);
@@ -366,19 +366,19 @@ header {
                     top: ($nav-disk-diameter/8);
                     transform: rotate(90deg);
                 }
-                
+
                 .fa, .fas, .fab {
                     font-size: ($nav-disk-diameter*(1/5));
                 }
             }
         }
-        
+
         #navigationLinks {
             width: 100%;
             height: 100%;
 			margin: 0;
 			padding: 3%;
-            
+
             ul {
                 display: flex;
                 flex-direction: column;
@@ -395,7 +395,7 @@ header {
 				justify-content: center;
 				border-bottom: 1px solid rgba(109, 86, 184, 0.5);
                 &:last-child { border: 0; }
-                
+
 				background: rgba(240,240,240,0.97);
                 &.active {
                     background: linear-gradient(180deg, rgba(240, 240, 240, 0.98), rgba(109, 86, 184, 0.98));
@@ -418,23 +418,23 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		
+
 		#headerContainer {
 			#headerTitle {
 			}
 		}
-		
+
 		#navigation {
 			width: auto;
 			margin: 0 -20px 0 0;
 			transform: none;
 			transform-origin: unset;
-			
+
 			#navButtonContainer { display: none; }
 			#navigationLinks {
 				width: auto;
 				padding: 0;
-				
+
 				ul {
 					flex-direction: row;
 					border: 0;
@@ -474,12 +474,12 @@ aside {
 		padding: 0;
 		border-left: 3px solid #333;
 		padding-left: 20px;
-		
+
 		li {
 			list-style-type: none;
 			margin: 20px 0;
 			display: inline-block;
-			
+
 			a.active:after {
 				border-top: 12px solid transparent;
 			    border-bottom: 12px solid transparent;
@@ -503,11 +503,11 @@ aside {
 footer {
 	background: $color-grey-10;
 	text-align: center;
-	
+
 	-webkit-box-shadow: 0 -3px 5px rgba(57, 63, 72, 0.3);
 	-moz-box-shadow: 0 -3px 5px rgba(57, 63, 72, 0.3);
 	box-shadow: 0 -3px 5px rgba(57, 63, 72, 0.3);
-	
+
 	ul {
 		list-style-type: none;
 		padding: 0;
@@ -522,7 +522,7 @@ footer {
 			}
 		}
 	}
-	
+
 	#one {
 		background: linear-gradient(180deg, $color-grey-11, $color-grey-9);
 		li {
@@ -540,11 +540,11 @@ footer {
 		ul {
 			li a {
 				padding: $pad $pad - 5;
-				.fa, .fas, .fab { 
+				.fa, .fas, .fab {
 					background: linear-gradient(135deg, transparent 20%, rgba(20,20,20,0.3));
 					color: white;
 					border-radius: 50%;
-					padding: $pad; 
+					padding: $pad;
 					font-size: 30px;
 					text-align: center;
 					line-height: 30px;
@@ -554,7 +554,7 @@ footer {
 	}
 	#three {
 		background: linear-gradient(180deg, $color-grey-11, $color-grey-13);
-		p { 
+		p {
 			margin: 0;
 			font-size: 12px;
 		}
@@ -566,7 +566,7 @@ footer {
 			ul {
 				li a {
 					padding: 0 $pad;
-					.fa, .fas, .fab { 
+					.fa, .fas, .fab {
 						font-size: 20px;
 						line-height: 20px;
 					}
@@ -579,17 +579,17 @@ footer {
 
 
 /* ******************
- *		CONTENT	
+ *		CONTENT
  */
 #content {
-	
+
 	> section {
 		&:nth-child(3n-2) {
 			background: $color-white;
 		}
 		&:nth-child(3n-1) {
 			background: $color-grey0;
-			
+
 			.inset {
 				background: $color-grey-2;
 				padding: $pad;
@@ -600,7 +600,7 @@ footer {
 			background: $color-grey1;
 		}
 	}
-	
+
 	ol.numlist {
 		list-style: none;
 		counter-reset: numlist-counter;
@@ -608,11 +608,11 @@ footer {
 		flex-wrap: wrap;
 		margin: 0;
 		padding: 0;
-		
+
 		li {
 			counter-increment: numlist-counter;
 			margin: 25px 0;
-			
+
 			&::before {
 				content: "0" counter(numlist-counter);
 				font-family: monospace;
@@ -627,9 +627,9 @@ footer {
 				text-align: center;
 				line-height: 100px;
 				font-size: 45px;
-				font-weight: 600;	
+				font-weight: 600;
 			}
-			
+
 			b {
 				display: block;
 				margin-bottom: 5px;
@@ -637,28 +637,28 @@ footer {
 			}
 		}
 	}
-	
+
 	#welcome {
-		
+
 		.blurb {
 			padding: $pad;
 			background: $color-grey-1;
 			text-align: center;
 		}
 	}
-	
+
 	ul.list {
 		padding: 0;
 		list-style-type: none;
 	}
 }
 @media (min-width: $mediaBreakMediumMin) {
-	
+
 }
 
 .group {
 	margin-bottom: (2*$pad);
-	
+
 	&.close {
 		.toggleBtns {
 			.group-btn-close { display: block; }
@@ -673,20 +673,20 @@ footer {
 		}
 		.group-content { display: block; }
 	}
-	
+
 	.group-header {
 		border-bottom: 1px solid black;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		
+
 		.toggleBtns {
 			display: flex;
 			flex: 1;
 			align-items: center;
 			justify-content: center;
 			margin-right: $pad;
-			
+
 			span {
 				height: 40px;
 				width: 40px;
@@ -695,18 +695,18 @@ footer {
     			text-align: center;
 			}
 		}
-		
+
 		h4 {
 			flex-grow: 999;
 		}
 	}
-	
+
 	.group-content {
-		
+
 		.list {
 			> li {
 				margin: 20px 0 30px 0;
-				
+
 				.image {
 					text-align: center;
 					margin: 20px;
@@ -717,13 +717,15 @@ footer {
 				.details {
 					.links {
 						display: flex;
-						flex-direction: column;
-						align-items: flex-end;
+						flex-direction: row;
+						align-items: flex-start;
+						flex-direction: row-reverse;
+						justify-content: space-between;
 					}
 				}
 			}
 		}
-		
+
 	}
 }
 @media (min-width: $mediaBreakMediumMin) {
@@ -746,25 +748,25 @@ footer {
 			}
 		}
 	}
-	
-	
+
+
 }
 
 #timeline { display: none; }
 @media (min-width: $mediaBreakMediumMin) {
-	
+
 	#timeline {
 		display: block;
 		margin: 20px -10% 50px;
 		text-align: center;
-		
+
 		#timeline-grid {
-			
+
 			.timeline-group, .timeline-header {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				
+
 				.timeline-label {
 					width: 130px;
 					display: flex;
@@ -784,7 +786,7 @@ footer {
 				.timeline-graph {
 					flex-grow: 999;
 					position: relative;
-					
+
 					span {
 						position: absolute;
 						left: 0;
@@ -824,7 +826,7 @@ footer {
 							background: $color-purple4;
 						}
 					}
-					&:nth-child(even) { 
+					&:nth-child(even) {
 						background: $color-grey-1;
 						.timeline-graph span {
 							background: $color-purple2;
@@ -835,18 +837,13 @@ footer {
 					}
 					.timeline-graph {
 						height: 55px;
-						span { 
+						span {
 							color: white;
 							text-shadow: 0 0 5px rgba(100,100,100, 1);
 						}
 					}
 				}
-			
+
 		}
 	}
 }
-
-
-
-
-

@@ -4,7 +4,7 @@
  * - https://codepen.io/0guzhan/pen/xJLKRo
  * - https://codepen.io/CiTA/pen/YBQjVQ
  */
- 
+
 $mediaBreakLargeMax: 1400px;
 $mediaBreakLargeMin: 1023px;
 $mediaBreakMediumMax: 1024px;
@@ -25,27 +25,6 @@ $border-radius: 5px;
 	transition: all $time-slow ease-out;
 	z-index: -1;
 }
-.btn-large-smallScreen {
-	font-size: 18px;
-	line-height: 22px;
-	padding: 8px 15px;
-}
-	.btn-large-largeScreen {
-		font-size: 20px;
-		line-height: 30px;
-		padding: 10px 25px;
-	}
-.btn-small-smallScreen {
-	font-size: 14px;
-	line-height: 18px;
-	padding: 6px 10px;
-}
-	.btn-small-largeScreen {
-		font-size: 16px;
-		line-height: 20px;
-		padding: 8px 15px;
-	}
-
 
 .download-btn, .link-btn {
 	position: relative;
@@ -53,13 +32,13 @@ $border-radius: 5px;
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row-reverse;
-	> button, li a {
+	button, a {
 		transition: all $time-fast;
 	    text-align: center;
 	    border-radius: $border-radius;
 		overflow: hidden;
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 		justify-content: center;
 		position: relative;
 		z-index: 1;
@@ -85,11 +64,14 @@ $border-radius: 5px;
 	}
 }
 
-
 .download-btn {
-	> button, li a { 
-		@extend .btn-large-smallScreen;
+	button, a {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 8px 15px;
 		color: white;
+	}
+	button {
 		&:before {
 			@extend .btn-gradientTransistion-before;
 			background-color: #C3407C;
@@ -106,7 +88,7 @@ $border-radius: 5px;
 			margin-right: -50px;
 			a {
 				background: #C3407C;
-				&:hover, &:focus, &:active { 
+				&:hover, &:focus, &:active {
 					background: #A22550;
 				}
 				span {
@@ -122,11 +104,11 @@ $border-radius: 5px;
     	}
 	}
 	&:hover, &:focus, &:active {
-		> button {
+		button {
 			&:before {
 				background-color: #6D56B8;
 				transform: scale(4) translateX(-37%);
-			} 
+			}
 		}
 		ul {
 			@for $i from 1 through 5 {
@@ -145,41 +127,39 @@ $border-radius: 5px;
 
 .link-btn {
 	a {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 6px 10px;
+
 		color: #C3407C;
 		border: 2px solid #C3407C;
-		&:before {
-			@extend .btn-gradientTransistion-before;
-			opacity: 0;
-			background-color: #C3407C;
-			background: linear-gradient(45deg, #C3407C 0%, #A22550 33%, 
-			#C3407C 43%, #A22550 50%, #C3407C 57%,
-			#A22550 67%, #C3407C 100%);
-			transform: scale(3) translateX(-33%) translateY(33%);
-		}
-		&:hover, &:focus, &:active { 
+		&:hover, &:focus, &:active {
 			text-decoration: none;
-			
-			&:before {
-				opacity: 1;
-				background-color: #A22550;
-				transform: scale(3) translateX(33%) translateY(-33%);
-			} 
+			color: white;
+			background: #C3407C;
+			border-color: #B3306C;
+			span { color: white; }
 		}
 		span {
 			margin-left: 10px;
+			color: #C3407C;
 		}
 	}
 }
 
 @media (min-width: $mediaBreakMediumMin) {
-	.download-btn, .link-btn {
-		> button, li a {
+	.download-btn {
+		button, a {
 			font-size: 20px;
 			line-height: 30px;
 			padding: 10px 25px;
 		}
 	}
+	.link-btn {
+		button, a {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 8px 15px;
+		}
+	}
 }
-
-
-
