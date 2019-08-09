@@ -1,0 +1,24 @@
+<div id="headerContainer" class="special">
+	<div id="headerTitle">
+		<h1><a href="index">Brittany Ann Kos</a></h1>
+		<p>Computing Educator &amp; Researcher</p>
+	</div>
+</div>
+
+<nav id="navigation" class="">
+	<section id="navButtonContainer" class="special">
+		<div id="navButtonDisk">
+			<button type="button" id="navClose"><span class="fas fa-times"></span></button>
+			<button type="button" id="navOpen"><span class="fas fa-bars"></span></button>
+		</div>
+	</section>
+	<section id="navigationLinks" class="light">
+		<ul>
+			{% for item in site.data.navigation %}
+			<li>
+				<a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+</nav>

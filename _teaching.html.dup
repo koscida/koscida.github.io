@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta Info -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Brittany Ann Kos" />
+
+    <!-- Descriptions, Labels -->
+	<title>Brittany Ann Kos - Teaching and Outreach</title>
+    <meta name="description" content="Brittany Ann Kos, PhD. Experienced researcher with a demonstrated history of working in education and outreach. Skilled in Computer Science Education, Leadership, Diversity and Inclusion, Informal Education, and Program Evaluation. Strong human resources professional with a background focused in Computer Science Education." />
+    <meta name="keywords" content="stem, computing, computer science, education, research, evaluation, diversity, inclusion, women, gender" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+	<!-- Custom Fonts -->
+	<!-- <link href="plugins/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- CSS -->
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+<body>
+
+	<header id="header">
+
+        <div id="headerContainer" class="special">
+            <div id="headerTitle">
+                <h1><a href="index">Brittany Ann Kos</a></h1>
+                <p>Computing Educator &amp; Researcher</p>
+            </div>
+        </div>
+
+		<nav id="navigation" class="">
+            <section id="navButtonContainer" class="special">
+                <div id="navButtonDisk">
+                    <button type="button" id="navClose"><span class="fas fa-times"></span></button>
+                    <button type="button" id="navOpen"><span class="fas fa-bars"></span></button>
+                </div>
+            </section>
+            <section id="navigationLinks" class="light">
+    			<ul>
+                    <li><a href="index.html">About</a></li>
+                    <li class="active"><a href="teachingoutreach.html">Teaching &amp; Outreach</a></li>
+                    <li><a href="research.html">Educational Research</a></li>
+    				<li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+    			</ul>
+            </section>
+		</nav>
+
+	</header>
+
+
+	<article id="page">
+		<section id="content">
+
+			<section>
+				<div id="welcome">
+					<h2>Teaching &amp; Outreach</h2>
+					<p class="blurb">
+						Teaching is one of my passions in life. I have experience teaching at the college level, as well volunteering for various middle school, high school, and undergraduate outreach programs and summer camps. I love teach introductoary computing, no matter the audience or context, it is always fun seeing my students learning and applying newly learned computing concepts.
+					</p>
+				</div>
+			</section>
+
+			<!--
+			<section id="two">
+				<div id="teachingphilosophy" class="">
+					<h3>Teaching Philosophy</h3>
+					<p>
+						My teaching philosophy is based in mutural effort, from the students and from myself. This means I want to see my students working and putting forth effort to understand concepts and practice with the content. As an instructur, I have a responsibility to my students to provide them with an engaging, flexiable, and supportive learning environment, below I describe my most important teaching goals.
+					</p>
+					<ol class="numlist">
+						<li>
+							<b>Fun and Open Curriculum</b>
+							I'm interested in designing curricula that is engaging and adaptitable for my students. For example, in my introductoary computing courses, I'll use simple games to teach programming concepts: e.g. MadLibs to teach variables, data types, and I/O; Text-based choose your own adventure games to teach I/O, if/else statements and program logic; prototype video game inventories to teach loops and data storage. I've found that my students learn and grasp concepts quicker and at a deeper understanding when they find value and excitement in what they are doing. I try to provide my students with curriculum that teaches concepts in innovative and fun ways.
+						</li>
+						<li>
+							<b>"Meet the students where they're at"</b>
+							Aliter homines, aliter philosophos loqui putas oportere? Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Cum audissem Antiochum, Brute, ut solebam, cum M. Sed ne, dum huic obsequor, vobis molestus sim.
+						</li>
+						<li>
+							<b>Multi-modal and Mixed Media Learning</b>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae quidem vel cum periculo est quaerenda vobis; Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Ita fit cum gravior, tum etiam splendidior oratio. Is es profecto tu. Duo Reges: constructio interrete. Cur deinde Metrodori liberos commendas? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Nosti, credo, illud: Nemo pius est, qui pietatem-; Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Aliter homines, aliter philosophos loqui putas oportere?
+						</li>
+					</ol>
+					<p>
+
+					</p>
+				</div>
+				<div id="technologyphilosophy" class="inset">
+					<h4>Technology Philosophy</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae quidem vel cum periculo est quaerenda vobis; Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Ita fit cum gravior, tum etiam splendidior oratio. Is es profecto tu. Duo Reges: constructio interrete. Cur deinde Metrodori liberos commendas? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Nosti, credo, illud: Nemo pius est, qui pietatem-; Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Aliter homines, aliter philosophos loqui putas oportere?
+					</p>
+				</div>
+				<div id="assessment" class="inset">
+					<h4>Assessment</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae quidem vel cum periculo est quaerenda vobis; Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Ita fit cum gravior, tum etiam splendidior oratio. Is es profecto tu. Duo Reges: constructio interrete. Cur deinde Metrodori liberos commendas? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Nosti, credo, illud: Nemo pius est, qui pietatem-; Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Aliter homines, aliter philosophos loqui putas oportere?
+					</p>
+				</div>
+			</section>
+			-->
+
+			<section>
+				<div id="experience">
+					<h3>Experience</h3>
+
+					<div id="timeline">
+						<div id="timeline-grid" data-size="18">
+
+							<div class="timeline-header">
+								<div class="timeline-label">
+									<h4></h4>
+								</div>
+								<div class="timeline-graph">
+									<span class="timeline-item" data-start="1" data-len ="2">2013</span>
+									<span class="timeline-item" data-start="3" data-len ="3">2014</span>
+									<span class="timeline-item" data-start="6" data-len ="3">2015</span>
+									<span class="timeline-item" data-start="9" data-len ="3">2016</span>
+									<span class="timeline-item" data-start="12" data-len ="3">2017</span>
+									<span class="timeline-item" data-start="15" data-len ="3">2018</span>
+									<span class="timeline-item" data-start="18" data-len ="1">2019</span>
+								</div>
+							</div>
+
+							
+							<div class="timeline-group">
+								<div class="timeline-label">
+									<h4>Outreach</h4>
+								</div>
+								<div class="timeline-graphs">
+									<div class="timeline-graph">
+										<span class="timeline-item" data-start="1" data-len ="7">GK-12</span>
+										<span class="timeline-item" data-start="10" data-len ="1">SuperSTEM</span>
+										<span class="timeline-item" data-start="16" data-len ="1">i3</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="timeline-group">
+								<div class="timeline-label">
+									<h4>Instructor</h4>
+								</div>
+								<div class="timeline-graph">
+									<span class="timeline-item" data-start="6" data-len ="1">CS1</span>
+									<span class="timeline-item" data-start="7" data-len ="1">CS2</span>
+									<span class="timeline-item" data-start="8" data-len ="1">CS1</span>
+									<span class="timeline-item" data-start="9" data-len ="1">CS1</span>
+									<span class="timeline-item" data-start="16" data-len ="1">CS1</span>
+								</div>
+							</div>
+							
+							<div class="timeline-group">
+								<div class="timeline-label">
+									<h4>Teaching Assistant (TA)</h4>
+								</div>
+								<div class="timeline-graph">
+									<span class="timeline-item" data-start="3" data-len ="1">Intro ICT</span>
+									<span class="timeline-item" data-start="5" data-len ="1">CS0</span>
+									<span class="timeline-item" data-start="9" data-len ="1">CS Ed</span>
+									<span class="timeline-item" data-start="11" data-len ="1">Intro Engr</span>
+									<span class="timeline-item" data-start="17" data-len ="1">CS1</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="group close">
+						<div class="group-header">
+							<div class="toggleBtns">
+								<span class="group-btn-close far fa-caret-square-down"></span>
+								<span class="group-btn-open far fa-caret-square-up"></span>
+							</div>
+							<h4>Outreach Instructor</h4>
+						</div>
+						<div class="group-content">
+							<ul class="list">
+			                    <li>
+									<div class="image">
+										<img src="images/projects/i3_logo.png" alt="i3 logo"/>
+									</div>
+									<div class="details">
+										<h4>The iSchool Inclusion Institute (i3)</h4>
+										<p class="role">i3 Teaching Fellow &mdash; Summer 2018</p>
+										<p class="description">
+											The iSchool Inclusion Institute (i3) is an undergraduate research and leadership development program that prepares students from underrepresented populations for graduate study and careers in the information sciences. i3 Teaching Fellows will co-teach a two-week module to the 2018 cohort of i3 Scholars. Two Teaching Fellows are selected to co-teach a two-week Programming Module, introducing students to the basics of Python. Teaching Fellows will be responsible for developing and delivering the daily, in-class content of their respective modules.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1KZtSvJh8MsgQTFyfWb0ENeA--UIVpVuc/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+			                    </li>
+			                    <li>
+									<div class="image">
+										<img src="images/projects/innovationcenter_logo.png" alt="Innovation Center logo"/>
+									</div>
+									<div class="details">
+										<h4>Summer SuperSTEM</h4>
+										<p class="date">Summer 2015 &mdash; Instructor</p>
+										<div class="description">
+											<p>
+												Summer SuperSTEM is a summer program hosted by the <a href="http://innovation.svvsd.org/" target="_blank">Innovation Center</a>, a maker space for the students in <a href="http://svvsd.org/" target="_blank">St. Vrain Valley School District</a>.
+											</p>
+				                            <p>
+				                                <b>Summer SuperSTEM: 3-D Printing Toy Design (intermediate level/grades 3-5)</b><br/>
+				                                Learn about the craft of toy design and manufacturing through 3-D printing. You will learn how to make 3D designs in print and with Google Sketchup, then print original toy designs on a 3D printer. What you design and make is limited only by your imagination!
+				                            </p>
+				                            <p>
+				                                <b>Summer SuperSTEM: Python Level 1 (high school level)</b><br/>
+				                                Learn the basics of Python, a common and accessible programming language. If you are new to programming, this is a great class for you.
+											</p>
+										</div>
+										<div class="links right">
+											<div class="link-btn small">
+												<a href="http://innovation.svvsd.org" target="_blank">Innovation Center<span class="fas fa-external-link-alt"></span></a>
+											</div>
+										</div>
+									</div>
+			                    </li>
+								<li>
+									<div class="image">
+										<img src="images/projects/digitalcurrents.png" alt="Digital CUrrents photo"/>
+									</div>
+									<div class="details">
+										<h4>Digital CUrrents (ATLAS-Campos EPC Summer STEM Program)</h4>
+										<p class="date">Summer 2014 &mdash; Teaching Assistant</p>
+										<p class="description">
+											Digital CUrrents (once ATLAS-Campos EPC Summer STEM Program) is a three-week technology intensive summer workshop for high school students who are largely from underrepresented minority groups.  Students learn to use software applications and gain programming skills to create and manipulate digital content and complete a final project that showcases their creative and technical talents. Workshop participants also visit with guest speakers about career opportunities in technology-related fields and enjoy field trips to local technology-focused businesses.
+										</p>
+										<div class="links right">
+											<div class="link-btn small">
+												<a href="http://atlas.colorado.edu/digital-currents" target="_blank">Digital CUrrents<span class="fas fa-external-link-alt"></span></a>
+											</div>
+										</div>
+									</div>
+			                    </li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="group close">
+						<div class="group-header">
+							<div class="toggleBtns">
+								<span class="group-btn-close far fa-caret-square-down"></span>
+								<span class="group-btn-open far fa-caret-square-up"></span>
+							</div>
+							<h4>Outreach</h4>
+						</div>
+						<div class="group-content">
+							<ul class="list">
+								<li>
+									<div class="image">
+										<img src="images/projects/t9hacks_logo.png" alt="T9Hacks 2018 logo"/>
+									</div>
+									<div class="details">
+										<h4>T9Hacks</h4>
+										<p class="role">Founder, Director, Advisor &mdash; 2015&ndash;2019</p>
+										<p class="description">
+											T9Hacks is a women's hackathon promoting gender diversity in creative technology.  The hackathon creates opportunity for women to explore new technologies, solve real-world problems, and create something amazing with a team.
+										</p>
+										<div class="links right">
+											<div class="link-btn small">
+												<a href="https://t9hacks.org" target="_blank">T9Hacks Website<span class="fas fa-external-link-alt"></span></a>
+											</div>
+											<div class="link-lists">
+												<b>News</b>
+												<ul>
+													<li><a href='http://www.dailycamera.com/cu-news/ci_32441347/t9-hacks-gathers-women-non-binary-people-at' target='_blank'>T9 Hacks gathers women, non-binary people at CU Boulder for 24-hour hackathon</a></li>
+													<li><a href='https://stories.mlh.io/community-roundup-empowering-safety-security-and-diversity-caaf07022edc' target='_blank'>Community Roundup: Hackathons Empowering Safety, Security, and Diversity</a></li>
+													<li><a href='https://www.colorado.edu/atlas/2018/02/16/t9hacks-continues-grow-and-thrive' target='_blank'>T9Hacks continues to grow and thrive</a></li>
+													<li><a href='https://www.colorado.edu/atlas/2018/01/17/female-focused-collaborative-hackathon-session-slated-feb-10' target='_blank'>Female-focused, collaborative hackathon session slated for Feb. 10</a></li>
+													<li><a href='http://www.dailycamera.com/news/ci_29545069/cuboulders-atlas-institute-hosts-inaugural-womencentric-hackathon' target='_blank'>CU-Boulder's Atlas Institute hosts inaugural women-centric hack-a-thon</a></li>
+													<li><a href='https://cuindependent.com/2016/02/29/71520/' target='_blank'>T9Hacks brings women together for 24 hours of hacking</a></li>
+													<li><a href='http://atlas.colorado.edu/t9-hacks-highlights/' target='_blank'>T9 Hacks Highlights</a></li>
+													<li><a href='https://victorops.com/blog/t9hacks-supporting-diversity-tech' target='_blank'>T9Hacks: Supporting Diversity in Tech</a></li>
+													<li><a href='https://quickleft.com/blog/cu-atlas-t9hacks-bridging-gap-women-tech/' target='_blank'>CU ATLAS T9Hacks: Bridging the Gap Between Women & Tech</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+			                    </li>
+			                    <li>
+									<div class="image">
+										<img src="images/projects/sciencediscovery_logo.png" alt="CU Science Discovery logo"/>
+									</div>
+									<div class="details">
+										<h4>Science Discovery Summer Camp</h4>
+										<p class="role">Teaching Assistant &mdash; Summer 2013&ndash;2015</p>
+										<p class="description">
+											CU Science Discovery offers a variety of hands-on STEM (science, technology, engineering and math) camps for kids ages 5-18.  Science Discovery offers intensive 1-3 week summer workshops for high school students. Workshops provide unique opportunities for older students to work in CU laboratories, interact with CU scientists, and explore STEM careers.
+										</p>
+										<div class="links right">
+											<div class="link-btn small">
+												<a href="http://sciencediscovery.colorado.edu" target="_blank">CU Science Discovery<span class="fas fa-external-link-alt"></span></a>
+											</div>
+										</div>
+									</div>
+			                    </li>
+			                    <li>
+									<div class="image">
+										<img src="images/projects/earthexplorers_logo.png" alt="earth explorers logo"/>
+									</div>
+									<div class="detail">
+										<h4>Earth Explorers</h4>
+										<p class="role">Board Member, Evaluation Lead, Senior Volunteer, Mentor &mdash; 2013&ndash;2015</p>
+										<p class="description">
+											Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics.
+										</p>
+									</div>
+			                    </li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="group close">
+						<div class="group-header">
+							<div class="toggleBtns">
+								<span class="group-btn-close far fa-caret-square-down"></span>
+								<span class="group-btn-open far fa-caret-square-up"></span>
+							</div>
+							<h4>Instructor</h4>
+						</div>
+						<div class="group-content">
+							<ul class="list">
+								<li>
+									<div class="details noimage">
+										<h4>[INFO 1201] Computational Reasoning 1: Expression and Media Transformation</h4>
+										<p class="role">Adjunct Instructor &mdash; Summer 2018</p>
+										<p class="description">
+											This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1yF8dMpY2yjazIDYqdeTvc6Wt6bFWpoST/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="details noimage">
+										<h4>[ATLS 1300] Code</h4>
+										<p class="role">Adjunct Instructor &mdash; Spring 2016</p>
+										<p class="description">
+											Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1nNZIrUOVxlVhm03Ue93p-4oaIB9Ldqq6/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[ATLS 1300] Code</h4>
+										<p class="role">Adjunct Instructor &mdash; Fall 2015</p>
+										<p class="description">
+											Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1e4TcMLJ_U69e8KGOzHjD9NkCXgGt16jE/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[CSCI 2270] Computer Science 2: Data Structures</h4>
+										<p class="role">Adjunct Instructor &mdash; Summer 2015</p>
+										<p class="description">
+											Studies data abstractions (e.g., stacks, queues, lists, trees) and their representation techniques (e.g., linking, arrays). Introduces concepts used in algorithm design and analysis including criteria for selecting data structures to fit their applications.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/19xhpc_YowsDCaJ7sITDLP0ZxG4_YNqow/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[ATLS 3020] Digital Media 2</h4>
+										<p class="role">Adjunct Instructor &mdash; Spring 2015</p>
+										<p class="description">
+											A continuation of Digital Media 1 (ATLS 3010), this course introduces students to advanced digital media development including interactive programming, scripting, and database functionality. Emphasizes a historical and conceptual understanding of programming and computational theories.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1b4Biy2ELetxWtwDdNohp-vuEgfLvv-IS/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="group close">
+						<div class="group-header">
+							<div class="toggleBtns">
+								<span class="group-btn-close far fa-caret-square-down"></span>
+								<span class="group-btn-open far fa-caret-square-up"></span>
+							</div>
+							<h4>Teaching Assistant (TA)</h4>
+						</div>
+						<div class="group-content">
+							<ul class="list">
+								<li>
+									<div class="details noimage">
+										<h4>[INFO 1201] Computational Reasoning 1</h4>
+										<p class="role">Teaching Assistant (TA) &mdash; Fall 2018</p>
+										<p class="description">
+											This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1wv4Kg1FR3tcVivoIduuol_1gZwTPc3vb/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[COEN 1500] Introduction to Engineering</h4>
+										<p class="role">Teaching Assistant (TA) &mdash; Fall 2016</p>
+										<p class="description">
+											Provides an introduction to the engineering profession, including an examination of current discipline specializations and a focus on career paths for those trained in engineering. Provides sufficient knowledge of the engineering disciplines necessary to make an informed major choice.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1D5UHKcMM5FiC51FvfIcCCICLCmXdRlYo/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[CSCI 4830] Special Topics: Computer Science Education</h4>
+										<p class="role">Teaching Assistant (TA) &mdash; Spring 2016</p>
+										<p class="description">
+											The computer science department is offering a 1-credit hour special topics course this semester on computer science education. If you are interested in teaching computer science or becoming involved in the computer science department as an undergraduate learning assistant (CA, PLA, or TA) this is the class for you. In this course, we will cover presentation techniques, how to lead a discussion session, assessment, dealing with difficult colleagues, and teaching styles. The class will be taught primarily through discussion and all students will have the opportunity to present and receive feedback in a friendly environment.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1ltAzV-lvPhFpy8icoZr8j8se0glFEizE/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[ATLS 1220] Introduction to Computer Science Principles</h4>
+										<p class="role">Teaching Assistant (TA) &mdash; Fall 2014</p>
+										<p class="description">
+											This course is designed to introduce students to the central ideas of computer science, to instill	ideas and practices of computational thinking, and to have students engage in activities that show how computing and computer science change the world. Rather than focus on a specific tool or programming language, this course focuses on the creative aspects of the field. Students will learn how to use computing as a means to understand and solve problems, reflect upon the cultural impact of technology, demonstrate computational thinking skills by building computer programs and games, learn information retrieval skills by researching and remixing media, and engage in other creative endeavors of computer science.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1pHAHRYhKhHuQ_gtlnvF3fBY0640yM3lq/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+			                    <li>
+									<div class="details noimage">
+										<h4>[ATLS 2000] Meaning of Information Technology</h4>
+										<p class="role">Teaching Assistant (TA) &mdash; Spring 2014</p>
+										<p class="description">
+											Surveys the history of information technologies and modern techniques of information production, storage, transmission, and retrieval. Emphasizes understanding not only the technological transformations in interpersonal, organizational, and mass communication, but also the technological, social and political changes that underlie the movement toward a digital society.
+										</p>
+										<div class="links right">
+											<div class="download-btn small">
+												<button>Syllabus</button>
+												<ul>
+													<li>
+														<a download href="https://drive.google.com/file/d/1JB7fMbHJ8EFDIZJE-4c5jlvYnlASl94h/view?usp=sharing" target="_blank"><span class="fa fa-file-pdf"></span>Download PDF</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!--<section>
+				<div id="curriculum">
+					<h3>Curriculum</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae quidem vel cum periculo est quaerenda vobis; Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Ita fit cum gravior, tum etiam splendidior oratio. Is es profecto tu. Duo Reges: constructio interrete. Cur deinde Metrodori liberos commendas? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Nosti, credo, illud: Nemo pius est, qui pietatem-; Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Aliter homines, aliter philosophos loqui putas oportere?
+					</p>
+				</div>
+			</section>-->
+
+
+		</section>
+	</article>
+
+	<footer id="footer">
+		<!--<section id="one" class="special">
+			<ul>
+				<li><a href="index.html">About</a></li>
+				<li class="active"><a href="teachingoutreach.html">Teaching &amp; Outreach</a></li>
+				<li><a href="educationalreasearch.html">Educational Research</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</section>-->
+		<section id="two" class="special">
+			<ul>
+				<li>
+					<a href="http://www.linkedin.com/in/brittanyannkos" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://medium.com/@koscida/" target="_blank">
+						<i class="fab fa-medium-m"></i>
+					</a>
+				</li>
+				<!--<li>
+					<a href="http://github.com/koscida/" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/Koscida" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</li>-->
+				<li>
+					<a href="https://www.instagram.com/koscida/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+				<li>
+					<a id="footeremail" href="" target="_blank">
+						<i class="fas fa-envelope"></i>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section id="three" class="dark">
+			<div id="copyright">
+				<p>
+					2019 &copy; Brittany Ann Kos
+				</p>
+			</div>
+		</section>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+	<script src="js/ga.js" type="text/javascript"></script>
+	<script src="js/tracking.js" type="text/javascript"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+{% if position.thumbnailpath %}
+	<div class="image">
+		<img src="{{ position.thumbnailpath }}" alt="{{ position.thumbnailalt }}"/>
+	</div>
+{% endif %}
+
+<div class="details">
+	{% unless position.classes %}
+		<h4>{{ position.title }}</h4>
+	{% endunless %}
+	{% if position.role %}
+		<p class="role">{{ position.role }} &nbsp; {{ position.time }}</p>
+	{% endif %}
+	{% if position.description %}
+		<p class="description">{{ position.description }}</p>
+	{% endif %}
+	
+	{% if position.materials %}
+		<div class="materials right">
+			<div class="link-btn medium">
+				<ul>
+					
+					{% if position.materials-siteuri %}
+						<li>
+							<a download href="{{ position.materials-siteuri }}" target="_blank"><span class="fa fa-external-link-alt"></span>{{ position.materials-siteuritext }}</a>
+						</li>
+					{% endif %}
+					
+					{% if position.materials-syllabuspdf %}
+						<li>
+							<a download href="{{ position.materials-syllabuspdf }}" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+						</li>
+					{% endif %}
+					
+				</ul>
+			</div>
+		</div>
+	{% endif %}
+	
+</div>
+
+
+{% if position.works %}
+	<ul class="works remove-list-styles">
+		{% for workKeyNames in position.works %}
+			{% for work in site.data.works %}
+				{% if workKeyNames.work == work.shorttitle %}
+					<li class="work">
+						<div class="work-header">
+							<div class="work-tab">
+								{{ work.type }}
+							</div>
+							{{ work.title }}
+						</div>
+						<div class="work-materials">
+							<div class="links right">
+								<div class="link-btn small">
+									<ul>
+										{% for link in work.links %}
+											<li>
+												<a download href="{{ link.uri }}" target="_blank"><span class="fa fas fa-file-pdf"></span>{{ link.text }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--<div class="work-content sh-group sh-close">
+							<div class="sh-btn">More details . . .</div>
+							<div class="sh-details">
+								{% if work.abstract %}
+									<div class="abstract">{{ work.abstract }}</div>
+								{% endif %}
+								{% if work.reference %}
+									<div class="ref">{{ work.reference }}</div>
+								{% endif %}
+							</div>
+						</div>-->
+					</li>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</ul>
+{% endif %}
+
+{% if position.misc %}
+	<div class="misc">
+		{{ position.misc }}
+	</div>
+{% endif %}
+
+{% if position.classes %}
+	<div class="classes">
+		<ul class="remove-list-styles">
+		{% for classType in position.classes %}
+			<li>
+				<h4>{{classType.type}}</h4>
+				<ul class="works remove-list-styles">
+				{% for position in classType.courses %}
+					<li class="work">
+						{% include page_position.html %}
+					</li>
+				{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endif %}

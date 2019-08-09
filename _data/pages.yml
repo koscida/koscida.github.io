@@ -1,0 +1,47 @@
+out:
+  key: "out"
+  title: "Outreach"
+  sections:
+    - key: "out-tea"
+      title: "Outreach Instructor"
+    - key: "out-co"
+      title: "Outreach Coordinator"
+    - key: "out-asst"
+      title: "Outreach Assistant"
+
+tea:
+  key: "tea"
+  title: "Teaching"
+  sections:
+    - key: "tea-out"
+      title: "Outreach Instructor"
+    - key: "tea-inst"
+      title: "Instructor"
+
+rea:
+  key: "rea"
+  title: "Research"
+  sections:
+    - key: "rea-diss"
+      title: "Dissertation"
+    - key: "rea-lab"
+      title: "Lab Work"
+    - key: "rea-proj"
+      title: "Research Projects"
+
+cv:
+  key: "cv"
+  title: "CV/Resume"
+  sections:
+    - key: "edu"
+      title: "Education"
+    - key: "rea"
+      title: "Research"
+    - key: "tea"
+      title: "Teaching"
+    - key: "out"
+      title: "Outreach"
+    - key: "pub"
+      title: "Publications"
+    - key: "ind"
+      title: "Industry Experience"

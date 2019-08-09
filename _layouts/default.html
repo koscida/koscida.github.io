@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include default_htmlhead.html %}
+</head>
+<body>
+	
+	<header id="header">
+		{% include default_header.html %}
+	</header>
+	
+	<article id="page">
+		<section id="content">
+			{{ content }}
+		</section>
+	</article>
+	
+	<footer id="footer">
+		{% include default_footer.html %}
+	</footer>
+	
+	{% include default_js.html %}
+	
+</body>
+</html>

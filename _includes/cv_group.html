@@ -1,0 +1,53 @@
+<ul class="positions works remove-list-styles">
+	
+	{% for position in site.data.positions.education %}
+		{% if position.flags.cv == section.key %}
+			<li class="position">
+				{% include cv_position.html %}
+			</li>
+		{% endif %}
+	{% endfor %}
+	
+	{% for position in site.data.positions.positions %}
+		{% if position.flags.cv == section.key %}
+			<li class="position">
+				{% include cv_position.html %}
+			</li>
+		{% endif %}
+	{% endfor %}
+	
+	{% for work in site.data.works %}
+		{% if "pub" == section.key %}
+			<li class="work">
+				<div class="work-header">
+					<div class="work-tab">
+						{{ work.type }}
+					</div>
+					{{ work.title }}
+				</div>
+				<div class="work-materials">
+					<div class="links left">
+						<div class="link-btn small">
+							<ul>
+								{% for link in work.links %}
+									<li>
+										<a download href="#" target="_blank"><span class="fa fas fa-file-pdf"></span>{{ link.text }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		{% endif %}
+	{% endfor %}
+	
+	{% for position in site.data.positions.industry %}
+		{% if position.flags.cv == section.key %}
+			<li class="position">
+				{% include cv_position.html %}
+			</li>
+		{% endif %}
+	{% endfor %}
+	
+</ul>

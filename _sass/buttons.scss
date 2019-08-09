@@ -1,0 +1,213 @@
+/*
+ * All button styles were adapted from:
+ * - https://codepen.io/chandrashekhar/pen/ypvdRR?editors=1100
+ * - https://codepen.io/0guzhan/pen/xJLKRo
+ * - https://codepen.io/CiTA/pen/YBQjVQ
+ */
+
+$mediaBreakLargeMax: 1400px;
+$mediaBreakLargeMin: 1023px;
+$mediaBreakMediumMax: 1024px;
+$mediaBreakMediumMin: 769px;
+$mediaBreakSmallMax: 768px;
+
+$time-slow: 500ms;
+$time-fast: 300ms;
+$border-radius: 5px;
+
+/* generic transistion */
+.btn-gradientTransistion-before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: all $time-slow ease-out;
+	z-index: -1;
+}
+
+/* layout, left or right aligned */
+.links {
+	&.left, &.inline  { 
+		.download-btn, .link-btn,
+		.download-btn ul, .link-btn ul { 
+			justify-content: flex-end; 
+			flex-direction: row;
+			display: flex;
+		}
+	}
+	&.right { 
+		.download-btn, .link-btn,
+		.download-btn ul, .link-btn ul { 
+			flex-direction: row-reverse;
+			display: flex;
+		}
+	}
+}
+
+/* styling of buttons, sizes, etc */
+.download-btn, .link-btn {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	
+	&.small {
+		button, a {
+			font-size: 12px;
+			line-height: 18px;
+			padding: 4px 8px;
+			border-width: 1px;
+		}
+		.fa, .fas, .far, .fab { font-size: 15px; }
+	}
+	&.medium {
+		button, a {
+			font-size: 15px;
+			line-height: 22px;
+			padding: 6px 10px;
+		}
+		.fa, .fas, .far, .fab { font-size: 18px; }
+	}
+	&.large {
+		button, a {
+			font-size: 18px;
+			line-height: 22px;
+			padding: 8px 15px;
+		}
+	}
+	button, a {
+		transition: all $time-fast;
+	    text-align: center;
+	    border-radius: $border-radius;
+		overflow: hidden;
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+		border: 0;
+		.fa, .fas, .far, .fab {
+			margin: 0 10px;
+		}
+	}
+	ul {
+		list-style-type:none;
+		padding:0;
+		margin:0;
+		li {
+			z-index: 1;
+			padding: 0 2px;
+			border-radius: $border-radius;
+			overflow: hidden;
+			a {
+				display: flex;
+			}
+		}
+	}
+	&:hover, &:focus, &:active {
+		cursor: pointer;
+	}
+}
+
+/* specific to download buttons */
+.download-btn {
+	button, a {
+		color: white;
+	}
+	button {
+		&:before {
+			@extend .btn-gradientTransistion-before;
+			background-color: #C3407C;
+			background-image: linear-gradient(to left, #C3407C 30%, #6D56B8 70%);
+			transform: scale(4) translateX(37%);
+		}
+	}
+	ul {
+		li {
+			transition: all ease-in-out 0.5s;
+			opacity: 0;
+			width: 0;
+			height: 0;
+			margin-right: -50px;
+			a {
+				background: #C3407C;
+				.fa, .fas, .far, .fab {
+					color: white;
+				}
+				&:hover, &:focus, &:active {
+					background: #A22550;
+				}
+			}
+		}
+		@for $i from 1 through 4 {
+    		li:nth-child(#{$i}) {
+        		transform:rotateX(#{$i*45}deg);
+	    	}
+    	}
+	}
+	&:hover, &:focus, &:active {
+		button {
+			&:before {
+				background-color: #6D56B8;
+				transform: scale(4) translateX(-37%);
+			}
+		}
+		ul {
+			@for $i from 1 through 5 {
+	    		li:nth-child(#{$i}) {
+					transition-delay: #{$i*0.08}s;
+	        		opacity: 1;
+					width: auto;
+					height: auto;
+					margin-right: 0;
+					transform: rotate(0deg);
+	        	}
+			}
+    	}
+	}
+}
+
+/* specific to link buttons */
+.link-btn {
+	a {
+		color: #C3407C;
+		border: 2px solid #C3407C;
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+			color: white;
+			background: #C3407C;
+			border-color: #B3306C;
+			span { color: white; }
+		}
+		.fa, .fas, .far, .fab {
+			color: #C3407C;
+		}
+	}
+}
+
+@media (min-width: $mediaBreakMediumMin) {
+	.download-btn, .link-btn {
+		&.small {
+			button, a {
+				font-size: 12px;
+				line-height: 18px;
+				padding: 4px 8px;
+			}
+		}
+		&.medium {
+			button, a {
+				font-size: 16px;
+				line-height: 22px;
+				padding: 8px 15px;
+			}
+		}
+		&.large {
+			button, a {
+				font-size: 20px;
+				line-height: 30px;
+				padding: 10px 25px;
+			}
+		}
+	}
+}

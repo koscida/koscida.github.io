@@ -1,0 +1,50 @@
+<div class="time">
+	{% if position.time_long %}
+		{{ position.time_long }}
+	{% else %}
+		{{ position.time }}
+	{% endif %}
+</div>
+
+<div class="details">
+	
+	{% unless position.classes %}<h5>{{ position.title }}</h5>{% endunless %}
+	{% if position.role %}
+		<p class="role">{{ position.role }}</p>
+	{% endif %}
+	{% if position.description %}
+		<p class="description">{{ position.description }}</p>
+	{% endif %}
+	
+	{% if position.misc %}
+		<div class="misc">
+			{{ position.misc }}
+		</div>
+	{% endif %}
+	
+	{% if position.classes %}
+		<div class="classes">
+			{% for classType in position.classes %}
+				<h5>{{classType.type}}</h5>
+				<ul>
+				{% for course in classType.courses %}
+					<li>
+						<h6>{{ course.title }}</h6>
+						<div class="details">
+							<span>
+								{{ course.role }} &ndash; {{ course.time }} 
+							</span>
+							{% if course.materials-syllabuspdf %}
+								<span class="link-btn small">
+									<a download href="{{ course.materials-syllabuspdf }}" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+								</span>
+							{% endif %}
+						</div>
+					</li>
+				{% endfor %}
+				</ul>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+</div>
