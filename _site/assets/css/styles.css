@@ -816,7 +816,9 @@ footer {
     margin-left: 20px;
     flex-basis: 450px; }
     #about .headshot img {
-      border-radius: 50%; }
+      border-radius: 50%;
+      border: 6px solid #EFEEF9;
+      padding: 2px; }
 
 /* Show Hide Group */
 .sh-group.sh-close .sh-details {
