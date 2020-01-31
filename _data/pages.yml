@@ -10,16 +10,16 @@ out:
       title: "Outreach Assistant"
 
 tea:
-  key: "tea"
+  key: "teaching"
   title: "Teaching"
   sections:
     - key: "tea-out"
       title: "Outreach Instructor"
     - key: "tea-inst"
-      title: "Instructor"
+      title: "University Instructor"
 
 rea:
-  key: "rea"
+  key: "research"
   title: "Research"
   sections:
     - key: "rea-diss"
@@ -33,15 +33,49 @@ cv:
   key: "cv"
   title: "CV/Resume"
   sections:
-    - key: "edu"
-      title: "Education"
-    - key: "rea"
-      title: "Research"
-    - key: "tea"
-      title: "Teaching"
-    - key: "out"
-      title: "Outreach"
-    - key: "pub"
-      title: "Publications"
-    - key: "ind"
-      title: "Industry Experience"
+    - cvSectionKey: "workhistory"
+      cvSectionTitle: "Work History"
+    - cvSectionKey: "education"
+      cvSectionTitle: "Education"
+    - cvSectionKey: "leadership"
+      cvSectionTitle: "Leadership Experience"
+    - cvSectionKey: "research"
+      cvSectionTitle: "Research Experience"
+      cvSectionSummary_markup: "<ul><li>Worked on multiple qualitative research projects with increasing amounts of autonomy and ownership over the projects</li>
+      <li>Experience publishing results, writing reports and IRB protocols</li>
+      <li>Latest CITI Certification: 2018-01-10</li>
+      <li>Interviews, focus groups, ethnographic observation; surveys, questionariers, assessments</li>
+      <li>Developed and improved data collector and data manager processes</li>
+      <li>Analyzed qualitative data, statistical analysis of quantitative data</li></ul>"
+      subsections:
+        - cvSubSectionKey: "pi"
+          cvSubSectionTitle: "Primary Investigator (PI)"
+        - cvSubSectionKey: "leadresearcher"
+          cvSubSectionTitle: "Lead Researcher"
+        - cvSubSectionKey: "fellowships"
+          cvSubSectionTitle: "Fellowships"
+        - cvSubSectionKey: "researchassistant"
+          cvSubSectionTitle: "Research Assistant"
+    - cvSectionKey: "teaching"
+      cvSectionTitle: "Instructional Experience"
+      cvSectionSummary_markup: "<p>Taught a variety of introductory STEM classes</p>
+      <ul><li>Taught and developed curriculum as the primary instructor, created assessments and evaluation</li>
+      <li>Managed small teaching teams, managed weekly responsibilities with team of learning assistants</li>
+      <li>Worked with other educators to standardize curriculum</li></ul>
+      <p>Student Assessments/Feedback<br/>
+      Course intellectual challenge: 5.0 / 6<br/>
+      Effectively encourages interest: 5.0 / 6<br/>
+      Overall instructor score: 5.4 / 6</p>"
+      subsections:
+        - cvSubSectionKey: "fellowship"
+          cvSubSectionTitle: "Fellowship"
+        - cvSubSectionKey: "instructor"
+          cvSubSectionTitle: "Instructor"
+        #- cvSubSectionKey: "courseinstructor"
+        #  cvSubSectionTitle: "Course Instructor"
+        #- cvSubSectionKey: "ta"
+        #  cvSubSectionTitle: "Teaching Assistant (TA)"
+        - cvSubSectionKey: "workshops"
+          cvSubSectionTitle: "Workshops, Summer Programs, etc"
+    - cvSectionKey: "ux"
+      cvSectionTitle: "UX Experience"

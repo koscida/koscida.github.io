@@ -3,24 +3,29 @@ layout: default
 title: CV/Resume
 ---
 
-
-<section>
-	<div id="welcome">
+<section class="intro">
+	<div id="welcome" class="wrapper">
 		<h2>CV/Resume</h2>
 		<div class="blurb">
-			<a href="assets/docs/Kos_Brittany_Ann_CV.pdf" target="_blank">Download CV (PDF)</a>
+			<a href="https://drive.google.com/file/d/1nn4DYaA9fQjQVYaIUyk8cncj1aGeu8gG/view?usp=sharing" target="_blank">Download Resume (1-page)</a><br/>
+            <a href="https://drive.google.com/file/d/1LnxhrpjDzuhO_iVWtUnK0r-o3PiRJa2J/view?usp=sharing" target="_blank">Download CV (comprehensive)</a>
 		</div>
 	</div>
 </section>
 	
 	
-<section>
-	
-	{% for section in site.data.pages.cv.sections %}
-		<div class="cv_section">
-			<h4>{{section.title}}</h4>
-			{% include cv_group.html %}
-		</div>
-	{% endfor %}
-	
+<section id="cv" class="wide">
+	<div class="wrapper">
+    	{% for section in site.data.pages.cv.sections %}
+    		<div class="cvSection">
+    			<h3>{{section.cvSectionTitle}}</h3>
+                {% if section.cvSectionSummary_markup %}
+                    <div class="summary">
+                        {{ section.cvSectionSummary_markup }}
+                    </div>
+                {% endif %}
+    			{% include cv_group.html %}
+    		</div>
+    	{% endfor %}
+	</div>
 </section>

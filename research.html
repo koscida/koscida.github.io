@@ -3,8 +3,8 @@ layout: default
 title: Research
 ---
 
-<section>
-	<div id="welcome">
+<section class="intro">
+	<div id="welcome" class="wrapper">
 		<h2>Educational Research</h2>
 		<!--
 		<p class="blurb">
@@ -14,8 +14,9 @@ title: Research
 	</div>
 </section>
 
-<section>
-	<div id="experience">
+<section id="experience" class="wide">
+	<div class="wrapper">
+        
 		<h3>Experience</h3>
 		
 		<div id="timeline">
@@ -77,9 +78,15 @@ title: Research
 			</div>
 		</div>
 		
-		{% for section in site.data.pages.rea.sections %}
-			{% include page_group.html %}
-		{% endfor %}
+        <div class="pageSection">
+            {% for position in site.data.positions %}
+                {% if position.flags.pageKey == "research" %}
+                    <div class="pagePosition">
+                        {% include page_position.html %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
 		
 		
 	</div>

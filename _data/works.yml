@@ -1,118 +1,112 @@
 # T9Hacks
-- shorttitle: "diss19"
+- workKey: "diss19"
   title: "An Autoethnography of T9Hacks: 'Designing a Welcoming Hackathon for Women and Non-Binary Students to Learn and Explore Computing'"
   type: "Dissertation/Thesis"
-  reference: "Kos, B. A. 2019. An Autoethnography of T9Hacks: 'Designing a Welcoming Hackathon for Women and Non-Binary Students to Learn and Explore Computing'. Dissertation. <i>University of Colorado Boulder</i>, (Boulder, CO, USA, 2019)."
+  reference: "Kos, Brittany Ann. \"An Autoethnography of T9Hacks: 'Designing a Welcoming Hackathon for Women and Non-Binary Students to Learn and Explore Computing.'\" Dissertation. University of Colorado Boulder. 2019."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://scholar.colorado.edu/concern/graduate_thesis_or_dissertations/tx31qh901' target='_blank'>An Autoethnography of T9Hacks: 'Designing a Welcoming Hackathon for Women and Non-Binary Students to Learn and Explore Computing.</a>'\" Dissertation. University of Colorado Boulder. 2019."
   abstract: "<p>Student hackathons are a type of demographic-specific event that are aimed at college students. Students may attend hackathons because they provide an opportunity for informal learning, networking, and building products for social change Hackathons are usually designed to give their participants opportunities to learn or expand their technical skill sets. During the process of building a project, participants learn about project management, task delegation, and the organization and production of a hack with a working demo within the limited time span. Hackathons are great at giving their participants informal and incidental learning opportunities. Participants may have different goals or motivations for attending a hackathon that can change how they participate in the event. Student hackathons have been growing in popularity over the last decade and are only becoming more popular as the computing field grows in size and demand. In the 2017-2018 school year, over 71,000 students in North America and Europe and over participated in a student hackathon. In 2017, every US university with a top-ranked computer science department hosted at least one student hackathon. However, despite their popularity with students, research about student hackathons is sparse and little work has been done studying student experiences at these events. There are also fewer women attending hackathons than men, on average, only 23% of the participants are women. This dissertation is situated within the existing hackathon literature and complements the work showing hackathons as places of informal and situated learning.<p/>
   <p>This dissertation focuses on the design of a women and non-binary hackathon, T9Hacks. I founded T9Hacks in the Fall of 2015 and, with a team of undergraduate students, we hosted our first hackathon event in late-February 2016. T9Hacks is open to all students, but specifically encourages women and non-binary students to attend through marketing, structure, and strategic use of competition. Our mission has always been to create a welcoming and safe environment where women and non-binary students can learn and explore with computing. I was drawn to autoethnography as a way to analyze, interpret, and attach meaning to the design of T9Hacks. Autoethnography is a form of self reflection on one’s personal experiences within a cultural context to look deeper at social interactions. Articulating the design choices that the team and I made created a list of design principles and lessons learned (listed below) and can give insight into the inclusive practices of student hackathons.</p>
   <p>This autoethnography discusses the design of T9Hacks, a women and non-binary hackathon, in regards to its branding, design of competition, and structures that supported our participants. I discuss the name of the event, the graphic design, and the labels and the ideologies and values associated with those choices; how the nature, value of prizes, and framing of the contests were impactful to students; how the professional development and technical resources we provided to the students satisfied their personal goals for attending the event. These elements of the hackathon changed multiple times through the most change and give insight into the challenges our team faced when trying to design an inclusive and welcoming hackathon. The decisions the T9Hacks team was faced with can help inform other hackathon designs as well.</p>"
   links:
     - uri: "https://search.proquest.com/openview/285c8439d3a55d30ca8fb38e6ed47b4c/1"
       text: "ProQuest Link"
-    - uri: "#"
-      text: "PDF (forthcomming)"
+    - uri: "https://scholar.colorado.edu/concern/graduate_thesis_or_dissertations/tx31qh901"
+    #https://drive.google.com/file/d/1QFMkllYtFfUmhXLaoGzwtnJ4eGMcrcwX/view?usp=sharing
+      text: "PDF"
 
 
-- shorttitle: "icgj19_coll_styles_goals"
+- workKey: "icgj19_coll_styles_goals"
   title: "Understanding Female-Focused Hackathon Participants' Collaboration Styles and Event Goals"
   type: "Full Paper"
-  reference: "Kos, B. A. 2019. Understanding Female-Focused Hackathon Participants' Collaboration Styles and Event Goals. <i>ICGJ 2019: Proceedings of the International Conference on Game Jams, Hackathons and Game Creation Events</i>, (San Francisco, CA, USA, 2019)."
+  reference: "Kos, Brittany Ann. \"Understanding Female-Focused Hackathon Participants' Collaboration Styles and Event Goals.\" <i>ICGJ 2019: Proceedings of the International Conference on Game Jams, Hackathons and Game Creation Events</i>, 2019."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://scholar.colorado.edu/concern/conference_proceedings/8w32r6494' target='_blank'>Understanding Female-Focused Hackathon Participants' Collaboration Styles and Event Goals</a>.\" <i>ICGJ 2019: Proceedings of the International Conference on Game Jams, Hackathons and Game Creation Events</i>, 2019."
   abstract: "Collegiate hackathons are informal learning environments where students build new projects in a limited amount of time and often compete for prizes. Previous hackathon research has shown that students go to these events to learn new technical skills, work on projects with friends, or network with the technical community; however, little is known about the different ways in which students collaborate with other participants and how students' event goals affect their trajectory at the hackathon. In the literature, students are typically described as working in competitive teams that build one project to be entered into a competition. However, there are gaps when it comes to discussing other ways students may work together or what other non-competitive projects/activities students may want to engage with at a hackathon. This paper reports on different collaboration styles and event goals documented at a Spring 2018 female-focused hackathon. Findings include three types of collaboration styles: team-based, cooperative group, and individual participation; as well as four types of event goals: competition, exploration, dabbling, and observing. These findings can inform the collegiate hackathon literature and help hackathons diversify their events by offering insight into ways diverse participants choose to participate at a hackathon and offering design suggestions that mainstream collegiate hackathons can adopt to be more inclusive of different types of students."
   links:
-    - uri: "#"
-      text: "PDF (forthcomming)"
+    - uri: "https://scholar.colorado.edu/concern/conference_proceedings/8w32r6494"
+    #https://drive.google.com/file/d/1hxnb7UNjSDUN6o-o3DZdr1zmBDR4hqXo/view?usp=sharing
+      text: "PDF"
     - uri: "https://dl.acm.org/citation.cfm?id=3316292"
       text: "ACM Link"
 
-- shorttitle: "icer18_hack_exp"
+
+- workKey: "icer18_hack_exp"
   title: "The Collegiate Hackathon Experience"
   type: "Work-In-Progress"
-  reference: "Kos, B. A. 2018. The Collegiate Hackathon Experience. <i>ICER '18: Proceedings of the fourtinteeth annual International Conference on International Computing Education Research</i>, (Espoo, Finland, 2018)."
+  reference: "Kos, Brittany Ann. \"The Collegiate Hackathon Experience.\" <i>ICER '18: Proceedings of the fourtinteeth annual International Conference on International Computing Education Research</i>, 2018."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://scholar.colorado.edu/concern/conference_proceedings/9s161692z' target='_blank'>The Collegiate Hackathon Experience</a>.\" <i>ICER '18: Proceedings of the fourtinteeth annual International Conference on International Computing Education Research</i>, 2018."
   abstract: "Collegiate hackathons are marathon-style, project building competitions where students can learn computing in an informal environment, build community, network with members of the technology industry, and be more productive members of the workforce. I am interested in understanding the social climate of hackathons and how it affects hackathon participants, particularly women and non-binary students, who only make up 23% of collegiate hackathon attendees. I will be exploring two lines of inquiry: (1) to explore the experiences of hackathon attendees to gain a deeper understanding about why participants do (or do not) participate in hackathons, what motivates them to attend, and what engages them at these events; and (2) to explore the ways collegiate hackathons can adapt their design practices to create an inclusive and equitable events for marginalized and minority students."
   links:
-    - uri: "https://drive.google.com/file/d/1V98I5Qp_cnW9rXkpLbwhdxSiI6SEeq7g/view"
+    - uri: "https://scholar.colorado.edu/concern/conference_proceedings/9s161692z"
+    #https://drive.google.com/file/d/1V98I5Qp_cnW9rXkpLbwhdxSiI6SEeq7g/view
       text: "PDF"
 
 
-- shorttitle: "wk16_uniq_hack_exp"
+- workKey: "wk16_uniq_hack_exp"
   title: "The Unique Hackathon Experience"
   type: "Working Paper"
-  reference: "Kos, B. A. 2016. The Unique Hackathon Experience. University of Colorado Boulder."
+  reference: "Kos, Brittany Ann \"The Unique Hackathon Experience.\" University of Colorado Boulder. 2016."
+  referenceLink: "Kos, Brittany Ann \"<a href='https://scholar.colorado.edu/concern/reports/d217qq423' target='_blank'>The Unique Hackathon Experience</a>.\" University of Colorado Boulder. 2016."
   abstract: "<p>In this paper, we give insight into the growing student hackathon movement. Student hackathons are weekend events where students come together to create, build, and share projects of any kind. These events are typically software and hardware focused, but have been expanding to broader disciplines. These events give students opportunities to learn and experience computing in ways that are not seen in a typical computer science classroom.</p>
   <p>Our study collected data from 7,800 students participating in over 300 student hackathons, hosted from 2013-2016. We describe the particular model of student hackathon this data was collected from. Our analysis focuses on how student hackathons are able to give unique experiences to these students, experiences that are difficult, if not impossible, to replicate in other computing learning environments. We focus on the small, elemental features of the hackathon and look at how they build into a cohesive and distinctive computing learning experience for student organizers and participants alike.</p>"
   links:
-    - uri: "https://scholar.colorado.edu/cgi/viewcontent.cgi?article=1006&context=atlas_gradpapers"
+    - uri: "https://scholar.colorado.edu/concern/reports/d217qq423"
+    #https://drive.google.com/file/d/1jXK95kMkeFosSqtf4mkZOLYTisMekd3D/view?usp=sharing
       text: "PDF"
 
 
-- shorttitle: "art17_fram_gen_div"
+- workKey: "art17_fram_gen_div"
   title: "Framing the Gender Diversity Conversation at Student Hackathons And Some Organizational Tips"
   type: "Article"
-  reference: "Kos, B. A. 2017. Framing the Gender Diversity Conversation at Student Hackathons And Some Organizational Tips. Code Like a Girl."
+  reference: "Kos, Brittany Ann. \"Framing the Gender Diversity Conversation at Student Hackathons And Some Organizational Tips.\" <i>Code Like a Girl</i>, 2017."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://code.likeagirl.io/gender-diversity-at-student-hackathons-re-framing-the-diversity-discussion-and-some-organizational-53877d6a62d7' target='_blank'>Framing the Gender Diversity Conversation at Student Hackathons And Some Organizational Tips</a>.\" <i>Code Like a Girl</i>, 2017."
   abstract: "Diversity efforts will need to be embedded into the very fabric of your organization and will need to be addressed at all levels."
   links:
     - uri: "https://code.likeagirl.io/gender-diversity-at-student-hackathons-re-framing-the-diversity-discussion-and-some-organizational-53877d6a62d7"
-      text: "Article"
+      text: "Opinion"
 
-- shorttitle: "art17_fram"
-  title: "SCIP: Teaching Media-Based Computational Thinking Practices"
-  type: "Article"
-  reference: "Kos, B. A. 2017. Framing the Gender Diversity Conversation at Student Hackathons And Some Organizational Tips. Code Like a Girl."
-  abstract: "Diversity efforts will need to be embedded into the very fabric of your organization and will need to be addressed at all levels."
-  links:
-    - uri: "https://code.likeagirl.io/gender-diversity-at-student-hackathons-re-framing-the-diversity-discussion-and-some-organizational-53877d6a62d7"
-      text: "Article"
 
 
 # Informal CS Training
-- shorttitle: "wk17_clf"
+- workKey: "wk17_clf"
   title: "The Collaborative Learning Framework: Scaffolding for Untrained Peer-to-Peer Collaboration"
   type: "Working Paper"
-  reference: "Kos, B. A. 2017. The Collaborative Learning Framework: Scaffolding for Untrained Peer-to-Peer Collaboration. University of Colorado Boulder"
+  reference: "Kos, Brittany Ann. \"The Collaborative Learning Framework: Scaffolding for Untrained Peer-to-Peer Collaboration.\" University of Colorado Boulder. 2017."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://scholar.colorado.edu/concern/reports/tx31qj61s' target='_blank'>The Collaborative Learning Framework: Scaffolding for Untrained Peer-to-Peer Collaboration</a>.\" University of Colorado Boulder. 2017."
   abstract: "Recently, we’ve seen huge enrollment increases in computing and technology courses, which make it difficult for instructors to work personally with students and give them individualized instruction. Instructors may encourage students to work together, but we cannot assume that students know how to ask for assistance from their peers or that students will know how to provide meaningful educational support. Our motivation for this study was to create a computer science educational intervention that provided students with a scaffolded framework that helps them work through problems together. Our goal was to create a simple and quickly understood resource for students to use during collaborative lab activities. This paper describes the \"Collaborative Learning Framework\" (CLF), an educational support tool operationalized as a poster. The CLF poster is intended to be hung in a classroom or lab space and includes four prompts that ask students to explain and think critically about their problems with their peers. In Summer 2017, we conducted an exploratory qualitative study of an introductory, non-major computing course. Our findings present case studies of three CLF poster users and two non-CLF poster users. We evaluate the CLF poster by identifying how the students develop a computational thinking mindset and use the poster as an instructional problem-solving tool. We found that the CLF poster was an effective and useful collaboration tool for the students who were developing a computational thinking mindset."
   links:
-    - uri: "https://scholar.colorado.edu/cgi/viewcontent.cgi?article=1005&context=atlas_gradpapers"
+    - uri: "https://scholar.colorado.edu/concern/reports/tx31qj61s"
+    #https://drive.google.com/file/d/1RAbG9bAgrzifkoP7_aHHxuV6ZGPEo9iW/view?usp=sharing
       text: "Working Paper PDF"
 
 
-# SCIP
-- shorttitle: "wk15_scip"
-  title: "Computational Thinking for Middle School: A Case Study of an 8th Grade Multimedia Outreach Project"
-  type: "Working Paper"
-  reference: "Computational Thinking for Middle School: A Case Study of an 8th Grade Multimedia Outreach Project. 2015. Brittany Ann Kos. University of Colorado Boulder"
-  abstract: "We describe the STEM Careers Infographic Project (SCIP), an outreach project for 8 th grade students. The goal of SCIP was to get students interested in STEM by letting them research their own careers and create infographics. We utilized the CSTA's Computational Thinking definition and progression chart to help develop the curriculum; and Sandoval’s conjecture mapping framework to structure and evaluate the project. This project was implemented in spring of 2015 with 153 students, 68% of which were from traditionally underserved communities. SCIP encountered theoretical and design obstacles during deployment that helped us modify the final project design. In the end, we present a multimedia, computational thinking unit that can be adopted by a non-expert at the middle school level."
-  links: 
-    - uri: "https://scholar.colorado.edu/cgi/viewcontent.cgi?article=1007&context=atlas_gradpapers"
-      text: "PDF"
 
-- shorttitle: "sigcse15_scip"
-  title: "STEM Careers Infographic Project (SCIP): Teaching Media-Based Computational Thinking Practices"
-  type: "Poster"
-  reference: "Kos, B. A., Sims, E. (2015). STEM Careers Infographic Project (SCIP): Teaching Media-Based Computational Thinking Practices. <i>SIGCSE ‘15: Proceedings of the 46th ACM Technical Symposium on Computer Science Education</i>, (Kansas City, MO, USA, 2015), 681."
-  abstract: "<p>The STEM Career Infographic Project (SCIP) was a 4-week exploratory project deployed in an 8th grade classroom at Mountain Vista Middle School (MVMS). SCIP was poised to address the growing focus on STEM fields at MVMS and within the school district. We piloted SCIP in Spring 2014 with six science classes or about 180 students. SCIP allowed for students to explore their own STEM interests, while simultaneously engaging in the 6 Computational Thinking Practices (CTP) outlined by the College Board.</p>
-  <p>Students were required to research a STEM career in-depth, then report on their careers using infographics (CTP #2: Creating Computational Artifacts and CTP #3: Abstracting). We used free and online programs to create the infographics; this provided the students the opportunity to learn software they were not previously exposed to and to explore new communication tools (CTP #1: Connecting Computing and CTP #2: Analyzing Problems and Artifacts). SCIP also provided many occasions for the students to work together by sharing career information or helping each other with the software (CTP #6: Collaborating). At the end of the project the students presented their infographics in front of the class and taught their classmates about their career (CTP #5: Communicating).</p>
-  <p>The project was incredibly successful. The students had a positive affect through the duration of the project and many also expressed an extreme level of interest in doing similar projects in the future. We will be repeating this project in Spring 2015, with a few adaptations and formal evaluation scheme.</p>"
-  links: 
-    - uri: "https://scholar.colorado.edu/cgi/viewcontent.cgi?article=1004&context=atlas_gradpapers"
-      text: "Extended Abstract"
-    - uri: "https://drive.google.com/file/d/1F_kxpApgSgdMzzn-zwOxClwNo6SVeFW-/view"
-      text: "Conference Poster"
-
-- shorttitle: "rmcwic14_scip"
-  title: "Infographics: The New 5-Paragraph Essay"
+# Grading at Scale
+- workKey: "asee17_grade_divide"
+  title: "Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale"
   type: "Full Paper"
-  reference: "Kos, B. A., Sims, E. (2014). Infographics: The New 5-Paragraph Essay. In <i>2014 Rocky Mountain Celebration of Women in Computing</i>. Laramie, WY, USA."
-  abstract: "The STEM Career Infographic Project (SCIP) was a 5-week exploratory project deployed in an 8th grade classroom at Mountain Vista Middle School (MVMS) in the spring of 2014. Students were required to research a STEM career in-depth, then report on their careers using infographics, in lieu of a standard 5-paragraph essay. SCIP was broken down into 9 days of instruction: introduction, research, three days of design lecture, three work days, and a final presentation day. The students were in the lab working on their infographics every day. We observed that infographics were better suited than traditional essays in areas that involved creativity and visual appeal, limited writing for ESL (English as a Second Language) students, fostering and appealing to student’s interests, and overall student enjoyment. Some of the negative obstacles we encountered revolved around limitations of free and online software, addressing the learning curve of technology, and altering student’s expectations of reporting tools. Overall, we considered SCIP a success because of the positive affect we recognized in the students through the duration of the project."
-  links: 
-    - uri: "http://scholar.colorado.edu/cgi/viewcontent.cgi?article=1001&context=atlas_gradpapers"
-      text: "PDF"
+  reference: "Kos, Brittany Ann and Sarah Miller. \"Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale.\" <i>ASEE '17: American Society of Engineering Education 124th Annual Conference & Exposition</i>, 2017."
+  referenceLink: "Kos, Brittany Ann and Sarah Miller. \"<a href='https://scholar.colorado.edu/concern/conference_proceedings/qf85nb969' target='_blank'>Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale</a>.\" <i>ASEE '17: American Society of Engineering Education 124th Annual Conference & Exposition</i>, 2017."
+  abstract: "<p>This complete evidence-based practice paper will describe our successful grading and assessment practices of a large freshmen engineering course. In the Fall of 2016 we taught \"Introduction to Engineering\", a course designed to help students transition from high school to college and learn strategies to help them become successful engineering students. Over 70% of the students had not yet declared an engineering major but had intentions to transfer to an engineering major the following spring semester. This was a 1-credit hour, online and in-person hybrid class, technologically managed by a Learning Management Software (LMS).</p>
+  <p>Over 700 students enrolled in the course, and our instructional team consisted of one Instructor, one graduate TA, and two undergraduate TAs. This paper reports evidence-based practice of two assessment methods, Divide-and-Conquer and Grade-a-thons, that we used to successfully evaluate a large-enrollment course with small grading staff. The coursework was divided into two types of assignments: weekly homework and a final report.</p>
+  <p>The design of the course was based on content that had been previously implemented at this large, midwestern institution, as well as best practices learned from introduction to engineering courses at other institutions. In particular, the final project was based on Ray Landis’ work (Landis 2013). The weekly assignments were 1-page essay assignments. We asked students to reflect on the course’s assigned in-person activities, reading, and videos and to create a personal plan that would set themselves up to becoming a successful engineering student. To the best of our understanding, this is the largest implementation of \"Design Your Successful Engineering Path\" that has been able to grade final reports at this scale.</p>
+  <p>Weekly assignments were assessed with Divide-and-Conquer style grading. Student assignments were divided by last name into three even sections; each TA was responsible for one section and performed a combination of “hand-grading” and “mass-grading”. Hand-grading involved looking at each student's assignment, making an assessment based on a rubric, writing comments, and assigning a grade. Mass-grading consisted of giving all students full credit for the assignment. Every week TAs would hand-grade between 80-100 assignments and mass-grade the remaining 130-150 assignments. They would change which students were selected for hand-grading every week, so no student went more than two weeks without being hand-graded. This strategy allowed three TAs to give select students meaningful feedback on their assignments and monitor student progress. The TAs would first complete the hand-grading, to monitor the quality of student work for that assignment. Through this hand-grading assessment, the TAs found that there was a consistent rate of 90-95% of students turning in completed work that followed all requirements, earning the students full-credit. Due to the overall quality of student submissions, we justified mass-grading: giving the remaining students full-credit would be a reasonable strategy, since an overwhelming majority of submissions would have been assigned full-credit with the hand-grading strategy.</p>
+  <p>The second type of assignment that required assessment was a final report. This report was an accumulation of the previous weekly assignments, where students were expected to create a cohesive strategy to becoming a successful student engineer. These reports were 9-11 pages in length, not including appendices. Since this assignment was significantly longer than the weekly assignments and required that every student be hand-graded, we created a “Grade-a-thon” event that enabled us to grade all student reports in two eight-hour sessions. The grade-a-thon augmented practices seen in hackathons and standardized AP grading assessment. We hired an additional 16 Graders for this event, paying each Grader $100 for the entire day. The grade-a-thon was hosted on a Saturday from 9-5 in a large conference and workspace on campus. Before the event, the TAs graded four student reports to create a standardized grading practice. At the beginning of the event, we performed a calibration session where the Graders could see these examples and practice grading reports themselves; through the calibration session, we created regulated grading practices for all grading staff. We catered lunch and provided snacks for the grading team as well as organized breaks and activities every two hours. This prevented burn-out and kept all graders engaged in grading. In the end, this format allowed all students to receive individual assessment and feedback, while simultaneously expediting grading time and at a relatively low financial cost to the university.</p>
+  <p>We developed the Divide-and-Conquer and Grade-a-thon strategies as alternatives to automated assessment or hiring full-time appointment-based TAs. Our experiences with this introduction to engineering course show us that we can achieve effective assessment for a large enrollment course with a small instructional staff.</p>"
+  links:
+    - uri: "https://scholar.colorado.edu/concern/conference_proceedings/qf85nb969"
+    #https://drive.google.com/file/d/1uuAXZc7Aus4M_hIY5IPrak-j_PqGrTF5/view?usp=sharing
+      text: "Full Paper PDF"
+    - uri: "https://drive.google.com/file/d/1sQjrhacdt_QWZjQM0MkfIzrTcml5Jbzt/view?usp=sharing"
+      text: "Conference Presentation PDF"
 
 
-# CS principles
-- shorttitle: "icer16_cs_principles"
+
+# CS principles (gamification)
+- workKey: "icer16_cs_principles"
   title: "Computer Science Principles: Impacting Student Motivation & Learning Within and Beyond the Classroom"
   type: "Full Paper"
-  reference: "Behnke, K. A., Kos, B. A., Bennett, J. (2016). Computer Science Principles: Impacting Student Motivation & Learning Within and Beyond the Classroom. <i>ICER '16 Proceedings of the 2016 ACM Conference on International Computing Education Research</i>, (Melbourne, AUS, 2016), 171-180."
+  reference: "Behnke, Kara A., Brittany Ann Kos, and John Bennett. \"Computer Science Principles: Impacting Student Motivation & Learning Within and Beyond the Classroom.\" <i>ICER '16 Proceedings of the 2016 ACM Conference on International Computing Education Research</i>, 2016."
+  referenceLink: "Behnke, Kara A., Brittany Ann Kos, and John Bennett. \"<a href='https://drive.google.com/file/d/14reeskvPMSWehRO8NwqIBl4mszIj1S9F/view' target='_blank'>Computer Science Principles: Impacting Student Motivation & Learning Within and Beyond the Classroom</a>.\" <i>ICER '16 Proceedings of the 2016 ACM Conference on International Computing Education Research</i>, 2016."
   abstract: "<p>The Computer Science (CS) Principles framework seeks to broaden student participation and diversity in the field by focusing on the creative and social aspects of computing. As the pilot effort undergoes its early execution phases, this research contributes to the theoretical and practical application of CS Principles. We investigated the impact of CS Principles on student motivation and learning outcomes and sought to determine if the pedagogy created any lasting change on student perceptions of CS as a field of practice.</p>
   <p>We report a case study of how CS Principles created an effective framework for introducing undergraduate students to the fundamentals of computer science. We discuss how Self-Determination Theory instantiates Self-Directed Learning, Constructionist, and Connectivist learning theories, which can be used to inform the pedagogical framework. Quantitative and qualitative measures were used to assess the impact of CS Principles on student motivation and learning outcomes, followed by an additional surveying of students one year after the completion of the course.</p>
   <p>Results indicate that CS Principles facilitated positive programming experiences for students, helped increase learning interest and improve attitudes of CS as a field of study, positively changed perceptions of CS as a creative practice, and also encouraged students to continue learning CS after the course had finished. In particular, many non-majority students in the course self-reported to having positive changes and attitudes about CS explicitly because of the course. These finding suggest that CS Principles is a step in the right direction for creating more engaging and compelling curricula to diverse groups of students, especially those with minimal experience and exposure in the field. We discuss opportunities for future work using the selected theoretical framework for CS Principles.</p>"
@@ -121,41 +115,77 @@
       text: "PDF"
 
 
+
+# SCIP
+- workKey: "wk15_scip"
+  title: "Computational Thinking for Middle School: A Case Study of an 8th Grade Multimedia Outreach Project"
+  type: "Working Paper"
+  reference: "Kos, Brittany Ann. \"Computational Thinking for Middle School: A Case Study of an 8th Grade Multimedia Outreach Project.\" Brittany Ann Kos. University of Colorado Boulder. 2015."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://scholar.colorado.edu/concern/reports/1v53jx82h' target='_blank'>Computational Thinking for Middle School: A Case Study of an 8th Grade Multimedia Outreach Project</a>.\" Brittany Ann Kos. University of Colorado Boulder. 2015."
+  abstract: "We describe the STEM Careers Infographic Project (SCIP), an outreach project for 8 th grade students. The goal of SCIP was to get students interested in STEM by letting them research their own careers and create infographics. We utilized the CSTA's Computational Thinking definition and progression chart to help develop the curriculum; and Sandoval’s conjecture mapping framework to structure and evaluate the project. This project was implemented in spring of 2015 with 153 students, 68% of which were from traditionally underserved communities. SCIP encountered theoretical and design obstacles during deployment that helped us modify the final project design. In the end, we present a multimedia, computational thinking unit that can be adopted by a non-expert at the middle school level."
+  links: 
+    - uri: "https://scholar.colorado.edu/concern/reports/1v53jx82h"
+    #https://drive.google.com/file/d/1ZUG90gd1TLZd_R89lYqt7ofaAgYGMhjS/view?usp=sharing
+      text: "PDF"
+
+- workKey: "sigcse15_scip"
+  title: "STEM Careers Infographic Project (SCIP): Teaching Media-Based Computational Thinking Practices"
+  type: "Poster"
+  reference: "Kos, Brittany Ann and Elizabeth Sims. \"STEM Careers Infographic Project (SCIP): Teaching Media-Based Computational Thinking Practices.\" <i>SIGCSE ‘15: Proceedings of the 46th ACM Technical Symposium on Computer Science Education</i>, 2015."
+  referenceLink: "Kos, Brittany Ann and Elizabeth Sims. \"<a href='https://scholar.colorado.edu/concern/conference_proceedings/x920fx62k' target='_blank'>STEM Careers Infographic Project (SCIP): Teaching Media-Based Computational Thinking Practices</a>.\" <i>SIGCSE ‘15: Proceedings of the 46th ACM Technical Symposium on Computer Science Education</i>, 2015."
+  abstract: "<p>The STEM Career Infographic Project (SCIP) was a 4-week exploratory project deployed in an 8th grade classroom at Mountain Vista Middle School (MVMS). SCIP was poised to address the growing focus on STEM fields at MVMS and within the school district. We piloted SCIP in Spring 2014 with six science classes or about 180 students. SCIP allowed for students to explore their own STEM interests, while simultaneously engaging in the 6 Computational Thinking Practices (CTP) outlined by the College Board.</p>
+  <p>Students were required to research a STEM career in-depth, then report on their careers using infographics (CTP #2: Creating Computational Artifacts and CTP #3: Abstracting). We used free and online programs to create the infographics; this provided the students the opportunity to learn software they were not previously exposed to and to explore new communication tools (CTP #1: Connecting Computing and CTP #2: Analyzing Problems and Artifacts). SCIP also provided many occasions for the students to work together by sharing career information or helping each other with the software (CTP #6: Collaborating). At the end of the project the students presented their infographics in front of the class and taught their classmates about their career (CTP #5: Communicating).</p>
+  <p>The project was incredibly successful. The students had a positive affect through the duration of the project and many also expressed an extreme level of interest in doing similar projects in the future. We will be repeating this project in Spring 2015, with a few adaptations and formal evaluation scheme.</p>"
+  links: 
+    - uri: "https://scholar.colorado.edu/concern/conference_proceedings/x920fx62k"
+    #https://drive.google.com/file/d/1Gw4mh6qovvfpFG2YnJKq585Hqlok5rNJ/view?usp=sharing
+      text: "Extended Abstract"
+    - uri: "https://drive.google.com/file/d/1F_kxpApgSgdMzzn-zwOxClwNo6SVeFW-/view"
+      text: "Conference Poster"
+
+- workKey: "rmcwic14_scip"
+  title: "Infographics: The New 5-Paragraph Essay"
+  type: "Full Paper"
+  reference: "Kos, Brittany Ann and Elizabeth Sims. \"Infographics: The New 5-Paragraph Essay.\" <i>RMCWiC '14: 2014 Rocky Mountain Celebration of Women in Computing</i>, 2014."
+  referenceLink: "Kos, Brittany Ann and Elizabeth Sims. \"<a href='https://scholar.colorado.edu/concern/conference_proceedings/pr76f406g' target='_blank'>Infographics: The New 5-Paragraph Essay</a>.\" <i>RMCWiC '14: 2014 Rocky Mountain Celebration of Women in Computing</i>, 2014."
+  abstract: "The STEM Career Infographic Project (SCIP) was a 5-week exploratory project deployed in an 8th grade classroom at Mountain Vista Middle School (MVMS) in the spring of 2014. Students were required to research a STEM career in-depth, then report on their careers using infographics, in lieu of a standard 5-paragraph essay. SCIP was broken down into 9 days of instruction: introduction, research, three days of design lecture, three work days, and a final presentation day. The students were in the lab working on their infographics every day. We observed that infographics were better suited than traditional essays in areas that involved creativity and visual appeal, limited writing for ESL (English as a Second Language) students, fostering and appealing to student’s interests, and overall student enjoyment. Some of the negative obstacles we encountered revolved around limitations of free and online software, addressing the learning curve of technology, and altering student’s expectations of reporting tools. Overall, we considered SCIP a success because of the positive affect we recognized in the students through the duration of the project."
+  links: 
+    - uri: "https://scholar.colorado.edu/concern/conference_proceedings/pr76f406g"
+    #https://drive.google.com/file/d/1gM4t9iIJXfV1NPjFEwKz3KTgihaAuJzq/view?usp=sharing
+      text: "PDF"
+
+
+
 # Intro CS major
-- shorttitle: "icer15_cs_hard"
+- workKey: "icer15_cs_hard"
   title: "Computer Science is \"Hard\": Looking at the Gender Gap Between Two Computing Programs"
   type: "Poster"
+  reference: "Kos, Brittany Ann. \"Computer Science is ‘Hard’: Looking at the Gap Between Two Computing Programs.\"  <i>ICER '15: Proceedings of the eleventh annual International Conference on International Computing Education Research</i>. Poster and Lightning Talk. 2015."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://drive.google.com/file/d/1zPj_Kb2cGo-LaPCwme58JLHDZVBI1u7V/view?usp=sharing' target='_blank'>Computer Science is ‘Hard’: Looking at the Gap Between Two Computing Programs</a>.\"  <i>ICER '15: Proceedings of the eleventh annual International Conference on International Computing Education Research</i>. Poster and Lightning Talk. 2015."
   links:
     - uri: "https://drive.google.com/file/d/1zPj_Kb2cGo-LaPCwme58JLHDZVBI1u7V/view?usp=sharing"
       text: "Poster Presentation PDF"
 
-- shorttitle: "atlasexpo15_cs_hard"
-  title: "How To Be a Good Programmer"
+- workKey: "atlasexpo15_cs_hard"
+  title: "Becomming a \"Good Programmer\""
   type: "Poster"
+  reference: "Kos, Brittany Ann. \"Becoming a \"Good Programmer\".\" University of Colorado Boulder. 2015."
+  referenceLink: "Kos, Brittany Ann. \"<a href='https://drive.google.com/file/d/13YKU3M_mcoRmTybAxp_Ljb5sTL0eeYWQ/view?usp=sharing' target='_blank'>Becoming a \"Good Programmer\"</a>.\" University of Colorado Boulder. 2015."
   abstract: "This poster analyizes a transcript taken from a CS1 class. The researcher used ethnographic observation and voice recording to collect data. The outstanding goal of this research is to determine how computer science build and enforce cultural norms and identities within their courses. This poster identifies a few cultural norms about how to be a \"good programmer\" presented in the course."
   links:
-    - uri: "https://drive.google.com/file/d/1AXeZ4yXZLRzsFiipIiNHLnhw85BOi8EI/view?usp=sharing"
+    - uri: "https://drive.google.com/file/d/13YKU3M_mcoRmTybAxp_Ljb5sTL0eeYWQ/view?usp=sharing"
       text: "Poster Presentation PDF"
 
 
-# Grading at Scale
-- shorttitle: "asee17_paper"
-  title: "Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale"
-  type: "Full Paper"
-  reference: "Kos, B. A., Miller, S.. 2017. Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale. <i>ASEE '17: American Society of Engineering Education 124th Annual Conference & Exposition</i>, (Columbus, OH, USA, 2017)."
-  abstract: "<p>This complete evidence-based practice paper will describe our successful grading and assessment practices of a large freshmen engineering course. In the Fall of 2016 we taught \"Introduction to Engineering\", a course designed to help students transition from high school to college and learn strategies to help them become successful engineering students. Over 70% of the students had not yet declared an engineering major but had intentions to transfer to an engineering major the following spring semester. This was a 1-credit hour, online and in-person hybrid class, technologically managed by a Learning Management Software (LMS).</p>
-  <p>Over 700 students enrolled in the course, and our instructional team consisted of one Instructor, one graduate TA, and two undergraduate TAs. This paper reports evidence-based practice of two assessment methods, Divide-and-Conquer and Grade-a-thons, that we used to successfully evaluate a large-enrollment course with small grading staff. The coursework was divided into two types of assignments: weekly homework and a final report.</p>
-  <p>The design of the course was based on content that had been previously implemented at this large, midwestern institution, as well as best practices learned from introduction to engineering courses at other institutions. In particular, the final project was based on Ray Landis’ work (Landis 2013). The weekly assignments were 1-page essay assignments. We asked students to reflect on the course’s assigned in-person activities, reading, and videos and to create a personal plan that would set themselves up to becoming a successful engineering student. To the best of our understanding, this is the largest implementation of \"Design Your Successful Engineering Path\" that has been able to grade final reports at this scale.</p>
-  <p>Weekly assignments were assessed with Divide-and-Conquer style grading. Student assignments were divided by last name into three even sections; each TA was responsible for one section and performed a combination of “hand-grading” and “mass-grading”. Hand-grading involved looking at each student's assignment, making an assessment based on a rubric, writing comments, and assigning a grade. Mass-grading consisted of giving all students full credit for the assignment. Every week TAs would hand-grade between 80-100 assignments and mass-grade the remaining 130-150 assignments. They would change which students were selected for hand-grading every week, so no student went more than two weeks without being hand-graded. This strategy allowed three TAs to give select students meaningful feedback on their assignments and monitor student progress. The TAs would first complete the hand-grading, to monitor the quality of student work for that assignment. Through this hand-grading assessment, the TAs found that there was a consistent rate of 90-95% of students turning in completed work that followed all requirements, earning the students full-credit. Due to the overall quality of student submissions, we justified mass-grading: giving the remaining students full-credit would be a reasonable strategy, since an overwhelming majority of submissions would have been assigned full-credit with the hand-grading strategy.</p>
-  <p>The second type of assignment that required assessment was a final report. This report was an accumulation of the previous weekly assignments, where students were expected to create a cohesive strategy to becoming a successful student engineer. These reports were 9-11 pages in length, not including appendices. Since this assignment was significantly longer than the weekly assignments and required that every student be hand-graded, we created a “Grade-a-thon” event that enabled us to grade all student reports in two eight-hour sessions. The grade-a-thon augmented practices seen in hackathons and standardized AP grading assessment. We hired an additional 16 Graders for this event, paying each Grader $100 for the entire day. The grade-a-thon was hosted on a Saturday from 9-5 in a large conference and workspace on campus. Before the event, the TAs graded four student reports to create a standardized grading practice. At the beginning of the event, we performed a calibration session where the Graders could see these examples and practice grading reports themselves; through the calibration session, we created regulated grading practices for all grading staff. We catered lunch and provided snacks for the grading team as well as organized breaks and activities every two hours. This prevented burn-out and kept all graders engaged in grading. In the end, this format allowed all students to receive individual assessment and feedback, while simultaneously expediting grading time and at a relatively low financial cost to the university.</p>
-  <p>We developed the Divide-and-Conquer and Grade-a-thon strategies as alternatives to automated assessment or hiring full-time appointment-based TAs. Our experiences with this introduction to engineering course show us that we can achieve effective assessment for a large enrollment course with a small instructional staff.</p>"
-  links:
-    - uri: "https://scholar.colorado.edu/cgi/viewcontent.cgi?article=1003&context=atlas_gradpapers"
-      text: "Full Paper PDF"
 
-- shorttitle: "asee17_presentation"
-  title: "Grade-a-thons and Divide-and-Conquer: Effective Assessment at Scale"
-  type: "Presentation"
+# Mapping Experiences
+#TODO this 
+- workKey: "map"
+  title: "Past Experience Influences Judgment of Pain: Prediction of Sequential Dependencies"
+  type: "Paper"
+  reference: "Link, Benjamin V., Brittany Ann Kos, Tor D. Wager, and Michael Mozer.  \"Past Experience Influences Judgment of Pain: Prediction of Sequential Dependencies.\" <i>Proceedings of the 33d Annual Conference of the Cognitive Science Society</i>, 2011."
+  referenceLink: "Link, Benjamin V., Brittany Ann Kos, Tor D. Wager, and Michael Mozer.  \"<a href='https://www.researchgate.net/profile/Michael_Mozer/publication/267698240_Past_Experience_Influences_Judgment_of_Pain_Prediction_of_Sequential_Dependencies/links/55b90cdb08aed621de085fd7.pdf' target='_blank'>Past Experience Influences Judgment of Pain: Prediction of Sequential Dependencies</a>.\" <i>Proceedings of the 33d Annual Conference of the Cognitive Science Society</i>, 2011."
+  abstract: "Recent experience can influence judgments in a wide rangeof tasks, from reporting physical properties of stimuli tograding papers to evaluating movies. In this work, weanalyze data from a task involving a series of judgments ofpain (discomfort) made by participants who were asked toplace their hands in a bowl of water of varying temperature.Although trials in this task were separated by a minute in orderto avoid sequential dependencies, we nonetheless find thatresponses are reliably influenced by the recent trial history.We explore a space of statistical models to predict sequentialdependencies, and show that a nonlinear autoregression usingneural networks is able to predict over 6% of the responsevariability unrelated to the stimulus itself. We discuss thepossibility of using decontamination procedures to removethis variability and thereby obtain more meaningful ratingsfrom individuals."
   links:
-    - uri: "https://drive.google.com/file/d/1sQjrhacdt_QWZjQM0MkfIzrTcml5Jbzt/view?usp=sharing"
-      text: "Conference Presentation PDF"
+    - uri: "https://www.researchgate.net/profile/Michael_Mozer/publication/267698240_Past_Experience_Influences_Judgment_of_Pain_Prediction_of_Sequential_Dependencies/links/55b90cdb08aed621de085fd7.pdf"
+      text: "PDF"

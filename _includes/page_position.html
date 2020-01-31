@@ -5,12 +5,13 @@
 {% endif %}
 
 <div class="details">
-	{% unless position.classes %}
-		<h4>{{ position.title }}</h4>
-	{% endunless %}
-	{% if position.role %}
-		<p class="role">{{ position.role }} &nbsp; {{ position.time }}</p>
+    
+	<h4>{{ position.role }}</h4>
+    
+	{% if position.org %}
+		<p class="org">{{ position.org }}</p>
 	{% endif %}
+    
 	{% if position.description %}
 		<p class="description">{{ position.description }}</p>
 	{% endif %}
@@ -37,57 +38,31 @@
 		</div>
 	{% endif %}
 	
+    {% if position.works %}
+        <div class="works">
+            {% for positionWork in position.works %}
+                {% for workData in site.data.works %}
+                    {% if positionWork.workKey == workData.workKey %}
+                        <div class="work">
+                            <p class="workRef">
+                                {{ workData.referenceLink }}
+                            </p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    {% if position.misc %}
+    	<div class="misc">
+    		{{ position.misc }}
+    	</div>
+    {% endif %}
+    
 </div>
 
 
-{% if position.works %}
-	<ul class="works remove-list-styles">
-		{% for workKeyNames in position.works %}
-			{% for work in site.data.works %}
-				{% if workKeyNames.work == work.shorttitle %}
-					<li class="work">
-						<div class="work-header">
-							<div class="work-tab">
-								{{ work.type }}
-							</div>
-							{{ work.title }}
-						</div>
-						<div class="work-materials">
-							<div class="links right">
-								<div class="link-btn small">
-									<ul>
-										{% for link in work.links %}
-											<li>
-												<a download href="{{ link.uri }}" target="_blank"><span class="fa fas fa-file-pdf"></span>{{ link.text }}</a>
-											</li>
-										{% endfor %}
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!--<div class="work-content sh-group sh-close">
-							<div class="sh-btn">More details . . .</div>
-							<div class="sh-details">
-								{% if work.abstract %}
-									<div class="abstract">{{ work.abstract }}</div>
-								{% endif %}
-								{% if work.reference %}
-									<div class="ref">{{ work.reference }}</div>
-								{% endif %}
-							</div>
-						</div>-->
-					</li>
-				{% endif %}
-			{% endfor %}
-		{% endfor %}
-	</ul>
-{% endif %}
-
-{% if position.misc %}
-	<div class="misc">
-		{{ position.misc }}
-	</div>
-{% endif %}
 
 {% if position.classes %}
 	<div class="classes">

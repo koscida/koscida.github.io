@@ -3,12 +3,14 @@ layout: default
 title: Teaching
 ---
 
-<section>
-	<div id="welcome">
+<section class="intro">
+	<div id="welcome" class="wrapper">
 		<h2>Teaching</h2>
-		<p class="blurb">
-			Teaching is one of my passions in life. I have experience teaching at the college level, as well volunteering for various middle school, high school, and undergraduate outreach programs and summer camps. I love teach introductoary computing, no matter the audience or context, it is always fun seeing my students learning and applying newly learned computing concepts.
-		</p>
+        <div class="blurb">
+    		<p>
+    		    I have a broad range of teaching experience from teaching college courses, assistant teaching in middle school, and volunteering for outreach and summer camps. I have experience collaborating with other instructors and stakeholders to develop curricula that integrate new topics into traditional subjects and to standardize curriculum across courses.
+    		</p>
+        </div>
 	</div>
 </section>
 
@@ -52,11 +54,12 @@ title: Teaching
 </section>
 -->
 
-<section>
-	<div id="experience">
-		<h3>Experience</h3>
-
-		<div id="timeline">
+<section id="experience" class="wide">
+	<div class="wrapper">
+		
+        <h3>Experience</h3>
+        
+        <div id="timeline">
 			<div id="timeline-grid" data-size="18">
 
 				<div class="timeline-header">
@@ -117,16 +120,16 @@ title: Teaching
 			</div>
 		</div>
 		
-		
-		
-		{% for section in site.data.pages.tea.sections %}
-		
-			{% include page_group.html %}
-
-		{% endfor %}
-		
-		
-		
+        <div class="pageSection">
+            {% for position in site.data.positions %}
+                {% if position.flags.pageKey == "teaching" %}
+                    <div class="pagePosition">
+                        {% include page_position.html %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
 		
 	</div>
 </section>

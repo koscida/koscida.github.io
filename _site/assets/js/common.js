@@ -9,9 +9,9 @@ window.onload = function() {
 
 	addContactInfo();
 
-	groupToggle();
+	//groupToggle();
 
-	positionTimeline();
+	//positionTimeline();
 	
 	showHideGroup();
 };
@@ -23,8 +23,8 @@ window.onload = function() {
  * Navigation
  * - Opens and closes the navigation when the hamburger button gets pressed.
  */
-var $btn = document.getElementById('navButtonContainer'),
-    $nav = document.getElementById('navigation');
+var $btn = document.querySelector('#navButton'),
+    $nav = document.querySelector('nav');
 
 $btn.onclick = function(){
     if ($nav.classList.contains('open')) {
@@ -94,17 +94,26 @@ function groupToggleTapOrClick(event) {
  * Timeline
  * - positions timeline items
  */
-function positionTimeline() {
-	var grid = $("#timeline-grid");
-	var gridSize = Number(grid.attr("data-size"));
-	var gridHeightpx = grid.height();
-	var labelWidthpx = $(".timeline-label").width();
-	var graphWidthpx = grid.width()-labelWidthpx-20;
+/*function positionTimeline() {
+    //var grid = $("#timeline-grid");
+    var grid = document.getElementById("timeline-grid");
+	var gridSize = Number(grid.getAttribute("data-size"));
+	//var gridHeightpx = grid.height();
+    var gridHeightpx = parseFloat(getComputedStyle(grid, null).height.replace("px", ""))
+    
+	//var labelWidthpx = $(".timeline-label").width();
+    var label = document.querySelector(".timeline-label");
+    var labelWidthpx = parseFloat(getComputedStyle(label, null).width.replace("px", ""))
+    
+	//var graphWidthpx = grid.width()-labelWidthpx-20;
+    var graphWidthpx = parseFloat(getComputedStyle(grid, null).width.replace("px", "")) - labelWidthpx-20;
 	var unitWidthpx = graphWidthpx/gridSize;
-
-	$(".timeline-item").each(function() {
-		var itemStart = $(this).attr("data-start");
-		var itemLen = $(this).attr("data-len");
+    
+    //$(".timeline-item").each(function() {
+    var timelineItems = document.querySelectorAll(".timeline-item");
+    Array.prototype.forEach.call(timelineItems, function(el, i){
+        var itemStart = this.getAttribute("data-start");
+		var itemLen = this.getAttribute("data-len");
 		var itemLeftpx = ((itemStart-1)*unitWidthpx) - 2;
 		var itemWidthpx = ((itemLen*unitWidthpx)-4);
 		if (itemLen == 1) { itemLeftpx -= 1; itemWidthpx += 2; }
@@ -113,18 +122,19 @@ function positionTimeline() {
 		var itemLeftpct = (itemLeftpx / graphWidthpx) * 100;
 
 		// first, move the items left, not animated
-		$(this).css({"margin-left": itemLeftpct + '%', overflow: "visible"});
+		//this.css({"margin-left": itemLeftpct + '%', overflow: "visible"});
+        this.style.marginLeft = itemLeftpct + "%";
+        this.style.overflow = "visible";
 
 		// expand the width
-		$(this).animate({width: itemWidthpct + "%"},750);
+		this.animate({width: itemWidthpct + "%"},750);
 
 		// drag the timeline markers down
-		if ($(this).parent().parent().hasClass("timeline-header")) {
-			$(this).animate({height: gridHeightpx + 'px'},750);
+		if (this.parent().parent().hasClass("timeline-header")) {
+			this.animate({height: gridHeightpx + 'px'},750);
 		}
 	});
-
-}
+}*/
 
 
 
