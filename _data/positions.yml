@@ -94,7 +94,8 @@
   dateStart: 2013-06-01
   dateEnd: 2015-12-01
   
-  description: "Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics."
+  description: "Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics.
+  <ul><li>Assisted in data coordination for 4+ schools/programs</li></ul>" 
 
   thumbnailpath: "assets/images/projects/earthexplorers_logo.png"
   thumbnailalt: "earth explorers logo"
@@ -243,8 +244,7 @@
   dateEnd: 2015-06-01
   
   description: "This NSF GK-12 project incorporated computing into existing K-12 courses by working with local school districts to develop standards-based curriculum appropriate for each school.
-  <ul><li>Collaborated with middle school teacher to develop career exploration curriculum</li>
-  <li>Project SCIPWorked with a science teacher to developed a 3-week long infographic-based career exploration workshop for ~200 8th grade students</li>
+  <ul><li>Collaborated with middle school science teacher to developed a 3-week long infographic-based career exploration workshop for ~200 8th grade students</li>
   <li>Developed interdisciplinary science/technology content for a targeted demographic</li></ul>"
   
   works: 
