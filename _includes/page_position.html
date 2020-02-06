@@ -1,84 +1,77 @@
-{% if position.thumbnailpath %}
-	<div class="image">
-		<img src="{{ position.thumbnailpath }}" alt="{{ position.thumbnailalt }}"/>
-	</div>
-{% endif %}
-
-<div class="details">
+<div class="pagePosition">
     
-	<h4>{{ position.role }}</h4>
-    
-	{% if position.org %}
-		<p class="org">{{ position.org }}</p>
-	{% endif %}
-    
-	{% if position.description %}
-		<p class="description">{{ position.description }}</p>
-	{% endif %}
-	
-	{% if position.materials %}
-		<div class="materials right">
-			<div class="link-btn medium">
-				<ul>
-					
-					{% if position.materials-siteuri %}
-						<li>
-							<a download href="{{ position.materials-siteuri }}" target="_blank"><span class="fa fa-external-link-alt"></span>{{ position.materials-siteuritext }}</a>
-						</li>
-					{% endif %}
-					
-					{% if position.materials-syllabuspdf %}
-						<li>
-							<a download href="{{ position.materials-syllabuspdf }}" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
-						</li>
-					{% endif %}
-					
-				</ul>
-			</div>
-		</div>
-	{% endif %}
-	
-    {% if position.works %}
-        <div class="works">
-            {% for positionWork in position.works %}
-                {% for workData in site.data.works %}
-                    {% if positionWork.workKey == workData.workKey %}
-                        <div class="work">
-                            <p class="workRef">
-                                {{ workData.referenceLink }}
-                            </p>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-        </div>
-    {% endif %}
-    
-    {% if position.misc %}
-    	<div class="misc">
-    		{{ position.misc }}
+    {% if position.thumbnailpath %}
+    	<div class="image">
+    		<img src="{{ position.thumbnailpath }}" alt="{{ position.thumbnailalt }}"/>
     	</div>
     {% endif %}
+
+    <div class="details">
+        
+    	<h4>{{ position.role }}</h4>
+        
+    	{% if position.organization %}
+    		<div class="org">
+                <p>{{ position.organization }}</p>
+            </div>
+    	{% endif %}
+        
+    	{% if position.descriptionHTML %}
+    		<div class="description">
+                {{ position.descriptionHTML }}
+                {% if position.responsibilitiesHTML %}
+                    {{ position.responsibilitiesHTML }}
+                {% endif %}
+                {% if position.extraHTML %}
+                    {{ position.extraHTML }}
+                {% endif %}
+            </div>
+    	{% endif %}
+    	
+    	{% if position.siteURL or position.syllabusURL %}
+    		<div class="materials right">
+    			<div class="link-btn medium">
+    				<ul>
+    					
+    					{% if position.siteURL %}
+    						<li>
+    							<a download href="{{ position.siteURL }}" target="_blank"><span class="fa fa-external-link-alt"></span>{{ position.siteURLText}}</a>
+    						</li>
+    					{% endif %}
+    					
+    					{% if position.syllabusURL %}
+    						<li>
+    							<a download href="{{ position.syllabusURL }}" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
+    						</li>
+    					{% endif %}
+    					
+    				</ul>
+    			</div>
+    		</div>
+    	{% endif %}
+    	
+        {% if position.workKeys %}
+            <div class="works">
+                {% for positionWork in position.workKeys %}
+                    {% for workData in site.data.works %}
+                        {% if positionWork.workKey == workData.workKey %}
+                            <div class="work">
+                                <p class="workRef">
+                                    {{ workData.referenceLink }}
+                                </p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% if position.miscHTML %}
+        	<div class="misc">
+        		{{ position.miscHTML }}
+        	</div>
+        {% endif %}
+        
+    </div>
     
 </div>
-
-
-
-{% if position.classes %}
-	<div class="classes">
-		<ul class="remove-list-styles">
-		{% for classType in position.classes %}
-			<li>
-				<h4>{{classType.type}}</h4>
-				<ul class="works remove-list-styles">
-				{% for position in classType.courses %}
-					<li class="work">
-						{% include page_position.html %}
-					</li>
-				{% endfor %}
-				</ul>
-			</li>
-		{% endfor %}
-		</ul>
-	</div>
-{% endif %}

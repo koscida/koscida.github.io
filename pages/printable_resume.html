@@ -1,0 +1,140 @@
+---
+layout: printable_resume
+title: Resume -- Brittany Ann Kos
+---
+
+<div class="top">
+    
+    <section class="resumeSection intro filled">
+        <div class="rsHead">
+            <h3>Resume</h3>
+        </div>
+        <div class="rsContent">
+            <h1>Brittany Ann Kos</h1>
+            <h2>Research and Development</h2>
+        	<p>
+                Experienced and self-motivated coordinator and researcher. History of working in outreach and education, with a strong focus on diversity and inclusion work. Knowledgeable of data science, program evaluation and development, research standards and practices. Looking for opportunities to extend knowledge base in research and management and apply skills in broader fields.
+        	</p>
+        </div>
+    </section>
+    
+</div>
+
+<div class="left">
+    
+    <section class="resumeSection contact filled">
+        <div class="rsHead">
+            <h3>Personal Info</h3>
+        </div>
+        
+        <div class="rsContent">
+            <p><i class="fas fa-envelope"></i></p>
+            <p><a href="mailto:BritKos@gmail.com" target="_blank">britkos@gmail.com</a></p>
+            
+            <p><i class="fas fa-mobile-alt"></i></p>
+            <p>720-270-500</p>
+            
+            <p><i class="fas fa-map-marker-alt"></i></p>
+            <p>Philaelphia, PA</p>
+            
+            <p><i class="fas fa-laptop"></i></p>
+            <p><a href="http://brittanyannkos.com" target="_blank">BrittanyAnnKos.com</a></p>
+            
+            <p><i class="fab fa-linkedin-in"></i></p>
+            <p><a href="http://www.linkedin.com/in/brittanyannkos" target="_blank">linkedin.com/in/brittanykos</a></p>
+        </div>
+    </section>
+
+    <section class="resumeSection filled">
+        <div class="rsHead">
+            <h3>Education</h3>
+        </div>
+        <div class="rsContent">
+            <p class="school">University of Colorado Boulder</p>
+            <p class="degree"><span class="special">Ph.D.</span> Technology, Arts and Media, 2019</p>
+            <p class="degreeDetail"><em>Thesis:</em> An Autoethnography of T9Hacks: Designing a Welcoming Hackathon for Women and Non-Binary Students to Learn and Explore Computing</p>
+            <p class="degree"><span class="special">M.S.</span> Computer Science, 2014</p>
+            <p class="degree"><span class="special">B.S.</span> Computer Science, 2012</p>
+            <p class="degreeDetail"><em>Emphasis:</em> User Experience (UX/UI)</p>
+            <p class="degreeDetail"><em>Minor:</em> Technology, Arts & Media</p>
+        </div>
+    </section>
+
+    <section class="resumeSection skills filled">
+        <div class="rsHead">
+            <h3>Skills</h3>
+        </div>
+        <div class="rsContent">
+            <h5>Interpersonal Skills</h5>
+            <p>Professional communication over phone/email/online</p>
+            <p>Able to work on collaborative teams and independently</p>
+            <p>Organized, detail-oriented, fast learner</p>
+            <h5>Tools and Languages</h5>
+            <p>SPSS</p>
+            <p>Google Suite, Microsoft, Adobe</p>
+            <p>Git, Slack, Basecamp</p>
+            <p>HTML, CSS, JS, Python, R, SQL</p>
+        </div>
+    </section>
+
+</div>
+
+<div class="right">
+
+    <section class="resumeSection">
+        <div class="rsHead">
+            <h3>Eperience</h3>
+        </div>
+        <div class="rsContent wide">
+            {% for pk in site.data.pages.printable_resume.positionKeys %}
+                {% for position in site.data.positions %}
+                    {% if pk.positionKey == position.positionKey %}
+                		<div class="resumePosition">
+                            <div class="rpRole">
+                    			<h4>{{position.role}}</h4>
+                            </div>
+                            <div class="rpOrg">
+                                {% if position.organizationShort %}
+                                    {{position.organizationShort}}
+                                {% else %}
+                                    {{position.organization}}
+                                {% endif %}
+                            </div>
+                            <div class="rpDate">
+                                {{ position.dateStart | date: "%Y" }} &ndash; {{ position.dateEnd | date: "%Y" }}
+                            </div>
+                            <div class="rpContent">
+                                
+                                <div class="rpDetails">
+                                    
+                                    {{position.descriptionHTML}}
+                                    
+                                    {% if position.resultsKeys %}
+                                        <p>Published/reported results:
+                                            {% for result in position.resultsKeys %}
+                                                {% for workData in site.data.works %}
+                                                    {% if result.workKey == workData.workKey %}
+                                                        [<a href="{{workData.links[0].uri}}" target="_blank">Ref</a>]
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    
+                                    {{position.responsibilitiesHTML}}
+                                    
+                                </div>
+                                
+                                {% if position.extraHTML %}
+                                    <div class="rpExtra">{{position.extraHTML}}</div>
+                                {% endif %}
+                                
+                            </div>
+                		</div>
+                    {% endif %}
+                {% endfor %}
+        	{% endfor %}
+        </div>
+    </section>
+    
+</div>

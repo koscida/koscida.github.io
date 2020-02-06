@@ -70,7 +70,7 @@ cv:
         - cvSubSectionKey: "fellowship"
           cvSubSectionTitle: "Fellowship"
         - cvSubSectionKey: "instructor"
-          cvSubSectionTitle: "Instructor"
+          cvSubSectionTitle: "Instructor/Teaching Assistant (TA)"
         #- cvSubSectionKey: "courseinstructor"
         #  cvSubSectionTitle: "Course Instructor"
         #- cvSubSectionKey: "ta"
@@ -79,3 +79,11 @@ cv:
           cvSubSectionTitle: "Workshops, Summer Programs, etc"
     - cvSectionKey: "ux"
       cvSectionTitle: "UX Experience"
+
+
+printable_resume:
+  positionKeys:
+    - positionKey: "T9Hacks"
+    - positionKey: "Graduate Researcher"
+    - positionKey: "Instructor/Teaching Assistant (TA)"
+    - positionKey: "GK-12 Fellow"

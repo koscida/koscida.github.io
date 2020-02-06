@@ -2,39 +2,39 @@
 ####      Education                       ####
 ##############################################
   
-- item: "PhD"
+- positionKey: "PhD"
 
   flags:
     cvSectionKey: "education"
   
   role: "Ph.D. Computing Education (Technology, Media & Society)"
-  org: "ATLAS Institute – University of Colorado Boulder"
+  organization: "ATLAS Institute – University of Colorado Boulder"
   
   dateFormat: "end"
   dateStart: 2013-07-01
   dateEnd: 2019-05-01
   
 
-- item: "MS"
+- positionKey: "MS"
   
   flags:
     cvSectionKey: "education"
   
   role: "M.S. Computer Science"
-  org: "College of Engineering and Applied Sciences - University of Colorado Boulder"
+  organization: "College of Engineering and Applied Sciences - University of Colorado Boulder"
   
   dateFormat: "end"
   dateStart: 2012-07-01
   dateEnd: 2014-05-01
 
 
-- item: "BS"
+- positionKey: "BS"
   
   flags:
     cvSectionKey: "education"
   
   role: "B.S. Computer Science"
-  org: "College of Engineering and Applied Sciences - University of Colorado Boulder"
+  organization: "College of Engineering and Applied Sciences - University of Colorado Boulder"
   
   dateFormat: "end"
   dateStart: 2008-07-01
@@ -48,37 +48,41 @@
 ####      Leadership Experience           ####
 ##############################################
 
-- item: "T9Hacks"
+- positionKey: "T9Hacks"
     
   flags:
     cvWorkHistory: true
     cvSectionKey: "leadership"
     
   role: "Lead Coordinator"
-  org: "T9Hacks: A Women and Non-Binary Hackathon"
+  organization: "T9Hacks: A Women and Non-Binary Hackathon"
   
   dateFormat: "range"
   dateStart: 2015-10-01
   dateEnd: 2019-02-01
     
-  description: "Founded T9Hacks, a student hackathon organization dedicated to providing events for women and non-binary students to learn and explore computing. Worked as head of logistical coordination for 100+ participants and 50+ volunteers at three annual events
-  <ul><li>Developed technical and professional development workshops, event programming, and hands-on, supportive, and project-based learning experience for students</li>
-  <li>Worked to improve participant recruitment and retention</li>
-  <li>Secured corporate sponsorships and community partnerships</li>
-  <li>Created organizational structure, positions, responsibilities, and workflows</li>
-  <li>Post-event evaluation</li></ul>"
+  descriptionHTML: "<p>Founded <a href='http://t9hacks.org/' target='_blank'>T9Hacks</a>, a student hackathon organization dedicated to providing events for women and non-binary students to learn and explore computing. Worked as head of logistical coordination for 100+ participants and 50+ volunteers at three annual events.</p>"
+  responsibilitiesHTML: "<ul><li>Developed technical and professional development workshops, event programming, and hands-on, supportive, and project-based learning experience for students</li>
+  <li>Created organizational structure: sponsorship, marketing and advertising, and logistics and event design/ux. Developed responsibilities and positions for roles; assisted in all areas. Improved participant recruitment and retention. Secured corporate sponsorships and community partnerships</li>
+  <li>Conducted research on event design and program evaluation</li></ul>"
+  
+  resultsKeys:
+    - workKey: "diss19"
+    - workKey: "icgj19_coll_styles_goals"
+    - workKey: "icer18_hack_exp"
+    - workKey: "wk16_uniq_hack_exp"
+    - workKey: "art17_fram_gen_div"
 
   thumbnailpath: "assets/images/projects/t9hacks_logo.png"
   thumbnailalt: "T9Hacks 2018 logo"
 
-  materials: true
-  materials-siteuri: "http://t9hacks.org"
-  materials-siteuritext: "T9Hacks Website"
+  siteURL: "http://t9hacks.org"
+  siteURLText: "T9Hacks Website"
     
-  misc: "<p><b>News</b></p><ul><li><a href='http://www.dailycamera.com/cu-news/ci_32441347/t9-hacks-gathers-women-non-binary-people-at' target='_blank'>T9 Hacks gathers women, non-binary people at CU Boulder for 24-hour hackathon</a></li><li><a href='https://stories.mlh.io/community-roundup-empowering-safety-security-and-diversity-caaf07022edc' target='_blank'>Community Roundup: Hackathons Empowering Safety, Security, and Diversity</a></li><li><a href='https://www.colorado.edu/atlas/2018/02/16/t9hacks-continues-grow-and-thrive' target='_blank'>T9Hacks continues to grow and thrive</a></li><li><a href='https://www.colorado.edu/atlas/2018/01/17/female-focused-collaborative-hackathon-session-slated-feb-10' target='_blank'>Female-focused, collaborative hackathon session slated for Feb. 10</a></li><li><a href='http://www.dailycamera.com/news/ci_29545069/cuboulders-atlas-institute-hosts-inaugural-womencentric-hackathon' target='_blank'>CU-Boulder's Atlas Institute hosts inaugural women-centric hack-a-thon</a></li><li><a href='https://cuindependent.com/2016/02/29/71520/' target='_blank'>T9Hacks brings women together for 24 hours of hacking</a></li><li><a href='http://atlas.colorado.edu/t9-hacks-highlights/' target='_blank'>T9 Hacks Highlights</a></li><li><a href='https://victorops.com/blog/t9hacks-supporting-diversity-tech' target='_blank'>T9Hacks: Supporting Diversity in Tech</a></li><li><a href='https://quickleft.com/blog/cu-atlas-t9hacks-bridging-gap-women-tech/' target='_blank'>CU ATLAS T9Hacks: Bridging the Gap Between Women & Tech</a></li></ul>"
+  miscHTML: "<p><b>News</b></p><ul><li><a href='http://www.dailycamera.com/cu-news/ci_32441347/t9-hacks-gathers-women-non-binary-people-at' target='_blank'>T9 Hacks gathers women, non-binary people at CU Boulder for 24-hour hackathon</a></li><li><a href='https://stories.mlh.io/community-roundup-empowering-safety-security-and-diversity-caaf07022edc' target='_blank'>Community Roundup: Hackathons Empowering Safety, Security, and Diversity</a></li><li><a href='https://www.colorado.edu/atlas/2018/02/16/t9hacks-continues-grow-and-thrive' target='_blank'>T9Hacks continues to grow and thrive</a></li><li><a href='https://www.colorado.edu/atlas/2018/01/17/female-focused-collaborative-hackathon-session-slated-feb-10' target='_blank'>Female-focused, collaborative hackathon session slated for Feb. 10</a></li><li><a href='http://www.dailycamera.com/news/ci_29545069/cuboulders-atlas-institute-hosts-inaugural-womencentric-hackathon' target='_blank'>CU-Boulder's Atlas Institute hosts inaugural women-centric hack-a-thon</a></li><li><a href='https://cuindependent.com/2016/02/29/71520/' target='_blank'>T9Hacks brings women together for 24 hours of hacking</a></li><li><a href='http://atlas.colorado.edu/t9-hacks-highlights/' target='_blank'>T9 Hacks Highlights</a></li><li><a href='https://victorops.com/blog/t9hacks-supporting-diversity-tech' target='_blank'>T9Hacks: Supporting Diversity in Tech</a></li><li><a href='https://quickleft.com/blog/cu-atlas-t9hacks-bridging-gap-women-tech/' target='_blank'>CU ATLAS T9Hacks: Bridging the Gap Between Women & Tech</a></li></ul>"
 
 
-- item: "Earth Explorers"
+- positionKey: "Earth Explorers"
   
   flags:
     cvWorkHistory: false
@@ -88,14 +92,14 @@
         section: "out-asst"
     
   role: "Board Member, Evaluation Lead"
-  org: "Earth Explorers"
+  organization: "Earth Explorers"
   
   dateFormat: "range"
   dateStart: 2013-06-01
   dateEnd: 2015-12-01
   
-  description: "Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics.
-  <ul><li>Assisted in data coordination for 4+ schools/programs</li></ul>" 
+  descriptionHTML: "<p>Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics.</p>"
+  responsibilitiesHTML: "<ul><li>Assisted in data management and analysis for 4+ schools/programs</li></ul>" 
 
   thumbnailpath: "assets/images/projects/earthexplorers_logo.png"
   thumbnailalt: "earth explorers logo"
@@ -106,22 +110,36 @@
 ####      Research Experience             ####
 ##############################################
 
-- item: "Graduate Researcher"
+- positionKey: "Graduate Researcher"
   
   flags:
     cvWorkHistory: true
   
   role: "Graduate Researcher"
-  org: "University of Colorado Boulder, Advised under Lecia Barker, PhD"
+  organization: "University of Colorado Boulder, Advised under Lecia Barker, PhD"
+  organizationShort: "University of Colorado Boulder"
   
   dateFormat: "range"
   dateStart: 2015-08-01
   dateEnd: 2019-05-01
   
+  descriptionHTML: "<p>Worked on multiple qualitative research projects with increasing amounts of autonomy and ownership.</p>"
+  responsibilitiesHTML: "<ul><li>Experience publishing results, writing reports and IRB protocols. CITI Certification: 2018-01-10</li>
+  <li>Interviews, focus groups, ethnographic observation; surveys, questionariers, assessments. Developed and improved data collector and data manager processes</li>
+  <li>Analyzed qualitative data, statistical analysis of quantitative data</li></ul>"
+  extraHTML: "<h6>Lead Researcher/PI</h6>
+    <p>2017	Prompting CT <a href='https://scholar.colorado.edu/concern/reports/tx31qj61s' target='_blank'>Ref</a></p>
+    <p>2016	Grading at Scale <a href='https://scholar.colorado.edu/concern/conference_proceedings/qf85nb969' target='_blank'>Ref</a></p>
+    <h6>Research Assistant</h6>
+    <p>'16-'17	Extension Services (NCWIT)</p>
+    <p>'15-'16	Lab for Playful Computation</p>
+    <p>2014	Gamification of CSP <a href='https://drive.google.com/file/d/14reeskvPMSWehRO8NwqIBl4mszIj1S9F/view' target='_blank'>Ref</a></p>
+    <p>'11-'10	Mapping Experiences <a href='https://www.researchgate.net/profile/Michael_Mozer/publication/267698240_Past_Experience_Influences_Judgment_of_Pain_Prediction_of_Sequential_Dependencies/links/55b90cdb08aed621de085fd7.pdf' target='_blank'>Ref</a></p>"
+  
 
 ####      Primary Investigator (PI)
 
-- item: "Student Hackathons"
+- positionKey: "Student Hackathons"
   
   flags:
     cvWorkHistory: false
@@ -135,8 +153,8 @@
   dateStart: 2016-10-01
   dateEnd: 2019-05-01
   
-  description: "Investigated student experiences at students hackathons, project-building marathons. Explored areas such as competition, learning experiences, event branding, motivations and goals, and student experiences.
-  <ul><li>Designed and ran interdisciplinary, hands-on, informal learning environment</li>
+  descriptionHTML: "<p>Investigated student experiences at students hackathons, project-building marathons. Explored areas such as competition, learning experiences, event branding, motivations and goals, and student experiences.</p>"
+  responsibilitiesHTML: "<ul><li>Designed and ran interdisciplinary, hands-on, informal learning environment</li>
   <li>Mix-methods study involving ethnographic observation, feedback questionnaires, construct surveys, informal and structured interviews</li>
   <li>Analyzed qualitative data, statistical analysis of quantitative data</li>
   <li>Conducted research on event design and program evaluation</li></ul>"
@@ -144,7 +162,7 @@
   thumbnailpath: "assets/images/projects/t9hacks_logo.png"
   thumbnailalt: "T9Hacks 2018 logo"
 
-  works:
+  workKeys:
     - workKey: "diss19"
     - workKey: "icgj19_coll_styles_goals"
     - workKey: "icer18_hack_exp"
@@ -152,7 +170,7 @@
     - workKey: "art17_fram_gen_div"
 
 
-- item: "Prompting Computational Thinking"
+- positionKey: "Prompting Computational Thinking"
   
   flags:
     cvWorkHistory: false
@@ -166,19 +184,19 @@
   dateStart: 2017-05-01
   dateEnd: 2017-08-01
   
-  description: "Investigated how untrained students could help each other learn to think computationally in introductory information science classes
-  <ul><li>Developed and intervention that prompted and guided students through questions that were designed to help them solve programming problems</li>
+  descriptionHTML: "<p>Investigated how untrained students could help each other learn to think computationally in introductory information science classes.</p>"
+  responsibilitiesHTML: "<ul><li>Developed and intervention that prompted and guided students through questions that were designed to help them solve programming problems</li>
   <li>Conducted focus groups with students to gain feedback</li>
   <li>Iterated on intervention for future implementation</li></ul>"
   
-  works:
+  workKeys:
     - workKey: "wk17_clf"
 
 
 
 ####      Lead Researcher
 
-- item: "Grading at Scale"
+- positionKey: "Grading at Scale"
   
   flags:
     cvWorkHistory: false
@@ -192,18 +210,18 @@
   dateStart: 2016-07-01
   dateEnd: 2017-02-01
   
-  description: "Developed unique grading practices for small team to manage coursework of a 700-student Introduction to Engineering Class. 
-  <ul><li>Managed core team of 3 and temporary team of 15+ graduate students</li>
+  descriptionHTML: "<p>Developed unique grading practices for small team to manage coursework of a 700-student Introduction to Engineering Class.</p>"
+  responsibilitiesHTML: "<ul><li>Managed core team of 3 and temporary team of 15+ graduate students</li>
   <li>Administered pre/mid/post assessments</li></ul>"
   
-  works: 
+  workKeys: 
     - workKey: "asee17_grade_divide"
 
 
 
 ####      Fellowships
 
-- item: "Center STEM Learning"
+- positionKey: "Center STEM Learning"
   
   flags:
     cvWorkHistory: false
@@ -212,23 +230,27 @@
     pageKey: "research"
   
   role: "Center for STEM Learning"
-  org: "Introductory STEM"
+  organization: "Introductory STEM"
   
   dateFormat: "range"
   dateStart: 2015-05-01
   dateEnd: 2016-08-01
   
-  description: "Various initiatives that explored: student experiences between three STEM majors; training undergraduate learning assistants (LA); and discourse within introductory classes
-  <ul><li>Administered questionnaires and surveys; conducted ethnographic observation</li>
+  descriptionHTML: "<p>Various initiatives that explored: student experiences between three STEM majors; training undergraduate learning assistants (LA); and discourse within introductory classes</p>"
+  responsibilitiesHTML: "<ul><li>Administered questionnaires and surveys; conducted ethnographic observation</li>
   </li>Assisted in conducting training of 15+ student workers</li></ul>
   <em>Committee Member</em>: TAM BA College Exploration Committee"
   
-  works:
+  resultsKeys:
+    - workKey: "icer15_cs_hard"
+    - workKey: "atlasexpo15_cs_hard"
+  
+  workKeys:
     - workKey: "icer15_cs_hard"
     - workKey: "atlasexpo15_cs_hard"
 
 
-- item: "GK-12 Fellow"
+- positionKey: "GK-12 Fellow"
   
   flags:
     cvWorkHistory: true
@@ -237,17 +259,22 @@
     pageKey: "research"
   
   role: "Graduate Research Fellow (NSF)"
-  org: "The ECSITE Project: Engaging Computer Science in Traditional Education"
+  organization: "The ECSITE Project: Engaging Computer Science in Traditional Education"
   
   dateFormat: "range"
   dateStart: 2013-07-01
   dateEnd: 2015-06-01
   
-  description: "This NSF GK-12 project incorporated computing into existing K-12 courses by working with local school districts to develop standards-based curriculum appropriate for each school.
-  <ul><li>Collaborated with middle school science teacher to developed a 3-week long infographic-based career exploration workshop for ~200 8th grade students</li>
+  descriptionHTML: "<p>This NSF GK-12 project incorporated computing into existing K-12 courses by working with local school districts to develop standards-based curriculum appropriate for each school.</p>"
+  responsibilitiesHTML: "<ul><li>Collaborated with middle school science teacher to developed a 3-week long infographic-based career exploration workshop for ~200 8th grade students</li>
   <li>Developed interdisciplinary science/technology content for a targeted demographic</li></ul>"
   
-  works: 
+  resultsKeys:
+    - workKey: "wk15_scip"
+    - workKey: "sigcse15_scip"
+    - workKey: "rmcwic14_scip"
+  
+  workKeys: 
     - workKey: "wk15_comp_thnk"
     - workKey: "sigcse15_scip"
     - workKey: "rmcwic14_scip"
@@ -256,7 +283,7 @@
 
 ####      Research Assistant
 
-- item: "ES"
+- positionKey: "ES"
   
   flags:
     cvWorkHistory: false
@@ -270,12 +297,12 @@
   dateStart: 2016-10-01
   dateEnd: 2017-07-01
   
-  description: "The National Center for Women in Information Technology (NCWIT) Extension Services Project seeks to increase recruitment and retention of women in computing and technology undergraduate programs. Worked as a graduate data analyst/social scientist.
-  <ul><li>Developed qualitative coding scheme for report data</li>
+  descriptionHTML: "<p>The National Center for Women in Information Technology (NCWIT) Extension Services Project seeks to increase recruitment and retention of women in computing and technology undergraduate programs. Worked as a graduate data analyst/social scientist.</p>"
+  responsibilitiesHTML: "<ul><li>Developed qualitative coding scheme for report data</li>
   <li>Analyzed qualitative data, statistical analysis of quantitative data</li></ul>"
 
 
-- item: "LPC"
+- positionKey: "LPC"
   
   flags:
     cvWorkHistory: false
@@ -289,12 +316,12 @@
   dateStart: 2015-11-01
   dateEnd: 2016-07-01
   
-  description: "Worked as data manager assistant and study facilitator. Interdisciplinary study, teaching middle school students computational thinking concepts through maker technology.
-  <ul><li>Multi-week study across two sites; video, voice, observational data collection</li>
+  descriptionHTML: "<p>Worked as data manager assistant and study facilitator. Interdisciplinary study, teaching middle school students computational thinking concepts through maker technology.</p>"
+  responsibilitiesHTML: "<ul><li>Multi-week study across two sites; video, voice, observational data collection</li>
   <li>Conducted assessment interviews</li></ul>"
 
 
-- item: "Gamification"
+- positionKey: "Gamification"
   
   flags:
     cvWorkHistory: false
@@ -308,13 +335,13 @@
   dateStart: 2014-07-01
   dateEnd: 2014-12-01
   
-  description: "Assisted in implementing gamified intervention to introductory Computer Science Principles course."
+  descriptionHTML: "<p>Assisted in implementing gamified intervention to introductory Computer Science Principles course.</p>"
   
-  works: 
+  workKeys: 
     - workKey: "icer16_cs_principles"
 
 
-- item: "Mapping Experiences"
+- positionKey: "Mapping Experiences"
   
   flags:
     cvWorkHistory: false
@@ -328,8 +355,9 @@
   dateStart: 2010-08-01
   dateEnd: 2011-05-01
   
-  description: "Linear modeling research project. Assisted in analysis and reporting of results."
-  works: 
+  descriptionHTML: "<p>Linear modeling research project. Assisted in analysis and reporting of results.</p>"
+  
+  workKeys: 
     - workKey: "map"
 
 
@@ -340,7 +368,7 @@
 
 ####      Fellowship
 
-- item: "i3"
+- positionKey: "i3"
   
   flags:
     cvWorkHistory: true
@@ -349,23 +377,23 @@
     pageKey: "teaching"
 
   role: "i3 Teaching Fellow"
-  org: "iSchool Inclusion Institute (i3), University of Pittsburgh"
+  organization: "iSchool Inclusion Institute (i3), University of Pittsburgh"
+  organizationShort: "iSchool Inclusion Institute (i3)"
   
   dateFormat: "text"
   date: "Summer 2018"
   dateStart: 2018-05-01
   dateEnd: 2018-07-01
 
-  description: "The iSchool Inclusion Institute (i3) is an undergraduate research and leadership development program that prepares students from underrepresented populations for graduate study and careers in the information sciences. Worked with fellowship team and program leadership to develop targeted curriculum."
+  descriptionHTML: "<p>The iSchool Inclusion Institute (i3) is an undergraduate research and leadership development program that prepares students from underrepresented populations for graduate study and careers in the information sciences. Worked with fellowship team and program leadership to develop targeted curriculum.</p>"
 
   thumbnailpath: "assets/images/projects/i3_logo.png"
   thumbnailalt: "i3 logo"
 
-  materials: true
-  materials-syllabuspdf: "https://drive.google.com/file/d/1KZtSvJh8MsgQTFyfWb0ENeA--UIVpVuc/view?usp=sharing"
+  syllabusURL: "https://drive.google.com/file/d/1KZtSvJh8MsgQTFyfWb0ENeA--UIVpVuc/view?usp=sharing"
 
 
-- item: "Instructor/Teaching Assistant (TA)"
+- positionKey: "Instructor/Teaching Assistant (TA)"
   
   flags:
     cvWorkHistory: true
@@ -373,132 +401,190 @@
     cvSubSectionKey: "instructor"
   
   role: "Instructor/Teaching Assistant (TA)"
-  org: "ATLAS Institute<br/>
+  organization: "ATLAS Institute<br/>
   Department of Computer Science<br/>
   Department of Information Science<br/>
   University of Colorado Boulder"
+  organizationShort: "University of Colorado Boulder"
   
   dateFormat: "range"
   dateStart: 2014-01-01
   dateEnd: 2018-12-01
   
-  description: "Taught a variety of introductory courses covering: computer science, computational thinking, engineering, and CS education. Developed curriculum as the primary instructor and managed other TAs as Lead TA."
+  descriptionHTML: "<p>Taught a variety of introductory courses covering: computer science, computational thinking, engineering, and CS education.</p>"
+  responsibilitiesHTML: "<ul><li>Taught and developed curriculum as the primary instructor, created assessments and evaluation</li>
+  <li>Managed weekly responsibilities with team of learning assistants</li></ul>"
+  extraHTML: "<table><tr><th colspan=\"2\">Student Assessments/Feedback</th></tr>
+  <tr><td>5.0/6</td><td>Course intellectual challenge</td></tr>
+  <tr><td>5.0/6</td><td>Encourages interest effectively</td></tr>
+  <tr><td>5.4/6</td><td>Overall instructor score</td></tr></table>"
 
 
 ####      Course Instructor
-- item: "classes"
+- positionKey: "18_fa_info1201"
   
   flags:
-    pages:
-      - page: "tea"
-        section: "tea-inst"
-    cv: "tea"
-
-  time: "2014-2019"
-  
-  classes:
-    - type: "Intro to Computer Science (CS1)"
-      courses:
-        - title: "Computational Reasoning 1 (INFO 1201)"
-          role: "Adjunct Instructor"
-          time: "Summer 2018"
-          description: "This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences."
-          
-          materials: true
-          materials-syllabuspdf: "https://drive.google.com/file/d/1yF8dMpY2yjazIDYqdeTvc6Wt6bFWpoST/view?usp=sharing"
-        
-        - title: "Computational Reasoning 1 (INFO 1201)"
-          role: "Teaching Assistant (TA)"
-          time: "Fall 2018"
-          description: "This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences."
-
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1wv4Kg1FR3tcVivoIduuol_1gZwTPc3vb/view?usp=sharing"
-          
-        - title: "Code (ATLS 1300)"
-          role: "Adjunct Instructor"
-          time: "Spring 2016"
-          description: "Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways."
-
-          materials: true
-          materials-syllabuspdf: "https://drive.google.com/file/d/1nNZIrUOVxlVhm03Ue93p-4oaIB9Ldqq6/view?usp=sharing"
-
-        - title: "Code (ATLS 1300)"
-          role: "Adjunct Instructor"
-          time: "Fall 2015"
-          description: "Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways."
-
-          materials: true
-          materials-syllabuspdf: "https://drive.google.com/file/d/1e4TcMLJ_U69e8KGOzHjD9NkCXgGt16jE/view?usp=sharing"
-
-        - title: "Digital Media 2 (ATLS 3020)"
-          role: "Adjunct Instructor"
-          time: "Spring 2015"
-          description: "A continuation of Digital Media 1 (ATLS 3010), this course introduces students to advanced digital media development including interactive programming, scripting, and database functionality. Emphasizes a historical and conceptual understanding of programming and computational theories."
-
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1b4Biy2ELetxWtwDdNohp-vuEgfLvv-IS/view?usp=sharing"  
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
     
-    - type: "Computer Science Data Structures (CS2)"
-      courses:
-        - title: "Computer Science 2: Data Structures (CSCI 2270)"
-          role: "Adjunct Instructor"
-          time: "Summer 2015"
-          description: "Studies data abstractions (e.g., stacks, queues, lists, trees) and their representation techniques (e.g., linking, arrays). Introduces concepts used in algorithm design and analysis including criteria for selecting data structures to fit their applications."
+  role: "Computational Reasoning 1 (INFO 1201)"
+  description: "Teaching Assistant; collaborated with team of TAs"
+  
+  dateFormat: "text"
+  date: "Fall 2018"
+  
+  courseSummary: "This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences."
+  
+  syllabusURL: "https://drive.google.com/file/d/1wv4Kg1FR3tcVivoIduuol_1gZwTPc3vb/view?usp=sharing"
 
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/19xhpc_YowsDCaJ7sITDLP0ZxG4_YNqow/view?usp=sharing"
-   
-    - type: "Intro to Computer Science (CS0)"
-      courses:
-        - title: "Introduction to Computer Science Principles (ATLS 1220)"
-          role: "Teaching Assistant (TA)"
-          time: "Fall 2014"
-          description: "This course is designed to introduce students to the central ideas of computer science, to instill	ideas and practices of computational thinking, and to have students engage in activities that show how computing and computer science change the world. Rather than focus on a specific tool or programming language, this course focuses on the creative aspects of the field. Students will learn how to use computing as a means to understand and solve problems, reflect upon the cultural impact of technology, demonstrate computational thinking skills by building computer programs and games, learn information retrieval skills by researching and remixing media, and engage in other creative endeavors of computer science."
+- positionKey: "18_sum_info1201"
 
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1pHAHRYhKhHuQ_gtlnvF3fBY0640yM3lq/view?usp=sharing"
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+    
+  role: "Computational Reasoning 1 (INFO 1201)"
+  description: "Instructor"
+  
+  dateFormat: "text"
+  date: "Summer 2018"
+  
+  courseSummary: "This course is a hands-on introduction to create, invent, and build with computer programming. No programming experience is necessary and all backgrounds are welcome. Students will become exposed to high-level computational concepts and practices that include algorithms, data, parallelism, abstraction, and debugging. Assignments and projects will involve learning to program using the Scratch and Python programming languages. The creative and problem-solving strategies introduced in this course are applicable across many domains beyond information and computer sciences."
+  
+  syllabusURL: "https://drive.google.com/file/d/1yF8dMpY2yjazIDYqdeTvc6Wt6bFWpoST/view?usp=sharing"
+  
+- positionKey: "16_fa_coen1500"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Introduction to Engineering (COEN 1500)"
+  description: "Teaching Assistant/Lead TA; managed team of LAs and graders"
+    
+  dateFormat: "text"
+  date: "Fall 2016"
+    
+  courseSummary: "Provides an introduction to the engineering profession, including an examination of current discipline specializations and a focus on career paths for those trained in engineering. Provides sufficient knowledge of the engineering disciplines necessary to make an informed major choice."
+    
+  syllabusURL: "https://drive.google.com/file/d/1D5UHKcMM5FiC51FvfIcCCICLCmXdRlYo/view?usp=sharing"
 
-        - title: "Meaning of Information Technology (ATLS 2000)"
-          role: "Teaching Assistant (TA)"
-          time: "Spring 2014"
-          description: "Surveys the history of information technologies and modern techniques of information production, storage, transmission, and retrieval. Emphasizes understanding not only the technological transformations in interpersonal, organizational, and mass communication, but also the technological, social and political changes that underlie the movement toward a digital society."
+- positionKey: "16_sp_atls1300"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Code (ATLS 1300)"
+  description: "Instructor"
+    
+  dateFormat: "text"
+  date: "Spring 2016"
+    
+  courseSummary: "Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways."
+    
+  syllabusURL: "https://drive.google.com/file/d/1nNZIrUOVxlVhm03Ue93p-4oaIB9Ldqq6/view?usp=sharing"
+  
+- positionKey: "16_sp_csci4830"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Special Topics: Computer Science Education (CSCI 4830)"
+  description: "Teaching Assistant"
+    
+  dateFormat: "text"
+  date: "Spring 2016"
+    
+  courseSummary: "The computer science department is offering a 1-credit hour special topics course this semester on computer science education. If you are interested in teaching computer science or becoming involved in the computer science department as an undergraduate learning assistant (CA, PLA, or TA) this is the class for you. In this course, we will cover presentation techniques, how to lead a discussion session, assessment, dealing with difficult colleagues, and teaching styles. The class will be taught primarily through discussion and all students will have the opportunity to present and receive feedback in a friendly environment."
+    
+  syllabusURL: "https://drive.google.com/file/d/1ltAzV-lvPhFpy8icoZr8j8se0glFEizE/view?usp=sharing"
 
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1JB7fMbHJ8EFDIZJE-4c5jlvYnlASl94h/view?usp=sharing"
+- positionKey: "15_fa_atls1300"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Code (ATLS 1300)"
+  description: "Instructor"
+    
+  dateFormat: "text"
+  date: "Fall 2015"
+    
+  courseSummary: "Introduces students to fundamental programming concepts and methodologies and apply them to creative projects. Students will learn to use code as a creative and artistic tool, and to utilize programming to find, define and solve problems in innovative ways."
+    
+  syllabusURL: "https://drive.google.com/file/d/1e4TcMLJ_U69e8KGOzHjD9NkCXgGt16jE/view?usp=sharing"
 
-    - type: "Other Courses"
-      courses:
-        - title: "Special Topics: Computer Science Education (CSCI 4830)"
-          role: "Teaching Assistant (TA)"
-          time: "Spring 2016"
-          description: "The computer science department is offering a 1-credit hour special topics course this semester on computer science education. If you are interested in teaching computer science or becoming involved in the computer science department as an undergraduate learning assistant (CA, PLA, or TA) this is the class for you. In this course, we will cover presentation techniques, how to lead a discussion session, assessment, dealing with difficult colleagues, and teaching styles. The class will be taught primarily through discussion and all students will have the opportunity to present and receive feedback in a friendly environment."
+- positionKey: "15_su_csci2270"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Computer Science 2: Data Structures (CSCI 2270)"
+  description: "Instructor; managed TA"
+    
+  dateFormat: "text"
+  date: "Summer 2015"
+    
+  courseSummary: "Studies data abstractions (e.g., stacks, queues, lists, trees) and their representation techniques (e.g., linking, arrays). Introduces concepts used in algorithm design and analysis including criteria for selecting data structures to fit their applications."
+    
+  syllabusURL: "https://drive.google.com/file/d/19xhpc_YowsDCaJ7sITDLP0ZxG4_YNqow/view?usp=sharing"
 
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1ltAzV-lvPhFpy8icoZr8j8se0glFEizE/view?usp=sharing"
-          
-        - title: "Introduction to Engineering (COEN 1500)"
-          role: "Teaching Assistant (TA)"
-          time: "Fall 2016"
-          description: "Provides an introduction to the engineering profession, including an examination of current discipline specializations and a focus on career paths for those trained in engineering. Provides sufficient knowledge of the engineering disciplines necessary to make an informed major choice."
+- positionKey: "15_sp_atls3020"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Digital Media 2 (ATLS 3020)"
+  description: "Instructor"
+    
+  dateFormat: "text"
+  date: "Spring 2015"
+    
+  courseSummary: "A continuation of Digital Media 1 (ATLS 3010), this course introduces students to advanced digital media development including interactive programming, scripting, and database functionality. Emphasizes a historical and conceptual understanding of programming and computational theories."
+    
+  syllabusURL: "https://drive.google.com/file/d/1b4Biy2ELetxWtwDdNohp-vuEgfLvv-IS/view?usp=sharing"
 
-          materials: true
-          materials-count: 1
-          materials-syllabuspdf: "https://drive.google.com/file/d/1D5UHKcMM5FiC51FvfIcCCICLCmXdRlYo/view?usp=sharing"
+- positionKey: "14_fa_atls1220"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Introduction to Computer Science Principles (ATLS 1220)"
+  description: "Teaching Assistant"
+    
+  dateFormat: "text"
+  date: "Fall 2014"
+    
+  courseSummary: "This course is designed to introduce students to the central ideas of computer science, to instill	ideas and practices of computational thinking, and to have students engage in activities that show how computing and computer science change the world. Rather than focus on a specific tool or programming language, this course focuses on the creative aspects of the field. Students will learn how to use computing as a means to understand and solve problems, reflect upon the cultural impact of technology, demonstrate computational thinking skills by building computer programs and games, learn information retrieval skills by researching and remixing media, and engage in other creative endeavors of computer science."
+    
+  syllabusURL: "https://drive.google.com/file/d/1pHAHRYhKhHuQ_gtlnvF3fBY0640yM3lq/view?usp=sharing"
 
-
-####      Teaching Assistant (TA)
+- positionKey: "14_sp_atls2000"
+  
+  flags:
+    cvSectionKey: "teaching"
+    cvSubSectionKey: "instructor"
+      
+  role: "Meaning of Information Technology (ATLS 2000)"
+  description: "Teaching Assistant; collaborated with team of TAs"
+    
+  dateFormat: "text"
+  date: "Spring 2014"
+    
+  courseSummary: "Surveys the history of information technologies and modern techniques of information production, storage, transmission, and retrieval. Emphasizes understanding not only the technological transformations in interpersonal, organizational, and mass communication, but also the technological, social and political changes that underlie the movement toward a digital society."
+    
+  syllabusURL: "https://drive.google.com/file/d/1JB7fMbHJ8EFDIZJE-4c5jlvYnlASl94h/view?usp=sharing"
 
 
 ####      Workshops, Summer Programs, etc
 
-- item: "Summer SuperSTEM"
+- positionKey: "Summer SuperSTEM"
   
   flags:
     cvWorkHistory: false
@@ -511,17 +597,16 @@
   dateFormat: "text"
   date: "Summer 2015"
   
-  description: "Summer SuperSTEM is a summer program hosted by the Innovation Center, a makerspace for the students in St. Vrain Valley School District. Taught a variety of summer programming introducing students into computing principles and topics."
+  descriptionHTML: "<p>Summer SuperSTEM is a summer program hosted by the Innovation Center, a makerspace for the students in St. Vrain Valley School District. Taught a variety of summer programming introducing students into computing principles and topics.</p>"
 
   thumbnailpath: "assets/images/projects/innovationcenter_logo.png"
   thumbnailalt: "innovation center logo"
 
-  materials: true
-  materials-siteuri: "http://innovation.svvsd.org"
-  materials-siteuritext: "Innovation Center"
+  siteURL: "http://innovation.svvsd.org"
+  siteURLText: "Innovation Center"
 
 
-- item: "Digital CUrrents"
+- positionKey: "Digital CUrrents"
   
   flags:
     cvWorkHistory: false
@@ -534,17 +619,16 @@
   dateFormat: "text"
   date: "Summer 2014"
   
-  description: "Digital CUrrents (also ATLAS-Campos EPC Summer STEM Program) is a three-week technology intensive summer workshop for high school students who are largely from underrepresented minority groups.  Students learn to use software applications and gain programming skills to create and manipulate digital content and complete a final project that showcases their creative and technical talents. Workshop participants also visit with guest speakers about career opportunities in technology-related fields and enjoy field trips to local technology-focused businesses."
+  descriptionHTML: "<p>Digital CUrrents (also ATLAS-Campos EPC Summer STEM Program) is a three-week technology intensive summer workshop for high school students who are largely from underrepresented minority groups.  Students learn to use software applications and gain programming skills to create and manipulate digital content and complete a final project that showcases their creative and technical talents. Workshop participants also visit with guest speakers about career opportunities in technology-related fields and enjoy field trips to local technology-focused businesses.</p>"
 
   thumbnailpath: "assets/images/projects/digitalcurrents.png"
   thumbnailalt: "Digital CUrrents photo"
 
-  materials: true
-  materials-siteuri: "http://atlas.colorado.edu/digital-currents-gets-grant/"
-  materials-siteuritext: "Digital CUrrents"
+  siteURL: "http://atlas.colorado.edu/digital-currents-gets-grant/"
+  siteURLText: "Digital CUrrents"
 
 
-- item: "Science Discovery Summer Camp"
+- positionKey: "Science Discovery Summer Camp"
   
   flags:
     cvWorkHistory: false
@@ -557,67 +641,66 @@
   dateFormat: "text"
   date: "Summer 2013<br/>Summer 2014<br/>Summer 2015"
   
-  description: "CU Science Discovery offers a variety of hands-on STEM (science, technology, engineering and math) camps for kids ages 5-18.  Science Discovery offers intensive 1-3 week summer workshops for high school students. Workshops provide unique opportunities for older students to work in CU laboratories, interact with CU scientists, and explore STEM careers."
+  descriptionHTML: "<p>CU Science Discovery offers a variety of hands-on STEM (science, technology, engineering and math) camps for kids ages 5-18.  Science Discovery offers intensive 1-3 week summer workshops for high school students. Workshops provide unique opportunities for older students to work in CU laboratories, interact with CU scientists, and explore STEM careers.</p>"
 
   thumbnailpath: "assets/images/projects/sciencediscovery_logo.png"
   thumbnailalt: "CU Science Discovery logo"
 
-  materials: true
-  materials-siteuri: "http://sciencediscovery.colorado.edu"
-  materials-siteuritext: "CU Science Discovery"
+  siteURL: "http://sciencediscovery.colorado.edu"
+  siteURLText: "CU Science Discovery"
 
 
 ##############################################
 ####      UX Experience                   ####
 ##############################################
 
-- item: "ZOLL"
+- positionKey: "ZOLL"
 
   flags:
     cvWorkHistory: true
     cvSectionKey: "ux"
   
   role: "User Experience (UX) Intern"
-  org: "ZOLL Medical"
+  organization: "ZOLL Medical"
   
   dateFormat: "range"
   dateStart: 2012-05-01
   dateEnd: 2013-06-01
   
-  description: "ZOLL develops emergency service software for EMS agencies and medical companies
-      <ul><li>Worked on migrating a legacy product to a web app</li>
-      <li>Assisted in re-designing and implementing new front-end user-interface</li>
-      <li>Worked well as a team player, assisting various development teams</li>
-      <li>Managed a project through its entire design cycle</li></ul>"
+  descriptionHTML: "<p>ZOLL develops emergency service software for EMS agencies and medical companies</p>"
+  responsibilitiesHTML: "<ul><li>Worked on migrating a legacy product to a web app</li>
+    <li>Assisted in re-designing and implementing new front-end user-interface</li>
+    <li>Worked well as a team player, assisting various development teams</li>
+    <li>Managed a project through its entire design cycle</li></ul>"
 
 
-- item: "ASIT"
+- positionKey: "ASIT"
 
   flags:
     cvWorkHistory: true
     cvSectionKey: "ux"
   
   role: "Web Developer Intern"
-  org: "College of Arts & Sciences IT Department"
+  organization: "College of Arts & Sciences IT Department"
   
   dateFormat: "range"
   dateStart: 2010-11-01
   dateEnd: 2012-05-01
   
-  description: "In-house IT department that build web apps for administration, faculty, and student body. Responsible for the design and full-stack implementation of new features into legacy software, updated design, improved usability"
+  descriptionHTML: "<p>In-house IT department that built web apps for administration, faculty, and student body. Responsible for the design and full-stack implementation of new features into legacy software, updated design, improved usability</p>"
 
 
-- item: "JILA"
+- positionKey: "JILA"
 
   flags:
     cvWorkHistory: true
     cvSectionKey: "ux"
   
   role: "Front-End Web Developer Intern"
-  org: "JILA IT Department"
+  organization: "JILA IT Department"
   
   dateFormat: "range"
   dateStart: 2010-07-01
   dateEnd: 2011-01-01
   
-  description: "Assisted in transferring legacy website to new wordpress site; updated design, improved usability."
+  descriptionHTML: "<p>Assisted in transferring legacy website to new wordpress site; updated design, improved usability.</p>"

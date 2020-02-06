@@ -81,9 +81,7 @@ title: Research
         <div class="pageSection">
             {% for position in site.data.positions %}
                 {% if position.flags.pageKey == "research" %}
-                    <div class="pagePosition">
-                        {% include page_position.html %}
-                    </div>
+                    {% include page_position.html %}
                 {% endif %}
             {% endfor %}
         </div>

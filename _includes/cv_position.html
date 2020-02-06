@@ -1,4 +1,5 @@
 <div class="cvPosition">
+    
     <div class="role">
         <h5>{{ position.role }}</h5>
     </div>
@@ -19,27 +20,35 @@
         </p>
     </div>
     
-    {% if position.org %}
+    {% if position.organization %}
         <div class="org">
-    		<p>{{ position.org }}</p>
+    		<p>{{ position.organization }}</p>
         </div>
     {% endif %}
     
     {% if section.cvSectionKey != "workhistory" %}
         <div class="details">
-        	{% if position.description %}
-        		<p class="description">{{ position.description }}</p>
+        	{% if position.descriptionHTML %}
+                <div class="description">
+                    {{ position.descriptionHTML }}
+                    {% if position.responsibilitiesHTML %}
+                        {{ position.responsibilitiesHTML }}
+                    {% endif %}
+                    {% if position.extraHTML %}
+                        {{ position.extraHTML }}
+                    {% endif %}
+                </div>
         	{% endif %}
         	
-        	{% if position.misc %}
+        	{% if position.miscHTML %}
         		<div class="misc">
-        			{{ position.misc }}
+        			{{ position.miscHTML }}
         		</div>
         	{% endif %}
             
-            {% if position.works %}
+            {% if position.workKeys %}
         		<div class="works">
-                    {% for positionWork in position.works %}
+                    {% for positionWork in position.workKeys %}
                         {% for workData in site.data.works %}
                             {% if positionWork.workKey == workData.workKey %}
                                 <div class="work">
@@ -52,31 +61,6 @@
                     {% endfor %}
                 </div>
             {% endif %}
-        	
-        	{% if position.classes %}
-        		<div class="classes">
-        			{% for classType in position.classes %}
-        				<h5>{{classType.type}}</h5>
-        				<ul>
-        				{% for course in classType.courses %}
-        					<li>
-        						<h6>{{ course.title }}</h6>
-        						<div class="details">
-        							<span>
-        								{{ course.role }} &ndash; {{ course.time }} 
-        							</span>
-        							{% if course.materials-syllabuspdf %}
-        								<span class="link-btn small">
-        									<a download href="{{ course.materials-syllabuspdf }}" target="_blank"><span class="fa fa-file-pdf"></span>Syllabus PDF</a>
-        								</span>
-        							{% endif %}
-        						</div>
-        					</li>
-        				{% endfor %}
-        				</ul>
-        			{% endfor %}
-        		</div>
-        	{% endif %}
         	
         </div>
     {% endif %}

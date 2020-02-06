@@ -276,6 +276,12 @@ body {
                     width: auto;
                 }
             }
+            &#cv.wide {
+                .wrapper { 
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
     	}
     }
     header {
@@ -714,12 +720,15 @@ article {
     grid-template-columns: $paddingEdgeMobile auto $paddingEdgeMobile;
     
     .pagePosition { 
-        display: grid;
-        grid-gap: 20px 0;
         grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
         
         .image {
             text-align: center;
+            flex: 1 0;
+            margin: 0 0 10px 0;
             img {
                 width: 50%;
             }
@@ -782,19 +791,15 @@ article {
     .pageSection {
         grid-template-columns: auto;
         .pagePosition { 
-            grid-template-columns: 200px auto;
-            grid-gap: 0 $paddingGap;
             grid-column: 1 / 2;
-            
-            .details { grid-column: 1 / 3; }
+            flex-direction: row;
             .image { 
-                grid-column: 1 / 2;
-                width: 100%;
+                flex: 1 0 200px;
+                margin: 0 50px0 0;
                 img {
                     width: 100%;
                 }
             }
-            .image + .details { grid-column: 2 / 3; }
         }
     }
 }
