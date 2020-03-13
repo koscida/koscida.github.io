@@ -28,17 +28,12 @@
     
     {% if section.cvSectionKey != "workhistory" %}
         <div class="details">
-        	{% if position.descriptionHTML %}
-                <div class="description">
-                    {{ position.descriptionHTML }}
-                    {% if position.responsibilitiesHTML %}
-                        {{ position.responsibilitiesHTML }}
-                    {% endif %}
-                    {% if position.extraHTML %}
-                        {{ position.extraHTML }}
-                    {% endif %}
-                </div>
-        	{% endif %}
+            <div class="description">
+                {{ position.descriptionHTML }}
+                {% if position.extraHTML %}
+                    {{ position.extraHTML }}
+                {% endif %}
+            </div>
         	
         	{% if position.miscHTML %}
         		<div class="misc">

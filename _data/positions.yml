@@ -61,10 +61,9 @@
   dateStart: 2015-10-01
   dateEnd: 2019-02-01
     
-  descriptionHTML: "<p>Founded <a href='http://t9hacks.org/' target='_blank'>T9Hacks</a>, a student hackathon organization dedicated to providing events for women and non-binary students to learn and explore computing. Worked as head of logistical coordination for 100+ participants and 50+ volunteers at three annual events.</p>"
-  responsibilitiesHTML: "<ul><li>Developed technical and professional development workshops, event programming, and hands-on, supportive, and project-based learning experience for students</li>
-  <li>Created organizational structure: sponsorship, marketing and advertising, and logistics and event design/ux. Developed responsibilities and positions for roles; assisted in all areas. Improved participant recruitment and retention. Secured corporate sponsorships and community partnerships</li>
-  <li>Conducted research on event design and program evaluation</li></ul>"
+  descriptionHTML: "<p>Founded T9Hacks, an organization dedicated to providing events for students to learn and explore computing. Designed and ran interdisciplinary, hands-on, informal learning environment. Mixed-methods study involving ethnographic observation, feedback questionnaires, construct surveys, informal and structured interviews. Analyzed qualitative data, statistical analysis, data analysis. Explored areas such as competition, learning experiences, motivations and goals, and student experiences, event design, and program evaluation.</p>
+  
+  <p>Worked as head of logistical coordination for 100+ participants and 50+ volunteers at three annual events. Developed technical and professional development workshops, event programming, and hands-on, supportive, and project-based learning experience for students. Worked to improve participant recruitment and retention. Secured corporate sponsorships and community partnerships. Created organizational structure: sponsorship, marketing and advertising, and logistics and event design/ux. Developed responsibilities and positions for roles; assisted in all areas.</p>"
   
   resultsKeys:
     - workKey: "diss19"
@@ -98,8 +97,7 @@
   dateStart: 2013-06-01
   dateEnd: 2015-12-01
   
-  descriptionHTML: "<p>Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics.</p>"
-  responsibilitiesHTML: "<ul><li>Assisted in data management and analysis for 4+ schools/programs</li></ul>" 
+  descriptionHTML: "<p>Earth Explorers is an independent nonprofit that partners with local schools and research institutions to provide Science, Technology, Engineering and Math (STEM) curriculum with education in filmmaking to spark a lifelong interest in STEM topics. Assisted in program coordination for 4 schools/programs. Gathered volunteers, hosted events, coordinated with middle schools.</p>"
 
   thumbnailpath: "assets/images/projects/earthexplorers_logo.png"
   thumbnailalt: "earth explorers logo"
@@ -123,11 +121,8 @@
   dateStart: 2015-08-01
   dateEnd: 2019-05-01
   
-  descriptionHTML: "<p>Worked on multiple qualitative research projects with increasing amounts of autonomy and ownership.</p>"
-  responsibilitiesHTML: "<ul><li>Experience publishing results, writing reports and IRB protocols. CITI Certification: 2018-01-10</li>
-  <li>Interviews, focus groups, ethnographic observation; surveys, questionariers, assessments. Developed and improved data collector and data manager processes</li>
-  <li>Analyzed qualitative data, statistical analysis of quantitative data</li></ul>"
-  extraHTML: "<h6>Lead Researcher/PI</h6>
+  descriptionHTML: "<p>Worked on multiple qualitative research projects with increasing amounts of autonomy and ownership over the projects. Experience publishing results, writing reports and protocols. Conducted interviews, focus groups, ethnographic observation; surveys, questionnaires, assessments. Developed and improved data collector and data manager processes. Analyzed qualitative data, quantitative data, performed statistical analysis. Created infographics and visualizations.</p>"
+  extraHTML2: "<h6>Lead Researcher/PI</h6>
     <p>2017	Prompting CT <a href='https://scholar.colorado.edu/concern/reports/tx31qj61s' target='_blank'>Ref</a></p>
     <p>2016	Grading at Scale <a href='https://scholar.colorado.edu/concern/conference_proceedings/qf85nb969' target='_blank'>Ref</a></p>
     <h6>Research Assistant</h6>
@@ -411,13 +406,11 @@
   dateStart: 2014-01-01
   dateEnd: 2018-12-01
   
-  descriptionHTML: "<p>Taught a variety of introductory courses covering: computer science, computational thinking, engineering, and CS education.</p>"
-  responsibilitiesHTML: "<ul><li>Taught and developed curriculum as the primary instructor, created assessments and evaluation</li>
-  <li>Managed weekly responsibilities with team of learning assistants</li></ul>"
+  descriptionHTML: "<p>Taught 10+ introductory STEM classes. As primary instructor developed full curriculum and created course evaluations. Managed small teaching teams, managed weekly responsibilities of team of learning assistants. Worked with other educators to standardize curriculum.</p>"
   extraHTML: "<table><tr><th colspan=\"2\">Student Assessments/Feedback</th></tr>
-  <tr><td>5.0/6</td><td>Course intellectual challenge</td></tr>
-  <tr><td>5.0/6</td><td>Encourages interest effectively</td></tr>
-  <tr><td>5.4/6</td><td>Overall instructor score</td></tr></table>"
+  <tr><td>Course intellectual challenge</td><td>5.0/6</td></tr>
+  <tr><td>Encourages interest effectively</td><td>5.0/6</td></tr>
+  <tr><td>Overall instructor score</td><td>5.4/6</td></tr></table>"
 
 
 ####      Course Instructor
@@ -667,11 +660,7 @@
   dateStart: 2012-05-01
   dateEnd: 2013-06-01
   
-  descriptionHTML: "<p>ZOLL develops emergency service software for EMS agencies and medical companies</p>"
-  responsibilitiesHTML: "<ul><li>Worked on migrating a legacy product to a web app</li>
-    <li>Assisted in re-designing and implementing new front-end user-interface</li>
-    <li>Worked well as a team player, assisting various development teams</li>
-    <li>Managed a project through its entire design cycle</li></ul>"
+  descriptionHTML: "<p>ZOLL develops emergency service software for EMS agencies and medical companies. Worked on scrum team migrating a legacy product to a web app. Assisted in re-designing and implementing new front-end user-interface. Worked on UX design and front-end development teams. Developed user stories, wireframes, low and high-fidelity prototypes.</p>"
 
 
 - positionKey: "ASIT"
@@ -687,7 +676,7 @@
   dateStart: 2010-11-01
   dateEnd: 2012-05-01
   
-  descriptionHTML: "<p>In-house IT department that built web apps for administration, faculty, and student body. Responsible for the design and full-stack implementation of new features into legacy software, updated design, improved usability</p>"
+  descriptionHTML: "<p>In-house IT department that built web apps for administration, faculty, and student body. Full-stack implementation, designed and developed new features, implemented unified brand design, built SQL queries, built advisor-matching algorithm.</p>"
 
 
 - positionKey: "JILA"

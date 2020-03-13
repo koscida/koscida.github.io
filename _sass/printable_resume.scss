@@ -106,34 +106,36 @@ article {
     .left { grid-template-rows: $rsContactHeight auto auto; }
 }
 
-.resumeSection {
+section {
     display: grid;
     grid-template-columns: 0 auto 0;
-    grid-template-rows: $rsHeadHeight auto 0;
     grid-gap: $paddingGap;
-    &.intro { 
-        grid-template-rows: $introHeaderHeight 1.5in 0;
-        grid-template-rows: $introHeaderHeight auto 0;
-    }
-    &.contact {
-        .rsContent {
-            display: grid;
-            grid-template-columns: 0.25in 1.75in;
-            grid-template-rows: repeat(5, $contactHeight);
-            p { place-self: center stretch; }
-            i { color: $colorPurple; }
-        }
-    }
     
-    .rsHead {    grid-row: 1 / 2; grid-column: 1 / 4; }
-    .rsContent { grid-row: 2 / 3; grid-column: 2 / 3; 
-        &.wide {                  grid-column: 1 / 4; }
+    .rsHead {    grid-column: 1 / 4; }
+    .rsContent { grid-column: 2 / 3; 
+        &.wide { grid-column: 1 / 4; }
     }
 }
-    .right .resumeSection { 
-        grid-template-rows: $rsHeadHeight auto;
-        grid-row-gap: ($paddingGap / 2);
+.resumeHeader {
+    grid-template-rows: $introHeaderHeight 1.5in 0;
+    grid-template-rows: $introHeaderHeight auto-flow 0;
+}
+.resumeSection {
+    grid-template-rows: $rsHeadHeight auto-flow 0;
+}
+.right .resumeSection { 
+    grid-template-rows: $rsHeadHeight auto;
+    grid-row-gap: ($paddingGap / 2);
+}
+.contact {
+    .rsContent {
+        display: grid;
+        grid-template-columns: 0.25in 1.75in;
+        grid-template-rows: repeat(5, $contactHeight);
+        p { place-self: center stretch; }
+        i { color: $colorPurple; }
     }
+}
 
 .resumePosition {
     display: grid;
@@ -157,7 +159,7 @@ article {
         }
     }
 }
-.resumeSection > *, .resumePosition > * {
+.resumeHeader > *, .resumeSection > *, .resumePosition > * {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,25 +167,24 @@ article {
 
 
 
-.resumeSection {
-    &.filled { background: $colorGreyLight; }
-    
-    .rsHead {
-        background: $colorPurple;
-        color: white;
-        padding: 0 $paddingGap;
+.resumeHeader, .resumeSection.filled {
+    background: $colorGreyLight;
+}
+.rsHead {
+    background: $colorPurple;
+    color: white;
+    padding: 0 $paddingGap;
+}
+.rsContent {
+    .school {
+        font-style: italic;
+        font-weight: 700;
     }
-    .rsContent {
-        .school {
-            font-style: italic;
-            font-weight: 700;
-        }
-        .degree {
-            margin-top: 5pt;
-        }
-        .degreeDetail {
-            font-size: 9pt;
-        }
+    .degree {
+        margin-top: 5pt;
+    }
+    .degreeDetail {
+        font-size: 9pt;
     }
 }
 .resumePosition {

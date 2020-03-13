@@ -73,23 +73,25 @@ article .top, article .left, article .right { display: grid; grid-template-colum
 
 article .left { grid-template-rows: 2.1in auto auto; }
 
-.resumeSection { display: grid; grid-template-columns: 0 auto 0; grid-template-rows: 0.35in auto 0; grid-gap: 0.125in; }
+section { display: grid; grid-template-columns: 0 auto 0; grid-gap: 0.125in; }
 
-.resumeSection.intro { grid-template-rows: 0.45in 1.5in 0; grid-template-rows: 0.45in auto 0; }
+section .rsHead { grid-column: 1 / 4; }
 
-.resumeSection.contact .rsContent { display: grid; grid-template-columns: 0.25in 1.75in; grid-template-rows: repeat(5, 0.3in); }
+section .rsContent { grid-column: 2 / 3; }
 
-.resumeSection.contact .rsContent p { place-self: center stretch; }
+section .rsContent.wide { grid-column: 1 / 4; }
 
-.resumeSection.contact .rsContent i { color: #5d46a8; }
+.resumeHeader { grid-template-rows: 0.45in 1.5in 0; grid-template-rows: 0.45in auto-flow 0; }
 
-.resumeSection .rsHead { grid-row: 1 / 2; grid-column: 1 / 4; }
-
-.resumeSection .rsContent { grid-row: 2 / 3; grid-column: 2 / 3; }
-
-.resumeSection .rsContent.wide { grid-column: 1 / 4; }
+.resumeSection { grid-template-rows: 0.35in auto-flow 0; }
 
 .right .resumeSection { grid-template-rows: 0.35in auto; grid-row-gap: 0.0625in; }
+
+.contact .rsContent { display: grid; grid-template-columns: 0.25in 1.75in; grid-template-rows: repeat(5, 0.3in); }
+
+.contact .rsContent p { place-self: center stretch; }
+
+.contact .rsContent i { color: #5d46a8; }
 
 .resumePosition { display: grid; grid-template-columns: 0 4.7625in 0.8in 0; grid-template-rows: 0.25in 0.25in auto; grid-gap: 0 0.125in; margin-bottom: 5pt; }
 
@@ -105,17 +107,17 @@ article .left { grid-template-rows: 2.1in auto auto; }
 
 .resumePosition .rpContent .rpExtra { flex: 0 0 2.2in; margin-left: 0.125in; }
 
-.resumeSection > *, .resumePosition > * { display: flex; flex-direction: column; justify-content: center; }
+.resumeHeader > *, .resumeSection > *, .resumePosition > * { display: flex; flex-direction: column; justify-content: center; }
 
-.resumeSection.filled { background: #ecebef; }
+.resumeHeader, .resumeSection.filled { background: #ecebef; }
 
-.resumeSection .rsHead { background: #5d46a8; color: white; padding: 0 0.125in; }
+.rsHead { background: #5d46a8; color: white; padding: 0 0.125in; }
 
-.resumeSection .rsContent .school { font-style: italic; font-weight: 700; }
+.rsContent .school { font-style: italic; font-weight: 700; }
 
-.resumeSection .rsContent .degree { margin-top: 5pt; }
+.rsContent .degree { margin-top: 5pt; }
 
-.resumeSection .rsContent .degreeDetail { font-size: 9pt; }
+.rsContent .degreeDetail { font-size: 9pt; }
 
 .resumePosition .rpRole { background: #ecebef; color: #5d46a8; padding: 0 0.125in; }
 

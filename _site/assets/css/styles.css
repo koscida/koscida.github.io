@@ -162,19 +162,19 @@ ul.remove-list-styles li, ol.remove-list-styles li { margin: 0; }
   h3 { text-align: left; } }
 
 /* ******************* LAYOUT - set the header to static (navigation is separate, see below) - set footer to bottom of page // TODO: do this - if aside, fix to 150px on right // TODO: this has never been tested on mobile, styles pulled from v1 */
-body { background: #FFF; display: grid; grid-template-rows: 65px auto auto; grid-gap: 100px 0; }
+body { background: #FFF; display: grid; grid-template-rows: 65px auto auto; grid-gap: 100px 0; overflow-x: hidden; }
 
 body header, body article, body footer { display: grid; grid-template-columns: 15px auto 15px; grid-column: 1 / 2; }
 
 body header > section, body article > section, body footer > section { grid-column: 2 / 3; }
 
-body header > section .wrapper, body article > section .wrapper, body footer > section .wrapper { width: 100%; position: relative; display: grid; grid-gap: 50px 0; }
+body header > section .wrapper, body article > section .wrapper, body footer > section .wrapper { position: relative; display: grid; grid-gap: 50px 0; width: 100%; }
 
 body header > section.wide, body article > section.wide, body footer > section.wide { grid-column: 1 / 4; }
 
 body header > section.wide .wrapper, body article > section.wide .wrapper, body footer > section.wide .wrapper { margin-left: 15px; margin-right: 15px; width: auto; }
 
-body header > section#cv.wide .wrapper, body article > section#cv.wide .wrapper, body footer > section#cv.wide .wrapper { margin-left: 0; margin-right: 0; }
+body header > section.wide#cv .wrapper, body article > section.wide#cv .wrapper, body footer > section.wide#cv .wrapper { margin-left: 0; margin-right: 0; }
 
 body header { position: fixed; z-index: 1; top: 0; height: 65px; width: 100%; grid-row: 1 / 2; }
 
@@ -190,7 +190,8 @@ body footer > section:nth-child(2) { grid-row: 2 / 3; }
 
 @media (min-width: 769px) { body { grid-template-rows: 85px auto auto; grid-gap: 50px 0; }
   body header, body article, body footer { grid-template-columns: 10% auto 10%; }
-  body header > section.wide .wrapper, body article > section.wide .wrapper, body footer > section.wide .wrapper { margin-left: 10%; margin-right: 10%; grid-gap: 50px 0; }
+  body header > section.wide .wrapper, body article > section.wide .wrapper, body footer > section.wide .wrapper { margin-left: 10%; margin-right: 10%; width: auto; }
+  body header > section.wide#cv .wrapper, body article > section.wide#cv .wrapper, body footer > section.wide#cv .wrapper { margin-left: 10%; margin-right: 10%; width: auto; }
   body header { height: 85px; } }
 
 /* ****************** HEADER - header bar - title - navigation */
@@ -218,7 +219,7 @@ header .wrapper nav.open #navOpen { display: none; }
 
 header .wrapper nav #navButton { height: 65px; width: 45px; z-index: 3; overflow: hidden; position: absolute; top: 0; right: 0; }
 
-header .wrapper nav #navButton button { height: 55px; width: 45px; padding: 0 0 10px 0; margin: 10px 0 0 0; position: absolute; z-index: 5; border-radius: 50% 50% 0 0; border: 0; background: transparent; }
+header .wrapper nav #navButton button { height: 55px; width: 45px; padding: 0 0 10px 0; margin: 10px 0 0 0; position: absolute; z-index: 5; border: 0; background: transparent; }
 
 header .wrapper nav #navButton button .fa, header .wrapper nav #navButton button .fas, header .wrapper nav #navButton button .fab { font-size: 30px; }
 

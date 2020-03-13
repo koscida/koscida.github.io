@@ -252,6 +252,8 @@ body {
     grid-template-rows: $headerHeightMobile auto auto;
     grid-gap: 100px 0;
     
+    overflow-x: hidden;
+    
     header, article, footer {
         display: grid;
         grid-template-columns: $paddingEdgeMobile auto $paddingEdgeMobile;
@@ -261,10 +263,10 @@ body {
     		grid-column: 2 / 3;
             
             .wrapper { 
-                width: 100%;
                 position: relative;
                 display: grid;
                 grid-gap: $paddingGap 0;
+                width: 100%;
             }
             
             &.wide {
@@ -275,11 +277,12 @@ body {
                     margin-right: $paddingEdgeMobile;
                     width: auto;
                 }
-            }
-            &#cv.wide {
-                .wrapper { 
-                    margin-left: 0;
-                    margin-right: 0;
+                
+                &#cv {
+                    .wrapper { 
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
                 }
             }
     	}
@@ -320,13 +323,23 @@ body {
         header, article, footer {
             grid-template-columns: $paddingEdgeScreen auto $paddingEdgeScreen;
             
-            > section.wide {
-                .wrapper { 
-                    margin-left: $paddingEdgeScreen;
-                    margin-right: $paddingEdgeScreen;
-                    grid-gap: $paddingGap 0;
+            > section { 
+                &.wide {
+                    .wrapper { 
+                        margin-left: $paddingEdgeScreen;
+                        margin-right: $paddingEdgeScreen;
+                        width: auto;
+                    }
+                    
+                    &#cv {
+                        .wrapper { 
+                            margin-left: $paddingEdgeScreen;
+                            margin-right: $paddingEdgeScreen;
+                            width: auto;
+                        }
+                    }
                 }
-        	}
+            }
         }
         header {
     		height: $headerHeightScreen;
@@ -403,7 +416,6 @@ header {
                     margin: 10px 0 0 0;
                     position: absolute;
                     z-index: ($headerZIndex + 4);
-                    border-radius: 50% 50% 0 0;
                     border: 0;
                     background: transparent;
 
