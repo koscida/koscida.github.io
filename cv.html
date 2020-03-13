@@ -16,16 +16,65 @@ title: CV/Resume
 	
 <section id="cv" class="wide">
 	<div class="wrapper">
-    	{% for section in site.data.pages.cv.sections %}
-    		<div class="cvSection">
-    			<h3>{{section.cvSectionTitle}}</h3>
-                {% if section.cvSectionSummary_markup %}
-                    <div class="summary">
-                        {{ section.cvSectionSummary_markup }}
-                    </div>
-                {% endif %}
-    			{% include cv_group.html %}
-    		</div>
-    	{% endfor %}
+        
+        <div class="cvSidebar">
+            
+            <div class="cvSection profile">
+                <h3>Profile</h3>
+                
+                <p>
+                    Experienced and self-motivated coordinator and researcher.
+                </p>
+                <p>
+                    Skilled in social science, program evaluation and development, informal education, and research standards and practices. History of working in outreach and education, with a strong focus on diversity and inclusion work. Strong technical background and knowledgeable of data science, user experience, and web development.
+                </p>
+                <p>
+                    Looking for opportunities to apply and develop my multidisciplinary skills and to gain industry experience.
+                </p>
+            </div>
+            
+            <div class="cvSection education">
+                <h3>Education</h3>
+                
+                <p><strong><em>University of Colorado Boulder</em></strong></p>
+                
+                <p><strong>Ph.D.</strong> Technology, Media & Society, 2019</p>
+                
+                <p><strong>M.S.</strong> Computer Science, 2014</p>
+                
+                <p><strong>B.S.</strong> Computer Science, 2012<br/>
+                <em>Emphasis: User Experience (UX/UI)</em><br/>
+                <em>Minor: Technology, Arts & Media</em></p>
+            </div>
+            
+            <div class="cvSection skills">
+                <h3>Skills</h3>
+                
+                <h4>Software and Tools</h4>
+                <p>SPSS, Tableau, Qualtrics, Excel<br/>
+                InVision, Git<br/>
+                Slack, Basecamp</p>
+
+                <h4>Languages</h4>
+                <p>HTML, CSS, JS, PHP<br/>
+                Python, R, SQL<br/>
+                Java, Swift, C#</p>
+            </div>
+            
+        </div>
+        
+        <div class="cvContent">
+            <div class="cvSection experience">
+                <h3>Work Experience</h3>
+                {% for position in site.data.positions %}
+                	{% if position.flags.cvWorkHistory %}
+                        {% include cv_position.html %}
+                	{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        
+        
+        
 	</div>
 </section>

@@ -157,23 +157,22 @@ h3 {	/* page section headers, ex: Statement, Work Experience */
     text-align: center;
 }
     .cvSection h3 { /* page sub-section headers, ex: Fellowships, Assistantships */
-        background: $color-purple;
-        color: $color-white;
-        padding: $paddingEdgeMobile;
-        font-size: 30px;
+        color: $color-purple;
+        padding: 10px 0;
+        font-size: 25px;
     	line-height: 1.25em;
         text-align: left;
+        border-bottom: 4px solid $color-purple;
+        border-top: 4px solid $color-purple;
+        margin-bottom: $paddingEdgeMobile;
     }
 h4 {	
-    font-size: 30px;
+    font-size: 18px;
     line-height: 1.25em;
 }
     .cvSection h4 { /* in-line role headers */
-        font-size: 25px;
     	line-height: 1.1em;
-        background: $color-grey-2;
-        color: $color-grey-10;
-        padding: ($paddingEdgeMobile - 10) $paddingEdgeMobile;
+        padding: ($paddingEdgeMobile - 10) 0;
     }
 h5 {    
     font-size: 20px;
@@ -205,10 +204,10 @@ a {
 		a { color: $color-red2-bad; }
 		.fa, .fas, .far, .fab { color: $color-grey-3; }
 	}
-b {
+b, strong {
 	font-weight: 400;
 }
-i {
+i, em {
 	font-style: italic;
 }
 
@@ -684,47 +683,21 @@ article {
 
 }
 
-.cvSubSection {
-    grid-column: 1 / 4;
-}
-.cvSection, .cvSubSection {
-    display: grid;
-    grid-gap: 20px 0;
-    grid-template-columns: $paddingEdgeMobile auto $paddingEdgeMobile;
-    
-    h3, h4 {
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-    }
-    .summary { grid-column: 2 / 3; }
-    
-    .cvPosition {
-        display: grid;
-        grid-template-columns: auto 110px;
-        grid-column: 2 / 3;
-        grid-gap: 10px 0;
-        
-        .role, .org, .date, .details {
-    		p {
-    			margin-bottom: 0;
-                line-height: 1.45em;
-    		}
-    	}
-        .role {
-            grid-column: 1 / 2;
-        }
-    	.date { 
-            text-align: right;
-            grid-column: 2 / 3;
-        }
-        .org {
-            font-style: italic;
-            grid-column: 1 / 3;
-        }
-        .details {
-            grid-column: 1 / 3;
+#cv {
+    .cvSection {
+        .cvPosition {
+            display: grid;
+            margin-bottom: $padding;
         }
     }
+    .profile, .skills, .role, .org, .date, .details {
+        p { line-height: 1.45em; }
+    }
+    .education, .role, .org, .date {
+        p { margin-bottom: 5px; }
+    }
+    .date { text-align: right; }
+    .org { font-style: italic; }
 }
 .pageSection {
     display: grid;
@@ -783,20 +756,23 @@ article {
     }
 }
 @media (min-width: $mediaBreakMediumMin) {
-    .cvSection, .cvSubSection {
-        .cvPosition {
-            grid-template-columns: 200px auto;
-            grid-gap: 5px $paddingGap;
+    #cv {
+        .wrapper { /* (margin regular padding) */
+            grid-template-columns: 33.3% auto;
+            grid-gap: $paddingGap;
             
-            .date { 
-                grid-column: 1 / 2;
-                grid-row: 1 / 4;
+            .cvSidebar { grid-column: 1 / 2; 
+                .cvSection { margin-bottom: $paddingGap; }
             }
-            .role {
-                grid-column: 2 / 3;
-            }
-            .org, .details {
-                grid-column: 2 / 3;
+            .cvContent { grid-column: 2 / 3; }
+        }
+        .cvSection {
+            .cvPosition {
+                grid-template-columns: auto 200px;
+                .role {     grid-column: 1 / 2; grid-row: 1 / 2; }
+                .date {     grid-column: 2 / 3; grid-row: 1 / 2; }
+                .org {      grid-column: 1 / 3; grid-row: 2 / 3; }
+                .details {  grid-column: 1 / 3; grid-row: 3 / 4; }
             }
         }
     }
@@ -807,7 +783,7 @@ article {
             flex-direction: row;
             .image { 
                 flex: 1 0 200px;
-                margin: 0 50px0 0;
+                margin: 0 50px 0 0;
                 img {
                     width: 100%;
                 }

@@ -29,7 +29,11 @@ rea:
     - key: "rea-proj"
       title: "Research Projects"
 
-cv:
+cv: # 4.5
+  key: "cv"
+  title: "CV/Resume"
+
+cv.4.4:
   key: "cv"
   title: "CV/Resume"
   sections:

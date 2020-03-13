@@ -20,44 +20,37 @@
         </p>
     </div>
     
-    {% if position.organization %}
-        <div class="org">
-    		<p>{{ position.organization }}</p>
-        </div>
-    {% endif %}
+    <div class="org">
+		<p>{{ position.organization }}</p>
+    </div>
     
-    {% if section.cvSectionKey != "workhistory" %}
-        <div class="details">
-            <div class="description">
-                {{ position.descriptionHTML }}
-                {% if position.extraHTML %}
-                    {{ position.extraHTML }}
-                {% endif %}
-            </div>
-        	
-        	{% if position.miscHTML %}
-        		<div class="misc">
-        			{{ position.miscHTML }}
-        		</div>
-        	{% endif %}
-            
-            {% if position.workKeys %}
-        		<div class="works">
-                    {% for positionWork in position.workKeys %}
-                        {% for workData in site.data.works %}
-                            {% if positionWork.workKey == workData.workKey %}
-                                <div class="work">
-                                    <p class="workRef">
-                                        {{ workData.referenceLink }}
-                                    </p>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                </div>
-            {% endif %}
-        	
+    <div class="details">
+        <div class="description">
+            {{ position.descriptionHTML }}
         </div>
-    {% endif %}
+    	
+    	{% if position.miscHTML and False %}
+    		<div class="misc">
+    			{{ position.miscHTML }}
+    		</div>
+    	{% endif %}
+        
+        {% if position.workKeys and False %}
+    		<div class="works">
+                {% for positionWork in position.workKeys %}
+                    {% for workData in site.data.works %}
+                        {% if positionWork.workKey == workData.workKey %}
+                            <div class="work">
+                                <p class="workRef">
+                                    {{ workData.referenceLink }}
+                                </p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    	
+    </div>
         
 </div>

@@ -260,9 +260,9 @@
   dateStart: 2013-07-01
   dateEnd: 2015-06-01
   
-  descriptionHTML: "<p>This NSF GK-12 project incorporated computing into existing K-12 courses by working with local school districts to develop standards-based curriculum appropriate for each school.</p>"
-  responsibilitiesHTML: "<ul><li>Collaborated with middle school science teacher to developed a 3-week long infographic-based career exploration workshop for ~200 8th grade students</li>
-  <li>Developed interdisciplinary science/technology content for a targeted demographic</li></ul>"
+  descriptionHTML: "<p>This NSF GK-12 project incorporated computing into existing K-12 courses by working with local school districts to develop standards-based curriculum appropriate for each school. Developed interdisciplinary science/technology content for a targeted demographic. Collaborated with a middle school teacher to develop career exploration, computational thinking, environmental activist curricula for >200 8th grade students.</p>
+
+  <p>Volunteered as a board member of STEM outreach NPO. Assisted in program coordination for 4 schools/programs. Gathered volunteers, hosted events, coordinated with middle schools.</p>"
   
   resultsKeys:
     - workKey: "wk15_scip"
@@ -660,7 +660,7 @@
   dateStart: 2012-05-01
   dateEnd: 2013-06-01
   
-  descriptionHTML: "<p>ZOLL develops emergency service software for EMS agencies and medical companies. Worked on scrum team migrating a legacy product to a web app. Assisted in re-designing and implementing new front-end user-interface. Worked on UX design and front-end development teams. Developed user stories, wireframes, low and high-fidelity prototypes.</p>"
+  descriptionHTML: "<p>ZOLL develops emergency service software for EMS agencies and medical companies. Worked on scrum team migrating a legacy product to a cloud-based web application. Worked on UX design and front-end development teams. Re-designed and implemented new front-end user interface. Created front-end design/programming standards. Developed user stories, wireframes, low and high-fidelity prototypes. Performed card sorting, heuristic evaluation.</p>"
 
 
 - positionKey: "ASIT"
