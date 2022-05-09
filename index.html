@@ -23,6 +23,8 @@
 	}
 	* {
 		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 	}
 	body {
 		font-family: ariel, helvetica, sans-serif;
@@ -51,7 +53,7 @@
 		align-items: start;
 	}
 	.headshot div {
-		width: 60%;
+		width: 80%;
 		margin: 0 10%;
 	}
 	.headshot div img {
@@ -63,11 +65,16 @@
 	h1 {
 		font-size: 2em;
 		line-height: 1.5em;
+		margin: 0.3em 0;
 	}
 	h2 {
 		font-size: 1.3em;
 		line-height: 1.5em;
 		font-style: italic;
+		margin: 0.7em 0;
+	}
+	p {
+		margin: 0.7em 0;
 	}
 	a {
 		color: var(--pink);
@@ -77,6 +84,9 @@
 		text-decoration: underline;
 	}
 	@media (min-width: 769px) {
+		.body {
+			height: 70vh;
+		}
 		.wrapper {
 			width: 80%;
 			margin: 50px 10%;
