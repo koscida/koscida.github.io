@@ -1,0 +1,154 @@
+:root {
+	--background-color: #efeef9;
+	--card-color: #f6f8ff;
+	--text-color: #222;
+	--shadow-color: #ccc;
+	--purple: #6d56b8;
+	--pink: #c3407c;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Ubuntu', ariel, helvetica, sans-serif;
+	background: var(--background-color);
+	color: var(--text-color);
+}
+
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.wrapper {
+	width: 96%;
+	background: var(--card-color);
+	margin: 20px 2%;
+	padding: 70px 50px;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 40% 60%;
+	grid-gap: 5px;
+	box-shadow: 1px 1px 5px var(--shadow-color);
+}
+
+.wrapper section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper section.bio {
+	align-items: start;
+}
+
+.headshot div {
+	width: 70%;
+	margin: 0 10%;
+}
+
+.headshot div img {
+	width: 100%;
+	border-radius: 50%;
+	border: 6px solid var(--purple);
+	padding: 5px;
+	animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		border-color: var(--purple);
+	}
+
+	50% {
+		border-color: var(--pink);
+	}
+
+	100% {
+		border-color: var(--purple);
+	}
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+	margin: 0.3em 0;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.3em;
+	line-height: 1.5em;
+	margin: 0.7em 0;
+	font-family: 'PT Mono';
+}
+
+p {
+	margin: 0.7em 0;
+}
+
+a {
+	color: var(--pink);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+	.wrapper {
+		width: 80%;
+		max-width: 900px;
+		margin: 50px 10%;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100%;
+		grid-gap: 10px;
+	}
+
+	.wrapper section.bio {
+		align-items: center;
+	}
+}
+
+@media (min-width: 1000px) {
+	.wrapper {
+		width: 900px;
+		margin: 50px auto;
+		grid-gap: 20px;
+	}
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	height: 1.5em;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2px;
+	height: 1.5em;
+	margin-left: 1px;
+	animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+
+	from,
+	to {
+		background-color: transparent;
+	}
+
+	50% {
+		background-color: var(--text-color);
+	}
+}

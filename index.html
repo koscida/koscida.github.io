@@ -1,259 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Meta Info -->
-<meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="author" content="Brittany Ann Kos" />
+	<head>
+		<!-- Meta Info -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="author" content="Brittany Ann Kos" />
 
-<!-- Descriptions, Labels -->
-<title>Brittany Ann Kos</title>
-<meta name="description" content="Brittany Ann Kos, PhD" />
-<meta name="keywords" content="stem, computing, computer science, education, program, project, research, development, evaluation, management, coordination, diversity, inclusion, women, gender" />
-<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<!-- Descriptions, Labels -->
+		<title>Brittany Ann Kos</title>
+		<meta name="description" content="Brittany Ann Kos, PhD" />
+		<meta
+			name="keywords"
+			content="stem, computing, computer science, education, program, project, research, development, evaluation, management, coordination, diversity, inclusion, women, gender"
+		/>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
-<!-- CSS -->
-<style>
-	:root {
-	  --background-color: #EFEEF9;
-	  --card-color: #F6F6FF;
-	  --text-color: #222;
-	  --shadow-color: #CCC;
-	  --purple: #6D56B8;
-	  --pink: #C3407C;
-	}
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
-	body {
-		font-family: ariel, helvetica, sans-serif;
-		background: var(--background-color);
-		color: var( --text-color);
-	}
-	.body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-	}
-	.wrapper {
-		width: 96%;
-		background: var(--card-color);
-		margin: 20px 2%;
-		padding: 70px 50px;
-		display: grid;
-		grid-template-columns: 100%;
-		grid-template-rows: 40% 60%;
-		grid-gap: 5px;
-		box-shadow: 1px 1px 5px var(--shadow-color);
-	}
-	.wrapper section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.wrapper section.bio {
-		align-items: start;
-	}
-	.headshot div {
-		width: 70%;
-		margin: 0 10%;
-	}
-	.headshot div img {
-		width: 100%;
-		border-radius: 50%;
-		border: 6px solid var(--purple);
-		padding: 5px;
-		animation: pulse 10s infinite;
-	}
-	@keyframes pulse {
-		0% {
-			border-color: var(--purple);
-		}
-		50% {
-			border-color: var(--pink);
-		}
-		100% {
-			border-color: var(--purple);
-		}
-	}
-	
-	h1 {
-		font-size: 2em;
-		line-height: 1.5em;
-		margin: 0.3em 0;
-	}
-	h2 {
-		font-size: 1.3em;
-		line-height: 1.5em;
-		font-style: italic;
-		margin: 0.7em 0;
-	}
-	p {
-		margin: 0.7em 0;
-	}
-	a {
-		color: var(--pink);
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: underline;
-	}
-	@media (min-width: 769px) {
-		.wrapper {
-			width: 80%;
-			max-width: 900px;
-			margin: 50px 10%;
-			grid-template-columns: 50% 50%;
-			grid-template-rows: 100%;
-			grid-gap: 10px;
-		}
-		.wrapper section.bio {
-			align-items: center;
-		}
-	}
-	@media (min-width: 1000px) {
-		.wrapper {
-			width: 900px;
-			margin: 50px auto;
-			grid-gap: 20px;
-		}
-	}
-	
-	#text {
-		display: inline-block;
-		vertical-align: middle;
-		letter-spacing: 2px;
-		height: 1.5em;
-	}
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu&family=PT+Mono&display=swap"
+			rel="stylesheet"
+		/>
 
-	#cursor {
-		display: inline-block;
-		vertical-align: middle;
-		width: 2px;
-		height: 1.5em;
-		margin-left: 1px;
-		animation: blink 0.5s step-end infinite;
-	}
+		<!-- CSS -->
+		<link href="styles/main.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="body">
+			<div class="wrapper">
+				<section class="headshot">
+					<div>
+						<img
+							src="images/brit_headshot_whtbk1_sq800x800.jpg"
+							alt="Hedshot of Brittany Ann Kos."
+						/>
+					</div>
+				</section>
 
-	@keyframes blink {
-		from, to { 
-			background-color: transparent 
-		}
-		50% { 
-			background-color: var( --text-color); 
-		}
-	}
-</style>
-
-</head>
-<body>
-<div class="body">
-	<div class="wrapper">
-	
-		<section class="headshot">
-			<div>
-				<img src="images/brit_headshot_whtbk1_sq800x800.jpg" alt="Hedshot of Brittany Ann Kos.">
+				<section class="bio">
+					<div>
+						<h1>Brittany Ann Kos</h1>
+						<h2>
+							<div id="text"></div>
+							<div id="cursor"></div>
+						</h2>
+						<p>Strong technical and analytical background</p>
+						<p>
+							<a
+								href="http://www.linkedin.com/in/brittanyannkos"
+								target="_blank"
+								>Linkedin</a
+							>
+							&bull;
+							<a href="https://github.com/koscida" target="_blank">Github</a>
+						</p>
+					</div>
+				</section>
 			</div>
-		</section>
+		</div>
 
-		<section class="bio">
-			<div>
-				<h1>Brittany Ann Kos</h1>
-				<h2><div id="text"></div><div id="cursor"></div></h2>
-				<p>Strong technical and analytical background</p>
-				<p>
-					<a href="http://www.linkedin.com/in/brittanyannkos" target="_blank">Linkedin</a>
-					&bull;
-					<a href="https://github.com/koscida" target="_blank">Github</a>
-				</p>
-			</div>
-    	</section>
-		
-	</div>
-	</div>
-
-	<script>
-		// source: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
-		// List of sentences
-		var _CONTENT = [ 
-			"Technologist", 
-			"Programer",
-			"Analyst",
-			"Researcher",
-			"Creative",
-		];
-
-		// Current sentence being processed
-		var _PART = 0;
-
-		// Character number of the current sentence being processed 
-		var _PART_INDEX = 0;
-
-		// Holds the handle returned from setInterval
-		var _INTERVAL_VAL;
-
-		// Element that holds the text
-		var _ELEMENT = document.querySelector("#text");
-
-		// Cursor element 
-		var _CURSOR = document.querySelector("#cursor");
-
-		// Implements typing effect
-		function Type() { 
-			// Get substring with 1 characater added
-			var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-			_ELEMENT.innerHTML = text;
-			_PART_INDEX++;
-
-			// If full sentence has been displayed then start to delete the sentence after some time
-			if(text === _CONTENT[_PART]) {
-				// Hide the cursor
-				//_CURSOR.style.display = 'none';
-
-				clearInterval(_INTERVAL_VAL);
-				setTimeout(function() {
-					_INTERVAL_VAL = setInterval(Delete, 75);
-				}, 2000);
-			}
-		}
-
-		// Implements deleting effect
-		function Delete() {
-			// Hide the cursor
-			_CURSOR.style.display = 'none';
-		
-			// Get substring with 1 characater deleted
-			var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-			_ELEMENT.innerHTML = text;
-			_PART_INDEX--;
-
-			// If sentence has been deleted then start to display the next sentence
-			if(text === '') {
-				clearInterval(_INTERVAL_VAL);
-
-				// If current sentence was last then display the first one, else move to the next
-				if(_PART == (_CONTENT.length - 1))
-					_PART = 0;
-				else
-					_PART++;
-				
-				_PART_INDEX = 0;
-
-				// Start to display the next sentence after some time
-				setTimeout(function() {
-					_CURSOR.style.display = 'inline-block';
-					_INTERVAL_VAL = setInterval(Type, 100);
-				}, 200);
-			}
-		}
-
-		// Start the typing effect on load
-		_INTERVAL_VAL = setInterval(Type, 100);
-	</script>
-</body>
+		<script src="scripts/type.js"></script>
+	</body>
 </html>
