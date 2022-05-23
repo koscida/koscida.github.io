@@ -2,10 +2,11 @@
 			// List of sentences
 			var _CONTENT = [
 				"Technologist",
-				"Programer",
 				"Analyst",
+				"Developer",
 				"Researcher",
 				"Creative",
+				"Engineer",
 			];
 
 			// Current sentence being processed
