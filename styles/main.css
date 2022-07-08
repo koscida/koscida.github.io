@@ -1,8 +1,10 @@
+/* https://www.htmlcsscolor.com/hex/43464B */
 :root {
 	--background-color: #efeef9;
 	--card-color: #f6f8ff;
 	--text-color: #222;
-	--shadow-color: #ccc;
+	--subtitle-color: #ECC1D4;
+	--shadow-color: #7E7E82;
 	--purple: #6d56b8;
 	--pink: #c3407c;
 }
@@ -11,6 +13,7 @@
 		--background-color: #2D2B30;
 		--card-color: #38363C;
 		--text-color: #fff;
+		--subtitle-color: #A8788E;
 		--shadow-color: #111;
 	}
 }
@@ -19,6 +22,7 @@
 		--background-color: #efeef9;
 		--card-color: #f6f8ff;
 		--text-color: #222;
+		--subtitle-color: #E7B1C9;
 		--shadow-color: #ccc;
 	}
 }
@@ -106,6 +110,10 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+a i.fa-brands {
+	color: var(--subtitle-color);
 }
 
 @media (min-width: 769px) {
