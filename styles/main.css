@@ -113,7 +113,7 @@ a:hover {
 }
 
 a i.fa-brands {
-	color: var(--subtitle-color);
+	color: rgb(195, 64, 124, 0.5);
 }
 
 @media (min-width: 769px) {
@@ -156,15 +156,19 @@ a i.fa-brands {
 	animation: pulse 10s infinite;
 }
 
+/* pulse purple -> pink  */
 @keyframes pulse {
 	0% {
 		border-color: var(--purple);
+		color: var(--purple);
 	}
 	50% {
 		border-color: var(--pink);
+		color: var(--pink);
 	}
 	100% {
 		border-color: var(--purple);
+		color: var(--purple);
 	}
 }
 
