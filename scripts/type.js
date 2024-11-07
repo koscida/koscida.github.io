@@ -7,6 +7,7 @@ var _CONTENT = [
 	"Designer",
 	"Maker",
 	"Engineer",
+	"Builder",
 	"Analyst",
 ];
 
