@@ -1,13 +1,13 @@
 // source: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
 // List of sentences
 var _CONTENT = [
-	"Technologist",
-	"Analyst",
 	"Developer",
-	"Maker",
-	"Researcher",
 	"Creator",
+	"Technologist",
+	"Designer",
+	"Maker",
 	"Engineer",
+	"Analyst",
 ];
 
 // Current sentence being processed
